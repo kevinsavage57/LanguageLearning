@@ -1193,11 +1193,10 @@ fetch(`words_${LANG.id}.json`)
     if (gistBundle && !gistBundle.error && gistBundle.words) {
       savedWords = gistBundle.words;
       savedVerbTenseProgress = gistBundle.verbTenseProgress || null;
-      diag("Loaded " + savedWords.length + " words from Gist ✓");
+     
       // Mirror into localStorage so the app still works offline.
       try { localStorage.setItem(`progress_${LANG.id}`, JSON.stringify(gistBundle)); } catch (_) {}
     } else {
-      diag("Gist load skipped — falling back to localStorage");
       const saved = localStorage.getItem(`progress_${LANG.id}`);
       if (saved) {
         const parsed = JSON.parse(saved);
