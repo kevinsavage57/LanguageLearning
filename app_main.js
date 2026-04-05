@@ -1187,18 +1187,9 @@ fetch(`words_${LANG.id}.json`)
     let savedWords = null;
     let savedVerbTenseProgress = null;
 
-    // Temporary diagnostic — shows load status on screen
-    const diagEl = document.getElementById("inlineJsMarker");
-    const diag = msg => { if (diagEl) diagEl.textContent = msg; console.log(msg); };
-
-    diag("Checking Gist config: " + (gistConfigured() ? "configured" : "NOT configured"));
+     diag("Checking Gist config: " + (gistConfigured() ? "configured" : "NOT configured"));
     const gistBundle = await loadFromGist();
-    diag("Gist result: " + JSON.stringify(
-      gistBundle === null ? "null (not configured)"
-      : gistBundle.error ? { error: gistBundle.error }
-      : { hasWords: !!gistBundle.words, wordCount: gistBundle.words?.length ?? 0 }
-    ));
-
+    
     if (gistBundle && !gistBundle.error && gistBundle.words) {
       savedWords = gistBundle.words;
       savedVerbTenseProgress = gistBundle.verbTenseProgress || null;
