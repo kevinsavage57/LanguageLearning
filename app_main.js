@@ -1187,7 +1187,6 @@ fetch(`words_${LANG.id}.json`)
     let savedWords = null;
     let savedVerbTenseProgress = null;
 
-     diag("Checking Gist config: " + (gistConfigured() ? "configured" : "NOT configured"));
     const gistBundle = await loadFromGist();
     
     if (gistBundle && !gistBundle.error && gistBundle.words) {
