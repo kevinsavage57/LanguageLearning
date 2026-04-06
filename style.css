@@ -49,7 +49,6 @@ body {
 }
 
 .sidebar {
-  border-right: 2px solid #ddd;
   padding-right: 14px;
   min-height: calc(100vh - 120px);
   overflow-y: auto;
