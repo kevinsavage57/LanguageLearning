@@ -464,12 +464,12 @@ const ACTIVE_POOL_SIZE = 25;
 const TENSE_UNLOCK_THRESHOLD = 10;
 
 // Order from easiest -> harder (adjust anytime)
-const VERB_TENSE_PROGRESS_KEY = `verbTenseProgress:${LANG.id}:v1`;
+const verbTenseProgressKey = () => `verbTenseProgress:${LANG.id}:v1`;
 
 // We track progress per tense + person, globally (not per-verb)
 function loadVerbTenseProgress() {
   try {
-    const raw = localStorage.getItem(VERB_TENSE_PROGRESS_KEY);
+    const raw = localStorage.getItem(verbTenseProgressKey());
     return raw ? JSON.parse(raw) : null;
   } catch {
     return null;
@@ -477,7 +477,7 @@ function loadVerbTenseProgress() {
 }
 
 function saveVerbTenseProgress(p) {
-  localStorage.setItem(VERB_TENSE_PROGRESS_KEY, JSON.stringify(p));
+  localStorage.setItem(verbTenseProgressKey(), JSON.stringify(p));
 }
 
 
