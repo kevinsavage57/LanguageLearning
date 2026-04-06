@@ -1,0 +1,388 @@
+/* ── Base ────────────────────────────────────────────────────────────────── */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────────── */
+.top {
+  text-align: center;
+  padding: 16px 12px 10px;
+  border-bottom: 2px solid #eee;
+}
+
+.top h1 {
+  margin: 0 0 10px;
+  font-size: clamp(18px, 4vw, 28px);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+}
+
+.controls select,
+.controls button {
+  font-size: 14px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background: #fff;
+  cursor: pointer;
+  min-height: 36px; /* comfortable tap target */
+}
+
+/* ── Two-column desktop layout ───────────────────────────────────────────── */
+:root {
+  --sidebar-width: 364px;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+  gap: 18px;
+  padding: 12px 18px 18px;
+  align-items: start;
+}
+
+.sidebar {
+  border-right: 2px solid #ddd;
+  padding-right: 14px;
+  min-height: calc(100vh - 120px);
+  overflow-y: auto;
+}
+
+#stats {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#mastery {
+  margin-top: 10px;
+}
+
+/* Game area */
+.gameArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  transform: translateX(calc(var(--sidebar-width) / -2));
+}
+
+/* ── Matching columns ────────────────────────────────────────────────────── */
+.game {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 10px auto 0 auto;
+  max-width: 900px;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.word {
+  padding: 10px 20px;
+  border: 1px solid black;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.word.selected { background-color: #ffe58a; }
+.word.matched  { background-color: #9ae6b4; cursor: default; }
+
+/* ── Typing area ─────────────────────────────────────────────────────────── */
+#typing_area {
+  margin-top: 18px;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+}
+
+#prompt {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#translationInput {
+  padding: 8px;
+  font-size: 16px;
+  width: min(520px, 90%);
+}
+
+#feedback {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* ── Accent buttons ──────────────────────────────────────────────────────── */
+.accent-buttons {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.accent-buttons button {
+  padding: 6px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  background: #f7f7f7;
+}
+
+.accent-buttons button:active { transform: translateY(1px); }
+
+/* ── Endings reference button ────────────────────────────────────────────── */
+#showEndingsBtn {
+  display: none;
+  padding: 6px 14px;
+  font-size: 13px;
+  font-family: inherit;
+  cursor: pointer;
+  border-radius: 6px;
+  border: 1px solid #aaa;
+  background: #f0f4ff;
+  color: #334;
+  transition: background 0.15s, border-color 0.15s;
+}
+#showEndingsBtn:hover { background: #dce6ff; border-color: #88a; }
+
+/* ── Modal overlay ───────────────────────────────────────────────────────── */
+#endingsModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+}
+#endingsModal.open { display: flex; }
+
+/* ── Modal box ───────────────────────────────────────────────────────────── */
+.endings-box {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.22);
+  padding: 28px 32px 24px;
+  max-width: 620px;
+  width: 95vw;
+  max-height: 85vh;
+  overflow-y: auto;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.endings-box h2 { margin: 0 0 4px; font-size: 18px; color: #222; }
+.endings-box .endings-subtitle { font-size: 12px; color: #777; margin-bottom: 18px; }
+
+.endings-close {
+  position: absolute;
+  top: 14px; right: 16px;
+  background: none; border: none;
+  font-size: 22px; cursor: pointer;
+  color: #666; line-height: 1;
+}
+.endings-close:hover { color: #111; }
+
+/* ── Endings table ───────────────────────────────────────────────────────── */
+.endings-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.endings-table th {
+  padding: 8px 12px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-bottom: 2px solid #ddd;
+}
+.endings-table th.col-person { text-align: left; color: #555; }
+.endings-table th.col-ar { color: #c0392b; }
+.endings-table th.col-er { color: #1a6baf; }
+.endings-table th.col-ir { color: #218838; }
+.endings-table td {
+  padding: 7px 12px;
+  text-align: center;
+  border-bottom: 1px solid #f0f0f0;
+}
+.endings-table td.col-person {
+  text-align: left;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+.endings-table tr:last-child td { border-bottom: none; }
+.endings-table tr:nth-child(even) td { background: #fafafa; }
+
+.ending-pill {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.01em;
+}
+.ending-pill.ar { background: #fdecea; color: #c0392b; }
+.ending-pill.er { background: #e8f0fb; color: #1a6baf; }
+.ending-pill.ir { background: #e6f4ea; color: #218838; }
+.ending-pill.same-as-er { background: #e6f4ea; color: #218838; opacity: 0.75; }
+
+.endings-note {
+  margin-top: 14px;
+  font-size: 12px;
+  color: #888;
+  font-style: italic;
+}
+.endings-stem-note {
+  margin-bottom: 14px;
+  padding: 8px 12px;
+  background: #fffbe6;
+  border-left: 3px solid #f0c040;
+  border-radius: 4px;
+  font-size: 12px;
+  color: #665500;
+}
+
+/* ══ MOBILE — single column layout under 768px ══════════════════════════════ */
+@media (max-width: 768px) {
+
+  /* Stack header controls into a grid for easier tapping */
+  .controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 0 8px;
+  }
+
+  .controls select,
+  .controls button {
+    width: 100%;
+    font-size: 15px;
+    min-height: 44px; /* Apple HIG minimum tap target */
+    box-sizing: border-box;
+  }
+
+  /* Single column layout — game on top, progress on bottom */
+  .content {
+    display: flex;
+    flex-direction: column-reverse;
+    padding: 8px;
+    gap: 0;
+  }
+
+  /* Sidebar becomes a compact strip below the game */
+  .sidebar {
+    border-right: none;
+    border-top: 2px solid #ddd;
+    border-bottom: none;
+    padding-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: unset;
+    overflow-y: visible;
+    width: 100%;
+  }
+
+  /* Mastery panel scrolls horizontally on mobile */
+  #mastery {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Game area — no centering transform on mobile */
+  .gameArea {
+    transform: none;
+    width: 100%;
+    padding: 8px 0;
+  }
+
+  /* Matching cards — full width, larger tap targets */
+  .game {
+    gap: 12px;
+    width: 100%;
+    padding: 0 4px;
+    box-sizing: border-box;
+  }
+
+  .column {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .word {
+    padding: 12px 8px;
+    font-size: 15px;
+    text-align: center;
+    word-break: break-word;
+  }
+
+  /* Typing area — full width */
+  #prompt {
+    font-size: 18px;
+    padding: 0 8px;
+  }
+
+  #translationInput {
+    width: 100%;
+    font-size: 16px; /* prevents iOS zoom on focus */
+    box-sizing: border-box;
+    padding: 10px;
+  }
+
+  /* Accent buttons — bigger on mobile */
+  .accent-buttons button {
+    padding: 10px 14px;
+    font-size: 18px;
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Submit / Continue buttons */
+  #submitTranslation,
+  #continueBtn {
+    min-height: 44px;
+    font-size: 16px;
+    padding: 10px 24px;
+    margin-top: 8px;
+  }
+
+  /* Endings modal — full screen on mobile */
+  .endings-box {
+    padding: 20px 16px;
+    max-height: 92vh;
+    border-radius: 10px 10px 0 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  #endingsModal {
+    align-items: flex-end;
+  }
+
+  /* Sync / profile panel — full width on mobile */
+  #gistSettingsPanel {
+    left: 8px !important;
+    right: 8px !important;
+    bottom: 8px !important;
+    width: auto !important;
+  }
+}
