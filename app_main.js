@@ -1386,6 +1386,7 @@ fetch(`words_${LANG.id}.json`)
     startNextRound();
     updateStats();
     addGistButton();
+    addQuickStartButton();
 
     // When the app is about to be closed or backgrounded, show "Saving…" and
     // do an immediate Gist save before yielding. This gives the save time to
@@ -1697,6 +1698,109 @@ function unlockVerbModes() {
 
 
 
+
+function activateQuickStart() {
+  // Unlock all Quick Start words, all tenses, and all modes immediately.
+  allWords.forEach(w => {
+    if (!w.quickStart) return;
+    w.unlocked   = true;
+    w.weight     = ratingToWeight(w.rating);
+    w.typing_weight = ratingToWeight(w.rating);
+  });
+
+  // Unlock all verb tenses
+  const p = loadVerbTenseProgress();
+  if (p && Array.isArray(LANG.tenseOrder)) {
+    p.unlockedTenses = [...LANG.tenseOrder];
+    saveVerbTenseProgress(p);
+    ensureVerbTenseProgressInit();
+  }
+
+  save();
+  buildConjugationPool();
+  unlockVerbModes();
+  startNextRound();
+  updateStats();
+
+  const btn = document.getElementById("quickStartBtn");
+  if (btn) btn.remove();
+}
+
+function addQuickStartButton() {
+  // Only show welcome screen if no progress yet
+  const hasProgress = allWords.some(w => w.unlocked);
+  if (hasProgress) return;
+
+  const overlay = document.createElement("div");
+  overlay.id = "welcomeOverlay";
+  overlay.style.cssText = `
+    position:fixed; inset:0; z-index:99999;
+    background:rgba(0,0,0,0.6);
+    display:flex; align-items:center; justify-content:center;
+    padding:16px; box-sizing:border-box;
+    font-family:system-ui, Arial, sans-serif;
+  `;
+
+  overlay.innerHTML = `
+    <div style="
+      background:#fff; border-radius:16px;
+      max-width:520px; width:100%;
+      padding:32px 28px; box-shadow:0 12px 48px rgba(0,0,0,0.3);
+      text-align:center;
+    ">
+      <div style="font-size:36px; margin-bottom:8px;">🇪🇸</div>
+      <h2 style="margin:0 0 8px; font-size:22px; color:#111;">Welcome to Language Learning</h2>
+      <p style="color:#555; font-size:14px; margin:0 0 28px; line-height:1.5;">
+        How would you like to get started?
+      </p>
+
+      <div style="display:flex; flex-direction:column; gap:14px;">
+
+        <button id="welcomeQuickStart" style="
+          padding:18px 20px; border-radius:12px; border:2px solid #4a90d9;
+          background:#f0f7ff; cursor:pointer; text-align:left;
+        ">
+          <div style="font-size:18px; font-weight:700; color:#2266aa; margin-bottom:4px;">
+            ⚡ Quick Start
+          </div>
+          <div style="font-size:13px; color:#444; line-height:1.5;">
+            Begin with ~200 of the most common Spanish words already unlocked.
+            All game modes — Matching, Typing, Verb Matching, and Verb Typing —
+            and all verb tenses are available from the start.
+            Best if you have some Spanish experience or want to dive straight in.
+          </div>
+        </button>
+
+        <button id="welcomeScratch" style="
+          padding:18px 20px; border-radius:12px; border:2px solid #aaa;
+          background:#fafafa; cursor:pointer; text-align:left;
+        ">
+          <div style="font-size:18px; font-weight:700; color:#333; margin-bottom:4px;">
+            🌱 Start from Scratch
+          </div>
+          <div style="font-size:13px; color:#444; line-height:1.5;">
+            Begin with a small set of basic words and the Matching game only.
+            New modes unlock as you master words — Typing unlocks after ${20} words mastered,
+            then Verb modes open as your vocabulary grows.
+            Best for complete beginners who want a gradual progression.
+          </div>
+        </button>
+
+      </div>
+    </div>
+  `;
+
+  document.body.appendChild(overlay);
+
+  document.getElementById("welcomeQuickStart").onclick = () => {
+    overlay.remove();
+    activateQuickStart();
+  };
+
+  document.getElementById("welcomeScratch").onclick = () => {
+    overlay.remove();
+  };
+}
 
 function decayWords() {
   const now = Date.now();
