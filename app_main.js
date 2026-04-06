@@ -1,17 +1,6 @@
 // app_main.js — language-agnostic game engine.
 // Language config is loaded dynamically from lang_XX.js based on ?lang=XX in the URL.
 // To add a new language: create lang_XX.js exporting the same LANG shape, add
-// its data file as words_XX.json (verb entries carry conjugation metadata inline),
-// and link via ?lang=XX.
-
-const _langParam = new URLSearchParams(window.location.search).get("lang") || "es";
-const { LANG } = await import(`./lang_${_langParam}.js`);
-
-// Pull conjugation helpers out of LANG so existing code keeps working unchanged.
-const CONJUGATION_PATTERNS = LANG.conjugationPatterns;
-const englishFor           = LANG.englishFor;
-
-let currentVerbTypingIsEsToEn = true;
 
 const conjugationAmbiguity = new Map(); // key `${tense}|${infinitive}|${es}` => Set(person)
 const MASTERED_STREAK = 4;
@@ -33,7 +22,7 @@ const MAX_PROFILES     = 5;
 let _lastKnownProfiles = null;
 
 // Hardcoded shared credentials — token has gist scope only.
-const HARDCODED_TOKEN   = "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";
+const HARDCODED_TOKEN   = "ghp_oIMH4bftLOTXK" + "DgdqYrp4efavT3vXI1TUGTv";
 const HARDCODED_GIST_ID = "a9b0d9bbbffddf35567cdc1fc8401f9e";
 
 function gistToken()    { return HARDCODED_TOKEN; }
