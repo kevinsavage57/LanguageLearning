@@ -1381,6 +1381,7 @@ fetch(`words_${LANG.id}.json`)
       }
     }
 
+    initAccentButtons();
     buildConjugationPool();
     unlockVerbModes();
     startNextRound();
