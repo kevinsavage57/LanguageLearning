@@ -815,11 +815,11 @@ function ensureEndingsUIElements() {
   return { btn, modal };
 }
 
-function placeEndingsButton(forceShow = false) {
+function placeEndingsButton() {
   const btn = document.getElementById("showEndingsBtn");
   if (!btn) return;
 
-  // Place button below the game area (matching columns or typing area)
+  // Place button below the game area
   const gameArea = document.querySelector(".gameArea");
   if (gameArea && btn.parentElement !== gameArea) {
     gameArea.appendChild(btn);
@@ -832,7 +832,6 @@ function placeEndingsButton(forceShow = false) {
   btn.style.top = "";
   btn.style.right = "";
   btn.style.zIndex = "";
-  btn.style.display = "inline-flex";
   btn.style.alignItems = "center";
   btn.style.gap = "8px";
   btn.style.padding = "10px 14px";
@@ -847,11 +846,10 @@ function placeEndingsButton(forceShow = false) {
   btn.style.background = "#ffd54a";
   btn.style.color = "#111";
 
-  // Show only in conjugation modes unless forced.
+  // Only show for verb modes
   const mode = (modeSelect && modeSelect.value) ? modeSelect.value : "";
   const isVerbMode = mode === "verb-match" || mode === "verb-type";
-  const show = forceShow || isVerbMode;
-  btn.style.display = show ? "inline-flex" : "none";
+  btn.style.display = isVerbMode ? "inline-flex" : "none";
 }
 
 
@@ -870,7 +868,7 @@ function updateEndingsButtonVisibility() {
 
 function setupEndingsModal() {
   const { btn, modal } = ensureEndingsUIElements();
-  placeEndingsButton(true);
+  placeEndingsButton();
   const closeBtn = document.getElementById("endingsClose");
 
   const open = () => {
@@ -2276,7 +2274,7 @@ function renderMatching() {
   );
 
   console.log("Matching words rendered"); // New: Log render end
-  placeEndingsButton(true);
+  placeEndingsButton();
 }
 
 function renderTyping() {
