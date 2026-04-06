@@ -2760,10 +2760,8 @@ function updateStats() {
   const matchingMastered = allWords.filter(w => w.streak >= MASTERED_STREAK).length;
   const typingMastered = allWords.filter(w => w.typing_streak >= MASTERED_STREAK).length;
 
-  // Keep your existing one-line stats (but use innerHTML so we can format nicely)
- stats.innerHTML =
-  `Matching Mastered: <b>${matchingMastered}</b> / ${allWords.length}<br><br>
-   Typing Mastered: <b>${typingMastered}</b> / ${matchingMastered}`;
+  // stats div is now unused — mastery div holds all counters
+  stats.innerHTML = "";
 
 
   // --- Unlock rules (these match your current code) ---
@@ -2815,46 +2813,23 @@ function updateStats() {
   const tenseProgressLine = reqPersons
     .map(p => `${p}: ${(tenseCounts[panelTense]?.[p] ?? 0)}/${TENSE_UNLOCK_THRESHOLD}`)
     .join(" • ");
-  // --- Build the mastery panel text (what unlocks, and at what number) ---
-  const typingUnlocked = matchingMastered >= TYPING_UNLOCK_MATCHING_MASTERED;
-
   if (!mastery) return;
-  mastery.innerHTML = `
 
-    <div style="margin-top:6px;">
-    
-      <div style="font-weight:normal;">
-        <b>Typing Game</b> unlocked at ${TYPING_UNLOCK_MATCHING_MASTERED} words mastered
-        (${typingUnlocked ? "Unlocked ✅" : `Locked 🔒 (${matchingMastered}/${TYPING_UNLOCK_MATCHING_MASTERED})`})
-      </div>
-    </div>
+  const unlockedWords = allWords.filter(w => w.unlocked).length;
 
+  const row = (label, value) => `
+    <div style="margin-top:12px;">
+      <div style="font-weight:700;">${label}</div>
+      <div style="margin-top:2px;">${value}</div>
+    </div>`;
 
-    <div style="margin-top:10px;">
-      🔓 <b>Unlocked Words</b>: ${allWords.filter(w => w.unlocked).length} / ${allWords.length}
-      <div style="font-weight:normal;">
-        1 word added after every mastered word
-      </div>
-    </div>
-
-    <div style="margin-top:10px;">
-      🧩 <b>Verb Infinitives Unlocked</b>: ${verbsUnlockedCount} / ${verbsTotal}
-      <div style="font-weight:normal;"><br>
-        <b>Verb Conjugation</b> modes unlocked after 1 verb is unlocked
-      </div>
-    </div>
-
-    <div style="margin-top:10px;">
-      ✅ <b>Verb Conjugations Mastered (Matching)</b>: ${verbMatchMastered}
-      
-    </div>
-
-    <div style="margin-top:10px;">
-      ⌨️ <b>Verb Conjugations Mastered (Typing)</b>: ${verbTypeMastered}
-      </div>
-</div>
-
-  `;
+  mastery.innerHTML =
+    row("Matching Mastered",              `${matchingMastered}/${allWords.length}`) +
+    row("Typing Mastered",                `${typingMastered}/${matchingMastered}`) +
+    row("Unlocked Words",                 `${unlockedWords}/${allWords.length}`) +
+    row("Infinitives Unlocked",           `${verbsUnlockedCount}/${verbsTotal}`) +
+    row("Verb Conjugations Mastered (Matching)", `${verbMatchMastered}`) +
+    row("Verb Conjugations Mastered (Typing)",   `${verbTypeMastered}`);
 }
 
 
