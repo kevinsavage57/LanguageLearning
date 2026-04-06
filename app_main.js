@@ -2824,12 +2824,10 @@ function updateStats() {
     </div>`;
 
   mastery.innerHTML =
-    row("Matching Mastered",              `${matchingMastered}/${allWords.length}`) +
-    row("Typing Mastered",                `${typingMastered}/${matchingMastered}`) +
-    row("Unlocked Words",                 `${unlockedWords}/${allWords.length}`) +
-    row("Infinitives Unlocked",           `${verbsUnlockedCount}/${verbsTotal}`) +
-    row("Verb Conjugations Mastered (Matching)", `${verbMatchMastered}`) +
-    row("Verb Conjugations Mastered (Typing)",   `${verbTypeMastered}`);
+    row("Matching Mastered",    `${matchingMastered}/${allWords.length}`) +
+    row("Typing Mastered",      `${typingMastered}/${matchingMastered}`) +
+    row("Unlocked Words",       `${unlockedWords}/${allWords.length}`) +
+    row("Infinitives Unlocked", `${verbsUnlockedCount}/${verbsTotal}`);
 }
 
 
