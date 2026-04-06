@@ -819,40 +819,39 @@ function placeEndingsButton(forceShow = false) {
   const btn = document.getElementById("showEndingsBtn");
   if (!btn) return;
 
-  // Always keep it in the DOM so it can't "disappear" due to layout.
-  if (!btn.parentElement) document.body.appendChild(btn);
+  // Place button below the game area (matching columns or typing area)
+  const gameArea = document.querySelector(".gameArea");
+  if (gameArea && btn.parentElement !== gameArea) {
+    gameArea.appendChild(btn);
+  } else if (!btn.parentElement) {
+    document.body.appendChild(btn);
+  }
 
-  // Very visible fixed placement (upper-right).
-  btn.style.position = "fixed";
-  btn.style.top = "14px";
-  btn.style.right = "14px";
-  btn.style.zIndex = "10000";
+  // Inline placement — not fixed
+  btn.style.position = "";
+  btn.style.top = "";
+  btn.style.right = "";
+  btn.style.zIndex = "";
   btn.style.display = "inline-flex";
   btn.style.alignItems = "center";
   btn.style.gap = "8px";
   btn.style.padding = "10px 14px";
   btn.style.borderRadius = "12px";
   btn.style.border = "2px solid #111";
-  btn.style.boxShadow = "0 10px 24px rgba(0,0,0,.25)";
+  btn.style.boxShadow = "0 4px 12px rgba(0,0,0,.15)";
   btn.style.fontWeight = "800";
   btn.style.fontSize = "14px";
   btn.style.letterSpacing = ".2px";
   btn.style.cursor = "pointer";
-
-  // High-contrast colors without relying on external CSS.
+  btn.style.marginTop = "16px";
   btn.style.background = "#ffd54a";
   btn.style.color = "#111";
 
   // Show only in conjugation modes unless forced.
-  if (!forceShow) {
-    const mode = (modeSelect && modeSelect.value) ? modeSelect.value : "";
-    const isVerbMode = mode === "verb-match" || mode === "verb-type";
-    btn.style.opacity = isVerbMode ? "1" : "0";
-    btn.style.pointerEvents = isVerbMode ? "auto" : "none";
-  } else {
-    btn.style.opacity = "1";
-    btn.style.pointerEvents = "auto";
-  }
+  const mode = (modeSelect && modeSelect.value) ? modeSelect.value : "";
+  const isVerbMode = mode === "verb-match" || mode === "verb-type";
+  const show = forceShow || isVerbMode;
+  btn.style.display = show ? "inline-flex" : "none";
 }
 
 
@@ -1310,7 +1309,8 @@ function buildAcceptedSetForWord(word, lang) {
   return variants;
 }
 
-if (accentButtons) {
+function initAccentButtons() {
+  if (!accentButtons) return;
   // Populate buttons from LANG config
   if (Array.isArray(LANG.accentButtons)) {
     LANG.accentButtons.forEach(({ ch, label }) => {
