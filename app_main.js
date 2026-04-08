@@ -33,7 +33,7 @@ const MAX_PROFILES     = 5;
 let _lastKnownProfiles = null;
 
 // Hardcoded shared credentials — token has gist scope only.
-const HARDCODED_TOKEN   = "ghp_oIMH4bftLOTXKDg" + "dqYrp4efavT3vXI1TUGTv";
+const HARDCODED_TOKEN   = "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";
 const HARDCODED_GIST_ID = "a9b0d9bbbffddf35567cdc1fc8401f9e";
 
 function gistToken()    { return HARDCODED_TOKEN; }
@@ -184,11 +184,67 @@ function showGistSettings() {
         style="flex:1;padding:8px;background:#eee;
                border:none;border-radius:4px;cursor:pointer;">Cancel</button>
     </div>
+    <div style="margin-top:8px;">
+      <button id="gistDeleteBtn"
+        style="width:100%;padding:8px;background:#fff;color:#c00;
+               border:1px solid #c00;border-radius:4px;cursor:pointer;font-size:12px;">
+        Delete this profile…
+      </button>
+    </div>
     <div id="gistStatus" style="margin-top:8px;font-size:12px;color:#555;"></div>
   `;
   document.body.appendChild(panel);
 
   document.getElementById("gistCancelBtn").onclick = () => panel.remove();
+
+  document.getElementById("gistDeleteBtn").onclick = async () => {
+    const profile  = document.getElementById("gistProfileInput").value.trim();
+    const password = document.getElementById("gistPasswordInput").value;
+    const status   = document.getElementById("gistStatus");
+
+    if (!profile) { status.textContent = "Enter the profile name to delete."; return; }
+    if (!password) { status.textContent = "Enter the profile password to confirm deletion."; return; }
+
+    status.style.color = "#555";
+    status.textContent = "Verifying…";
+
+    const profiles = await fetchAllProfiles();
+    if (!profiles || profiles.error) {
+      status.style.color = "#d00";
+      status.textContent = profiles?.error ? `Error: ${profiles.error}` : "Could not connect.";
+      return;
+    }
+
+    const existing = profiles[profile];
+    if (!existing) {
+      status.style.color = "#d00";
+      status.textContent = `Profile "${profile}" not found.`;
+      return;
+    }
+
+    const hash = await hashPassword(password);
+    if (existing.hash !== hash) {
+      status.style.color = "#d00";
+      status.textContent = "Incorrect password.";
+      return;
+    }
+
+    if (!confirm(`Delete profile "${profile}"? This cannot be undone.`)) return;
+
+    delete profiles[profile];
+    await writeAllProfiles(profiles);
+
+    // Clear this device's profile if it was the deleted one
+    if (localStorage.getItem(GIST_PROFILE_KEY) === profile) {
+      localStorage.removeItem(GIST_PROFILE_KEY);
+      const btn = document.getElementById("gistSettingsBtn");
+      if (btn) btn.textContent = "☁ Sync";
+    }
+
+    status.style.color = "green";
+    status.textContent = `Profile "${profile}" deleted.`;
+    setTimeout(() => panel.remove(), 1500);
+  };
   document.getElementById("gistSaveBtn").onclick = async () => {
     const profile  = document.getElementById("gistProfileInput").value.trim();
     const password = document.getElementById("gistPasswordInput").value;
@@ -1384,10 +1440,16 @@ fetch(`words_${LANG.id}.json`)
     initAccentButtons();
     buildConjugationPool();
     unlockVerbModes();
+
+    // Check for new user BEFORE startNextRound unlocks initial words
+    const isNewUser = !savedWords || savedWords.length === 0;
+    if (isNewUser) {
+      addQuickStartButton();
+    }
+
     startNextRound();
     updateStats();
     addGistButton();
-    addQuickStartButton();
 
     // When the app is about to be closed or backgrounded, show "Saving…" and
     // do an immediate Gist save before yielding. This gives the save time to
@@ -1728,9 +1790,6 @@ function activateQuickStart() {
 }
 
 function addQuickStartButton() {
-  // Only show welcome screen if no progress yet
-  const hasProgress = allWords.some(w => w.unlocked);
-  if (hasProgress) return;
 
   const overlay = document.createElement("div");
   overlay.id = "welcomeOverlay";
