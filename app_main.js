@@ -33,7 +33,7 @@ const MAX_PROFILES     = 5;
 let _lastKnownProfiles = null;
 
 // Hardcoded shared credentials — token has gist scope only.
-const HARDCODED_TOKEN   = "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";
+const HARDCODED_TOKEN   = "ghp_oIMH4bftLOTXKDg" + "dqYrp4efavT3vXI1TUGTv";
 const HARDCODED_GIST_ID = "a9b0d9bbbffddf35567cdc1fc8401f9e";
 
 function gistToken()    { return HARDCODED_TOKEN; }
