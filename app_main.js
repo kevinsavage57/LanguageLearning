@@ -1489,6 +1489,7 @@ function mergeProgress(savedWords, freshData) {
       noun_class:    raw.noun_class,
       noun_override: raw.noun_override,
       id:            raw.id,
+      ...(raw.quickStart ? { quickStart: true } : {}),
     };
 
     // Copy conjugation metadata for verb entries
@@ -1513,7 +1514,6 @@ function mergeProgress(savedWords, freshData) {
         noun_typing_singular_ok: saved.noun_typing_singular_ok ?? false,
         noun_typing_plural_ok:   saved.noun_typing_plural_ok   ?? false,
         unlocked:                saved.unlocked                ?? false,
-        ...(raw.quickStart ? { quickStart: true } : {}),
       };
     }
 
