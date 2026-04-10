@@ -1708,10 +1708,9 @@ function activateQuickStart() {
     w.unlocked      = true;
     w.weight        = ratingToWeight(w.rating);
     w.typing_weight = ratingToWeight(w.rating);
-    // Set verbs to mastered so isVerbUnlocked() returns true for them
+    // Mark verbs as quick-start unlocked for conjugation modes
     if (w.pos === "verb") {
-      w.streak        = MASTERED_STREAK;
-      w.typing_streak = MASTERED_STREAK;
+      w.quickStartUnlocked = true;
     }
     unlockCount++;
   });
@@ -1817,7 +1816,17 @@ function addQuickStartButton() {
 
   document.getElementById("welcomeScratch").onclick = () => {
     overlay.remove();
-    // Save empty progress to Gist to register the profile
+    // Reset to 25 random non-quickStart words only
+    allWords.forEach(w => { w.unlocked = false; });
+    const nonQS = allWords.filter(w => !w.quickStart);
+    shuffle(nonQS);
+    for (let i = 0; i < Math.min(INITIAL_POOL_SIZE, nonQS.length); i++) {
+      nonQS[i].unlocked = true;
+    }
+    save();
+    buildConjugationPool();
+    startNextRound();
+    updateStats();
     scheduleSaveToGist();
   };
 }
@@ -1908,8 +1917,13 @@ function startNextRound() {
   // 2) Mode filter
   if (mode === "typing") {
     isTyping = true;
-    // typing only from matching-mastered, but not typing-mastered
-    pool = pool.filter(w => w.streak >= MASTERED_STREAK && !isTypingMasteredWord(w));
+    // For Quick Start users, draw from all unlocked words not yet typing-mastered.
+    // For normal users, only from matching-mastered words.
+    if (quickStartActive) {
+      pool = pool.filter(w => w.unlocked && !isTypingMasteredWord(w));
+    } else {
+      pool = pool.filter(w => w.streak >= MASTERED_STREAK && !isTypingMasteredWord(w));
+    }
 
   } else if (mode === "review") {
     isTyping = false;
@@ -2734,8 +2748,8 @@ function isVerbUnlocked(verb) {
 
   return infinitiveWords.length > 0 &&
     infinitiveWords.every(w =>
-      w.streak >= MASTERED_STREAK &&
-      w.typing_streak >= MASTERED_STREAK
+      w.quickStartUnlocked ||
+      (w.streak >= MASTERED_STREAK && w.typing_streak >= MASTERED_STREAK)
     );
 }
 
