@@ -5,7 +5,7 @@
 // then load it via ?lang=XX in the URL.
 
 import { CONJUGATION_PATTERNS } from "./conjugationPatterns_es.js";
-import { englishFor } from "./englishConjugation_v2.js";
+import { englishFor, englishForAll } from "./englishConjugation_v2.js";
 
 // ─── Tense ordering and display ──────────────────────────────────────────────
 
@@ -488,9 +488,9 @@ const ACCENT_BUTTONS = [
   { ch: "ü" }, { ch: "ñ" }, { ch: "¿" }, { ch: "¡" }
 ];
 
-// ─── englishFor re-export ─────────────────────────────────────────────────────
-// app_main uses this to generate English conjugation display labels.
-export { englishFor };
+// ─── englishFor / englishForAll re-export ─────────────────────────────────────
+// app_main uses englishFor for display labels and englishForAll for answer checking.
+export { englishFor, englishForAll };
 
 // ─── Main LANG export ─────────────────────────────────────────────────────────
 
@@ -637,6 +637,7 @@ export const LANG = {
   conjugationPatterns:     CONJUGATION_PATTERNS,
   applyOrthography,
   englishFor,
+  englishForAll,   // ← NEW: used by app_main buildForPerson() to accept all slash-variant answers
 
   // Noun gender system
   getNounForms,
@@ -669,7 +670,7 @@ export const LANG = {
     return out;
   },
 
-    // Conjugation endings reference modal
+  // Conjugation endings reference modal
   buildEndingsTableHTML,
 
   // Conjugation engine — builds all inflected forms for one verb
