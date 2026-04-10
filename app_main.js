@@ -315,7 +315,9 @@ function showGistSettings() {
       profiles[profile].hash = hash;
       await writeAllProfiles(profiles);
 
-      // Reset all progress immediately before showing the choice
+      // Clear localStorage and reset all progress before showing the choice
+      localStorage.removeItem(`progress_${LANG.id}`);
+      localStorage.removeItem(verbTenseProgressKey());
       allWords.forEach(w => {
         w.unlocked = false;
         w.streak = 0;
@@ -328,7 +330,6 @@ function showGistSettings() {
         w.noun_typing_plural_ok = false;
         w.quickStartUnlocked = false;
       });
-      save();
 
       status.style.color = "green";
       status.textContent = `Profile "${profile}" created! Choose how to start…`;
