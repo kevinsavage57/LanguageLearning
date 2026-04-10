@@ -315,6 +315,21 @@ function showGistSettings() {
       profiles[profile].hash = hash;
       await writeAllProfiles(profiles);
 
+      // Reset all progress immediately before showing the choice
+      allWords.forEach(w => {
+        w.unlocked = false;
+        w.streak = 0;
+        w.misses = 0;
+        w.weight = ratingToWeight(w.rating);
+        w.typing_streak = 0;
+        w.typing_misses = 0;
+        w.typing_weight = ratingToWeight(w.rating);
+        w.noun_typing_singular_ok = false;
+        w.noun_typing_plural_ok = false;
+        w.quickStartUnlocked = false;
+      });
+      save();
+
       status.style.color = "green";
       status.textContent = `Profile "${profile}" created! Choose how to start…`;
       setTimeout(() => {
@@ -1808,18 +1823,19 @@ function addQuickStartButton() {
 
   document.body.appendChild(overlay);
 
-  document.getElementById("welcomeQuickStart").addEventListener("click", () => {
+  document.getElementById("welcomeQuickStart").addEventListener("click", async () => {
     console.log("Quick Start clicked");
     overlay.remove();
     activateQuickStart();
-    // Save immediately to persist the Quick Start state
-    saveToGist({
+    console.log("Saving Quick Start to Gist...");
+    await saveToGist({
       words: slimProgress(allWords),
       verbTenseProgress: loadVerbTenseProgress() || null
     });
+    console.log("Quick Start Gist save complete");
   });
 
-  document.getElementById("welcomeScratch").addEventListener("click", () => {
+  document.getElementById("welcomeScratch").addEventListener("click", async () => {
     console.log("Start from Scratch clicked");
     overlay.remove();
     allWords.forEach(w => { w.unlocked = false; });
@@ -1833,11 +1849,13 @@ function addQuickStartButton() {
     buildConjugationPool();
     startNextRound();
     updateStats();
-    // Save immediately (not debounced) to overwrite any previous Quick Start data in the Gist
-    saveToGist({
+    // Await the Gist save to ensure it completes before user can navigate away
+    console.log("Saving to Gist...");
+    await saveToGist({
       words: slimProgress(allWords),
       verbTenseProgress: loadVerbTenseProgress() || null
     });
+    console.log("Gist save complete");
   });
 }
 
