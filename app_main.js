@@ -292,8 +292,9 @@ function showGistSettings() {
 
     // Support both new format (existing[LANG.id]) and old format (existing.words)
     const langBundle = existing?.[LANG.id] ?? (existing?.words ? existing : null);
-    if (existing && langBundle && langBundle.words) {
-      // Returning user — load their progress for this language
+    const hasProgress = langBundle && langBundle.words && langBundle.words.length > 0;
+    if (existing && hasProgress) {
+      // Returning user with actual progress — load it
       allWords = mergeProgress(langBundle.words, allWords);
       if (langBundle.verbTenseProgress) {
         try {
@@ -309,7 +310,7 @@ function showGistSettings() {
       if (btn) btn.textContent = `☁ ${profile}`;
       setTimeout(() => panel.remove(), 1500);
     } else {
-      // New profile — save hash to Gist immediately, then show welcome screen
+      // New profile or profile with no progress yet — save hash and show welcome screen
       if (!profiles[profile]) profiles[profile] = {};
       profiles[profile].hash = hash;
       await writeAllProfiles(profiles);
@@ -1807,31 +1808,29 @@ function addQuickStartButton() {
 
   document.body.appendChild(overlay);
 
-  document.getElementById("welcomeQuickStart").onclick = () => {
+  document.getElementById("welcomeQuickStart").addEventListener("click", () => {
+    console.log("Quick Start clicked");
     overlay.remove();
     activateQuickStart();
-    // Save to Gist so the choice is persisted
     scheduleSaveToGist();
-  };
+  });
 
-  document.getElementById("welcomeScratch").onclick = () => {
+  document.getElementById("welcomeScratch").addEventListener("click", () => {
+    console.log("Start from Scratch clicked");
     overlay.remove();
-    // Reset to 25 random non-quickStart words only
     allWords.forEach(w => { w.unlocked = false; });
     const nonQS = allWords.filter(w => !w.quickStart);
     shuffle(nonQS);
     for (let i = 0; i < Math.min(INITIAL_POOL_SIZE, nonQS.length); i++) {
       nonQS[i].unlocked = true;
     }
-    const unlockedCount = allWords.filter(w => w.unlocked).length;
-    const qsUnlocked = allWords.filter(w => w.unlocked && w.quickStart).length;
-    console.log(`Start from Scratch: ${unlockedCount} unlocked, ${qsUnlocked} are quickStart words`);
+    console.log(`Start from Scratch: ${allWords.filter(w => w.unlocked).length} unlocked, ${allWords.filter(w => w.unlocked && w.quickStart).length} are quickStart`);
     save();
     buildConjugationPool();
     startNextRound();
     updateStats();
     scheduleSaveToGist();
-  };
+  });
 }
 
 function decayWords() {
