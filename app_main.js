@@ -185,6 +185,18 @@ function showGistSettings() {
                border:none;border-radius:4px;cursor:pointer;">Cancel</button>
     </div>
     <div style="margin-top:8px;">
+      <label style="display:block;font-size:12px;color:#555;margin-bottom:4px;">
+        Import progress file
+      </label>
+      <input id="gistImportFile" type="file" accept=".json"
+        style="font-size:12px;width:100%;box-sizing:border-box;">
+      <button id="gistImportBtn"
+        style="width:100%;margin-top:4px;padding:8px;background:#2da44e;color:#fff;
+               border:none;border-radius:4px;cursor:pointer;font-size:12px;">
+        Import Progress File
+      </button>
+    </div>
+    <div style="margin-top:8px;">
       <button id="gistDeleteBtn"
         style="width:100%;padding:8px;background:#fff;color:#c00;
                border:1px solid #c00;border-radius:4px;cursor:pointer;font-size:12px;">
@@ -196,6 +208,49 @@ function showGistSettings() {
   document.body.appendChild(panel);
 
   document.getElementById("gistCancelBtn").onclick = () => panel.remove();
+
+  document.getElementById("gistImportBtn").onclick = () => {
+    const status = document.getElementById("gistStatus");
+    const file = document.getElementById("gistImportFile").files[0];
+    if (!file) { status.textContent = "Please choose a file first."; return; }
+    const reader = new FileReader();
+    reader.onload = async () => {
+      try {
+        const raw = JSON.parse(reader.result);
+        const importedWords = Array.isArray(raw) ? raw
+          : (raw && Array.isArray(raw.words) ? raw.words : null);
+        const importedVerbTenseProgress = (!Array.isArray(raw) && raw?.verbTenseProgress)
+          ? raw.verbTenseProgress : null;
+        if (!importedWords) throw new Error("Unrecognised file format.");
+        const migrated = LANG.migrateProgressPayload
+          ? LANG.migrateProgressPayload({ words: importedWords }).words
+          : importedWords;
+        allWords = mergeProgress(migrated, allWords);
+        if (importedVerbTenseProgress) {
+          try {
+            saveVerbTenseProgress(importedVerbTenseProgress);
+            ensureVerbTenseProgressInit();
+          } catch (_) {}
+        }
+        save();
+        buildConjugationPool();
+        unlockVerbModes();
+        startNextRound();
+        updateStats();
+        status.style.color = "green";
+        status.textContent = "Progress imported!";
+        await saveToGist({
+          words: slimProgress(allWords),
+          verbTenseProgress: loadVerbTenseProgress() || null
+        });
+        setTimeout(() => panel.remove(), 1000);
+      } catch (e) {
+        status.style.color = "#d00";
+        status.textContent = "Could not read file: " + e.message;
+      }
+    };
+    reader.readAsText(file);
+  };
 
   document.getElementById("gistDeleteBtn").onclick = async () => {
     const profile  = document.getElementById("gistProfileInput").value.trim();
