@@ -1812,7 +1812,11 @@ function addQuickStartButton() {
     console.log("Quick Start clicked");
     overlay.remove();
     activateQuickStart();
-    scheduleSaveToGist();
+    // Save immediately to persist the Quick Start state
+    saveToGist({
+      words: slimProgress(allWords),
+      verbTenseProgress: loadVerbTenseProgress() || null
+    });
   });
 
   document.getElementById("welcomeScratch").addEventListener("click", () => {
@@ -1829,7 +1833,11 @@ function addQuickStartButton() {
     buildConjugationPool();
     startNextRound();
     updateStats();
-    scheduleSaveToGist();
+    // Save immediately (not debounced) to overwrite any previous Quick Start data in the Gist
+    saveToGist({
+      words: slimProgress(allWords),
+      verbTenseProgress: loadVerbTenseProgress() || null
+    });
   });
 }
 
