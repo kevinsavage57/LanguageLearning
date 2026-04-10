@@ -309,7 +309,11 @@ function showGistSettings() {
       if (btn) btn.textContent = `☁ ${profile}`;
       setTimeout(() => panel.remove(), 1500);
     } else {
-      // New profile — show welcome screen after closing panel
+      // New profile — save hash to Gist immediately, then show welcome screen
+      if (!profiles[profile]) profiles[profile] = {};
+      profiles[profile].hash = hash;
+      await writeAllProfiles(profiles);
+
       status.style.color = "green";
       status.textContent = `Profile "${profile}" created! Choose how to start…`;
       setTimeout(() => {
