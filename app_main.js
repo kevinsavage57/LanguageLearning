@@ -1448,11 +1448,10 @@ fetch(`words_${LANG.id}.json`)
     buildConjugationPool();
     unlockVerbModes();
 
-    // Check for new user BEFORE startNextRound unlocks initial words
+    // Show welcome screen for new users BEFORE startNextRound unlocks initial words.
+    // A user is new if they have no saved progress from Gist or localStorage.
     const isNewUser = !savedWords || savedWords.length === 0;
-    if (isNewUser) {
-      addQuickStartButton();
-    }
+    if (isNewUser) addQuickStartButton();
 
     startNextRound();
     updateStats();
@@ -1527,6 +1526,8 @@ function initWords(data) {
       entry.stemOverrides = raw.stemOverrides ?? {};
       entry.irregularTags = raw.irregularTags ?? [];
     }
+    // Preserve quickStart flag from JSON
+    if (raw.quickStart) entry.quickStart = true;
     return entry;
   });
 
@@ -1583,6 +1584,7 @@ function mergeProgress(savedWords, freshData) {
         noun_typing_singular_ok: saved.noun_typing_singular_ok ?? false,
         noun_typing_plural_ok:   saved.noun_typing_plural_ok   ?? false,
         unlocked:                saved.unlocked                ?? false,
+        ...(raw.quickStart ? { quickStart: true } : {}),
       };
     }
 
@@ -1771,12 +1773,15 @@ function unlockVerbModes() {
 
 function activateQuickStart() {
   // Unlock all Quick Start words, all tenses, and all modes immediately.
+  let unlockCount = 0;
   allWords.forEach(w => {
     if (!w.quickStart) return;
-    w.unlocked   = true;
-    w.weight     = ratingToWeight(w.rating);
+    w.unlocked      = true;
+    w.weight        = ratingToWeight(w.rating);
     w.typing_weight = ratingToWeight(w.rating);
+    unlockCount++;
   });
+  console.log(`Quick Start: unlocked ${unlockCount} words`);
 
   // Unlock all verb tenses
   const p = loadVerbTenseProgress();
