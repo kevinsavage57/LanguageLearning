@@ -309,85 +309,15 @@ function showGistSettings() {
       if (btn) btn.textContent = `☁ ${profile}`;
       setTimeout(() => panel.remove(), 1500);
     } else {
-      // New profile — offer to upload existing progress file, or start fresh
-      status.style.color = "#555";
-      status.textContent = "";
-      panel.innerHTML += `
-        <div id="gistImportSection" style="margin-top:12px;border-top:1px solid #eee;padding-top:12px;">
-          <strong style="font-size:13px;">Import existing progress?</strong>
-          <p style="font-size:12px;color:#555;margin:4px 0 8px;">
-            Upload your progress file now, or skip to start fresh.
-          </p>
-          <input id="gistImportFile" type="file" accept=".json"
-            style="font-size:12px;width:100%;">
-          <div style="margin-top:8px;display:flex;gap:8px;">
-            <button id="gistImportBtn"
-              style="flex:1;padding:8px;background:#2da44e;color:#fff;
-                     border:none;border-radius:4px;cursor:pointer;">Import & Save</button>
-            <button id="gistSkipBtn"
-              style="flex:1;padding:8px;background:#eee;
-                     border:none;border-radius:4px;cursor:pointer;">Start Fresh</button>
-          </div>
-          <div id="gistImportStatus" style="margin-top:6px;font-size:12px;color:#555;"></div>
-        </div>
-      `;
-
-      const finishNewProfile = async (importedWords, importedVerbTenseProgress) => {
-        if (importedWords) {
-          allWords = mergeProgress(importedWords, allWords);
-          if (importedVerbTenseProgress) {
-            try {
-              saveVerbTenseProgress(importedVerbTenseProgress);
-              ensureVerbTenseProgressInit();
-            } catch (_) {}
-          }
-          buildConjugationPool();
-          unlockVerbModes();
-          startNextRound();
-          updateStats();
-        }
-        // Store under language id so Spanish and Italian are kept separately
-        if (!profiles[profile]) profiles[profile] = {};
-        profiles[profile].hash = hash;
-        profiles[profile][LANG.id] = {
-          words: slimProgress(allWords),
-          verbTenseProgress: loadVerbTenseProgress() || null
-        };
-        await writeAllProfiles(profiles);
-        const btn = document.getElementById("gistSettingsBtn");
-        if (btn) btn.textContent = `☁ ${profile}`;
-        setTimeout(() => panel.remove(), 1500);
-      };
-
-      document.getElementById("gistSkipBtn").onclick = () => finishNewProfile(null, null);
-
-      document.getElementById("gistImportBtn").onclick = () => {
-        const importStatus = document.getElementById("gistImportStatus");
-        const file = document.getElementById("gistImportFile").files[0];
-        if (!file) { importStatus.textContent = "Please choose a file first."; return; }
-        const reader = new FileReader();
-        reader.onload = async () => {
-          try {
-            const raw = JSON.parse(reader.result);
-            const importedWords = Array.isArray(raw) ? raw
-              : (raw && Array.isArray(raw.words) ? raw.words : null);
-            const importedVerbTenseProgress = (!Array.isArray(raw) && raw?.verbTenseProgress)
-              ? raw.verbTenseProgress : null;
-            if (!importedWords) throw new Error("Unrecognised file format.");
-            const migrated = LANG.migrateProgressPayload
-              ? LANG.migrateProgressPayload({ words: importedWords }).words
-              : importedWords;
-            importStatus.style.color = "green";
-            importStatus.textContent = "Imported! Saving…";
-            await finishNewProfile(migrated, importedVerbTenseProgress);
-          } catch (e) {
-            importStatus.style.color = "#d00";
-            importStatus.textContent = "Could not read file: " + e.message;
-          }
-        };
-        reader.readAsText(file);
-      };
+      // New profile — show welcome screen after closing panel
+      status.style.color = "green";
+      status.textContent = `Profile "${profile}" created! Choose how to start…`;
+      setTimeout(() => {
+        panel.remove();
+        addQuickStartButton();
+      }, 800);
     }
+
   };
 }
 
@@ -1448,11 +1378,6 @@ fetch(`words_${LANG.id}.json`)
     buildConjugationPool();
     unlockVerbModes();
 
-    // Show welcome screen for new users BEFORE startNextRound unlocks initial words.
-    // A user is new if they have no saved progress from Gist or localStorage.
-    const isNewUser = !savedWords || savedWords.length === 0;
-    if (isNewUser) addQuickStartButton();
-
     startNextRound();
     updateStats();
     addGistButton();
@@ -1867,10 +1792,14 @@ function addQuickStartButton() {
   document.getElementById("welcomeQuickStart").onclick = () => {
     overlay.remove();
     activateQuickStart();
+    // Save to Gist so the choice is persisted
+    scheduleSaveToGist();
   };
 
   document.getElementById("welcomeScratch").onclick = () => {
     overlay.remove();
+    // Save empty progress to Gist to register the profile
+    scheduleSaveToGist();
   };
 }
 
