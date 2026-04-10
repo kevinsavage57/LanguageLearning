@@ -1701,24 +1701,39 @@ function unlockVerbModes() {
 
 
 function activateQuickStart() {
-  // Unlock all Quick Start words, all tenses, and all modes immediately.
+  // Unlock all Quick Start words and set streaks so verb modes open immediately.
   let unlockCount = 0;
   allWords.forEach(w => {
     if (!w.quickStart) return;
     w.unlocked      = true;
     w.weight        = ratingToWeight(w.rating);
     w.typing_weight = ratingToWeight(w.rating);
+    // Set verbs to mastered so isVerbUnlocked() returns true for them
+    if (w.pos === "verb") {
+      w.streak        = MASTERED_STREAK;
+      w.typing_streak = MASTERED_STREAK;
+    }
     unlockCount++;
   });
   console.log(`Quick Start: unlocked ${unlockCount} words`);
 
   // Unlock all verb tenses
-  const p = loadVerbTenseProgress();
+  let p = loadVerbTenseProgress();
+  if (!p) p = ensureVerbTenseProgressInit();
   if (p && Array.isArray(LANG.tenseOrder)) {
     p.unlockedTenses = [...LANG.tenseOrder];
     saveVerbTenseProgress(p);
-    ensureVerbTenseProgressInit();
   }
+
+  // Enable verb mode dropdown options directly
+  const vm = document.getElementById("verbMatchOption") || document.querySelector('option[value="verb-match"]');
+  const vt = document.getElementById("verbTypeOption")  || document.querySelector('option[value="verb-type"]');
+  if (vm) vm.disabled = false;
+  if (vt) vt.disabled = false;
+
+  // Also unlock typing mode
+  const typingOpt = document.querySelector('option[value="typing"]');
+  if (typingOpt) typingOpt.disabled = false;
 
   save();
   buildConjugationPool();
@@ -1868,8 +1883,9 @@ function startNextRound() {
 
   const matchingMastered = allWords.filter(w => w.streak >= MASTERED_STREAK).length;
 
-  // Typing is still gated behind 20 matching-mastered
-  if (mode === "typing" && matchingMastered < 20) {
+  // Typing is gated behind 20 matching-mastered, unless Quick Start unlocked enough words
+  const quickStartActive = allWords.filter(w => w.quickStart && w.unlocked).length >= 20;
+  if (mode === "typing" && matchingMastered < 20 && !quickStartActive) {
     alert("Master 20 words in matching first!");
     document.getElementById("mode").value = "all";
     mode = "all";
