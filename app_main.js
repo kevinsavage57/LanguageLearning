@@ -1823,6 +1823,9 @@ function addQuickStartButton() {
     for (let i = 0; i < Math.min(INITIAL_POOL_SIZE, nonQS.length); i++) {
       nonQS[i].unlocked = true;
     }
+    const unlockedCount = allWords.filter(w => w.unlocked).length;
+    const qsUnlocked = allWords.filter(w => w.unlocked && w.quickStart).length;
+    console.log(`Start from Scratch: ${unlockedCount} unlocked, ${qsUnlocked} are quickStart words`);
     save();
     buildConjugationPool();
     startNextRound();
