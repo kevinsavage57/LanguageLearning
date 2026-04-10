@@ -1406,10 +1406,17 @@ fetch(`words_${LANG.id}.json`)
 
     const gistBundle = await loadFromGist();
     if (gistBundle && !gistBundle.error && gistBundle.words) {
+      // Loaded from Gist — mirror to localStorage for offline use
       savedWords = gistBundle.words;
       savedVerbTenseProgress = gistBundle.verbTenseProgress || null;
       try { localStorage.setItem(`progress_${LANG.id}`, JSON.stringify(gistBundle)); } catch (_) {}
+    } else if (gistConfigured()) {
+      // Gist is configured but returned no progress for this profile — new profile on existing device.
+      // Do NOT fall back to localStorage (it may contain a different user's progress).
+      // Clear any stale localStorage progress so it doesn't bleed into this profile.
+      try { localStorage.removeItem(`progress_${LANG.id}`); } catch (_) {}
     } else {
+      // Gist not configured — use localStorage as normal (single user, no sync)
       const saved = localStorage.getItem(`progress_${LANG.id}`);
       if (saved) {
         const parsed = JSON.parse(saved);
