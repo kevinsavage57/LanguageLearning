@@ -1796,6 +1796,7 @@ function activateQuickStart() {
     p.unlockedTenses = [...LANG.tenseOrder];
     saveVerbTenseProgress(p);
   }
+  refreshTenseSelector();
 
   // Enable verb mode dropdown options directly
   const vm = document.getElementById("verbMatchOption") || document.querySelector('option[value="verb-match"]');
@@ -3026,4 +3027,4 @@ function routeModeChange() {
 }
 
 levelSelect.onchange = routeModeChange;
-modeSelect.onchange = routeModeChange;
+modeSelect.onchange = routeModeChange;s
