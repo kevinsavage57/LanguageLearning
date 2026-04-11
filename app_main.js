@@ -1000,6 +1000,7 @@ function isIrregularInTense(verbWord, tense) {
     "imperfect":             "imperfect",
     "future":                "future",
     "conditional":           "conditional",
+    "present_perfect":       "present_perfect",
     "present_subjunctive":   "present_subjunctive",
     "imperative_affirmative":"imperative_affirmative",
     "imperative_negative":   "imperative_negative",
@@ -2302,17 +2303,10 @@ function handleVerbTypingSubmit() {
         out.add(LANG.normalizeAnswer(currentTarget.replace(/ \((formal|informal)\)$/i, "")));
         for (const pronoun of pronounVariants) {
           if (verbObj) {
-            // Use englishForAll to generate one form per slash-separated English alternate
-            // e.g. hacer "to do/make" → ["he did", "he made"] so both are accepted.
-            // Falls back to englishFor if englishForAll is not available (older lang files).
-            const generatedForms = LANG.englishForAll
-              ? LANG.englishForAll(verbObj, currentWord.tense, pronoun)
-              : [englishFor(verbObj, currentWord.tense, pronoun)];
-            for (const generated of generatedForms) {
-              out.add(LANG.normalizeAnswer(generated));
-              // Also accept without formality tag
-              out.add(LANG.normalizeAnswer(generated.replace(/ \((formal|informal)\)$/i, "")));
-            }
+            const generated = englishFor(verbObj, currentWord.tense, pronoun);
+            out.add(LANG.normalizeAnswer(generated));
+            // Also accept without formality tag
+            out.add(LANG.normalizeAnswer(generated.replace(/ \((formal|informal)\)$/i, "")));
           }
         }
         return Array.from(out).filter(Boolean);
