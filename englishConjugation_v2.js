@@ -379,7 +379,17 @@ function conjugateMainVerb(head, tail, tenseKey, personInfo) {
   }
 
   if (t === "present_subjunctive") {
-    // English subjunctive in "that ..." clauses typically uses base form
+    // Use present indicative conjugation with "that" framing.
+    // The formal English subjunctive (bare form: "that he need") is grammatically
+    // correct but sounds unnatural to most learners. Present indicative forms
+    // ("that he needs", "that they are") are more natural and useful for practice.
+    if (base.toLowerCase() === "be") {
+      const pro = personInfo.pronoun.toLowerCase();
+      if (pro === "i") return "am" + tail;
+      if (personInfo.plural) return "are" + tail;
+      return personInfo.is3s ? "is" + tail : "are" + tail;
+    }
+    if (personInfo.is3s) return thirdPersonSingular(base) + tail;
     return base + tail;
   }
 
