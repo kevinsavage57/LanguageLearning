@@ -3,7 +3,6 @@
 //
 // Exports:
 //   - englishFor(verbObj, tenseKey, personKey)
-//   - englishForAll(verbObj, tenseKey, personKey)   ← NEW: returns array of all slash-variant forms
 //   - normalizeEnglishInfinitive(rawEnglish)   (helpful for debugging)
 //
 // Goals:
@@ -12,7 +11,6 @@
 // - Handle phrasal verbs ("to wake up")
 // - Preserve clarification suffixes like "(state/location)" in output
 // - Keep behavior compatible with your existing tense keys
-// - Accept ALL slash-separated English alternates (e.g. hacer "to do/make" → "he did" AND "he made")
 
 // Split a string by a separator, but do not split inside parentheses.
 // Example: "raise (children/animals)/lift" split by "/" => ["raise (children/animals)", "lift"]
@@ -373,6 +371,13 @@ function conjugateMainVerb(head, tail, tenseKey, personInfo) {
   if (t === "future") return "will " + base + tail;
   if (t === "conditional") return "would " + base + tail;
 
+  if (t === "present_perfect") {
+    // have/has + past participle
+    const aux = personInfo.is3s ? "has" : "have";
+    const pp = pastParticiple(base);
+    return aux + " " + pp + tail;
+  }
+
   if (t === "present_subjunctive") {
     // English subjunctive in "that ..." clauses typically uses base form
     return base + tail;
@@ -420,64 +425,28 @@ function applyYouTag(result, personInfo) {
   return r;
 }
 
-// ---------- Internal: build one conjugated phrase from a pre-parsed head/tail ----------
-
-function _buildPhrase(head, tail, tenseKey, personInfo) {
-  const t = (tenseKey ?? "").toString();
-  if (t === "imperative_affirmative" || t === "imperative_negative") {
-    return conjugateMainVerb(head, tail, t, personInfo);
-  }
-  if (t === "present_subjunctive") {
-    const main = conjugateMainVerb(head, tail, t, personInfo);
-    return applyYouTag("that " + personInfo.pronoun + " " + main, personInfo);
-  }
-  const main = conjugateMainVerb(head, tail, t, personInfo);
-  return applyYouTag(personInfo.pronoun + " " + main, personInfo);
-}
-
 // Public API used by app.js
 export function englishFor(verbObj, tenseKey, personKey) {
   const list = getVerbEnglishList(verbObj);
   const englishInf = list[0] ?? ""; // game uses first gloss as canonical
   const { head, tail } = parseInfinitiveToHeadTail(englishInf);
   const personInfo = personToPronoun(personKey);
-  return _buildPhrase(head, tail, tenseKey, personInfo);
-}
 
-// Like englishFor(), but returns an array of ALL accepted conjugated forms —
-// one per slash-separated English alternate in the verb's `en` / `english` field.
-//
-// Example: hacer  en="to do/make"  preterite  él  →  ["he did", "he made"]
-// Example: hablar en="to speak"    preterite  yo  →  ["I spoke"]   (single-element array)
-//
-// Use this in buildForPerson() so that answers like "he made" are accepted for hizo.
-export function englishForAll(verbObj, tenseKey, personKey) {
-  const list = getVerbEnglishList(verbObj);
-  const rawInf = list[0] ?? "";
+  const t = (tenseKey ?? "").toString();
 
-  // Split the raw infinitive on slashes (outside parentheses) to get all alternates.
-  const raw = normSpace(rawInf);
-  const options = splitOutsideParens(raw, "/").map(x => normSpace(x)).filter(Boolean);
-
-  const personInfo = personToPronoun(personKey);
-  const results = new Set();
-
-  for (let opt of options) {
-    // Ensure each option has a "to " prefix before parsing head/tail.
-    if (!/^to\s+/i.test(opt)) opt = "to " + opt;
-    const { head, tail } = parseInfinitiveToHeadTail(opt);
-    if (!head) continue;
-    const phrase = _buildPhrase(head, tail, tenseKey, personInfo);
-    if (phrase) results.add(phrase);
+  // Imperatives: omit subject, keep tail — no formality tag needed
+  if (t === "imperative_affirmative" || t === "imperative_negative") {
+    return conjugateMainVerb(head, tail, t, personInfo);
   }
 
-  // Always fall back to at least the single englishFor result.
-  if (results.size === 0) {
-    const fallback = englishFor(verbObj, tenseKey, personKey);
-    if (fallback) results.add(fallback);
+  // Subjunctive prompt: "that + subject + base"
+  if (t === "present_subjunctive") {
+    const main = conjugateMainVerb(head, tail, t, personInfo);
+    return applyYouTag("that " + personInfo.pronoun + " " + main, personInfo);
   }
 
-  return Array.from(results);
+  const main = conjugateMainVerb(head, tail, t, personInfo);
+  return applyYouTag(personInfo.pronoun + " " + main, personInfo);
 }
 
 
@@ -487,14 +456,5 @@ export function debugEnglishConjugation(englishInfinitive, tenseKey) {
   const persons = ["yo","tú","3s","nosotros","vosotros","3p"];
   const out = {};
   for (const p of persons) out[p] = englishFor(fakeVerb, tenseKey, p);
-  return out;
-}
-
-// Debug helper: like debugEnglishConjugation but shows ALL slash-variant forms per person.
-export function debugEnglishConjugationAll(englishInfinitive, tenseKey) {
-  const fakeVerb = { english: [englishInfinitive] };
-  const persons = ["yo","tú","3s","nosotros","vosotros","3p"];
-  const out = {};
-  for (const p of persons) out[p] = englishForAll(fakeVerb, tenseKey, p);
   return out;
 }
