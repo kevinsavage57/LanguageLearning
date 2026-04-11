@@ -2116,7 +2116,8 @@ function startVerbTyping() {
 
 function showNextVerbTyping() {
   if (currentIndex >= currentRound.length) {
-    setTimeout(startVerbTyping, 1000);
+    const isMixed = modeSelect.value === "mixed-mode";
+    setTimeout(isMixed ? startMixedRound : startVerbTyping, 1000);
     return;
   }
 
@@ -2535,7 +2536,8 @@ function renderTyping() {
 
 function showNextTyping() {
   if (currentIndex >= currentRound.length) {
-    setTimeout(startNextRound, 1000);
+    const isMixed = modeSelect.value === "mixed-mode";
+    setTimeout(isMixed ? startMixedRound : startNextRound, 1000);
     return;
   }
 
@@ -2760,7 +2762,8 @@ if (sameEntry || sameSourceSurface || englishOverlap || sameVerbMeaning) {
     const mode = modeSelect.value;
 setTimeout(() => {
   hideIrregularVerbPanel();
-  if (mode === "verb-match") startVerbMatching();
+  if (mode === "mixed-mode") startMixedRound();
+  else if (mode === "verb-match") startVerbMatching();
   else startNextRound();
 }, 600);
 
@@ -3019,6 +3022,11 @@ function routeModeChange() {
   updateTenseSelectorVisibility();
 
   updateFilterVisibility();
+  if (mode === "mixed-mode") {
+    startMixedRound();
+    return;
+  }
+
   if (mode === "verb-match") {
     startVerbMatching();
     return;
@@ -3031,6 +3039,112 @@ function routeModeChange() {
 
   // default: word modes
   startNextRound();
+}
+
+// ── Mixed Mode ──────────────────────────────────────────────────────────────
+// Randomly picks from all modes (weighted), skipping modes with empty pools.
+
+const MIXED_MODE_WEIGHTS = [
+  { mode: "all",        weight: 5   },   // Matching
+  { mode: "typing",     weight: 4.5 },   // Typing
+  { mode: "verb-match", weight: 3.5 },   // Verb Matching
+  { mode: "review",     weight: 2   },   // Review
+  { mode: "verb-type",  weight: 1   },   // Verb Typing
+];
+
+function mixedModeHasPool(mode) {
+  const level = document.getElementById("level").value;
+  const matchingMastered = allWords.filter(w => w.streak >= MASTERED_STREAK).length;
+  const quickStartActive = allWords.filter(w => w.quickStart && w.unlocked).length >= 20;
+
+  if (mode === "all") {
+    const pool = allWords.filter(w => {
+      if (level === "all") return true;
+      if (level === "verbs") return isVerbInfinitiveWord(w);
+      return w.level === level;
+    }).filter(w => w.streak < MASTERED_STREAK);
+    return pool.length > 0;
+  }
+
+  if (mode === "typing") {
+    if (matchingMastered < 20 && !quickStartActive) return false;
+    const pool = allWords.filter(w => {
+      if (level === "all") return true;
+      if (level === "verbs") return isVerbInfinitiveWord(w);
+      return w.level === level;
+    }).filter(w => quickStartActive
+      ? (w.unlocked && !isTypingMasteredWord(w))
+      : (w.streak >= MASTERED_STREAK && !isTypingMasteredWord(w))
+    );
+    return pool.length > 0;
+  }
+
+  if (mode === "review") {
+    const pool = allWords.filter(w => {
+      if (level === "all") return true;
+      if (level === "verbs") return isVerbInfinitiveWord(w);
+      return w.level === level;
+    }).filter(w => w.streak >= MASTERED_STREAK);
+    return pool.length > 0;
+  }
+
+  if (mode === "verb-match") {
+    const selectedTenses = getSelectedVerbTenses();
+    const pool = conjugations.filter(c => selectedTenses.includes(c.tense) && c.matchStreak < MASTERED_STREAK);
+    return pool.length > 0;
+  }
+
+  if (mode === "verb-type") {
+    const selectedTenses = getSelectedVerbTenses();
+    const pool = conjugations.filter(c => selectedTenses.includes(c.tense) && c.typeStreak < MASTERED_STREAK);
+    return pool.length > 0;
+  }
+
+  return false;
+}
+
+function pickMixedMode() {
+  // Filter to modes that have available words, then weighted random pick
+  const available = MIXED_MODE_WEIGHTS.filter(m => mixedModeHasPool(m.mode));
+  if (available.length === 0) return null;
+
+  const totalWeight = available.reduce((sum, m) => sum + m.weight, 0);
+  let r = Math.random() * totalWeight;
+  for (const m of available) {
+    r -= m.weight;
+    if (r <= 0) return m.mode;
+  }
+  return available[available.length - 1].mode;
+}
+
+function startMixedRound() {
+  const picked = pickMixedMode();
+  if (!picked) {
+    alert("No words available for any mode. Try changing settings or resetting progress.");
+    return;
+  }
+
+  // Show tense selector only if a verb mode was picked
+  const isVerbMode = picked === "verb-match" || picked === "verb-type";
+  if (tenseSelect) {
+    const wrapper = tenseSelect.closest(".control") || tenseSelect.parentElement;
+    if (wrapper) wrapper.style.display = isVerbMode ? "" : "none";
+  }
+  const endingsBtn = document.getElementById("showEndingsBtn");
+  if (endingsBtn) endingsBtn.style.display = isVerbMode ? "" : "none";
+
+  if (picked === "verb-match") {
+    startVerbMatching();
+  } else if (picked === "verb-type") {
+    startVerbTyping();
+  } else {
+    // Temporarily set the mode value so startNextRound reads the right mode,
+    // then restore it to mixed-mode afterward.
+    const realMode = modeSelect.value;
+    modeSelect.value = picked;
+    startNextRound();
+    modeSelect.value = realMode;
+  }
 }
 
 levelSelect.onchange = routeModeChange;
