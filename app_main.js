@@ -1527,6 +1527,9 @@ function initWords(data) {
       entry.overrides     = raw.overrides     ?? {};
       entry.stemOverrides = raw.stemOverrides ?? {};
       entry.irregularTags = raw.irregularTags ?? [];
+      entry.reflexive     = raw.reflexive;
+      entry.aux           = raw.aux;
+      entry.pastParticiple = raw.pastParticiple;
     }
     // Preserve quickStart flag from JSON
     if (raw.quickStart) entry.quickStart = true;
@@ -1571,6 +1574,9 @@ function mergeProgress(savedWords, freshData) {
       base.overrides     = raw.overrides     ?? {};
       base.stemOverrides = raw.stemOverrides ?? {};
       base.irregularTags = raw.irregularTags ?? [];
+      base.reflexive     = raw.reflexive;
+      base.aux           = raw.aux;
+      base.pastParticiple = raw.pastParticiple;
     }
 
     if (saved) {
