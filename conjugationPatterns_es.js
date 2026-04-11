@@ -22,6 +22,14 @@ export const CONJUGATION_PATTERNS = {
       endings: { yo: "ía", tú: "ías", él: "ía", nosotros: "íamos", vosotros: "íais", ellos: "ían" }
     },
 
+    // Compound: present perfect (haber present + past participle)
+    present_perfect: {
+      stemType: "compound_perfect",
+      auxiliary: "haber",
+      auxiliaryTense: "present",
+      participleEnding: "ado"
+    },
+
     // Subjunctive (present): based on "yo" present indicative minus final "o"
     present_subjunctive: {
       stemType: "yo_present_minus_o",
@@ -61,6 +69,14 @@ export const CONJUGATION_PATTERNS = {
       endings: { yo: "ía", tú: "ías", él: "ía", nosotros: "íamos", vosotros: "íais", ellos: "ían" }
     },
 
+    // Compound: present perfect (haber present + past participle)
+    present_perfect: {
+      stemType: "compound_perfect",
+      auxiliary: "haber",
+      auxiliaryTense: "present",
+      participleEnding: "ido"
+    },
+
     present_subjunctive: {
       stemType: "yo_present_minus_o",
       endings: { yo: "a", tú: "as", él: "a", nosotros: "amos", vosotros: "áis", ellos: "an" }
@@ -96,6 +112,14 @@ export const CONJUGATION_PATTERNS = {
     conditional: {
       stemType: "infinitive",
       endings: { yo: "ía", tú: "ías", él: "ía", nosotros: "íamos", vosotros: "íais", ellos: "ían" }
+    },
+
+    // Compound: present perfect (haber present + past participle)
+    present_perfect: {
+      stemType: "compound_perfect",
+      auxiliary: "haber",
+      auxiliaryTense: "present",
+      participleEnding: "ido"
     },
 
     present_subjunctive: {
