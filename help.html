@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>How to Play — Language Learning Game</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;700&display=swap');
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #faf8f4;
+      --surface:   #ffffff;
+      --ink:       #1a1714;
+      --ink-soft:  #5a534a;
+      --accent:    #c0562a;
+      --accent-lt: #f5ede7;
+      --teal:      #2a7c6f;
+      --teal-lt:   #e4f2f0;
+      --gold:      #b08a2e;
+      --gold-lt:   #fdf4dc;
+      --border:    #e8e2d8;
+      --radius:    10px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.65;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    .page-header {
+      background: var(--ink);
+      color: #fff;
+      padding: 40px 24px 32px;
+      text-align: center;
+      position: relative;
+    }
+
+    .page-header .flags {
+      font-size: 28px;
+      letter-spacing: 6px;
+      margin-bottom: 12px;
+    }
+
+    .page-header h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(22px, 5vw, 34px);
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .page-header p {
+      color: #bbb;
+      font-size: 14px;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    .back-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 20px;
+      padding: 8px 18px;
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 999px;
+      font-size: 13px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .back-btn:hover { background: rgba(255,255,255,0.22); }
+    .back-btn svg { width:14px; height:14px; }
+
+    /* ── Nav pills ── */
+    .toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      padding: 20px 24px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .toc a {
+      padding: 5px 14px;
+      border-radius: 999px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--ink-soft);
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .toc a:hover {
+      background: var(--accent-lt);
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* ── Main layout ── */
+    .page-body {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 40px 24px 80px;
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 52px;
+      scroll-margin-top: 70px;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-family: 'Lora', serif;
+      font-size: clamp(19px, 4vw, 26px);
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      color: var(--ink);
+    }
+
+    p { color: var(--ink-soft); margin-bottom: 12px; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── Start cards ── */
+    .start-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 500px) {
+      .start-cards { grid-template-columns: 1fr; }
+    }
+
+    .start-card {
+      border-radius: var(--radius);
+      padding: 20px;
+      border: 1.5px solid var(--border);
+    }
+
+    .start-card.qs {
+      background: var(--accent-lt);
+      border-color: #e0a080;
+    }
+
+    .start-card.scratch {
+      background: var(--teal-lt);
+      border-color: #9accc5;
+    }
+
+    .start-card .card-icon {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .start-card h3 {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .start-card p {
+      font-size: 13.5px;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* ── Mode cards ── */
+    .mode-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .mode-card {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+    }
+
+    .mode-card .mode-icon {
+      font-size: 26px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .mode-card h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    .mode-card p {
+      font-size: 13.5px;
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 999px;
+      margin-left: 6px;
+      vertical-align: middle;
+      background: var(--gold-lt);
+      color: var(--gold);
+      border: 1px solid #e8d090;
+    }
+
+    /* ── Progress steps ── */
+    .progress-steps {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .step {
+      display: flex;
+      gap: 16px;
+      position: relative;
+    }
+
+    .step:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: 18px;
+      top: 40px;
+      bottom: 0;
+      width: 2px;
+      background: var(--border);
+    }
+
+    .step-num {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      flex-shrink: 0;
+      z-index: 1;
+    }
+
+    .step-body {
+      padding-bottom: 28px;
+    }
+
+    .step-body h3 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 4px;
+      padding-top: 8px;
+    }
+
+    .step-body p {
+      font-size: 13.5px;
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    /* ── Tense chain ── */
+    .tense-chain {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 6px;
+      margin: 18px 0 8px;
+    }
+
+    .tense-pill {
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .tense-arrow {
+      color: var(--border);
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    /* ── Info boxes ── */
+    .info-box {
+      border-radius: var(--radius);
+      padding: 16px 20px;
+      margin-top: 16px;
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    .info-box.tip {
+      background: var(--gold-lt);
+      border-left: 3px solid var(--gold);
+      color: #5a4810;
+    }
+
+    .info-box.note {
+      background: var(--teal-lt);
+      border-left: 3px solid var(--teal);
+      color: #1a4a43;
+    }
+
+    .info-box strong { font-weight: 700; }
+
+    /* ── Language grid ── */
+    .lang-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 440px) {
+      .lang-grid { grid-template-columns: 1fr; }
+    }
+
+    .lang-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 18px 20px;
+      text-align: center;
+    }
+
+    .lang-card .lang-flag { font-size: 36px; margin-bottom: 8px; }
+    .lang-card h3 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .lang-card p { font-size: 13px; margin: 0; }
+
+    /* ── Divider ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0 0 52px;
+    }
+
+    /* ── Footer ── */
+    .page-footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 12px;
+      color: #aaa;
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <div class="flags">🇪🇸 🇮🇹</div>
+    <h1>How to Play</h1>
+    <p>A quick guide to all game modes, how words unlock, and how your progress is tracked.</p>
+    <a class="back-btn" href="javascript:history.back()">
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M10 3L5 8l5 5"/>
+      </svg>
+      Back to Game
+    </a>
+  </header>
+
+  <nav class="toc" aria-label="Page sections">
+    <a href="#getting-started">Getting Started</a>
+    <a href="#modes">Game Modes</a>
+    <a href="#progression">Progression</a>
+    <a href="#verb-tenses">Verb Tenses</a>
+    <a href="#sync">Saving Progress</a>
+    <a href="#languages">Languages</a>
+  </nav>
+
+  <div class="page-body">
+
+    <!-- ── GETTING STARTED ── -->
+    <section id="getting-started">
+      <span class="section-label">First launch</span>
+      <h2>Getting Started</h2>
+      <p>The first time you open the app you'll be asked how you'd like to begin. Choose the option that fits your experience level.</p>
+
+      <div class="start-cards">
+        <div class="start-card qs">
+          <div class="card-icon">⚡</div>
+          <h3>Quick Start</h3>
+          <p>Unlocks ~200 of the most common words immediately. All game modes and every verb tense are available from the start. Best if you have some prior experience with the language.</p>
+        </div>
+        <div class="start-card scratch">
+          <div class="card-icon">🌱</div>
+          <h3>Start from Scratch</h3>
+          <p>Begins with 25 words and Matching only. New modes and words unlock gradually as you play. Best for complete beginners who want a structured, step-by-step progression.</p>
+        </div>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ── GAME MODES ── -->
+    <section id="modes">
+      <span class="section-label">Playing</span>
+      <h2>Game Modes</h2>
+      <p>Select a mode from the dropdown in the top bar. Some modes start locked and unlock as you progress.</p>
+
+      <div class="mode-list">
+
+        <div class="mode-card">
+          <div class="mode-icon">🔗</div>
+          <div>
+            <h3>Matching</h3>
+            <p>Five word pairs appear in two shuffled columns. Click one word on each side to match them. A correct pair disappears; a wrong guess flashes and deselects. Finish all five to advance. Words you find harder or haven't seen recently appear more often.</p>
+          </div>
+        </div>
+
+        <div class="mode-card">
+          <div class="mode-icon">🔁</div>
+          <div>
+            <h3>Review Only</h3>
+            <p>The same as Matching, but limited to words you've already mastered. Good for keeping vocabulary fresh without mixing in new material.</p>
+          </div>
+        </div>
+
+        <div class="mode-card">
+          <div class="mode-icon">⌨️</div>
+          <div>
+            <h3>Typing Game <span class="badge">Unlocks at 20 mastered</span></h3>
+            <p>A word appears and you type its translation. Accent buttons are shown below the input for special characters. If you used Quick Start, Typing draws from all your unlocked words. If you started from scratch, it only draws from words you've already matching-mastered.</p>
+          </div>
+        </div>
+
+        <div class="mode-card">
+          <div class="mode-icon">🧩</div>
+          <div>
+            <h3>Verb Matching <span class="badge">Unlocks later</span></h3>
+            <p>Like Matching, but with conjugated verb forms instead of vocabulary. Match the conjugated form to its English prompt. A conjugation endings reference table is available during play.</p>
+          </div>
+        </div>
+
+        <div class="mode-card">
+          <div class="mode-icon">✍️</div>
+          <div>
+            <h3>Verb Typing <span class="badge">Unlocks later</span></h3>
+            <p>A conjugated verb form is shown and you type the English translation (or vice versa). Multiple valid English answers are accepted — for example, both <em>"he did"</em> and <em>"he made"</em> are correct for <em>hizo</em>.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="info-box tip">
+        <strong>When do Verb modes unlock?</strong> Both Verb Matching and Verb Typing become available once at least one verb infinitive has been fully mastered — meaning you've reached a 4-correct streak both in Matching and Typing for that verb.
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ── PROGRESSION ── -->
+    <section id="progression">
+      <span class="section-label">How it works</span>
+      <h2>Progression &amp; Mastery</h2>
+
+      <div class="progress-steps">
+
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <h3>Active pool of 25 words</h3>
+            <p>At any time, 25 words are in active rotation. As you master words they leave the pool and new ones enter, so the game stays focused without overwhelming you.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <h3>Matching mastery</h3>
+            <p>A word becomes <strong>matching-mastered</strong> after 4 correct matches in a row. Each time a word is mastered, one new word is automatically added to your pool.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <h3>Typing mastery</h3>
+            <p>A word becomes <strong>typing-mastered</strong> after 4 correct typed answers in a row. For gendered nouns, you need to correctly type both the singular and plural forms. Each typing-mastered word also adds a new word to your pool.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <h3>Decay keeps things fresh</h3>
+            <p>If you haven't practiced a word in 7 days, it becomes more likely to appear — but your streak isn't reset. Decay just nudges forgotten words back into view.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="info-box note">
+        <strong>Level filter:</strong> Use the level selector (A1 → B2) to focus on a specific difficulty, or choose <strong>Verbs Only</strong> to practice verb infinitives exclusively. The pool and unlock logic respect whichever filter is active.
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ── VERB TENSES ── -->
+    <section id="verb-tenses">
+      <span class="section-label">Conjugation modes</span>
+      <h2>Verb Tenses</h2>
+      <p>Verb modes start with the Present tense only. Each tense unlocks the next once you've answered it correctly <strong>10 times across all grammatical persons</strong>. A notification appears each time a new tense opens up.</p>
+
+      <div class="tense-chain">
+        <span class="tense-pill">Present</span>
+        <span class="tense-arrow">→</span>
+        <span class="tense-pill">Preterite</span>
+        <span class="tense-arrow">→</span>
+        <span class="tense-pill">Imperfect</span>
+        <span class="tense-arrow">→</span>
+        <span class="tense-pill">Future</span>
+        <span class="tense-arrow">→</span>
+        <span class="tense-pill">Conditional</span>
+        <span class="tense-arrow">→</span>
+        <span class="tense-pill">Subjunctive</span>
+        <span class="tense-arrow">→</span>
+        <span class="tense-pill">Imperative +</span>
+        <span class="tense-arrow">→</span>
+        <span class="tense-pill">Imperative −</span>
+      </div>
+
+      <div class="info-box tip">
+        <strong>Mixed mode:</strong> Once you've unlocked two or more tenses, a <strong>Mixed</strong> option appears in the tense selector so you can practice all unlocked tenses together in the same session.
+      </div>
+
+      <div class="info-box note" style="margin-top:12px;">
+        <strong>Quick Start shortcut:</strong> Choosing Quick Start at launch unlocks all tenses immediately — no need to progress through them one by one.
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ── SAVING PROGRESS ── -->
+    <section id="sync">
+      <span class="section-label">Your data</span>
+      <h2>Saving Progress</h2>
+      <p>Progress is saved automatically to your browser's local storage every time you answer a question, so nothing is lost if you close the tab.</p>
+      <p>To sync across multiple devices, connect a <strong>GitHub Gist</strong> from the settings panel. Enter a profile name and password — your password is never stored, only a secure hash. The same Gist can hold up to <strong>5 separate profiles</strong>, so multiple people can share one setup. Progress is stored independently per language and per profile.</p>
+      <p>You can also use the settings panel to <strong>import or export</strong> a progress file if you want a manual backup or to transfer between accounts.</p>
+    </section>
+
+    <hr>
+
+    <!-- ── LANGUAGES ── -->
+    <section id="languages">
+      <span class="section-label">Supported languages</span>
+      <h2>Languages</h2>
+      <p>Use the language selector in the top bar to switch languages at any time. Progress is tracked separately for each language within the same profile.</p>
+
+      <div class="lang-grid">
+        <div class="lang-card">
+          <div class="lang-flag">🇪🇸</div>
+          <h3>Spanish</h3>
+          <p>Full vocabulary list and verb conjugation support across all tenses.</p>
+        </div>
+        <div class="lang-card">
+          <div class="lang-flag">🇮🇹</div>
+          <h3>Italian</h3>
+          <p>Full vocabulary list and verb conjugation support across all tenses.</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer class="page-footer">
+    Language Learning Game &nbsp;·&nbsp; <a href="javascript:history.back()" style="color:inherit;">Back to Game</a>
+  </footer>
+
+</body>
+</html>
