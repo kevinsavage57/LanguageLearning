@@ -1587,6 +1587,7 @@ function mergeProgress(savedWords, freshData) {
         noun_typing_singular_ok: saved.noun_typing_singular_ok ?? false,
         noun_typing_plural_ok:   saved.noun_typing_plural_ok   ?? false,
         unlocked:                saved.unlocked                ?? false,
+        quickStartUnlocked:      saved.quickStartUnlocked      ?? false,
       };
     }
 
