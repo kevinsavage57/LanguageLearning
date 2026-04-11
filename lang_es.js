@@ -5,7 +5,7 @@
 // then load it via ?lang=XX in the URL.
 
 import { CONJUGATION_PATTERNS } from "./conjugationPatterns_es.js";
-import { englishFor, englishForAll } from "./englishConjugation_v2.js";
+import { englishFor } from "./englishConjugation_v2.js";
 
 // ─── Tense ordering and display ──────────────────────────────────────────────
 
@@ -15,6 +15,7 @@ const TENSE_ORDER = [
   "imperfect",
   "future",
   "conditional",
+  "present_perfect",
   "present_subjunctive",
   "imperative_affirmative",
   "imperative_negative"
@@ -27,6 +28,7 @@ function formatTenseLabel(tenseKey) {
     imperfect:              "Imperfect (Indicative)",
     future:                 "Future (Indicative)",
     conditional:            "Conditional",
+    present_perfect:        "Present Perfect (Indicative)",
     present_subjunctive:    "Present (Subjunctive)",
     imperative_affirmative: "Imperative (Affirmative)",
     imperative_negative:    "Imperative (Negative)"
@@ -344,6 +346,11 @@ function buildEndingsTableHTML(tense, showHeader) {
   const isImperativeAff = tense === "imperative_affirmative";
   const isImperativeNeg = tense === "imperative_negative";
 
+  // Compound tense detection: check if any group defines this tense as compound_perfect
+  const isCompound = ["ar", "er", "ir"].some(g =>
+    CONJUGATION_PATTERNS[g]?.[tense]?.stemType === "compound_perfect"
+  );
+
   const TU = "t\u00fa"; // tú
   const EL = "\u00e9l"; // él
 
@@ -368,10 +375,58 @@ function buildEndingsTableHTML(tense, showHeader) {
     imperfect:              "Endings attach to the <strong>verb stem</strong>. -er and -ir share the same endings.",
     future:                 "Endings attach to the <strong>full infinitive</strong>.",
     conditional:            "Endings attach to the <strong>full infinitive</strong>.",
+    present_perfect:        "Compound tense: <strong>haber</strong> (present) + <strong>past participle</strong> (-ado for -ar, -ido for -er/-ir).",
     present_subjunctive:    "Based on the <strong>yo present indicative stem</strong> (minus -o). -er/-ir share endings.",
     imperative_affirmative: "tú = él present; usted/ustedes/nosotros = present subj.; vosotros = infinitive -r +d.",
     imperative_negative:    "Use <strong>no</strong> + the <strong>present subjunctive</strong> form for all persons."
   };
+
+  // ── Compound tense table (different layout: auxiliary + participle) ──
+  if (isCompound) {
+    const pat = CONJUGATION_PATTERNS.ar?.[tense]; // all groups share the same auxiliary
+    const auxVerb = pat?.auxiliary || "haber";
+
+    // Look up auxiliary verb's overrides to get its conjugated forms
+    // We read from the CONJUGATION_PATTERNS data for the auxiliary's tense
+    const auxTense = pat?.auxiliaryTense || "present";
+    const auxForms = {
+      yo: "he", [TU]: "has", [EL]: "ha",
+      nosotros: "hemos", vosotros: "habéis", ellos: "han"
+    };
+
+    const participleEndings = {
+      ar: CONJUGATION_PATTERNS.ar?.[tense]?.participleEnding || "ado",
+      er: CONJUGATION_PATTERNS.er?.[tense]?.participleEnding || "ido",
+      ir: CONJUGATION_PATTERNS.ir?.[tense]?.participleEnding || "ido",
+    };
+
+    const rows = persons.map(person => {
+      const aux = auxForms[person] || "—";
+      return `<tr>
+        <td class="col-person">${personLabels[person] || person}</td>
+        <td><span class="ending-pill ar">${aux}</span></td>
+        <td><span class="ending-pill ar">-${participleEndings.ar}</span></td>
+        <td><span class="ending-pill er">-${participleEndings.er}</span></td>
+        <td><span class="ending-pill ir">-${participleEndings.ir}</span></td>
+      </tr>`;
+    }).join("");
+
+    return `
+      ${showHeader ? `<h3 style="margin:18px 0 6px;font-size:15px;color:#333;">${formatTenseLabel(tense)}</h3>` : ""}
+      <div class="endings-stem-note">${stemNotes[tense] || ""}</div>
+      <table class="endings-table">
+        <thead><tr>
+          <th class="col-person">Person</th>
+          <th><span class="ending-pill ar">${auxVerb}</span></th>
+          <th><span class="ending-pill ar">-ar</span></th>
+          <th><span class="ending-pill er">-er</span></th>
+          <th><span class="ending-pill ir">-ir</span></th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+      <div class="endings-same-note">-er and -ir share the same participle ending</div>
+    `;
+  }
 
   function getCell(group, person) {
     if (isImperativeAff) {
@@ -488,9 +543,9 @@ const ACCENT_BUTTONS = [
   { ch: "ü" }, { ch: "ñ" }, { ch: "¿" }, { ch: "¡" }
 ];
 
-// ─── englishFor / englishForAll re-export ─────────────────────────────────────
-// app_main uses englishFor for display labels and englishForAll for answer checking.
-export { englishFor, englishForAll };
+// ─── englishFor re-export ─────────────────────────────────────────────────────
+// app_main uses this to generate English conjugation display labels.
+export { englishFor };
 
 // ─── Main LANG export ─────────────────────────────────────────────────────────
 
@@ -561,6 +616,21 @@ function buildVerbForms(verb, tgtFor) {
         baseStem: stem, baseInf, subjStem, subjDef,
         buildFormFn: (t, p) => buildForm(t, p),
       });
+    } else if (def.stemType === "compound_perfect") {
+      // Compound tense: auxiliary (conjugated) + past participle
+      // 1. Get the auxiliary verb's conjugated form for this person
+      const auxForms = LANG.getAuxiliaryForms(def.auxiliary, def.auxiliaryTense);
+      const auxForm = auxForms?.[person];
+      if (!auxForm) return null;
+      // 2. Build the past participle: use verb override, or default stem + ending
+      const participle = verb.pastParticiple || (stem + def.participleEnding);
+      // 3. Assemble: for reflexive verbs, pronoun goes before the auxiliary
+      let form = `${auxForm} ${participle}`;
+      if (reflexive) {
+        const pro = getReflexivePronoun(person);
+        form = `${pro} ${form}`;
+      }
+      return form;
     } else {
       base = stem;
     }
@@ -583,9 +653,15 @@ function buildVerbForms(verb, tgtFor) {
 
   for (const tense in patterns) {
     const def = patterns[tense];
-    const endings = def.endings || def;
 
-    for (const person in endings) {
+    // Compound tenses (e.g. present_perfect) have no endings object —
+    // iterate over the standard indicative persons instead.
+    const isCompound = def.stemType === "compound_perfect";
+    const personKeys = isCompound
+      ? ["yo", "tú", "él", "nosotros", "vosotros", "ellos"]
+      : Object.keys(def.endings || def);
+
+    for (const person of personKeys) {
       const srcForm = buildForm(tense, person);
       if (!srcForm) continue;
 
@@ -593,6 +669,7 @@ function buildVerbForms(verb, tgtFor) {
       results.push(entry);
 
       // Expand él->usted, ellos->ustedes when not explicitly in pattern
+      const endings = def.endings || {};
       const expandedPersons = LANG.expandConjugationPersons(person, endings);
       for (const ep of expandedPersons) {
         if (ep !== person) {
@@ -637,7 +714,19 @@ export const LANG = {
   conjugationPatterns:     CONJUGATION_PATTERNS,
   applyOrthography,
   englishFor,
-  englishForAll,   // ← NEW: used by app_main buildForPerson() to accept all slash-variant answers
+
+  // Auxiliary verb forms for compound tenses.
+  // Returns a map of person -> conjugated auxiliary for the given auxiliary+tense.
+  // Each language overrides this with its own auxiliary verbs (haber, avoir, essere, etc.)
+  getAuxiliaryForms(auxiliary, tense) {
+    if (auxiliary === "haber" && tense === "present") {
+      return {
+        yo: "he", "tú": "has", "él": "ha",
+        nosotros: "hemos", vosotros: "habéis", ellos: "han"
+      };
+    }
+    return null;
+  },
 
   // Noun gender system
   getNounForms,
@@ -670,7 +759,7 @@ export const LANG = {
     return out;
   },
 
-  // Conjugation endings reference modal
+    // Conjugation endings reference modal
   buildEndingsTableHTML,
 
   // Conjugation engine — builds all inflected forms for one verb
