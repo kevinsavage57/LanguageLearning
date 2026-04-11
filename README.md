@@ -108,3 +108,4 @@ The app is designed to be language-agnostic. The game engine (`app_main.js`) con
 | `words_es.json` / `words_it.json` | Vocabulary and verb list with metadata for each language |
 | `style.css` | Styles |
 | `manifest.json` / `service-worker.js` | PWA support (installable on mobile) |
+| 'help.html' | User-friendly directions for use of game |
