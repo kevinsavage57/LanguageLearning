@@ -3027,4 +3027,4 @@ function routeModeChange() {
 }
 
 levelSelect.onchange = routeModeChange;
-modeSelect.onchange = routeModeChange;s
+modeSelect.onchange = routeModeChange;
