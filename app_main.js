@@ -12,6 +12,7 @@ const CONJUGATION_PATTERNS = LANG.conjugationPatterns;
 const englishFor           = LANG.englishFor;
 
 let currentVerbTypingIsEsToEn = true;
+let _mixedModeCurrentPick = null; // tracks which sub-mode mixed-mode selected
 
 const conjugationAmbiguity = new Map(); // key `${tense}|${infinitive}|${es}` => Set(person)
 const MASTERED_STREAK = 4;
@@ -3049,8 +3050,6 @@ function routeModeChange() {
 
 // ── Mixed Mode ──────────────────────────────────────────────────────────────
 // Randomly picks from all modes (weighted), skipping modes with empty pools.
-
-let _mixedModeCurrentPick = null; // tracks which sub-mode mixed-mode selected
 
 const MIXED_MODE_WEIGHTS = [
   { mode: "all",        weight: 5   },   // Matching
