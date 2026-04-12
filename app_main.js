@@ -812,7 +812,8 @@ const current = tenseSelect.value || (unlocked[0] ?? LANG.tenseOrder[0]);
 
 function updateTenseSelectorVisibility() {
   const mode = modeSelect?.value;
-  const show = mode === "verb-match" || mode === "verb-type";
+  const show = mode === "verb-match" || mode === "verb-type"
+    || _mixedModeCurrentPick === "verb-match" || _mixedModeCurrentPick === "verb-type";
 
   // Always update the button regardless of tenseSelect state
   const btn = document.getElementById("showEndingsBtn");
@@ -908,9 +909,9 @@ function placeEndingsButton() {
   btn.style.background = "#ffd54a";
   btn.style.color = "#111";
 
-  // Only show for verb modes
+  // Only show for verb modes (including when mixed-mode picks a verb sub-mode)
   const mode = (modeSelect && modeSelect.value) ? modeSelect.value : "";
-  const isVerbMode = mode === "verb-match" || mode === "verb-type";
+  const isVerbMode = mode === "verb-match" || mode === "verb-type" || _mixedModeCurrentPick === "verb-match" || _mixedModeCurrentPick === "verb-type";
   btn.style.display = isVerbMode ? "inline-flex" : "none";
 }
 
@@ -922,7 +923,8 @@ function updateEndingsButtonVisibility() {
   if (!btn) return;
 
   const mode = (modeSelect && modeSelect.value ? String(modeSelect.value) : "").toLowerCase();
-  const isVerbMode = (mode === "verb-match" || mode === "verb-type");
+  const isVerbMode = (mode === "verb-match" || mode === "verb-type")
+    || (_mixedModeCurrentPick === "verb-match" || _mixedModeCurrentPick === "verb-type");
 
   btn.style.display = isVerbMode ? "inline-block" : "none";
 }
@@ -3019,6 +3021,10 @@ function shuffle(a) {
 
 function routeModeChange() {
   const mode = modeSelect.value;
+
+  // Clear mixed-mode sub-pick when user explicitly changes mode
+  if (mode !== "mixed-mode") _mixedModeCurrentPick = null;
+
   updateTenseSelectorVisibility();
 
   updateFilterVisibility();
@@ -3043,6 +3049,8 @@ function routeModeChange() {
 
 // ── Mixed Mode ──────────────────────────────────────────────────────────────
 // Randomly picks from all modes (weighted), skipping modes with empty pools.
+
+let _mixedModeCurrentPick = null; // tracks which sub-mode mixed-mode selected
 
 const MIXED_MODE_WEIGHTS = [
   { mode: "all",        weight: 5   },   // Matching
@@ -3124,14 +3132,30 @@ function startMixedRound() {
     return;
   }
 
-  // Show tense selector only if a verb mode was picked
+  // Track the current sub-mode so other functions can detect verb modes in mixed
+  _mixedModeCurrentPick = picked;
+
   const isVerbMode = picked === "verb-match" || picked === "verb-type";
+
+  // For verb sub-modes in mixed: force tense selector to "mixed" so all unlocked
+  // tenses are used, not just whatever it was last set to.
+  if (isVerbMode && tenseSelect) {
+    // Ensure "mixed" option exists
+    const hasMixed = Array.from(tenseSelect.options).some(o => o.value === "mixed");
+    if (hasMixed) {
+      tenseSelect.value = "mixed";
+    }
+  }
+
+  // Show/hide tense selector
   if (tenseSelect) {
     const wrapper = tenseSelect.closest(".control") || tenseSelect.parentElement;
     if (wrapper) wrapper.style.display = isVerbMode ? "" : "none";
   }
+
+  // Show/hide conjugation table button
   const endingsBtn = document.getElementById("showEndingsBtn");
-  if (endingsBtn) endingsBtn.style.display = isVerbMode ? "" : "none";
+  if (endingsBtn) endingsBtn.style.display = isVerbMode ? "inline-flex" : "none";
 
   if (picked === "verb-match") {
     startVerbMatching();
