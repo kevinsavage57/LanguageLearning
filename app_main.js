@@ -1043,47 +1043,90 @@ function buildIrregularVerbTableHTML(verbObj, tenseFilter) {
     const tForms = byTense[tenseKey];
     if (!tForms) continue;
 
-    // Build irregular-form detector: bold a person's form only if that person
-    // has an explicit override AND the override differs from the regular form.
-    // This prevents regular forms stored in overrides from being incorrectly bolded.
     // Bold a form if it differs from what the regular conjugation formula produces.
-    // requiredPersonsForTense returns canonical keys "3s"/"3p"; the endings tables
-    // use "él"/"ellos", so we map before lookup.
-    const _endingKey  = p => p === "3s" ? "él"    : p === "3p" ? "ellos" : p;
-    const _reflexKey  = p => p === "3s" ? "él"    : p === "3p" ? "ellos" : p;
+    // For tenses where we can't compute a regular form (imperatives, compounds),
+    // fall back to bolding any person that has an explicit override.
+    const isItalian = verbObj.group === "are" || verbObj.group === "ere" ||
+                      verbObj.group === "ire"  || verbObj.group === "ire_isc";
+    // requiredPersonsForTense returns canonical keys "3s"/"3p"; map to the right
+    // key for each language's endings table.
+    const _endingKey = p => p === "3s" ? (isItalian ? "3s" : "él")
+                          : p === "3p" ? (isItalian ? "3p" : "ellos")
+                          : p;
+    const _reflexKey  = p => p === "3s" ? "él" : p === "3p" ? "ellos" : p;
     const _reflexPros = { yo:"me", tú:"te", él:"se", nosotros:"nos", vosotros:"os", ellos:"se" };
 
     const _regularEndings = {
+      // ── Spanish ────────────────────────────────────────────────────────────
       ar: {
-        present:     { yo:"o",   tú:"as",   él:"a",   nosotros:"amos",   vosotros:"áis",    ellos:"an"    },
-        preterite:   { yo:"é",   tú:"aste",  él:"ó",   nosotros:"amos",   vosotros:"asteis", ellos:"aron"  },
-        imperfect:   { yo:"aba", tú:"abas",  él:"aba", nosotros:"ábamos", vosotros:"abais",  ellos:"aban"  },
-        future:      { yo:"é",   tú:"ás",    él:"á",   nosotros:"emos",   vosotros:"éis",    ellos:"án"    },
-        conditional: { yo:"ía",  tú:"ías",   él:"ía",  nosotros:"íamos",  vosotros:"íais",   ellos:"ían"   },
+        present:              { yo:"o",   tú:"as",   él:"a",   nosotros:"amos",   vosotros:"áis",    ellos:"an"    },
+        preterite:            { yo:"é",   tú:"aste",  él:"ó",   nosotros:"amos",   vosotros:"asteis", ellos:"aron"  },
+        imperfect:            { yo:"aba", tú:"abas",  él:"aba", nosotros:"ábamos", vosotros:"abais",  ellos:"aban"  },
+        future:               { yo:"é",   tú:"ás",    él:"á",   nosotros:"emos",   vosotros:"éis",    ellos:"án"    },
+        conditional:          { yo:"ía",  tú:"ías",   él:"ía",  nosotros:"íamos",  vosotros:"íais",   ellos:"ían"   },
+        present_subjunctive:  { yo:"e",   tú:"es",    él:"e",   nosotros:"emos",   vosotros:"éis",    ellos:"en"    },
       },
       er: {
-        present:     { yo:"o",   tú:"es",   él:"e",   nosotros:"emos",   vosotros:"éis",    ellos:"en"    },
-        preterite:   { yo:"í",   tú:"iste",  él:"ió",  nosotros:"imos",   vosotros:"isteis", ellos:"ieron" },
-        imperfect:   { yo:"ía",  tú:"ías",   él:"ía",  nosotros:"íamos",  vosotros:"íais",   ellos:"ían"   },
-        future:      { yo:"é",   tú:"ás",    él:"á",   nosotros:"emos",   vosotros:"éis",    ellos:"án"    },
-        conditional: { yo:"ía",  tú:"ías",   él:"ía",  nosotros:"íamos",  vosotros:"íais",   ellos:"ían"   },
+        present:              { yo:"o",   tú:"es",   él:"e",   nosotros:"emos",   vosotros:"éis",    ellos:"en"    },
+        preterite:            { yo:"í",   tú:"iste",  él:"ió",  nosotros:"imos",   vosotros:"isteis", ellos:"ieron" },
+        imperfect:            { yo:"ía",  tú:"ías",   él:"ía",  nosotros:"íamos",  vosotros:"íais",   ellos:"ían"   },
+        future:               { yo:"é",   tú:"ás",    él:"á",   nosotros:"emos",   vosotros:"éis",    ellos:"án"    },
+        conditional:          { yo:"ía",  tú:"ías",   él:"ía",  nosotros:"íamos",  vosotros:"íais",   ellos:"ían"   },
+        present_subjunctive:  { yo:"a",   tú:"as",    él:"a",   nosotros:"amos",   vosotros:"áis",    ellos:"an"    },
       },
       ir: {
-        present:     { yo:"o",   tú:"es",   él:"e",   nosotros:"imos",   vosotros:"ís",     ellos:"en"    },
-        preterite:   { yo:"í",   tú:"iste",  él:"ió",  nosotros:"imos",   vosotros:"isteis", ellos:"ieron" },
-        imperfect:   { yo:"ía",  tú:"ías",   él:"ía",  nosotros:"íamos",  vosotros:"íais",   ellos:"ían"   },
-        future:      { yo:"é",   tú:"ás",    él:"á",   nosotros:"emos",   vosotros:"éis",    ellos:"án"    },
-        conditional: { yo:"ía",  tú:"ías",   él:"ía",  nosotros:"íamos",  vosotros:"íais",   ellos:"ían"   },
+        present:              { yo:"o",   tú:"es",   él:"e",   nosotros:"imos",   vosotros:"ís",     ellos:"en"    },
+        preterite:            { yo:"í",   tú:"iste",  él:"ió",  nosotros:"imos",   vosotros:"isteis", ellos:"ieron" },
+        imperfect:            { yo:"ía",  tú:"ías",   él:"ía",  nosotros:"íamos",  vosotros:"íais",   ellos:"ían"   },
+        future:               { yo:"é",   tú:"ás",    él:"á",   nosotros:"emos",   vosotros:"éis",    ellos:"án"    },
+        conditional:          { yo:"ía",  tú:"ías",   él:"ía",  nosotros:"íamos",  vosotros:"íais",   ellos:"ían"   },
+        present_subjunctive:  { yo:"a",   tú:"as",    él:"a",   nosotros:"amos",   vosotros:"áis",    ellos:"an"    },
+      },
+      // ── Italian ────────────────────────────────────────────────────────────
+      // Stem = infinitive minus 3-char ending (-are/-ere/-ire).
+      // futuro/condizionale endings include the connecting vowel so the same
+      // stem formula works (e.g. "parl" + "erò" = "parlerò").
+      are: {
+        present:              { io:"o",    tu:"i",      "3s":"a",      noi:"iamo",  voi:"ate",   "3p":"ano"       },
+        imperfetto:           { io:"avo",  tu:"avi",    "3s":"ava",    noi:"avamo", voi:"avate", "3p":"avano"     },
+        futuro:               { io:"erò",  tu:"erai",   "3s":"erà",    noi:"eremo", voi:"erete", "3p":"eranno"    },
+        condizionale:         { io:"erei", tu:"eresti", "3s":"erebbe", noi:"eremmo",voi:"ereste","3p":"erebbero"  },
+        congiuntivo_presente: { io:"i",    tu:"i",      "3s":"i",      noi:"iamo",  voi:"iate",  "3p":"ino"       },
+      },
+      ere: {
+        present:              { io:"o",    tu:"i",      "3s":"e",      noi:"iamo",  voi:"ete",   "3p":"ono"       },
+        imperfetto:           { io:"evo",  tu:"evi",    "3s":"eva",    noi:"evamo", voi:"evate", "3p":"evano"     },
+        futuro:               { io:"erò",  tu:"erai",   "3s":"erà",    noi:"eremo", voi:"erete", "3p":"eranno"    },
+        condizionale:         { io:"erei", tu:"eresti", "3s":"erebbe", noi:"eremmo",voi:"ereste","3p":"erebbero"  },
+        congiuntivo_presente: { io:"a",    tu:"a",      "3s":"a",      noi:"iamo",  voi:"iate",  "3p":"ano"       },
+      },
+      ire: {
+        present:              { io:"o",    tu:"i",      "3s":"e",      noi:"iamo",  voi:"ite",   "3p":"ono"       },
+        imperfetto:           { io:"ivo",  tu:"ivi",    "3s":"iva",    noi:"ivamo", voi:"ivate", "3p":"ivano"     },
+        futuro:               { io:"irò",  tu:"irai",   "3s":"irà",    noi:"iremo", voi:"irete", "3p":"iranno"    },
+        condizionale:         { io:"irei", tu:"iresti", "3s":"irebbe", noi:"iremmo",voi:"ireste","3p":"irebbero"  },
+        congiuntivo_presente: { io:"a",    tu:"a",      "3s":"a",      noi:"iamo",  voi:"iate",  "3p":"ano"       },
+      },
+      ire_isc: {
+        present:              { io:"isco", tu:"isci",   "3s":"isce",   noi:"iamo",  voi:"ite",   "3p":"iscono"    },
+        imperfetto:           { io:"ivo",  tu:"ivi",    "3s":"iva",    noi:"ivamo", voi:"ivate", "3p":"ivano"     },
+        futuro:               { io:"irò",  tu:"irai",   "3s":"irà",    noi:"iremo", voi:"irete", "3p":"iranno"    },
+        condizionale:         { io:"irei", tu:"iresti", "3s":"irebbe", noi:"iremmo",voi:"ireste","3p":"irebbero"  },
+        congiuntivo_presente: { io:"isca", tu:"isca",   "3s":"isca",   noi:"iamo",  voi:"iate",  "3p":"iscano"    },
       },
     };
 
     const getRegularForm = (person) => {
       const endings = (_regularEndings[verbObj.group] ?? {})[tenseKey];
-      if (!endings) return null; // imperative/subjunctive/unknown — skip bolding
+      if (!endings) return null; // imperatives/compounds — use override fallback
       const ending = endings[_endingKey(person)];
       if (ending === undefined) return null;
       const baseInf = verbObj.infinitive.replace(/se$/i, "");
-      const stem = (tenseKey === "future" || tenseKey === "conditional") ? baseInf : baseInf.slice(0, -2);
+      // Italian groups end in 3 chars (-are/-ere/-ire); Spanish in 2 (-ar/-er/-ir).
+      // For Spanish future/conditional the full infinitive is the stem.
+      const stem = isItalian ? baseInf.slice(0, -3)
+                 : (tenseKey === "future" || tenseKey === "conditional") ? baseInf
+                 : baseInf.slice(0, -2);
       return stem + ending;
     };
 
@@ -1097,11 +1140,15 @@ function buildIrregularVerbTableHTML(verbObj, tenseFilter) {
     const rows = persons.map(p => {
       const form = tForms[p] ?? "—";
       const label = LANG.displayPersonLabel(p);
-      // Bold if the displayed form (reflexive pronoun stripped) differs from the regular formula
       const regularForm = getRegularForm(p);
       const formCore = stripReflexive(form, p).toLowerCase().trim();
-      const isIrregForm = form !== "—" && regularForm != null
-        && formCore !== regularForm.toLowerCase().trim();
+      // Bold if form differs from the regular formula; for tenses without a
+      // regular formula (imperatives, compounds) bold if an explicit override exists.
+      const isIrregForm = form !== "—" && (
+        regularForm != null
+          ? formCore !== regularForm.toLowerCase().trim()
+          : !!(verbObj.overrides?.[tenseKey]?.[p])
+      );
       const formHTML = isIrregForm
         ? `<strong style="color:#7a3800">${form}</strong>`
         : form;
