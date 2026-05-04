@@ -2603,17 +2603,13 @@ function _vtLCS(a, b) {
   return { aIndices: ai, bIndices: bi };
 }
 
-// Returns data needed for both render phases.
+// Returns validation data for phase 1.
 //
-// requiredRemovals – Set of positions in baseInf the user MUST select.
-//   Always includes the full infinitive ending (-ar/-er/-ir or -are/-ere/-ire),
-//   plus any stem positions that differ from the conjugated form (LCS-based).
-//
-// segments – ordered display list for phase 2:
-//   { type:'letter', char }  — kept box
-//   { type:'blank',  idx  }  — text input; fill = blankFills[idx]
-//
-// blankFills – what the user must type into each blank (normalized for checking).
+// mandatoryRemovals – positions that MUST be removed (not in LCS of full baseInf vs baseSrc).
+// endingPositions   – positions of the infinitive ending (-ar/-er/-ir etc.).
+//                     The user may additionally remove any subset of these.
+// infToSrcMap       – Map<infPos, srcPos> for all positions in the LCS (used to build
+//                     phase-2 segments from whatever the user actually removed).
 function _vtComputeData(conj) {
   const fullInf = conj.infinitive;
   const baseInf = fullInf.replace(/se$/i, "");
@@ -2627,54 +2623,62 @@ function _vtComputeData(conj) {
   }
 
   // Italian infinitives end in -are/-ere/-ire (3 chars); Spanish in -ar/-er/-ir (2 chars).
-  const endingLen = /[aeiou]re$/i.test(baseInf) ? 3 : 2;
-  const stem      = baseInf.slice(0, -endingLen);
+  const endingLen   = /[aeiou]re$/i.test(baseInf) ? 3 : 2;
+  const endingStart = baseInf.length - endingLen;
 
-  // LCS of stem vs conjugated form to find which stem positions are unchanged.
-  // Strip diacritics before comparing so e.g. 'á' in the stem counts as matching
-  // 'a' in the conjugated form — avoids marking accent-only differences as removals.
-  const { aIndices: keptStem, bIndices: matchedSrc } =
-    _vtLCS(
-      LANG.stripDiacritics(stem.toLowerCase()),
-      LANG.stripDiacritics(baseSrc.toLowerCase())
-    );
-  const keptStemSet = new Set(keptStem);
+  const endingPositions = new Set();
+  for (let i = endingStart; i < baseInf.length; i++) endingPositions.add(i);
 
-  // All stem positions not in LCS + entire ending = required removals.
-  const requiredRemovals = new Set();
-  for (let i = 0; i < stem.length; i++) {
-    if (!keptStemSet.has(i)) requiredRemovals.add(i);
+  // LCS of full baseInf vs baseSrc (diacritic-stripped for matching).
+  // Positions not in this LCS are mandatory to remove; positions in it are keepable.
+  const { aIndices, bIndices } = _vtLCS(
+    LANG.stripDiacritics(baseInf.toLowerCase()),
+    LANG.stripDiacritics(baseSrc.toLowerCase())
+  );
+  const fullLCSSet = new Set(aIndices);
+
+  const infToSrcMap = new Map();
+  for (let k = 0; k < aIndices.length; k++) infToSrcMap.set(aIndices[k], bIndices[k]);
+
+  const mandatoryRemovals = new Set();
+  for (let i = 0; i < baseInf.length; i++) {
+    if (!fullLCSSet.has(i)) mandatoryRemovals.add(i);
   }
-  for (let i = stem.length; i < baseInf.length; i++) requiredRemovals.add(i);
 
-  // Build phase-2 segments and their fills.
-  // Walk through kept stem positions; insert a blank wherever there's a gap
-  // in the infinitive (removed positions) between consecutive kept letters.
+  return { baseInf, baseSrc, endingPositions, mandatoryRemovals, infToSrcMap };
+}
+
+// Build phase-2 segments from whatever the user actually removed.
+// Kept positions that are in infToSrcMap are aligned against baseSrc;
+// gaps between their baseSrc positions become blanks the user must fill.
+function _vtBuildSegments(baseInf, baseSrc, actualRemovals, infToSrcMap) {
+  const keptMapped = [];
+  for (let i = 0; i < baseInf.length; i++) {
+    if (!actualRemovals.has(i) && infToSrcMap.has(i)) {
+      keptMapped.push({ infPos: i, srcIdx: infToSrcMap.get(i) });
+    }
+  }
+
   const segments  = [];
   const blankFills = [];
-  let srcPtr      = 0;
-  let prevInfPos  = -1;
+  let prevSrcIdx  = -1;
 
-  for (let k = 0; k < keptStem.length; k++) {
-    const infPos = keptStem[k];
-    const srcIdx = matchedSrc[k];
-
-    if (infPos > prevInfPos + 1) {
-      // There are removed positions between the last kept letter and this one.
-      blankFills.push(baseSrc.slice(srcPtr, srcIdx));
+  for (const { infPos, srcIdx } of keptMapped) {
+    if (srcIdx > prevSrcIdx + 1) {
+      blankFills.push(baseSrc.slice(prevSrcIdx + 1, srcIdx));
       segments.push({ type: 'blank', idx: blankFills.length - 1 });
     }
-
     segments.push({ type: 'letter', char: baseInf[infPos] });
-    srcPtr     = srcIdx + 1;
-    prevInfPos = infPos;
+    prevSrcIdx = srcIdx;
   }
 
-  // The ending is always removed → always one trailing blank.
-  blankFills.push(baseSrc.slice(srcPtr));
-  segments.push({ type: 'blank', idx: blankFills.length - 1 });
+  const trailingFill = baseSrc.slice(prevSrcIdx + 1);
+  if (trailingFill) {
+    blankFills.push(trailingFill);
+    segments.push({ type: 'blank', idx: blankFills.length - 1 });
+  }
 
-  return { baseInf, requiredRemovals, segments, blankFills };
+  return { segments, blankFills };
 }
 
 function startVerbTransforming() {
@@ -2741,8 +2745,9 @@ function _vtRenderSelecting(topFeedback) {
     <div class="vt-prompt">${_vtConj.tgt}</div>
     <div class="vt-letter-row">${letterBoxes}</div>
     <button class="vt-btn" id="vtRemoveBtn">Remove</button>
-    <div class="vt-instruction">Click the letters to remove, then click Remove.<br>
-      Always remove the ending (<em>-ar / -er / -ir</em>) plus any changed letters.</div>
+    <div class="vt-instruction">Click letters that need to change, then click Remove.<br>
+      You may also remove the ending (<em>-ar / -er / -ir</em>) — it's optional.<br>
+      Only remove letters that actually change.</div>
   `;
 
   area.querySelectorAll(".vt-letter").forEach(el => {
@@ -2759,12 +2764,14 @@ function _vtRenderSelecting(topFeedback) {
   });
 
   document.getElementById("vtRemoveBtn").addEventListener("click", () => {
-    const { requiredRemovals, segments, blankFills } = _vtComputeData(_vtConj);
+    const { mandatoryRemovals, endingPositions, baseInf, baseSrc, infToSrcMap } = _vtComputeData(_vtConj);
 
-    const correct = requiredRemovals.size === _vtSelected.size &&
-      [...requiredRemovals].every(i => _vtSelected.has(i));
+    const correct =
+      [...mandatoryRemovals].every(i => _vtSelected.has(i)) &&
+      [..._vtSelected].every(i => mandatoryRemovals.has(i) || endingPositions.has(i));
 
     if (correct) {
+      const { segments, blankFills } = _vtBuildSegments(baseInf, baseSrc, _vtSelected, infToSrcMap);
       _vtRenderEntering(segments, blankFills);
     } else {
       _vtSelected = new Set();
