@@ -2631,8 +2631,13 @@ function _vtComputeData(conj) {
   const stem      = baseInf.slice(0, -endingLen);
 
   // LCS of stem vs conjugated form to find which stem positions are unchanged.
+  // Strip diacritics before comparing so e.g. 'á' in the stem counts as matching
+  // 'a' in the conjugated form — avoids marking accent-only differences as removals.
   const { aIndices: keptStem, bIndices: matchedSrc } =
-    _vtLCS(stem.toLowerCase(), baseSrc.toLowerCase());
+    _vtLCS(
+      LANG.stripDiacritics(stem.toLowerCase()),
+      LANG.stripDiacritics(baseSrc.toLowerCase())
+    );
   const keptStemSet = new Set(keptStem);
 
   // All stem positions not in LCS + entire ending = required removals.
@@ -2792,9 +2797,30 @@ function _vtRenderEntering(segments, blankFills) {
     <div class="vt-prompt-label">Conjugate to</div>
     <div class="vt-prompt">${_vtConj.tgt}</div>
     <div class="vt-letter-row">${rowHTML}</div>
+    <div id="vtAccentButtons" class="accent-buttons"></div>
     <button class="vt-btn" id="vtEnterBtn">Enter</button>
-    <div class="vt-instruction">Type the missing letters in each blank</div>
+    <div class="vt-instruction">Type the missing letters in each blank (accents optional)</div>
   `;
+
+  // Populate accent buttons — insert into whichever blank has focus.
+  const vtAccentDiv = document.getElementById("vtAccentButtons");
+  if (vtAccentDiv && Array.isArray(LANG.accentButtons)) {
+    LANG.accentButtons.forEach(({ ch, label }) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.dataset.ch = ch;
+      b.textContent = label || ch;
+      vtAccentDiv.appendChild(b);
+    });
+    vtAccentDiv.addEventListener("click", e => {
+      const b = e.target.closest("button");
+      if (!b) return;
+      const ch = b.dataset.ch || b.textContent;
+      const active = area.querySelector(".vt-replace-input:focus")
+                  || area.querySelector(".vt-replace-input");
+      if (active) insertAtCursor(active, ch);
+    });
+  }
 
   const inputs = [...area.querySelectorAll(".vt-replace-input")];
   const btn    = document.getElementById("vtEnterBtn");
