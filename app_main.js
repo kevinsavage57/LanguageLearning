@@ -2577,32 +2577,99 @@ function verb_typing_wrong(c) {
 
 // ── Verb Transform Mode ──────────────────────────────────────────────────────
 
-let _vtConj = null;      // current conjugation entry
-let _vtSelected = null;  // Set of selected letter indices
-let _vtKeepCount = 0;    // length of common prefix to keep
-let _vtToAdd = "";       // replacement string the user must type
+let _vtConj     = null;  // current conjugation entry
+let _vtSelected = null;  // Set of selected letter indices (phase 1)
 
+// LCS of strings a and b (both already lowercased).
+// Returns { aIndices, bIndices } — parallel arrays of matched positions.
+// Tie-breaks prefer skipping a (treating a-chars as removed) over skipping b,
+// which ensures stem vowel substitutions are treated as removals rather than keeps.
+function _vtLCS(a, b) {
+  const m = a.length, n = b.length;
+  const dp = Array.from({ length: m + 1 }, () => new Int32Array(n + 1));
+  for (let i = m - 1; i >= 0; i--) {
+    for (let j = n - 1; j >= 0; j--) {
+      if (a[i] === b[j]) dp[i][j] = 1 + dp[i+1][j+1];
+      else dp[i][j] = dp[i+1][j] >= dp[i][j+1] ? dp[i+1][j] : dp[i][j+1];
+    }
+  }
+  const ai = [], bi = [];
+  let i = 0, j = 0;
+  while (i < m && j < n) {
+    if (a[i] === b[j]) { ai.push(i); bi.push(j); i++; j++; }
+    else if (dp[i+1] && dp[i+1][j] >= dp[i][j+1]) i++;
+    else j++;
+  }
+  return { aIndices: ai, bIndices: bi };
+}
+
+// Returns data needed for both render phases.
+//
+// requiredRemovals – Set of positions in baseInf the user MUST select.
+//   Always includes the full infinitive ending (-ar/-er/-ir or -are/-ere/-ire),
+//   plus any stem positions that differ from the conjugated form (LCS-based).
+//
+// segments – ordered display list for phase 2:
+//   { type:'letter', char }  — kept box
+//   { type:'blank',  idx  }  — text input; fill = blankFills[idx]
+//
+// blankFills – what the user must type into each blank (normalized for checking).
 function _vtComputeData(conj) {
-  const isReflexive = /se$/i.test(conj.infinitive);
-  const baseInf = conj.infinitive.replace(/se$/i, "");
+  const fullInf = conj.infinitive;
+  const baseInf = fullInf.replace(/se$/i, "");
 
-  // Strip reflexive pronoun from the displayed source form for comparison
   let baseSrc = conj.src || "";
-  if (isReflexive && LANG.getReflexivePronoun) {
+  if (/se$/i.test(fullInf) && LANG.getReflexivePronoun) {
     const pro = LANG.getReflexivePronoun(conj.person);
     if (pro && baseSrc.toLowerCase().startsWith(pro.toLowerCase() + " ")) {
       baseSrc = baseSrc.slice(pro.length + 1);
     }
   }
 
-  // Longest common prefix (case-insensitive)
-  let i = 0;
-  while (i < baseInf.length && i < baseSrc.length &&
-         baseInf[i].toLowerCase() === baseSrc[i].toLowerCase()) {
-    i++;
+  // Italian infinitives end in -are/-ere/-ire (3 chars); Spanish in -ar/-er/-ir (2 chars).
+  const endingLen = /[aeiou]re$/i.test(baseInf) ? 3 : 2;
+  const stem      = baseInf.slice(0, -endingLen);
+
+  // LCS of stem vs conjugated form to find which stem positions are unchanged.
+  const { aIndices: keptStem, bIndices: matchedSrc } =
+    _vtLCS(stem.toLowerCase(), baseSrc.toLowerCase());
+  const keptStemSet = new Set(keptStem);
+
+  // All stem positions not in LCS + entire ending = required removals.
+  const requiredRemovals = new Set();
+  for (let i = 0; i < stem.length; i++) {
+    if (!keptStemSet.has(i)) requiredRemovals.add(i);
+  }
+  for (let i = stem.length; i < baseInf.length; i++) requiredRemovals.add(i);
+
+  // Build phase-2 segments and their fills.
+  // Walk through kept stem positions; insert a blank wherever there's a gap
+  // in the infinitive (removed positions) between consecutive kept letters.
+  const segments  = [];
+  const blankFills = [];
+  let srcPtr      = 0;
+  let prevInfPos  = -1;
+
+  for (let k = 0; k < keptStem.length; k++) {
+    const infPos = keptStem[k];
+    const srcIdx = matchedSrc[k];
+
+    if (infPos > prevInfPos + 1) {
+      // There are removed positions between the last kept letter and this one.
+      blankFills.push(baseSrc.slice(srcPtr, srcIdx));
+      segments.push({ type: 'blank', idx: blankFills.length - 1 });
+    }
+
+    segments.push({ type: 'letter', char: baseInf[infPos] });
+    srcPtr     = srcIdx + 1;
+    prevInfPos = infPos;
   }
 
-  return { baseInf, baseSrc, keepCount: i, toAdd: baseSrc.slice(i) };
+  // The ending is always removed → always one trailing blank.
+  blankFills.push(baseSrc.slice(srcPtr));
+  segments.push({ type: 'blank', idx: blankFills.length - 1 });
+
+  return { baseInf, requiredRemovals, segments, blankFills };
 }
 
 function startVerbTransforming() {
@@ -2654,9 +2721,8 @@ function _vtRenderSelecting(topFeedback) {
   area.style.display = "block";
 
   const data = _vtComputeData(_vtConj);
-  const letters = [...data.baseInf];
 
-  const letterBoxes = letters.map((ch, i) => {
+  const letterBoxes = [...data.baseInf].map((ch, i) => {
     const isSel = _vtSelected.has(i);
     const display = i === 0 ? ch.toUpperCase() : ch;
     return `<div class="vt-letter${isSel ? " vt-selected" : ""}" data-vt-idx="${i}">${display}</div>`;
@@ -2670,7 +2736,8 @@ function _vtRenderSelecting(topFeedback) {
     <div class="vt-prompt">${_vtConj.tgt}</div>
     <div class="vt-letter-row">${letterBoxes}</div>
     <button class="vt-btn" id="vtRemoveBtn">Remove</button>
-    <div class="vt-instruction">Click the letters to remove. Remove the fewest number of letters possible.</div>
+    <div class="vt-instruction">Click the letters to remove, then click Remove.<br>
+      Always remove the ending (<em>-ar / -er / -ir</em>) plus any changed letters.</div>
   `;
 
   area.querySelectorAll(".vt-letter").forEach(el => {
@@ -2687,17 +2754,13 @@ function _vtRenderSelecting(topFeedback) {
   });
 
   document.getElementById("vtRemoveBtn").addEventListener("click", () => {
-    const data = _vtComputeData(_vtConj);
-    const required = new Set();
-    for (let i = data.keepCount; i < data.baseInf.length; i++) required.add(i);
+    const { requiredRemovals, segments, blankFills } = _vtComputeData(_vtConj);
 
-    const correct = required.size === _vtSelected.size &&
-      [...required].every(i => _vtSelected.has(i));
+    const correct = requiredRemovals.size === _vtSelected.size &&
+      [...requiredRemovals].every(i => _vtSelected.has(i));
 
     if (correct) {
-      _vtKeepCount = data.keepCount;
-      _vtToAdd = data.toAdd;
-      _vtRenderEntering();
+      _vtRenderEntering(segments, blankFills);
     } else {
       _vtSelected = new Set();
       _vtRenderSelecting("TRY AGAIN!");
@@ -2705,44 +2768,65 @@ function _vtRenderSelecting(topFeedback) {
   });
 }
 
-function _vtRenderEntering() {
+function _vtRenderEntering(segments, blankFills) {
   const area = document.getElementById("verbTransformArea");
   area.style.display = "block";
 
-  const data = _vtComputeData(_vtConj);
-  const keptBoxes = [...data.baseInf].slice(0, _vtKeepCount).map((ch, i) => {
-    const display = i === 0 ? ch.toUpperCase() : ch;
-    return `<div class="vt-letter vt-kept">${display}</div>`;
+  // Build the letter-row HTML: kept letter boxes + one <input> per blank.
+  let blankCount = 0;
+  const rowHTML = segments.map(seg => {
+    if (seg.type === 'letter') {
+      const display = seg.char === seg.char.toUpperCase() && segments[0] === seg
+        ? seg.char.toUpperCase() : seg.char;
+      return `<div class="vt-letter vt-kept">${seg.char}</div>`;
+    } else {
+      const id = `vtBlank${blankCount++}`;
+      return `<input class="vt-replace-input" id="${id}" type="text"
+                autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
+                data-vt-blank="${seg.idx}">`;
+    }
   }).join("");
 
   area.innerHTML = `
     <div class="vt-feedback-top" id="vtFeedback"></div>
     <div class="vt-prompt-label">Conjugate to</div>
     <div class="vt-prompt">${_vtConj.tgt}</div>
-    <div class="vt-letter-row">
-      ${keptBoxes}
-      <input class="vt-replace-input" id="vtReplaceInput" type="text"
-             autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
-    </div>
+    <div class="vt-letter-row">${rowHTML}</div>
     <button class="vt-btn" id="vtEnterBtn">Enter</button>
-    <div class="vt-instruction">Enter letters to add</div>
+    <div class="vt-instruction">Type the missing letters in each blank</div>
   `;
 
-  const input = document.getElementById("vtReplaceInput");
-  const btn   = document.getElementById("vtEnterBtn");
-  const fbDiv = document.getElementById("vtFeedback");
-  input.focus();
+  const inputs = [...area.querySelectorAll(".vt-replace-input")];
+  const btn    = document.getElementById("vtEnterBtn");
+  const fbDiv  = document.getElementById("vtFeedback");
+
+  if (inputs.length) inputs[0].focus();
+
+  // Move focus to next input on Enter, submit on last input's Enter.
+  inputs.forEach((inp, k) => {
+    inp.addEventListener("keydown", e => {
+      if (e.key !== "Enter") return;
+      e.preventDefault();
+      if (k < inputs.length - 1) inputs[k + 1].focus();
+      else submit();
+    });
+  });
 
   const submit = () => {
-    const typed = input.value.trim();
-    if (LANG.normalizeAnswer(typed) === LANG.normalizeAnswer(_vtToAdd)) {
+    // Check every blank matches its expected fill (accent-insensitive).
+    const allCorrect = inputs.every(inp => {
+      const fillIdx = parseInt(inp.dataset.vtBlank, 10);
+      return LANG.normalizeAnswer(inp.value.trim()) === LANG.normalizeAnswer(blankFills[fillIdx]);
+    });
+
+    if (allCorrect) {
       verb_transform_correct(_vtConj);
       recordVerbTenseCorrect(_vtConj.tense, _vtConj.person);
       currentIndex++;
       fbDiv.style.color = "green";
       fbDiv.textContent = "CORRECT!";
-      input.disabled = true;
-      btn.disabled   = true;
+      inputs.forEach(i => i.disabled = true);
+      btn.disabled = true;
       showIrregularVerbPanel(_vtConj.infinitive, _vtConj.tense);
       setTimeout(() => {
         hideIrregularVerbPanel();
@@ -2752,15 +2836,12 @@ function _vtRenderEntering() {
       verb_transform_wrong(_vtConj);
       fbDiv.style.color = "red";
       fbDiv.innerHTML = `INCORRECT <span style="font-size:14px;font-weight:normal">— Try again!</span>`;
-      input.value = "";
-      input.focus();
+      inputs.forEach(i => { i.value = ""; });
+      if (inputs.length) inputs[0].focus();
     }
   };
 
   btn.addEventListener("click", submit);
-  input.addEventListener("keydown", e => {
-    if (e.key === "Enter") { e.preventDefault(); submit(); }
-  });
 }
 
 function verb_transform_correct(c) {
