@@ -2791,12 +2791,14 @@ if (sameEntry || sameSourceSurface || englishOverlap || sameVerbMeaning) {
   // Changed: Dynamic based on currentRound.length (handles <5 words)
   if (document.querySelectorAll(".matched").length === currentRound.length * 2) {
     const mode = modeSelect.value;
+    const verbPanel = document.getElementById("irregularVerbPanel");
+    const tableVisible = verbPanel && verbPanel.style.display === "block";
 setTimeout(() => {
   hideIrregularVerbPanel();
   if (mode === "mixed-mode") startMixedRound();
   else if (mode === "verb-match") startVerbMatching();
   else startNextRound();
-}, 600);
+}, tableVisible ? 3500 : 600);
 
   }
 }
