@@ -506,7 +506,7 @@ const modeSelect = document.getElementById("mode");
 
 function updateFilterVisibility() {
   const mode = (modeSelect && modeSelect.value ? String(modeSelect.value) : "").toLowerCase();
-  const isVerbMode = (mode === "verb-match" || mode === "verb-type");
+  const isVerbMode = (mode === "verb-match" || mode === "verb-type" || mode === "verb-transform");
 
   const levelEl = document.getElementById("level");
   if (!levelEl) return;
@@ -774,8 +774,9 @@ function setupTenseSelector() {
   tenseSelect.onchange = () => {
     // re-route only if we're in a verb mode
     const mode = modeSelect?.value;
-    if (mode === "verb-match") startVerbMatching();
-    if (mode === "verb-type") startVerbTyping();
+    if (mode === "verb-match")      startVerbMatching();
+    if (mode === "verb-type")       startVerbTyping();
+    if (mode === "verb-transform")  startVerbTransforming();
   };
 
   refreshTenseSelector();
@@ -813,7 +814,7 @@ const current = tenseSelect.value || (unlocked[0] ?? LANG.tenseOrder[0]);
 
 function updateTenseSelectorVisibility() {
   const mode = modeSelect?.value;
-  const show = mode === "verb-match" || mode === "verb-type"
+  const show = mode === "verb-match" || mode === "verb-type" || mode === "verb-transform"
     || _mixedModeCurrentPick === "verb-match" || _mixedModeCurrentPick === "verb-type";
 
   // Always update the button regardless of tenseSelect state
@@ -912,7 +913,8 @@ function placeEndingsButton() {
 
   // Only show for verb modes (including when mixed-mode picks a verb sub-mode)
   const mode = (modeSelect && modeSelect.value) ? modeSelect.value : "";
-  const isVerbMode = mode === "verb-match" || mode === "verb-type" || _mixedModeCurrentPick === "verb-match" || _mixedModeCurrentPick === "verb-type";
+  const isVerbMode = mode === "verb-match" || mode === "verb-type" || mode === "verb-transform"
+    || _mixedModeCurrentPick === "verb-match" || _mixedModeCurrentPick === "verb-type";
   btn.style.display = isVerbMode ? "inline-flex" : "none";
 }
 
@@ -924,7 +926,7 @@ function updateEndingsButtonVisibility() {
   if (!btn) return;
 
   const mode = (modeSelect && modeSelect.value ? String(modeSelect.value) : "").toLowerCase();
-  const isVerbMode = (mode === "verb-match" || mode === "verb-type")
+  const isVerbMode = (mode === "verb-match" || mode === "verb-type" || mode === "verb-transform")
     || (_mixedModeCurrentPick === "verb-match" || _mixedModeCurrentPick === "verb-type");
 
   btn.style.display = isVerbMode ? "inline-block" : "none";
@@ -1661,6 +1663,8 @@ function mergeProgress(savedWords, freshData) {
 }
 
 function startVerbMatching() {
+  const _vtArea = document.getElementById("verbTransformArea");
+  if (_vtArea) _vtArea.style.display = "none";
   // Verb matching uses the same matching UI
   sourceCol.style.display = "";
   targetCol.style.display = "";
@@ -1784,16 +1788,18 @@ function buildConjugationPool() {
       const isIrreg = (verbObj.irregularTags ?? []).includes("present-irreg");
       const baseVerbWeight = isIrreg ? 45 : 15;
       const entry = {
-        verbId:      verbObj.id,
-        infinitive:  verbObj.infinitive,
-        tense:       form.tense,
-        person:      form.person,
-        src:         form.src,
-        tgt:         form.tgt,
-        matchStreak: 0,
-        typeStreak:  0,
-        matchWeight: baseVerbWeight,
-        typeWeight:  baseVerbWeight,
+        verbId:          verbObj.id,
+        infinitive:      verbObj.infinitive,
+        tense:           form.tense,
+        person:          form.person,
+        src:             form.src,
+        tgt:             form.tgt,
+        matchStreak:     0,
+        typeStreak:      0,
+        transformStreak: 0,
+        matchWeight:     baseVerbWeight,
+        typeWeight:      baseVerbWeight,
+        transformWeight: baseVerbWeight,
       };
 
       conjugations.push(entry);
@@ -1821,11 +1827,13 @@ function unlockVerbModes() {
   if (!unlocked) return;
 
   // Be robust to older HTML versions that don't have option IDs.
-  const vm = document.getElementById("verbMatchOption") || document.querySelector('option[value="verb-match"]');
-  const vt = document.getElementById("verbTypeOption")  || document.querySelector('option[value="verb-type"]');
+  const vm  = document.getElementById("verbMatchOption")     || document.querySelector('option[value="verb-match"]');
+  const vt  = document.getElementById("verbTypeOption")      || document.querySelector('option[value="verb-type"]');
+  const vtr = document.getElementById("verbTransformOption") || document.querySelector('option[value="verb-transform"]');
 
-  if (vm) vm.disabled = false;
-  if (vt) vt.disabled = false;
+  if (vm)  vm.disabled  = false;
+  if (vt)  vt.disabled  = false;
+  if (vtr) vtr.disabled = false;
 }
 
 
@@ -1857,10 +1865,12 @@ function activateQuickStart() {
   refreshTenseSelector();
 
   // Enable verb mode dropdown options directly
-  const vm = document.getElementById("verbMatchOption") || document.querySelector('option[value="verb-match"]');
-  const vt = document.getElementById("verbTypeOption")  || document.querySelector('option[value="verb-type"]');
-  if (vm) vm.disabled = false;
-  if (vt) vt.disabled = false;
+  const vm  = document.getElementById("verbMatchOption")     || document.querySelector('option[value="verb-match"]');
+  const vt  = document.getElementById("verbTypeOption")      || document.querySelector('option[value="verb-type"]');
+  const vtr = document.getElementById("verbTransformOption") || document.querySelector('option[value="verb-transform"]');
+  if (vm)  vm.disabled  = false;
+  if (vt)  vt.disabled  = false;
+  if (vtr) vtr.disabled = false;
 
   // Also unlock typing mode
   const typingOpt = document.querySelector('option[value="typing"]');
@@ -2116,6 +2126,8 @@ if (mode !== "review") {
 
 
 function startVerbTyping() {
+  const _vtArea = document.getElementById("verbTransformArea");
+  if (_vtArea) _vtArea.style.display = "none";
   // Hide matching columns, show typing UI (same as word typing)
   sourceCol.style.display = "none";
   targetCol.style.display = "none";
@@ -2563,7 +2575,207 @@ function verb_typing_wrong(c) {
   c.typeWeight += 2;
 }
 
+// ── Verb Transform Mode ──────────────────────────────────────────────────────
+
+let _vtConj = null;      // current conjugation entry
+let _vtSelected = null;  // Set of selected letter indices
+let _vtKeepCount = 0;    // length of common prefix to keep
+let _vtToAdd = "";       // replacement string the user must type
+
+function _vtComputeData(conj) {
+  const isReflexive = /se$/i.test(conj.infinitive);
+  const baseInf = conj.infinitive.replace(/se$/i, "");
+
+  // Strip reflexive pronoun from the displayed source form for comparison
+  let baseSrc = conj.src || "";
+  if (isReflexive && LANG.getReflexivePronoun) {
+    const pro = LANG.getReflexivePronoun(conj.person);
+    if (pro && baseSrc.toLowerCase().startsWith(pro.toLowerCase() + " ")) {
+      baseSrc = baseSrc.slice(pro.length + 1);
+    }
+  }
+
+  // Longest common prefix (case-insensitive)
+  let i = 0;
+  while (i < baseInf.length && i < baseSrc.length &&
+         baseInf[i].toLowerCase() === baseSrc[i].toLowerCase()) {
+    i++;
+  }
+
+  return { baseInf, baseSrc, keepCount: i, toAdd: baseSrc.slice(i) };
+}
+
+function startVerbTransforming() {
+  sourceCol.style.display = "none";
+  targetCol.style.display = "none";
+  typingArea.style.display = "none";
+
+  const selectedTenses = getSelectedVerbTenses();
+  const pool = conjugations.filter(c =>
+    selectedTenses.includes(c.tense) && (c.transformStreak ?? 0) < MASTERED_STREAK
+  );
+
+  if (pool.length === 0) {
+    alert("No verb conjugations available yet. Master a verb infinitive first.");
+    return;
+  }
+
+  // Deduplicate by source form (same logic as verb typing)
+  const seen = new Map();
+  const deduped = [];
+  for (const c of pool) {
+    const key = `${c.tense}|${c.infinitive}|${c.src}`;
+    if (!seen.has(key)) {
+      seen.set(key, deduped.length);
+      deduped.push(c);
+    } else {
+      const idx = seen.get(key);
+      if ((c.transformWeight ?? 1) > (deduped[idx].transformWeight ?? 1)) deduped[idx] = c;
+    }
+  }
+
+  currentRound = pickWeighted(deduped, 5, false);
+  currentIndex = 0;
+  showNextVerbTransform();
+}
+
+function showNextVerbTransform() {
+  if (currentIndex >= currentRound.length) {
+    setTimeout(startVerbTransforming, 1000);
+    return;
+  }
+  _vtConj = currentRound[currentIndex];
+  _vtSelected = new Set();
+  _vtRenderSelecting("");
+}
+
+function _vtRenderSelecting(topFeedback) {
+  const area = document.getElementById("verbTransformArea");
+  area.style.display = "block";
+
+  const data = _vtComputeData(_vtConj);
+  const letters = [...data.baseInf];
+
+  const letterBoxes = letters.map((ch, i) => {
+    const isSel = _vtSelected.has(i);
+    const display = i === 0 ? ch.toUpperCase() : ch;
+    return `<div class="vt-letter${isSel ? " vt-selected" : ""}" data-vt-idx="${i}">${display}</div>`;
+  }).join("");
+
+  const fbColor = topFeedback ? "color:#c0392b" : "";
+
+  area.innerHTML = `
+    <div class="vt-feedback-top" style="${fbColor}">${topFeedback}</div>
+    <div class="vt-prompt-label">Conjugate to</div>
+    <div class="vt-prompt">${_vtConj.tgt}</div>
+    <div class="vt-letter-row">${letterBoxes}</div>
+    <button class="vt-btn" id="vtRemoveBtn">Remove</button>
+    <div class="vt-instruction">Click the letters to remove. Remove the fewest number of letters possible.</div>
+  `;
+
+  area.querySelectorAll(".vt-letter").forEach(el => {
+    el.addEventListener("click", () => {
+      const idx = parseInt(el.dataset.vtIdx, 10);
+      if (_vtSelected.has(idx)) {
+        _vtSelected.delete(idx);
+        el.classList.remove("vt-selected");
+      } else {
+        _vtSelected.add(idx);
+        el.classList.add("vt-selected");
+      }
+    });
+  });
+
+  document.getElementById("vtRemoveBtn").addEventListener("click", () => {
+    const data = _vtComputeData(_vtConj);
+    const required = new Set();
+    for (let i = data.keepCount; i < data.baseInf.length; i++) required.add(i);
+
+    const correct = required.size === _vtSelected.size &&
+      [...required].every(i => _vtSelected.has(i));
+
+    if (correct) {
+      _vtKeepCount = data.keepCount;
+      _vtToAdd = data.toAdd;
+      _vtRenderEntering();
+    } else {
+      _vtSelected = new Set();
+      _vtRenderSelecting("TRY AGAIN!");
+    }
+  });
+}
+
+function _vtRenderEntering() {
+  const area = document.getElementById("verbTransformArea");
+  area.style.display = "block";
+
+  const data = _vtComputeData(_vtConj);
+  const keptBoxes = [...data.baseInf].slice(0, _vtKeepCount).map((ch, i) => {
+    const display = i === 0 ? ch.toUpperCase() : ch;
+    return `<div class="vt-letter vt-kept">${display}</div>`;
+  }).join("");
+
+  area.innerHTML = `
+    <div class="vt-feedback-top" id="vtFeedback"></div>
+    <div class="vt-prompt-label">Conjugate to</div>
+    <div class="vt-prompt">${_vtConj.tgt}</div>
+    <div class="vt-letter-row">
+      ${keptBoxes}
+      <input class="vt-replace-input" id="vtReplaceInput" type="text"
+             autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+    </div>
+    <button class="vt-btn" id="vtEnterBtn">Enter</button>
+    <div class="vt-instruction">Enter letters to add</div>
+  `;
+
+  const input = document.getElementById("vtReplaceInput");
+  const btn   = document.getElementById("vtEnterBtn");
+  const fbDiv = document.getElementById("vtFeedback");
+  input.focus();
+
+  const submit = () => {
+    const typed = input.value.trim();
+    if (LANG.normalizeAnswer(typed) === LANG.normalizeAnswer(_vtToAdd)) {
+      verb_transform_correct(_vtConj);
+      recordVerbTenseCorrect(_vtConj.tense, _vtConj.person);
+      currentIndex++;
+      fbDiv.style.color = "green";
+      fbDiv.textContent = "CORRECT!";
+      input.disabled = true;
+      btn.disabled   = true;
+      showIrregularVerbPanel(_vtConj.infinitive, _vtConj.tense);
+      setTimeout(() => {
+        hideIrregularVerbPanel();
+        showNextVerbTransform();
+      }, 1500);
+    } else {
+      verb_transform_wrong(_vtConj);
+      fbDiv.style.color = "red";
+      fbDiv.innerHTML = `INCORRECT <span style="font-size:14px;font-weight:normal">— Try again!</span>`;
+      input.value = "";
+      input.focus();
+    }
+  };
+
+  btn.addEventListener("click", submit);
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter") { e.preventDefault(); submit(); }
+  });
+}
+
+function verb_transform_correct(c) {
+  c.transformStreak = (c.transformStreak ?? 0) + 1;
+  c.transformWeight = Math.max(1, (c.transformWeight ?? 15) - verbWeightDecrement(c.transformStreak));
+}
+
+function verb_transform_wrong(c) {
+  c.transformStreak = 0;
+  c.transformWeight = (c.transformWeight ?? 15) + 2;
+}
+
 function renderMatching() {
+  const _vtArea = document.getElementById("verbTransformArea");
+  if (_vtArea) _vtArea.style.display = "none";
   selectedSource = null;
   selectedTarget = null;
 
@@ -2589,6 +2801,8 @@ function renderMatching() {
 }
 
 function renderTyping() {
+  const _vtArea = document.getElementById("verbTransformArea");
+  if (_vtArea) _vtArea.style.display = "none";
   sourceCol.style.display = "none";
   targetCol.style.display = "none";
   typingArea.style.display = "block";
@@ -3118,6 +3332,11 @@ function routeModeChange() {
 
   if (mode === "verb-type") {
     startVerbTyping();
+    return;
+  }
+
+  if (mode === "verb-transform") {
+    startVerbTransforming();
     return;
   }
 
