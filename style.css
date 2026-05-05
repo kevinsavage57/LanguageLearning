@@ -322,6 +322,12 @@ body {
   cursor: default;
 }
 
+.vt-pronoun {
+  background: #f0f4ff;
+  border-color: #99b;
+  color: #446;
+}
+
 .vt-ending {
   min-width: 52px;
   padding: 0 12px;

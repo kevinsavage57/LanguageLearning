@@ -2617,10 +2617,12 @@ function _vtComputeData(conj) {
   const baseInf = fullInf.replace(/se$/i, "");
 
   let baseSrc = conj.src || "";
+  let strippedPronoun = null;
   if (/se$/i.test(fullInf) && LANG.getReflexivePronoun) {
     const pro = LANG.getReflexivePronoun(conj.person);
     if (pro && baseSrc.toLowerCase().startsWith(pro.toLowerCase() + " ")) {
       baseSrc = baseSrc.slice(pro.length + 1);
+      strippedPronoun = pro;
     }
   }
 
@@ -2647,7 +2649,7 @@ function _vtComputeData(conj) {
     if (!fullLCSSet.has(i)) mandatoryRemovals.add(i);
   }
 
-  return { baseInf, baseSrc, endingPositions, mandatoryRemovals, infToSrcMap };
+  return { baseInf, baseSrc, endingPositions, mandatoryRemovals, infToSrcMap, strippedPronoun };
 }
 
 // Build phase-2 segments from whatever the user actually removed.
@@ -2744,7 +2746,11 @@ function _vtRenderSelecting(topFeedback) {
   const isEndingSel = [...data.endingPositions].some(i => _vtSelected.has(i));
   const endingBox = `<div class="vt-letter vt-ending${isEndingSel ? " vt-selected" : ""}" data-vt-ending="true">${endingStr}</div>`;
 
-  const letterBoxes = stemBoxes + endingBox;
+  const pronounBox = data.strippedPronoun
+    ? `<div class="vt-letter vt-kept vt-pronoun">${data.strippedPronoun}</div>`
+    : "";
+
+  const letterBoxes = pronounBox + stemBoxes + endingBox;
 
   const vtPrompt = _vtConj.tense?.startsWith("imperative")
     ? `${_vtConj.tgt} (Command - ${_vtConj.person})`
@@ -2816,9 +2822,14 @@ function _vtRenderEntering(segments, blankFills) {
     ? `${_vtConj.tgt} (Command - ${_vtConj.person})`
     : _vtConj.tgt;
 
+  const { strippedPronoun } = _vtComputeData(_vtConj);
+  const pronounBox = strippedPronoun
+    ? `<div class="vt-letter vt-kept vt-pronoun">${strippedPronoun}</div>`
+    : "";
+
   // Build the letter-row HTML: kept letter boxes + one <input> per blank.
   let blankCount = 0;
-  const rowHTML = segments.map(seg => {
+  const rowHTML = pronounBox + segments.map(seg => {
     if (seg.type === 'letter') {
       const display = seg.char === seg.char.toUpperCase() && segments[0] === seg
         ? seg.char.toUpperCase() : seg.char;
