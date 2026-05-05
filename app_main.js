@@ -2742,7 +2742,7 @@ function _vtRenderSelecting(topFeedback) {
 
   const endingStr = data.baseInf.slice(endingStart);
   const isEndingSel = [...data.endingPositions].some(i => _vtSelected.has(i));
-  const endingBox = `<div class="vt-letter vt-ending${isEndingSel ? " vt-selected" : ""}" data-vt-ending="true">-${endingStr}</div>`;
+  const endingBox = `<div class="vt-letter vt-ending${isEndingSel ? " vt-selected" : ""}" data-vt-ending="true">${endingStr}</div>`;
 
   const letterBoxes = stemBoxes + endingBox;
 
@@ -2757,7 +2757,10 @@ function _vtRenderSelecting(topFeedback) {
     <div class="vt-prompt-label">Conjugate to</div>
     <div class="vt-prompt">${vtPrompt}</div>
     <div class="vt-letter-row">${letterBoxes}</div>
-    <button class="vt-btn" id="vtRemoveBtn">Remove</button>
+    <div class="vt-btn-row">
+      <button class="vt-btn" id="vtRemoveBtn">Remove</button>
+      <button class="vt-btn vt-giveup-btn" id="vtGiveUpBtn">I give up</button>
+    </div>
     <div class="vt-instruction">Click letters that need to change, then click Remove.<br>
       Only remove letters that actually change.</div>
   `;
@@ -2801,6 +2804,8 @@ function _vtRenderSelecting(topFeedback) {
       _vtRenderSelecting("TRY AGAIN!");
     }
   });
+
+  document.getElementById("vtGiveUpBtn").addEventListener("click", _vtGiveUp);
 }
 
 function _vtRenderEntering(segments, blankFills) {
@@ -2832,7 +2837,10 @@ function _vtRenderEntering(segments, blankFills) {
     <div class="vt-prompt">${vtPrompt}</div>
     <div class="vt-letter-row">${rowHTML}</div>
     <div id="vtAccentButtons" class="accent-buttons"></div>
-    <button class="vt-btn" id="vtEnterBtn">Enter</button>
+    <div class="vt-btn-row">
+      <button class="vt-btn" id="vtEnterBtn">Enter</button>
+      <button class="vt-btn vt-giveup-btn" id="vtGiveUpBtn">I give up</button>
+    </div>
     <div class="vt-instruction">Type the missing letters in each blank (accents optional)</div>
   `;
 
@@ -2902,6 +2910,31 @@ function _vtRenderEntering(segments, blankFills) {
   };
 
   btn.addEventListener("click", submit);
+  document.getElementById("vtGiveUpBtn").addEventListener("click", _vtGiveUp);
+}
+
+function _vtGiveUp() {
+  verb_transform_wrong(_vtConj);
+  const area = document.getElementById("verbTransformArea");
+
+  const vtPrompt = _vtConj.tense?.startsWith("imperative")
+    ? `${_vtConj.tgt} (Command - ${_vtConj.person})`
+    : _vtConj.tgt;
+
+  area.innerHTML = `
+    <div class="vt-feedback-top" style="color:#c0392b">The answer was:</div>
+    <div class="vt-prompt-label">Conjugate to</div>
+    <div class="vt-prompt">${vtPrompt}</div>
+    <div class="vt-answer-reveal">${_vtConj.src}</div>
+    <div class="vt-btn-row">
+      <button class="vt-btn" id="vtContinueBtn">Continue</button>
+    </div>
+  `;
+
+  document.getElementById("vtContinueBtn").addEventListener("click", () => {
+    currentIndex++;
+    showNextVerbTransform();
+  });
 }
 
 function verb_transform_correct(c) {

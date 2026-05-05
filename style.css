@@ -322,6 +322,12 @@ body {
   cursor: default;
 }
 
+.vt-ending {
+  min-width: 52px;
+  padding: 0 12px;
+  letter-spacing: 3px;
+}
+
 .vt-replace-input {
   border: none;
   border-bottom: 2px solid #444;
@@ -337,9 +343,15 @@ body {
   vertical-align: middle;
 }
 
+.vt-btn-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2px 0 12px;
+}
+
 .vt-btn {
-  display: block;
-  margin: 2px auto 12px;
   padding: 8px 28px;
   font-size: 15px;
   font-family: Arial, sans-serif;
@@ -347,6 +359,21 @@ body {
   border-radius: 8px;
   background: #fff;
   cursor: pointer;
+}
+
+.vt-giveup-btn {
+  position: absolute;
+  right: 0;
+  font-size: 13px;
+  color: #888;
+  padding: 6px 14px;
+}
+
+.vt-answer-reveal {
+  font-size: 28px;
+  font-weight: bold;
+  color: #c0392b;
+  margin: 12px 0 18px;
 }
 
 .vt-btn:hover { background: #f0f0f0; }
