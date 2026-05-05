@@ -2617,12 +2617,12 @@ function _vtComputeData(conj) {
   const baseInf = fullInf.replace(/se$/i, "");
 
   let baseSrc = conj.src || "";
-  let strippedPronoun = null;
+  let reflexivePronoun = null;
   if (/se$/i.test(fullInf) && LANG.getReflexivePronoun) {
     const pro = LANG.getReflexivePronoun(conj.person);
     if (pro && baseSrc.toLowerCase().startsWith(pro.toLowerCase() + " ")) {
       baseSrc = baseSrc.slice(pro.length + 1);
-      strippedPronoun = pro;
+      reflexivePronoun = pro;
     }
   }
 
@@ -2649,7 +2649,11 @@ function _vtComputeData(conj) {
     if (!fullLCSSet.has(i)) mandatoryRemovals.add(i);
   }
 
-  return { baseInf, baseSrc, endingPositions, mandatoryRemovals, infToSrcMap, strippedPronoun };
+  const sePositions = /se$/i.test(fullInf)
+    ? new Set([fullInf.length - 2, fullInf.length - 1])
+    : new Set();
+
+  return { fullInf, baseInf, baseSrc, endingPositions, mandatoryRemovals, infToSrcMap, sePositions, reflexivePronoun };
 }
 
 // Build phase-2 segments from whatever the user actually removed.
@@ -2746,11 +2750,13 @@ function _vtRenderSelecting(topFeedback) {
   const isEndingSel = [...data.endingPositions].some(i => _vtSelected.has(i));
   const endingBox = `<div class="vt-letter vt-ending${isEndingSel ? " vt-selected" : ""}" data-vt-ending="true">${endingStr}</div>`;
 
-  const pronounBox = data.strippedPronoun
-    ? `<div class="vt-letter vt-kept vt-pronoun">${data.strippedPronoun}</div>`
-    : "";
+  const seBoxes = [...data.fullInf].slice(data.baseInf.length).map((ch, idx) => {
+    const pos = data.baseInf.length + idx;
+    const isSel = _vtSelected.has(pos);
+    return `<div class="vt-letter${isSel ? " vt-selected" : ""}" data-vt-idx="${pos}">${ch}</div>`;
+  }).join("");
 
-  const letterBoxes = pronounBox + stemBoxes + endingBox;
+  const letterBoxes = stemBoxes + endingBox + seBoxes;
 
   const vtPrompt = _vtConj.tense?.startsWith("imperative")
     ? `${_vtConj.tgt} (Command - ${_vtConj.person})`
@@ -2796,14 +2802,16 @@ function _vtRenderSelecting(topFeedback) {
   });
 
   document.getElementById("vtRemoveBtn").addEventListener("click", () => {
-    const { mandatoryRemovals, endingPositions, baseInf, baseSrc, infToSrcMap } = _vtComputeData(_vtConj);
+    const { mandatoryRemovals, endingPositions, sePositions, baseInf, baseSrc, infToSrcMap } = _vtComputeData(_vtConj);
 
     const correct =
       [...mandatoryRemovals].every(i => _vtSelected.has(i)) &&
-      [..._vtSelected].every(i => mandatoryRemovals.has(i) || endingPositions.has(i));
+      [...sePositions].every(i => _vtSelected.has(i)) &&
+      [..._vtSelected].every(i => mandatoryRemovals.has(i) || endingPositions.has(i) || sePositions.has(i));
 
     if (correct) {
-      const { segments, blankFills } = _vtBuildSegments(baseInf, baseSrc, _vtSelected, infToSrcMap);
+      const stemRemovals = new Set([..._vtSelected].filter(i => !sePositions.has(i)));
+      const { segments, blankFills } = _vtBuildSegments(baseInf, baseSrc, stemRemovals, infToSrcMap);
       _vtRenderEntering(segments, blankFills);
     } else {
       _vtSelected = new Set();
@@ -2822,14 +2830,14 @@ function _vtRenderEntering(segments, blankFills) {
     ? `${_vtConj.tgt} (Command - ${_vtConj.person})`
     : _vtConj.tgt;
 
-  const { strippedPronoun } = _vtComputeData(_vtConj);
-  const pronounBox = strippedPronoun
-    ? `<div class="vt-letter vt-kept vt-pronoun">${strippedPronoun}</div>`
+  const { reflexivePronoun } = _vtComputeData(_vtConj);
+  const pronounHTML = reflexivePronoun
+    ? `<input class="vt-pronoun-input" type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">`
     : "";
 
   // Build the letter-row HTML: kept letter boxes + one <input> per blank.
   let blankCount = 0;
-  const rowHTML = pronounBox + segments.map(seg => {
+  const rowHTML = pronounHTML + segments.map(seg => {
     if (seg.type === 'letter') {
       const display = seg.char === seg.char.toUpperCase() && segments[0] === seg
         ? seg.char.toUpperCase() : seg.char;
@@ -2869,34 +2877,39 @@ function _vtRenderEntering(segments, blankFills) {
       const b = e.target.closest("button");
       if (!b) return;
       const ch = b.dataset.ch || b.textContent;
-      const active = area.querySelector(".vt-replace-input:focus")
+      const active = area.querySelector(".vt-pronoun-input:focus, .vt-replace-input:focus")
                   || area.querySelector(".vt-replace-input");
       if (active) insertAtCursor(active, ch);
     });
   }
 
-  const inputs = [...area.querySelectorAll(".vt-replace-input")];
-  const btn    = document.getElementById("vtEnterBtn");
-  const fbDiv  = document.getElementById("vtFeedback");
+  const inputs   = [...area.querySelectorAll(".vt-replace-input")];
+  const pronInp  = area.querySelector(".vt-pronoun-input");
+  const allInps  = [...(pronInp ? [pronInp] : []), ...inputs];
+  const btn      = document.getElementById("vtEnterBtn");
+  const fbDiv    = document.getElementById("vtFeedback");
 
-  if (inputs.length) inputs[0].focus();
+  if (allInps.length) allInps[0].focus();
 
   // Move focus to next input on Enter, submit on last input's Enter.
-  inputs.forEach((inp, k) => {
+  allInps.forEach((inp, k) => {
     inp.addEventListener("keydown", e => {
       if (e.key !== "Enter") return;
       e.preventDefault();
-      if (k < inputs.length - 1) inputs[k + 1].focus();
+      if (k < allInps.length - 1) allInps[k + 1].focus();
       else submit();
     });
   });
 
   const submit = () => {
+    const pronounCorrect = !reflexivePronoun ||
+      LANG.normalizeAnswer(pronInp.value.trim()) === LANG.normalizeAnswer(reflexivePronoun);
     // Check every blank matches its expected fill (accent-insensitive).
-    const allCorrect = inputs.every(inp => {
+    const blanksCorrect = inputs.every(inp => {
       const fillIdx = parseInt(inp.dataset.vtBlank, 10);
       return LANG.normalizeAnswer(inp.value.trim()) === LANG.normalizeAnswer(blankFills[fillIdx]);
     });
+    const allCorrect = pronounCorrect && blanksCorrect;
 
     if (allCorrect) {
       verb_transform_correct(_vtConj);
@@ -2904,7 +2917,7 @@ function _vtRenderEntering(segments, blankFills) {
       currentIndex++;
       fbDiv.style.color = "green";
       fbDiv.textContent = "CORRECT!";
-      inputs.forEach(i => i.disabled = true);
+      allInps.forEach(i => i.disabled = true);
       btn.disabled = true;
       showIrregularVerbPanel(_vtConj.infinitive, _vtConj.tense);
       setTimeout(() => {
@@ -2915,8 +2928,8 @@ function _vtRenderEntering(segments, blankFills) {
       verb_transform_wrong(_vtConj);
       fbDiv.style.color = "red";
       fbDiv.innerHTML = `INCORRECT <span style="font-size:14px;font-weight:normal">— Try again!</span>`;
-      inputs.forEach(i => { i.value = ""; });
-      if (inputs.length) inputs[0].focus();
+      allInps.forEach(i => { i.value = ""; });
+      if (allInps.length) allInps[0].focus();
     }
   };
 

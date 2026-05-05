@@ -322,9 +322,19 @@ body {
   cursor: default;
 }
 
-.vt-pronoun {
-  background: #f0f4ff;
-  border-color: #99b;
+.vt-pronoun-input {
+  border: none;
+  border-bottom: 2px solid #446;
+  outline: none;
+  font-size: 18px;
+  font-family: Arial, sans-serif;
+  width: 46px;
+  background: transparent;
+  padding: 0 4px;
+  margin-right: 4px;
+  height: 38px;
+  vertical-align: middle;
+  text-align: center;
   color: #446;
 }
 
