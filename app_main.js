@@ -1690,9 +1690,10 @@ function startVerbMatching() {
     sourceCol.appendChild(makeWord(c.src || c.src, "src", c))
   );
 
-  shuffle([...currentRound]).forEach(c =>
-    targetCol.appendChild(makeWord(c.tgt || c.tgt, "tgt", c))
-  );
+  shuffle([...currentRound]).forEach(c => {
+    const tgt = c.tense?.startsWith("imperative") ? `${c.tgt} (Command - ${c.person})` : c.tgt;
+    targetCol.appendChild(makeWord(tgt, "tgt", c));
+  });
 }
 
 
@@ -2219,7 +2220,8 @@ function showNextVerbTyping() {
   } else {
     const showTense = isFormAmbiguousAcrossTenses(c, false);
     const prefix = showTense ? `(${LANG.formatTenseLabel(c.tense)}) ` : "";
-    promptDiv.textContent = `${prefix}Type the ${LANG.sourceLang} for: ${c.tgt}`;
+    const imperativeSuffix = c.tense?.startsWith("imperative") ? ` (Command - ${c.person})` : "";
+    promptDiv.textContent = `${prefix}Type the ${LANG.sourceLang} for: ${c.tgt}${imperativeSuffix}`;
     currentVerbTypingIsEsToEn = false;
     currentTarget = c.src;
   }
@@ -2730,35 +2732,56 @@ function _vtRenderSelecting(topFeedback) {
   area.style.display = "block";
 
   const data = _vtComputeData(_vtConj);
+  const endingStart = data.endingPositions.size > 0 ? Math.min(...data.endingPositions) : data.baseInf.length;
 
-  const letterBoxes = [...data.baseInf].map((ch, i) => {
+  const stemBoxes = [...data.baseInf].slice(0, endingStart).map((ch, i) => {
     const isSel = _vtSelected.has(i);
     const display = i === 0 ? ch.toUpperCase() : ch;
     return `<div class="vt-letter${isSel ? " vt-selected" : ""}" data-vt-idx="${i}">${display}</div>`;
   }).join("");
+
+  const endingStr = data.baseInf.slice(endingStart);
+  const isEndingSel = [...data.endingPositions].some(i => _vtSelected.has(i));
+  const endingBox = `<div class="vt-letter vt-ending${isEndingSel ? " vt-selected" : ""}" data-vt-ending="true">-${endingStr}</div>`;
+
+  const letterBoxes = stemBoxes + endingBox;
+
+  const vtPrompt = _vtConj.tense?.startsWith("imperative")
+    ? `${_vtConj.tgt} (Command - ${_vtConj.person})`
+    : _vtConj.tgt;
 
   const fbColor = topFeedback ? "color:#c0392b" : "";
 
   area.innerHTML = `
     <div class="vt-feedback-top" style="${fbColor}">${topFeedback}</div>
     <div class="vt-prompt-label">Conjugate to</div>
-    <div class="vt-prompt">${_vtConj.tgt}</div>
+    <div class="vt-prompt">${vtPrompt}</div>
     <div class="vt-letter-row">${letterBoxes}</div>
     <button class="vt-btn" id="vtRemoveBtn">Remove</button>
     <div class="vt-instruction">Click letters that need to change, then click Remove.<br>
-      You may also remove the ending (<em>-ar / -er / -ir</em>) — it's optional.<br>
       Only remove letters that actually change.</div>
   `;
 
   area.querySelectorAll(".vt-letter").forEach(el => {
     el.addEventListener("click", () => {
-      const idx = parseInt(el.dataset.vtIdx, 10);
-      if (_vtSelected.has(idx)) {
-        _vtSelected.delete(idx);
-        el.classList.remove("vt-selected");
+      if (el.dataset.vtEnding) {
+        const { endingPositions } = _vtComputeData(_vtConj);
+        const isCurrentlySel = [...endingPositions].some(i => _vtSelected.has(i));
+        if (isCurrentlySel) {
+          endingPositions.forEach(i => _vtSelected.delete(i));
+        } else {
+          endingPositions.forEach(i => _vtSelected.add(i));
+        }
+        el.classList.toggle("vt-selected", !isCurrentlySel);
       } else {
-        _vtSelected.add(idx);
-        el.classList.add("vt-selected");
+        const idx = parseInt(el.dataset.vtIdx, 10);
+        if (_vtSelected.has(idx)) {
+          _vtSelected.delete(idx);
+          el.classList.remove("vt-selected");
+        } else {
+          _vtSelected.add(idx);
+          el.classList.add("vt-selected");
+        }
       }
     });
   });
@@ -2784,6 +2807,10 @@ function _vtRenderEntering(segments, blankFills) {
   const area = document.getElementById("verbTransformArea");
   area.style.display = "block";
 
+  const vtPrompt = _vtConj.tense?.startsWith("imperative")
+    ? `${_vtConj.tgt} (Command - ${_vtConj.person})`
+    : _vtConj.tgt;
+
   // Build the letter-row HTML: kept letter boxes + one <input> per blank.
   let blankCount = 0;
   const rowHTML = segments.map(seg => {
@@ -2802,7 +2829,7 @@ function _vtRenderEntering(segments, blankFills) {
   area.innerHTML = `
     <div class="vt-feedback-top" id="vtFeedback"></div>
     <div class="vt-prompt-label">Conjugate to</div>
-    <div class="vt-prompt">${_vtConj.tgt}</div>
+    <div class="vt-prompt">${vtPrompt}</div>
     <div class="vt-letter-row">${rowHTML}</div>
     <div id="vtAccentButtons" class="accent-buttons"></div>
     <button class="vt-btn" id="vtEnterBtn">Enter</button>
