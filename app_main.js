@@ -208,12 +208,6 @@ function showGistSettings() {
     <div style="margin-top:12px;border-top:1px solid #eee;padding-top:12px;">
       <div style="font-size:12px;color:#555;margin-bottom:6px;font-weight:600;">Change Password</div>
       <label style="display:block;margin-top:6px;font-size:12px;">
-        Current password<br>
-        <input id="gistCurrentPwInput" type="password"
-          style="width:100%;box-sizing:border-box;margin-top:4px;padding:6px;
-                 border:1px solid #ccc;border-radius:4px;font-size:12px;">
-      </label>
-      <label style="display:block;margin-top:6px;font-size:12px;">
         New password<br>
         <input id="gistNewPwInput" type="password"
           style="width:100%;box-sizing:border-box;margin-top:4px;padding:6px;
@@ -333,19 +327,16 @@ function showGistSettings() {
   const changePwBtn = document.getElementById("gistChangePwBtn");
   if (changePwBtn) {
     changePwBtn.onclick = async () => {
-      const currentPw  = document.getElementById("gistCurrentPwInput").value;
-      const newPw      = document.getElementById("gistNewPwInput").value;
-      const confirmPw  = document.getElementById("gistConfirmPwInput").value;
-      const status     = document.getElementById("gistStatus");
-      const profile    = gistProfile();
+      const newPw     = document.getElementById("gistNewPwInput").value;
+      const confirmPw = document.getElementById("gistConfirmPwInput").value;
+      const status    = document.getElementById("gistStatus");
+      const profile   = gistProfile();
 
-      if (!currentPw) { status.style.color = "#d00"; status.textContent = "Enter your current password."; return; }
-      if (!newPw)      { status.style.color = "#d00"; status.textContent = "Enter a new password."; return; }
-      if (newPw !== confirmPw) { status.style.color = "#d00"; status.textContent = "New passwords do not match."; return; }
-      if (newPw === currentPw) { status.style.color = "#d00"; status.textContent = "New password must be different."; return; }
+      if (!newPw)                  { status.style.color = "#d00"; status.textContent = "Enter a new password."; return; }
+      if (newPw !== confirmPw)     { status.style.color = "#d00"; status.textContent = "Passwords do not match."; return; }
 
       status.style.color = "#555";
-      status.textContent = "Verifying…";
+      status.textContent = "Saving…";
 
       const profiles = await fetchAllProfiles();
       if (!profiles || profiles.error) {
@@ -354,20 +345,7 @@ function showGistSettings() {
         return;
       }
 
-      const existing = profiles[profile];
-      if (!existing) {
-        status.style.color = "#d00";
-        status.textContent = `Profile "${profile}" not found on server.`;
-        return;
-      }
-
-      const currentHash = await hashPassword(currentPw);
-      if (existing.hash !== currentHash) {
-        status.style.color = "#d00";
-        status.textContent = "Current password is incorrect.";
-        return;
-      }
-
+      if (!profiles[profile]) profiles[profile] = {};
       profiles[profile].hash = await hashPassword(newPw);
       await writeAllProfiles(profiles);
       status.style.color = "green";
