@@ -284,7 +284,7 @@ body {
 }
 
 .vt-letter-row {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   gap: 4px;
   margin-bottom: 14px;
@@ -303,6 +303,8 @@ body {
   cursor: pointer;
   font-size: 18px;
   user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
   background: #fff;
   transition: background 0.1s, border-color 0.1s;
   padding: 0 5px;
@@ -502,6 +504,28 @@ body {
     font-size: 16px;
     padding: 10px 24px;
     margin-top: 8px;
+  }
+
+  /* Verb Transform mode — mobile overrides */
+  .vt-letter {
+    min-width: 40px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .vt-ending {
+    min-width: 60px;
+  }
+
+  .vt-btn-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .vt-giveup-btn {
+    position: static;
+    font-size: 14px;
   }
 
   /* Endings modal — full screen on mobile */
