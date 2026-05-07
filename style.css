@@ -262,7 +262,6 @@ body {
   max-width: 700px;
   text-align: center;
   padding: 10px 0;
-  align-self: stretch;
 }
 
 .vt-feedback-top {
@@ -466,6 +465,11 @@ body {
     transform: none;
     width: 100%;
     padding: 8px 0;
+    align-items: stretch;
+  }
+
+  #verbTransformArea {
+    align-self: stretch;
   }
 
   /* Matching cards — full width, larger tap targets */
