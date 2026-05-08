@@ -1560,6 +1560,7 @@ fetch(`words_${LANG.id}.json`)
     initAccentButtons();
     buildConjugationPool();
     unlockVerbModes();
+    refreshTenseSelector();
 
     startNextRound();
     updateStats();
