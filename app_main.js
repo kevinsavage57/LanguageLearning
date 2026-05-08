@@ -3001,12 +3001,47 @@ function _vtGiveUp() {
     ? `${_vtConj.tgt} (Command - ${_vtConj.person})`
     : _vtConj.tgt;
 
+  // Build conjugation table for this verb + tense
+  let conjTableHTML = "";
+  const verbWord = allWords.find(w =>
+    (w.src || w.es || w.it) === _vtConj.infinitive && w.group != null
+  );
+  if (verbWord) {
+    const verbObj = {
+      id:             verbWord.id,
+      infinitive:     verbWord.src || verbWord.es || verbWord.it,
+      en:             verbWord.tgt || verbWord.en,
+      english:        verbWord.tgt ? [verbWord.tgt] : (verbWord.en ? [verbWord.en] : []),
+      group:          verbWord.group,
+      overrides:      verbWord.overrides     ?? {},
+      stemOverrides:  verbWord.stemOverrides ?? {},
+      irregularTags:  verbWord.irregularTags ?? [],
+      reflexive:      verbWord.reflexive,
+      aux:            verbWord.aux,
+      pastParticiple: verbWord.pastParticiple,
+    };
+    const tableInner = buildIrregularVerbTableHTML(verbObj, _vtConj.tense);
+    if (tableInner) {
+      conjTableHTML = `
+        <div style="margin:16px auto 0;max-width:500px;text-align:left;
+                    padding:16px 20px;background:#fffbe6;border:2px solid #f0c040;
+                    border-radius:10px;box-sizing:border-box">
+          <div style="font-size:13px;font-weight:800;letter-spacing:.08em;color:#7a5800;
+                      text-transform:uppercase;margin-bottom:10px">
+            ${verbObj.infinitive} &nbsp;·&nbsp; ${LANG.formatTenseLabel(_vtConj.tense)}
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:0">${tableInner}</div>
+        </div>`;
+    }
+  }
+
   area.innerHTML = `
     <div class="vt-feedback-top" style="color:#c0392b">The answer was:</div>
     <div class="vt-prompt-label">Conjugate to</div>
     <div class="vt-prompt">${vtPrompt}</div>
     <div class="vt-answer-reveal">${_vtConj.src}</div>
-    <div class="vt-btn-row">
+    ${conjTableHTML}
+    <div class="vt-btn-row" style="margin-top:18px">
       <button class="vt-btn" id="vtContinueBtn">Continue</button>
     </div>
   `;
