@@ -2898,9 +2898,11 @@ function _vtRenderEntering(segments, blankFills) {
       return `<div class="vt-letter vt-kept">${seg.char}</div>`;
     } else {
       const id = `vtBlank${blankCount++}`;
+      const fillLen = (blankFills[seg.idx] || "").length;
+      const w = Math.max(3, fillLen + 2);
       return `<input class="vt-replace-input" id="${id}" type="text"
                 autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"
-                data-vt-blank="${seg.idx}">`;
+                data-vt-blank="${seg.idx}" style="width:${w}ch">`;
     }
   }).join("");
 

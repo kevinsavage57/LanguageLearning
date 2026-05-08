@@ -363,8 +363,6 @@ body {
   outline: none;
   font-size: 18px;
   font-family: Arial, sans-serif;
-  min-width: 80px;
-  max-width: 220px;
   background: transparent;
   padding: 0 4px;
   margin-left: 2px;
