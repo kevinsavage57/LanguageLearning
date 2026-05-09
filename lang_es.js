@@ -762,6 +762,14 @@ export const LANG = {
     // Conjugation endings reference modal
   buildEndingsTableHTML,
 
+  // When Imperative is selected in the tense selector, also show Present Subjunctive
+  // and Present Indicative tables (imperative forms are derived from both).
+  // Order: all unlocked imperative variants, then Present Subjunctive, then Present Indicative.
+  imperativeModalTenses(unlockedSet) {
+    const imperatives = ["imperative_affirmative", "imperative_negative"].filter(t => unlockedSet.has(t));
+    return [...imperatives, "present_subjunctive", "present"];
+  },
+
   // Conjugation engine — builds all inflected forms for one verb
   buildVerbForms,
 

@@ -1020,9 +1020,17 @@ function populateEndingsModal() {
   const bodyEl = document.getElementById("endingsBody");
   if (!bodyEl) return;
 
-  const tensesToShow = isMixed
-    ? getUnlockedTenses().map(LANG.canonicalTenseKey).filter((t,i,a) => a.indexOf(t)===i)
-    : [LANG.canonicalTenseKey(rawTense)];
+  const isImperative = !isMixed && rawTense === "imperative";
+
+  let tensesToShow;
+  if (isMixed) {
+    tensesToShow = getUnlockedTenses().map(LANG.canonicalTenseKey).filter((t,i,a) => a.indexOf(t)===i);
+  } else if (isImperative && typeof LANG.imperativeModalTenses === "function") {
+    const unlockedSet = new Set(getUnlockedTenses().map(LANG.canonicalTenseKey));
+    tensesToShow = LANG.imperativeModalTenses(unlockedSet);
+  } else {
+    tensesToShow = [LANG.canonicalTenseKey(rawTense)];
+  }
 
   titleEl.textContent = isMixed
     ? "Conjugation Endings — Mixed (All Unlocked)"
