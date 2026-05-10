@@ -770,10 +770,7 @@ let tenseSelect = null;
 
 
 function mapTenseForEngine(tenseKey) {
-  const t = (tenseKey || "").toString().trim().toLowerCase();
-  // ConjugationPatterns typically uses a single "imperative" key.
-  if (t.startsWith("imperative")) return "imperative";
-  return t;
+  return (tenseKey || "").toString().trim().toLowerCase();
 }
 
 function mapTenseForProgress(tenseKey) {
@@ -1020,7 +1017,8 @@ function populateEndingsModal() {
   const bodyEl = document.getElementById("endingsBody");
   if (!bodyEl) return;
 
-  const isImperative = !isMixed && rawTense === "imperative";
+  const canon = LANG.canonicalTenseKey(rawTense);
+  const isImperative = !isMixed && (canon === "imperative_affirmative" || canon === "imperative_negative");
 
   let tensesToShow;
   if (isMixed) {

@@ -615,6 +615,12 @@ export const LANG = {
   buildEndingsTableHTML,
   buildVerbForms,
 
+  // When Imperativo is selected, also show Present Subjunctive and Present Indicative tables.
+  imperativeModalTenses(unlockedSet) {
+    const imperatives = ["imperativo"].filter(t => unlockedSet.has(t));
+    return [...imperatives, "congiuntivo_presente", "present"];
+  },
+
   // Italian imperative builder
   buildImperativoForm({ verb, person, stem, baseInf, buildFormFn }) {
     const group = verb.group;
