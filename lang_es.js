@@ -83,6 +83,38 @@ function displayPersonLabel(canon) {
   }
 }
 
+// Find the index of the stressed vowel in a bare Spanish word (no written accent present).
+// Used to place an accent mark before appending a clitic pronoun.
+function stressedVowelIndex(word) {
+  const w = word.toLowerCase();
+  const groups = [];
+  for (let i = 0; i < w.length; ) {
+    if (/[aeiouü]/.test(w[i])) {
+      const start = i;
+      while (i < w.length && /[aeiouü]/.test(w[i])) i++;
+      groups.push({ start, end: i });
+    } else {
+      i++;
+    }
+  }
+  if (!groups.length) return -1;
+  if (groups.length === 1) return groups[0].end - 1;
+  const lastCh = w[w.length - 1];
+  const g = /[aeiouüns]/.test(lastCh) ? groups[groups.length - 2] : groups[groups.length - 1];
+  return g.end - 1;
+}
+
+// Add a written accent to the stressed vowel of a bare verb form before appending a clitic.
+// Monosyllabic forms are returned unchanged (default stress rule covers them after append).
+function addAccentForClitic(form) {
+  if (!form || /[áéíóúÁÉÍÓÚ]/.test(form)) return form;
+  if ((form.toLowerCase().match(/[aeiouü]+/g) || []).length <= 1) return form;
+  const idx = stressedVowelIndex(form);
+  if (idx < 0) return form;
+  const map = { a:'á',e:'é',i:'í',o:'ó',u:'ú',A:'Á',E:'É',I:'Í',O:'Ó',U:'Ú' };
+  return form.slice(0, idx) + (map[form[idx]] || form[idx]) + form.slice(idx + 1);
+}
+
 // Spanish reflexive pronouns by person
 function getReflexivePronoun(person) {
   const map = {
@@ -587,7 +619,9 @@ function buildVerbForms(verb, tgtFor) {
     const directOverride = verb.overrides?.[tense]?.[person];
     if (directOverride) {
       let form = directOverride;
-      if (reflexive) {
+      // For imperative_affirmative, overrides store the complete form (pronoun appended).
+      // For all other tenses, prepend reflexive pronoun if not already present.
+      if (reflexive && tense !== "imperative_affirmative") {
         const pro = getReflexivePronoun(person);
         const lower = form.toLowerCase();
         const already = ["me ", "te ", "se ", "nos ", "os "].some(p => lower.startsWith(p));
@@ -774,24 +808,37 @@ export const LANG = {
   buildVerbForms,
 
   // Language-specific imperative affirmative builder.
-  // Called by app_main.buildForm() when stemType === "imperative_affirmative".
   // Receives: { verb, person, baseStem, baseInf, subjStem, subjDef, buildFormFn }
-  // Returns the conjugated form string (without reflexive pronoun; app_main adds it).
+  // Returns the complete conjugated form, including appended reflexive pronoun for reflexive verbs.
   buildImperativeAffirmative({ verb, person, baseStem, baseInf, subjStem, subjDef, buildFormFn }) {
+    const reflexive = verb.reflexive === true || isReflexiveInfinitive(verb.infinitive);
+
+    // Get bare verb form (no pronoun) for this person.
+    let bare;
     if (person === "tú") {
-      // tú imperative = él/ella present indicative
       const elForm = buildFormFn("present", "él") || (baseStem + (CONJUGATION_PATTERNS[verb.group]?.present?.endings?.["él"] ?? ""));
-      return elForm.replace(/^(me|te|se|nos|os)\s+/i, "");
-    } else if (person === "nosotros") {
-      const subjEnding = subjDef?.endings?.["nosotros"] ?? "";
-      return subjStem + subjEnding;
+      bare = elForm.replace(/^(me|te|se|nos|os)\s+/i, "");
     } else if (person === "vosotros") {
+      if (reflexive) {
+        // Reflexive vosotros: drop -r from infinitive, append -os.
+        // IR verbs: stem ends in 'i' — add accent to break diphthong with following 'o'.
+        const stem = baseInf.slice(0, -1);
+        return /i$/i.test(stem) ? stem.slice(0, -1) + "íos" : stem + "os";
+      }
       return baseInf.slice(0, -1) + "d";
     } else {
-      // usted / ustedes / 3s / 3p → present subjunctive
-      const subjEnding = subjDef?.endings?.[person] ?? "";
-      return subjStem + subjEnding;
+      // nosotros, usted, ustedes: use present_subjunctive (correctly applies orthography/overrides).
+      const form = buildFormFn("present_subjunctive", person);
+      bare = form ? form.replace(/^(me|te|se|nos|os)\s+/i, "") : subjStem + (subjDef?.endings?.[person] ?? "");
     }
+
+    if (!reflexive) return bare;
+
+    const pro = getReflexivePronoun(person);
+    if (!pro) return bare;
+    // nosotros: Spanish elides the final 's' before appending 'nos' (hablemos → hablémonos)
+    const stem = (person === "nosotros" && bare.endsWith("s")) ? bare.slice(0, -1) : bare;
+    return addAccentForClitic(stem) + pro;
   },
 
   // Reflexive pronoun prefixes — used by buildForm to detect if a form already has its pronoun.

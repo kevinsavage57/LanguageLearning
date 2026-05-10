@@ -999,10 +999,6 @@
         "nosotros": "nos abastecemos",
         "vosotros": "os abastecéis",
         "ellos": "se abastecen"
-      },
-      "imperative_affirmative": {
-        "usted": "se abastezca",
-        "ustedes": "se abastezcan"
       }
     },
     "irregularTags": [
@@ -1467,11 +1463,6 @@
         "nosotros": "nos abstendríamos",
         "vosotros": "os abstendríais",
         "ellos": "se abstendrían"
-      },
-      "imperative_affirmative": {
-        "tú": "te absten",
-        "usted": "se abstenga",
-        "ustedes": "se abstengan"
       }
     },
     "irregularTags": [
@@ -1634,10 +1625,6 @@
         "nosotros": "nos aburrimos",
         "vosotros": "os aburrís",
         "ellos": "se aburren"
-      },
-      "imperative_affirmative": {
-        "usted": "se aburra",
-        "ustedes": "se aburran"
       }
     }
   },
@@ -2268,14 +2255,7 @@
     "group": "ar",
     "es_syn": [
       "abordar"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se acerque",
-        "nosotros": "nos acerquemos",
-        "ustedes": "se acerquen"
-      }
-    }
+    ]
   },
   {
     "id": "acertado_adjective",
@@ -2704,11 +2684,6 @@
       "present_subjunctive": {
         "nosotros": "nos acostemos",
         "vosotros": "os acostéis"
-      },
-      "imperative_affirmative": {
-        "usted": "se acueste",
-        "nosotros": "nos acostemos",
-        "ustedes": "se acuesten"
       }
     },
     "irregularTags": [
@@ -3898,10 +3873,6 @@
         "nosotros": "nos adueñamos",
         "vosotros": "os adueñáis",
         "ellos": "se adueñan"
-      },
-      "imperative_affirmative": {
-        "usted": "se adueñe",
-        "ustedes": "se adueñen"
       }
     }
   },
@@ -4164,13 +4135,7 @@
     ],
     "rating": 5,
     "group": "ar",
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se afeite",
-        "ustedes": "se afeiten"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "aferrar_verb",
@@ -4351,10 +4316,6 @@
         "nosotros": "nos afiliamos",
         "vosotros": "os afiliáis",
         "ellos": "se afilian"
-      },
-      "imperative_affirmative": {
-        "usted": "se afilie",
-        "ustedes": "se afilien"
       }
     }
   },
@@ -6329,10 +6290,6 @@
         "nosotros": "nos alegramos",
         "vosotros": "os alegráis",
         "ellos": "se alegran"
-      },
-      "imperative_affirmative": {
-        "usted": "se alegre",
-        "ustedes": "se alegren"
       }
     }
   },
@@ -7231,10 +7188,6 @@
         "nosotros": "nos alojamos",
         "vosotros": "os alojáis",
         "ellos": "se alojan"
-      },
-      "imperative_affirmative": {
-        "usted": "se aloje",
-        "ustedes": "se alojen"
       }
     }
   },
@@ -9966,11 +9919,6 @@
       },
       "preterite": {
         "yo": "me apegué"
-      },
-      "imperative_affirmative": {
-        "usted": "se apegue",
-        "nosotros": "nos apeguemos",
-        "ustedes": "se apeguen"
       }
     },
     "irregularTags": [
@@ -10385,10 +10333,6 @@
         "nosotros": "nos apoderamos",
         "vosotros": "os apoderáis",
         "ellos": "se apoderan"
-      },
-      "imperative_affirmative": {
-        "usted": "se apodere",
-        "ustedes": "se apoderen"
       }
     }
   },
@@ -10515,10 +10459,6 @@
         "nosotros": "nos apoyamos",
         "vosotros": "os apoyáis",
         "ellos": "se apoyan"
-      },
-      "imperative_affirmative": {
-        "usted": "se apoye",
-        "ustedes": "se apoyen"
       }
     }
   },
@@ -11713,11 +11653,6 @@
       },
       "preterite": {
         "yo": "me arraigué"
-      },
-      "imperative_affirmative": {
-        "usted": "se arraigue",
-        "nosotros": "nos arraiguemos",
-        "ustedes": "se arraiguen"
       }
     },
     "irregularTags": [
@@ -11990,11 +11925,6 @@
       "present_subjunctive": {
         "nosotros": "nos arrepintamos",
         "vosotros": "os arrepintáis"
-      },
-      "imperative_affirmative": {
-        "usted": "se arrepienta",
-        "nosotros": "nos arrepintamos",
-        "ustedes": "se arrepientan"
       }
     },
     "irregularTags": [
@@ -12217,10 +12147,6 @@
         "nosotros": "nos arrodillamos",
         "vosotros": "os arrodilláis",
         "ellos": "se arrodillan"
-      },
-      "imperative_affirmative": {
-        "usted": "se arrodille",
-        "ustedes": "se arrodillen"
       }
     }
   },
@@ -14059,12 +13985,6 @@
         "vosotros": "os atengáis",
         "ellos": "se atengan",
         "ustedes": "se atengan"
-      },
-      "imperative_affirmative": {
-        "tú": "te aten",
-        "usted": "se atenga",
-        "nosotros": "nos atengamos",
-        "ustedes": "se atengan"
       }
     }
   },
@@ -14820,11 +14740,6 @@
         "nosotros": "nos atreveamos",
         "vosotros": "os atreveáis",
         "ellos": "se atrevean",
-        "ustedes": "se atrevean"
-      },
-      "imperative_affirmative": {
-        "usted": "se atrevea",
-        "nosotros": "nos atreveamos",
         "ustedes": "se atrevean"
       }
     }
@@ -15900,10 +15815,6 @@
         "nosotros": "nos avecindamos",
         "vosotros": "os avecindáis",
         "ellos": "se avecindan"
-      },
-      "imperative_affirmative": {
-        "usted": "se avecinde",
-        "ustedes": "se avecinden"
       }
     }
   },
@@ -16035,12 +15946,6 @@
         "nosotros": "nos avengamos",
         "vosotros": "os avengáis",
         "ellos": "se avengan",
-        "ustedes": "se avengan"
-      },
-      "imperative_affirmative": {
-        "tú": "te aven",
-        "usted": "se avenga",
-        "nosotros": "nos avengamos",
         "ustedes": "se avengan"
       }
     }
@@ -18964,11 +18869,6 @@
       },
       "preterite": {
         "yo": "me bifurqué"
-      },
-      "imperative_affirmative": {
-        "usted": "se bifurque",
-        "nosotros": "nos bifurquemos",
-        "ustedes": "se bifurquen"
       }
     },
     "irregularTags": [
@@ -25176,10 +25076,6 @@
         "nosotros": "nos casamos",
         "vosotros": "os casáis",
         "ellos": "se casan"
-      },
-      "imperative_affirmative": {
-        "usted": "se case",
-        "ustedes": "se casen"
       }
     }
   },
@@ -32153,10 +32049,6 @@
         "nosotros": "nos comportamos",
         "vosotros": "os comportáis",
         "ellos": "se comportan"
-      },
-      "imperative_affirmative": {
-        "usted": "se comporte",
-        "ustedes": "se comporten"
       }
     },
     "es_syn": []
@@ -54071,10 +53963,6 @@
         "tú": "te despediste",
         "nosotros": "nos despedimos",
         "vosotros": "os despedisteis"
-      },
-      "imperative_affirmative": {
-        "usted": "se despida",
-        "ustedes": "se despidan"
       }
     },
     "irregularTags": [
@@ -54206,11 +54094,6 @@
       "present_subjunctive": {
         "nosotros": "nos despertemos",
         "vosotros": "os despertéis"
-      },
-      "imperative_affirmative": {
-        "usted": "se despierte",
-        "nosotros": "nos despertemos",
-        "ustedes": "se despierten"
       }
     },
     "irregularTags": [
@@ -55818,10 +55701,6 @@
         "nosotros": "nos disculpamos",
         "vosotros": "os disculpáis",
         "ellos": "se disculpan"
-      },
-      "imperative_affirmative": {
-        "usted": "se disculpe",
-        "ustedes": "se disculpen"
       }
     }
   },
@@ -56675,11 +56554,6 @@
       "present_subjunctive": {
         "nosotros": "nos divirtamos",
         "vosotros": "os divirtáis"
-      },
-      "imperative_affirmative": {
-        "usted": "se divierta",
-        "nosotros": "nos divirtamos",
-        "ustedes": "se diviertan"
       }
     },
     "irregularTags": [
@@ -56744,10 +56618,6 @@
         "nosotros": "nos divorciamos",
         "vosotros": "os divorciáis",
         "ellos": "se divorcian"
-      },
-      "imperative_affirmative": {
-        "usted": "se divorcie",
-        "ustedes": "se divorcien"
       }
     }
   },
@@ -57468,13 +57338,7 @@
     "level": "A2",
     "rating": 5,
     "group": "ar",
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se duche",
-        "ustedes": "se duchen"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "ducharte_noun",
@@ -59343,11 +59207,6 @@
       },
       "preterite": {
         "yo": "me embarqué"
-      },
-      "imperative_affirmative": {
-        "usted": "se embarque",
-        "nosotros": "nos embarquemos",
-        "ustedes": "se embarquen"
       }
     },
     "irregularTags": [
@@ -61449,10 +61308,6 @@
         "nosotros": "nos enamoramos",
         "vosotros": "os enamoráis",
         "ellos": "se enamoran"
-      },
-      "imperative_affirmative": {
-        "usted": "se enamore",
-        "ustedes": "se enamoren"
       }
     }
   },
@@ -61905,10 +61760,6 @@
         "nosotros": "nos enfadamos",
         "vosotros": "os enfadáis",
         "ellos": "se enfadan"
-      },
-      "imperative_affirmative": {
-        "usted": "se enfade",
-        "ustedes": "se enfaden"
       }
     },
     "es_syn": [
@@ -73587,11 +73438,6 @@
       "present_subjunctive": {
         "nosotros": "nos graduemos",
         "vosotros": "os graduéis"
-      },
-      "imperative_affirmative": {
-        "usted": "se gradúe",
-        "nosotros": "nos graduemos",
-        "ustedes": "se gradúen"
       }
     },
     "irregularTags": [
@@ -76846,10 +76692,6 @@
         "nosotros": "nos hospedamos",
         "vosotros": "os hospedáis",
         "ellos": "se hospedan"
-      },
-      "imperative_affirmative": {
-        "usted": "se hospede",
-        "ustedes": "se hospeden"
       }
     }
   },
@@ -82885,10 +82727,11 @@
         "ustedes": "se vayan"
       },
       "imperative_affirmative": {
-        "tú": "te ve",
-        "usted": "se vaya",
-        "nosotros": "nos vayamos",
-        "ustedes": "se vayan"
+        "tú": "vete",
+        "usted": "váyase",
+        "nosotros": "vayámonos",
+        "vosotros": "idos",
+        "ustedes": "váyanse"
       }
     },
     "irregularTags": [
@@ -83487,10 +83330,6 @@
         "nosotros": "nos jubilamos",
         "vosotros": "os jubiláis",
         "ellos": "se jubilan"
-      },
-      "imperative_affirmative": {
-        "usted": "se jubile",
-        "ustedes": "se jubilen"
       }
     }
   },
@@ -84951,13 +84790,7 @@
     "level": "A2",
     "rating": 5,
     "group": "ar",
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se lave",
-        "ustedes": "se laven"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "lavavajillas_noun",
@@ -85599,13 +85432,7 @@
     "es_syn": [
       "levantarme",
       "levantarte"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se levante",
-        "ustedes": "se levanten"
-      }
-    }
+    ]
   },
   {
     "id": "levantarte_noun",
@@ -86500,13 +86327,7 @@
     "level": "A1",
     "rating": 3,
     "group": "ar",
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se llame",
-        "ustedes": "se llamen"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "llame_noun",
@@ -89983,10 +89804,6 @@
         "nosotros": "nos matriculamos",
         "vosotros": "os matriculáis",
         "ellos": "se matriculan"
-      },
-      "imperative_affirmative": {
-        "usted": "se matricule",
-        "ustedes": "se matriculen"
       }
     }
   },
@@ -93470,10 +93287,6 @@
         "nosotros": "nos mudamos",
         "vosotros": "os mudáis",
         "ellos": "se mudan"
-      },
-      "imperative_affirmative": {
-        "usted": "se mude",
-        "ustedes": "se muden"
       }
     }
   },
@@ -105994,11 +105807,6 @@
         "vosotros": "os pondríais",
         "ellos": "se pondrían",
         "ustedes": "se pondrían"
-      },
-      "imperative_affirmative": {
-        "tú": "te pon",
-        "usted": "se ponga",
-        "ustedes": "se pongan"
       }
     },
     "irregularTags": [
@@ -108014,13 +107822,7 @@
       "inquietar"
     ],
     "rating": 4,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se preocupe",
-        "ustedes": "se preocupen"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "preparado_adjective",
@@ -112303,13 +112105,7 @@
       "grumble"
     ],
     "rating": 4,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se queje",
-        "ustedes": "se quejen"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "quemadura_noun",
@@ -113765,10 +113561,6 @@
         "nosotros": "nos rebelamos",
         "vosotros": "os rebeláis",
         "ellos": "se rebelan"
-      },
-      "imperative_affirmative": {
-        "usted": "se rebele",
-        "ustedes": "se rebelen"
       }
     }
   },
@@ -114758,10 +114550,6 @@
         "nosotros": "nos recuperamos",
         "vosotros": "os recuperáis",
         "ellos": "se recuperan"
-      },
-      "imperative_affirmative": {
-        "usted": "se recupere",
-        "ustedes": "se recuperen"
       }
     }
   },
@@ -115889,10 +115677,6 @@
         "nosotros": "nos registramos",
         "vosotros": "os registráis",
         "ellos": "se registran"
-      },
-      "imperative_affirmative": {
-        "usted": "se registre",
-        "ustedes": "se registren"
       }
     }
   },
@@ -116580,13 +116364,7 @@
       "relax"
     ],
     "rating": 4,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se relaje",
-        "ustedes": "se relajen"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "relatar_verb",
@@ -118118,11 +117896,6 @@
       "present_subjunctive": {
         "nosotros": "nos resintamos",
         "vosotros": "os resintáis"
-      },
-      "imperative_affirmative": {
-        "usted": "se resienta",
-        "nosotros": "nos resintamos",
-        "ustedes": "se resientan"
       }
     },
     "irregularTags": [
@@ -119500,11 +119273,6 @@
         "usted": "se reúna",
         "ellos": "se reúnan",
         "ustedes": "se reúnan"
-      },
-      "imperative_affirmative": {
-        "tú": "te reúne",
-        "usted": "se reúna",
-        "ustedes": "se reúnan"
       }
     }
   },
@@ -120726,10 +120494,6 @@
         "nosotros": "nos rompemos",
         "vosotros": "os rompéis",
         "ellos": "se rompen"
-      },
-      "imperative_affirmative": {
-        "usted": "se rompa",
-        "ustedes": "se rompan"
       }
     },
     "pastParticiple": "roto",
@@ -128418,10 +128182,6 @@
         "nosotros": "nos suicidamos",
         "vosotros": "os suicidáis",
         "ellos": "se suicidan"
-      },
-      "imperative_affirmative": {
-        "usted": "se suicide",
-        "ustedes": "se suiciden"
       }
     }
   },
@@ -136415,10 +136175,6 @@
         "nosotros": "nos ufanamos",
         "vosotros": "os ufanáis",
         "ellos": "se ufanan"
-      },
-      "imperative_affirmative": {
-        "usted": "se ufane",
-        "ustedes": "se ufanen"
       }
     }
   },
@@ -138921,10 +138677,6 @@
         "usted": "se vistió",
         "ellos": "se vistieron",
         "ustedes": "se vistieron"
-      },
-      "imperative_affirmative": {
-        "usted": "se vista",
-        "ustedes": "se vistan"
       }
     },
     "irregularTags": [
@@ -140978,10 +140730,6 @@
         "nosotros": "nos zafamos",
         "vosotros": "os zafáis",
         "ellos": "se zafan"
-      },
-      "imperative_affirmative": {
-        "usted": "se zafe",
-        "ustedes": "se zafen"
       }
     }
   },
@@ -167156,13 +166904,7 @@
     "level": "B1",
     "pos": "verb",
     "rating": 3,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se anime",
-        "ustedes": "se animen"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "coreografiar_verb",
@@ -167233,13 +166975,7 @@
     "level": "B1",
     "pos": "verb",
     "rating": 3,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se nuble",
-        "ustedes": "se nublen"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "peinarse_verb",
@@ -167249,13 +166985,7 @@
     "pos": "verb",
     "rating": 5,
     "group": "ar",
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se peine",
-        "ustedes": "se peinen"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "volver_casa_verb",
@@ -167597,13 +167327,7 @@
     "level": "B1",
     "pos": "verb",
     "rating": 3,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se arrastre",
-        "ustedes": "se arrastren"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "redactar_contrato_verb",
@@ -167623,14 +167347,7 @@
     "group": "ar",
     "irregularTags": [
       "zar"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se disfrace",
-        "nosotros": "nos disfracemos",
-        "ustedes": "se disfracen"
-      }
-    }
+    ]
   },
   {
     "id": "conducir_izquierda_verb",
@@ -167856,13 +167573,7 @@
     "level": "B1",
     "pos": "verb",
     "rating": 3,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se desmaye",
-        "ustedes": "se desmayen"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "dormirse_verb",
@@ -167890,12 +167601,6 @@
       "present_subjunctive": {
         "nosotros": "nos durmamos",
         "vosotros": "os durmáis"
-      },
-      "imperative_affirmative": {
-        "tú": "te duerme",
-        "usted": "se duerma",
-        "nosotros": "nos durmamos",
-        "ustedes": "se duerman"
       }
     },
     "irregularTags": [
@@ -168138,12 +167843,6 @@
       "present_subjunctive": {
         "nosotros": "nos perdamos",
         "vosotros": "os perdáis"
-      },
-      "imperative_affirmative": {
-        "tú": "te pierde",
-        "usted": "se pierda",
-        "nosotros": "nos perdamos",
-        "ustedes": "se pierdan"
       }
     },
     "irregularTags": [
@@ -168158,13 +167857,7 @@
     "level": "B1",
     "pos": "verb",
     "rating": 3,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se asuste",
-        "ustedes": "se asusten"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "estresarse_verb",
@@ -168176,13 +167869,7 @@
     "group": "ar",
     "en_syn": [
       "to stress"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se estrese",
-        "ustedes": "se estresen"
-      }
-    }
+    ]
   },
   {
     "id": "desvestirse_verb",
@@ -168994,13 +168681,7 @@
     "pos": "verb",
     "rating": 5,
     "group": "ar",
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se maquille",
-        "ustedes": "se maquillen"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "perfumarse_verb",
@@ -169526,10 +169207,6 @@
     "overrides": {
       "present": {
         "yo": "me encojo"
-      },
-      "imperative_affirmative": {
-        "usted": "se encoja",
-        "ustedes": "se encojan"
       }
     },
     "irregularTags": [
@@ -169594,13 +169271,7 @@
     "pastParticiple": "inscrito",
     "es_syn": [
       "registrarse"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se inscriba",
-        "ustedes": "se inscriban"
-      }
-    }
+    ]
   },
   {
     "id": "sorber_verb",
@@ -169924,13 +169595,7 @@
     "level": "A2",
     "pos": "verb",
     "rating": 4,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se cuide",
-        "ustedes": "se cuiden"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "domesticar_verb",
@@ -175692,13 +175357,7 @@
       "running"
     ],
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se acabe",
-        "ustedes": "se acaben"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "acordarse_verb",
@@ -175734,12 +175393,6 @@
         "ustedes": "se acuerden",
         "nosotros": "nos acordemos",
         "vosotros": "os acordéis"
-      },
-      "imperative_affirmative": {
-        "tú": "te acuerda",
-        "usted": "se acuerde",
-        "ustedes": "se acuerden",
-        "nosotros": "nos acordemos"
       }
     }
   },
@@ -175750,13 +175403,7 @@
     "level": "A2",
     "pos": "verb",
     "rating": 4,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se acostumbre",
-        "ustedes": "se acostumbren"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "adaptarse_verb",
@@ -175768,13 +175415,7 @@
     "group": "ar",
     "es_syn": [
       "ajustar"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se adapte",
-        "ustedes": "se adapten"
-      }
-    }
+    ]
   },
   {
     "id": "adjuntar_verb",
@@ -175821,13 +175462,7 @@
     "level": "B2",
     "pos": "verb",
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se agote",
-        "ustedes": "se agoten"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "alejarse_verb",
@@ -175836,13 +175471,7 @@
     "level": "B2",
     "pos": "verb",
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se aleje",
-        "ustedes": "se alejen"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "anunciar_verb",
@@ -175872,13 +175501,7 @@
     "group": "ar",
     "es_syn": [
       "apresurar"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se apure",
-        "ustedes": "se apuren"
-      }
-    }
+    ]
   },
   {
     "id": "asegurarse_verb",
@@ -175890,13 +175513,7 @@
     "group": "ar",
     "es_syn": [
       "salir de dudas"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se asegure",
-        "ustedes": "se aseguren"
-      }
-    }
+    ]
   },
   {
     "id": "atrasarse_verb",
@@ -175908,13 +175525,7 @@
     "group": "ar",
     "en_syn": [
       "to delay"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se atrase",
-        "ustedes": "se atrasen"
-      }
-    }
+    ]
   },
   {
     "id": "automedicarse_verb",
@@ -175926,14 +175537,7 @@
     "group": "ar",
     "irregularTags": [
       "car"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se automedique",
-        "nosotros": "nos automediquemos",
-        "ustedes": "se automediquen"
-      }
-    }
+    ]
   },
   {
     "id": "bañarse_verb",
@@ -175949,13 +175553,7 @@
     "rating": 5,
     "group": "ar",
     "audited": "v7-audit-2026-04-12",
-    "es_syn": [],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se bañe",
-        "ustedes": "se bañen"
-      }
-    }
+    "es_syn": []
   },
   {
     "id": "beneficiarse_verb",
@@ -175967,13 +175565,7 @@
     "group": "ar",
     "en_syn": [
       "to benefit"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se beneficie",
-        "ustedes": "se beneficien"
-      }
-    }
+    ]
   },
   {
     "id": "caerse_verb",
@@ -176006,10 +175598,6 @@
         "vosotros": "os habéis caído",
         "ellos": "se han caído",
         "ustedes": "se han caído"
-      },
-      "imperative_affirmative": {
-        "usted": "se caiga",
-        "ustedes": "se caigan"
       }
     },
     "irregularTags": [
@@ -176035,13 +175623,7 @@
     ],
     "rating": 2,
     "group": "ar",
-    "es_syn": [],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se calle",
-        "ustedes": "se callen"
-      }
-    }
+    "es_syn": []
   },
   {
     "id": "cansarse_verb",
@@ -176055,13 +175637,7 @@
       "tiring"
     ],
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se canse",
-        "ustedes": "se cansen"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "capacitarse_verb",
@@ -176070,13 +175646,7 @@
     "level": "B2",
     "pos": "verb",
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se capacite",
-        "ustedes": "se capaciten"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "cepillarse_verb",
@@ -176086,13 +175656,7 @@
     "pos": "verb",
     "rating": 5,
     "group": "ar",
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se cepille",
-        "ustedes": "se cepillen"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "charlar_verb",
@@ -176223,14 +175787,7 @@
     "group": "ar",
     "irregularTags": [
       "car"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se complique",
-        "nosotros": "nos compliquemos",
-        "ustedes": "se compliquen"
-      }
-    }
+    ]
   },
   {
     "id": "comprometerse_verb",
@@ -176249,13 +175806,7 @@
     "group": "er",
     "es_syn": [
       "cometer"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se comprometa",
-        "ustedes": "se comprometan"
-      }
-    }
+    ]
   },
   {
     "id": "comunicarse_verb",
@@ -176270,14 +175821,7 @@
     "group": "ar",
     "irregularTags": [
       "car"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se comunique",
-        "nosotros": "nos comuniquemos",
-        "ustedes": "se comuniquen"
-      }
-    }
+    ]
   },
   {
     "id": "concentrarse_verb",
@@ -176287,13 +175831,7 @@
     "pos": "verb",
     "rating": 2,
     "group": "ar",
-    "es_syn": [],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se concentre",
-        "ustedes": "se concentren"
-      }
-    }
+    "es_syn": []
   },
   {
     "id": "concordar_verb",
@@ -176368,13 +175906,7 @@
     "level": "B2",
     "pos": "verb",
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se conecte",
-        "ustedes": "se conecten"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "consentir_verb",
@@ -176463,13 +175995,7 @@
     ],
     "en_syn": [
       "to infect"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se contagie",
-        "ustedes": "se contagien"
-      }
-    }
+    ]
   },
   {
     "id": "convenir_verb",
@@ -176567,12 +176093,6 @@
       "present_subjunctive": {
         "nosotros": "nos convirtamos",
         "vosotros": "os convirtáis"
-      },
-      "imperative_affirmative": {
-        "tú": "te convierte",
-        "usted": "se convierta",
-        "nosotros": "nos convirtamos",
-        "ustedes": "se conviertan"
       }
     },
     "irregularTags": [
@@ -176592,13 +176112,7 @@
     ],
     "rating": 2,
     "group": "ar",
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se corte",
-        "ustedes": "se corten"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "curarse_verb",
@@ -176610,13 +176124,7 @@
     "group": "ar",
     "es_syn": [
       "sanar"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se cure",
-        "ustedes": "se curen"
-      }
-    }
+    ]
   },
   {
     "id": "dedicarse_verb",
@@ -176631,14 +176139,7 @@
     "group": "ar",
     "irregularTags": [
       "car"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se dedique",
-        "nosotros": "nos dediquemos",
-        "ustedes": "se dediquen"
-      }
-    }
+    ]
   },
   {
     "id": "deprimirse_verb",
@@ -176647,13 +176148,7 @@
     "level": "B2",
     "pos": "verb",
     "rating": 2,
-    "group": "ir",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se deprima",
-        "ustedes": "se depriman"
-      }
-    }
+    "group": "ir"
   },
   {
     "id": "derrumbarse_verb",
@@ -176665,13 +176160,7 @@
     "group": "ar",
     "es_syn": [
       "caerse"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se derrumbe",
-        "ustedes": "se derrumben"
-      }
-    }
+    ]
   },
   {
     "id": "desahogar_verb",
@@ -176738,13 +176227,7 @@
     "level": "B2",
     "pos": "verb",
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se desate",
-        "ustedes": "se desaten"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "desbordarse_verb",
@@ -176753,13 +176236,7 @@
     "level": "B2",
     "pos": "verb",
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se desborde",
-        "ustedes": "se desborden"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "descomponer_verb",
@@ -176873,14 +176350,7 @@
     ],
     "es_syn": [
       "sobresalir"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se destaque",
-        "nosotros": "nos destaquemos",
-        "ustedes": "se destaquen"
-      }
-    }
+    ]
   },
   {
     "id": "destrozar_verb",
@@ -176930,12 +176400,6 @@
         "ustedes": "se desvíen",
         "nosotros": "nos desviemos",
         "vosotros": "os desviéis"
-      },
-      "imperative_affirmative": {
-        "tú": "te desvía",
-        "usted": "se desvíe",
-        "ustedes": "se desvíen",
-        "nosotros": "nos desviemos"
       }
     }
   },
@@ -176965,11 +176429,6 @@
         "vosotros": "os detuvisteis",
         "ellos": "se detuvieron",
         "ustedes": "se detuvieron"
-      },
-      "imperative_affirmative": {
-        "tú": "te deten",
-        "usted": "se detenga",
-        "ustedes": "se detengan"
       }
     },
     "stemOverrides": {
@@ -177023,13 +176482,7 @@
       "space out",
       "to become separated",
       "to separate"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se distancie",
-        "ustedes": "se distancien"
-      }
-    }
+    ]
   },
   {
     "id": "distraerse_verb",
@@ -177062,10 +176515,6 @@
         "vosotros": "os habéis distraído",
         "ellos": "se han distraído",
         "ustedes": "se han distraído"
-      },
-      "imperative_affirmative": {
-        "usted": "se distraiga",
-        "ustedes": "se distraigan"
       }
     },
     "irregularTags": [
@@ -177147,14 +176596,7 @@
     ],
     "es_syn": [
       "manija"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se encargue",
-        "nosotros": "nos encarguemos",
-        "ustedes": "se encarguen"
-      }
-    }
+    ]
   },
   {
     "id": "enfermarse_verb",
@@ -177163,13 +176605,7 @@
     "level": "B2",
     "pos": "verb",
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se enferme",
-        "ustedes": "se enfermen"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "enfocarse_verb",
@@ -177181,14 +176617,7 @@
     "group": "ar",
     "irregularTags": [
       "car"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se enfoque",
-        "nosotros": "nos enfoquemos",
-        "ustedes": "se enfoquen"
-      }
-    }
+    ]
   },
   {
     "id": "enojarse_verb",
@@ -177200,13 +176629,7 @@
     "group": "ar",
     "es_syn": [
       "enfadarse"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se enoje",
-        "ustedes": "se enojen"
-      }
-    }
+    ]
   },
   {
     "id": "ensuciarse_verb",
@@ -177215,13 +176638,7 @@
     "level": "B2",
     "pos": "verb",
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se ensucie",
-        "ustedes": "se ensucien"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "enterar_verb",
@@ -177253,13 +176670,7 @@
     "group": "ar",
     "es_syn": [
       "averiguar"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se entere",
-        "ustedes": "se enteren"
-      }
-    }
+    ]
   },
   {
     "id": "entretenerse_verb",
@@ -177287,11 +176698,6 @@
         "vosotros": "os entretuvisteis",
         "ellos": "se entretuvieron",
         "ustedes": "se entretuvieron"
-      },
-      "imperative_affirmative": {
-        "tú": "te entreten",
-        "usted": "se entretenga",
-        "ustedes": "se entretengan"
       }
     },
     "stemOverrides": {
@@ -177369,13 +176775,7 @@
     "pos": "verb",
     "rating": 2,
     "group": "ar",
-    "es_syn": [],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se escape",
-        "ustedes": "se escapen"
-      }
-    }
+    "es_syn": []
   },
   {
     "id": "esconderse_verb",
@@ -177392,13 +176792,7 @@
     "audited": "v7-audit-2026-04-12",
     "es_syn": [
       "ocultar"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se esconda",
-        "ustedes": "se escondan"
-      }
-    }
+    ]
   },
   {
     "id": "esforzarse_verb",
@@ -177436,12 +176830,6 @@
         "ustedes": "se esfuercen",
         "nosotros": "nos esforcemos",
         "vosotros": "os esforcéis"
-      },
-      "imperative_affirmative": {
-        "tú": "te esfuerza",
-        "usted": "se esfuerce",
-        "nosotros": "nos esforcemos",
-        "ustedes": "se esfuercen"
       }
     }
   },
@@ -177473,14 +176861,7 @@
     "group": "ar",
     "irregularTags": [
       "zar"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se especialice",
-        "nosotros": "nos especialicemos",
-        "ustedes": "se especialicen"
-      }
-    }
+    ]
   },
   {
     "id": "estacionar_verb",
@@ -177636,13 +177017,7 @@
     ],
     "rating": 2,
     "group": "ar",
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se fije",
-        "ustedes": "se fijen"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "fortalecerse_verb",
@@ -177655,10 +177030,6 @@
     "overrides": {
       "present": {
         "yo": "me fortalezco"
-      },
-      "imperative_affirmative": {
-        "usted": "se fortalezca",
-        "ustedes": "se fortalezcan"
       }
     },
     "irregularTags": [
@@ -177756,13 +177127,7 @@
       "hitting"
     ],
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se golpee",
-        "ustedes": "se golpeen"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "gotear_verb",
@@ -177804,11 +177169,6 @@
         "vosotros": "os hicisteis",
         "ellos": "se hicieron",
         "ustedes": "se hicieron"
-      },
-      "imperative_affirmative": {
-        "tú": "te haz",
-        "usted": "se haga",
-        "ustedes": "se hagan"
       }
     },
     "stemOverrides": {
@@ -177851,13 +177211,7 @@
       "hydrate",
       "stay hydrated"
     ],
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se hidrate",
-        "ustedes": "se hidraten"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "imaginarse_verb",
@@ -177871,13 +177225,7 @@
     "rating": 2,
     "group": "ar",
     "audited": "v7-audit-2026-04-12",
-    "es_syn": [],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se imagine",
-        "ustedes": "se imaginen"
-      }
-    }
+    "es_syn": []
   },
   {
     "id": "incendiarse_verb",
@@ -177886,13 +177234,7 @@
     "level": "B2",
     "pos": "verb",
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se incendie",
-        "ustedes": "se incendien"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "incomodar_verb",
@@ -177944,14 +177286,7 @@
     "group": "ar",
     "irregularTags": [
       "zar"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se independice",
-        "nosotros": "nos independicemos",
-        "ustedes": "se independicen"
-      }
-    }
+    ]
   },
   {
     "id": "interactuar_verb",
@@ -178027,13 +177362,7 @@
     "group": "ar",
     "es_syn": [
       "anegar"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se inunde",
-        "ustedes": "se inunden"
-      }
-    }
+    ]
   },
   {
     "id": "juntarse_verb",
@@ -178048,13 +177377,7 @@
       "got"
     ],
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se junte",
-        "ustedes": "se junten"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "lesionarse_verb",
@@ -178066,13 +177389,7 @@
     "group": "ar",
     "en_syn": [
       "to wound"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se lesione",
-        "ustedes": "se lesionen"
-      }
-    }
+    ]
   },
   {
     "id": "llevarse_verb",
@@ -178087,13 +177404,7 @@
       "carried"
     ],
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se lleve",
-        "ustedes": "se lleven"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "lloviznar_verb",
@@ -178198,13 +177509,7 @@
     ],
     "rating": 2,
     "group": "ar",
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se marche",
-        "ustedes": "se marchen"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "mejorarse_verb",
@@ -178215,13 +177520,7 @@
     "en_syn": [],
     "rating": 2,
     "group": "ar",
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se mejore",
-        "ustedes": "se mejoren"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "merendar_verb",
@@ -178271,13 +177570,7 @@
     "level": "B2",
     "pos": "verb",
     "rating": 2,
-    "group": "er",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se meta",
-        "ustedes": "se metan"
-      }
-    }
+    "group": "er"
   },
   {
     "id": "mojarse_verb",
@@ -178286,13 +177579,7 @@
     "level": "A2",
     "pos": "verb",
     "rating": 4,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se moje",
-        "ustedes": "se mojen"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "moverse_verb",
@@ -178317,12 +177604,6 @@
       "present_subjunctive": {
         "nosotros": "nos movamos",
         "vosotros": "os mováis"
-      },
-      "imperative_affirmative": {
-        "tú": "te mueve",
-        "usted": "se mueva",
-        "nosotros": "nos movamos",
-        "ustedes": "se muevan"
       }
     },
     "irregularTags": [
@@ -178351,12 +177632,6 @@
       "present_subjunctive": {
         "nosotros": "nos neguemos",
         "vosotros": "os neguéis"
-      },
-      "imperative_affirmative": {
-        "tú": "te niega",
-        "usted": "se niegue",
-        "nosotros": "nos neguemos",
-        "ustedes": "se nieguen"
       }
     },
     "irregularTags": [
@@ -178379,13 +177654,7 @@
     "group": "ar",
     "es_syn": [
       "cuidar"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se ocupe",
-        "ustedes": "se ocupen"
-      }
-    }
+    ]
   },
   {
     "id": "ocurrirse_verb",
@@ -178399,13 +177668,7 @@
     ],
     "rating": 2,
     "group": "ir",
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se ocurra",
-        "ustedes": "se ocurran"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "ofenderse_verb",
@@ -178419,13 +177682,7 @@
       "take offense",
       "to offend",
       "to take umbrage"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se ofenda",
-        "ustedes": "se ofendan"
-      }
-    }
+    ]
   },
   {
     "id": "pasarse_verb",
@@ -178440,12 +177697,7 @@
     ],
     "rating": 2,
     "group": "ar",
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se pase"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "patear_verb",
@@ -178495,13 +177747,7 @@
     ],
     "rating": 2,
     "group": "ir",
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se permita",
-        "ustedes": "se permitan"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "pisar_verb",
@@ -178568,13 +177814,7 @@
     "group": "ar",
     "es_syn": [
       "considerar"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se plantee",
-        "ustedes": "se planteen"
-      }
-    }
+    ]
   },
   {
     "id": "portarse_verb",
@@ -178589,13 +177829,7 @@
     "rating": 2,
     "group": "ar",
     "audited": "v7-audit-2026-04-12",
-    "es_syn": [],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se porte",
-        "ustedes": "se porten"
-      }
-    }
+    "es_syn": []
   },
   {
     "id": "preguntarse_verb",
@@ -178606,13 +177840,7 @@
     "en_syn": [],
     "rating": 2,
     "group": "ar",
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se pregunte",
-        "ustedes": "se pregunten"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "prepararse_verb",
@@ -178625,13 +177853,7 @@
       "to prepare"
     ],
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se prepare",
-        "ustedes": "se preparen"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "presentarse_verb",
@@ -178646,13 +177868,7 @@
       "run"
     ],
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se presente",
-        "ustedes": "se presenten"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "probarse_verb",
@@ -178674,12 +177890,6 @@
       "present_subjunctive": {
         "nosotros": "nos probemos",
         "vosotros": "os probéis"
-      },
-      "imperative_affirmative": {
-        "tú": "te prueba",
-        "usted": "se pruebe",
-        "nosotros": "nos probemos",
-        "ustedes": "se prueben"
       }
     },
     "irregularTags": [
@@ -178702,13 +177912,7 @@
     ],
     "rating": 2,
     "group": "ar",
-    "audited": "v7-audit-2026-04-12",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se queme",
-        "ustedes": "se quemen"
-      }
-    }
+    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "rastrear_verb",
@@ -178738,13 +177942,7 @@
     "group": "ar",
     "en_syn": [
       "to reconcile"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se reconcilie",
-        "ustedes": "se reconcilien"
-      }
-    }
+    ]
   },
   {
     "id": "reencontrarse_verb",
@@ -178776,12 +177974,6 @@
         "ustedes": "se reencuentren",
         "nosotros": "nos reencontremos",
         "vosotros": "os reencontréis"
-      },
-      "imperative_affirmative": {
-        "tú": "te reencuentra",
-        "usted": "se reencuentre",
-        "ustedes": "se reencuentren",
-        "nosotros": "nos reencontremos"
       }
     }
   },
@@ -178849,12 +178041,6 @@
       "present_subjunctive": {
         "nosotros": "nos refiramos",
         "vosotros": "os refiráis"
-      },
-      "imperative_affirmative": {
-        "tú": "te refiere",
-        "usted": "se refiera",
-        "nosotros": "nos refiramos",
-        "ustedes": "se refieran"
       }
     },
     "irregularTags": [
@@ -178870,13 +178056,7 @@
     "level": "B2",
     "pos": "verb",
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se refugie",
-        "ustedes": "se refugien"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "remar_verb",
@@ -178930,11 +178110,6 @@
         "usted": "se rindió",
         "ellos": "se rindieron",
         "ustedes": "se rindieron"
-      },
-      "imperative_affirmative": {
-        "tú": "te rinde",
-        "usted": "se rinda",
-        "ustedes": "se rindan"
       }
     },
     "irregularTags": [
@@ -178997,13 +178172,7 @@
     "level": "B2",
     "pos": "verb",
     "rating": 2,
-    "group": "ar",
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se resbale",
-        "ustedes": "se resbalen"
-      }
-    }
+    "group": "ar"
   },
   {
     "id": "resistirse_verb",
@@ -179016,13 +178185,7 @@
     "es_syn": [
       "negarse",
       "rehusar"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se resista",
-        "ustedes": "se resistan"
-      }
-    }
+    ]
   },
   {
     "id": "retroceder_verb",
@@ -179058,14 +178221,7 @@
     "group": "ar",
     "irregularTags": [
       "car"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se seque",
-        "nosotros": "nos sequemos",
-        "ustedes": "se sequen"
-      }
-    }
+    ]
   },
   {
     "id": "sentirse_verb",
@@ -179096,12 +178252,6 @@
       "present_subjunctive": {
         "nosotros": "nos sintamos",
         "vosotros": "os sintáis"
-      },
-      "imperative_affirmative": {
-        "tú": "te siente",
-        "usted": "se sienta",
-        "nosotros": "nos sintamos",
-        "ustedes": "se sientan"
       }
     },
     "irregularTags": [
@@ -179126,13 +178276,7 @@
     "group": "ar",
     "es_syn": [
       "apartar"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se separe",
-        "ustedes": "se separen"
-      }
-    }
+    ]
   },
   {
     "id": "soplar_verb",
@@ -179272,14 +178416,7 @@
     ],
     "es_syn": [
       "calmarse"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se tranquilice",
-        "nosotros": "nos tranquilicemos",
-        "ustedes": "se tranquilicen"
-      }
-    }
+    ]
   },
   {
     "id": "tronar_verb",
@@ -179372,14 +178509,7 @@
     "group": "ar",
     "irregularTags": [
       "gar"
-    ],
-    "overrides": {
-      "imperative_affirmative": {
-        "usted": "se vengue",
-        "nosotros": "nos venguemos",
-        "ustedes": "se venguen"
-      }
-    }
+    ]
   },
   {
     "id": "verse_verb",
@@ -179413,10 +178543,6 @@
         "vosotros": "os veíais",
         "ellos": "se veían",
         "ustedes": "se veían"
-      },
-      "imperative_affirmative": {
-        "usted": "se vea",
-        "ustedes": "se vean"
       }
     },
     "irregularTags": [
@@ -179450,12 +178576,6 @@
       "present_subjunctive": {
         "nosotros": "nos volvamos",
         "vosotros": "os volváis"
-      },
-      "imperative_affirmative": {
-        "tú": "te vuelve",
-        "usted": "se vuelva",
-        "nosotros": "nos volvamos",
-        "ustedes": "se vuelvan"
       }
     },
     "irregularTags": [
