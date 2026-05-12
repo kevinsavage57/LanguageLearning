@@ -2693,16 +2693,23 @@ function _vtComputeData(conj) {
   const endingPositions = new Set();
   for (let i = endingStart; i < baseInf.length; i++) endingPositions.add(i);
 
-  // LCS of full baseInf vs baseSrc (diacritic-stripped for matching).
+  // For compound tenses (auxiliary + participle) or negative imperatives, align the
+  // infinitive against the final word only so blanks land cleanly around the stem.
+  // e.g. "hablar" vs "has hablado": LCS against "hablado" (offset 4) → [has ]habl[ado]
+  const spaceIdx = baseSrc.indexOf(' ');
+  const lcsTarget = spaceIdx !== -1 ? baseSrc.slice(spaceIdx + 1) : baseSrc;
+  const lcsOffset = spaceIdx !== -1 ? spaceIdx + 1 : 0;
+
+  // LCS of full baseInf vs lcsTarget (diacritic-stripped for matching).
   // Positions not in this LCS are mandatory to remove; positions in it are keepable.
   const { aIndices, bIndices } = _vtLCS(
     LANG.stripDiacritics(baseInf.toLowerCase()),
-    LANG.stripDiacritics(baseSrc.toLowerCase())
+    LANG.stripDiacritics(lcsTarget.toLowerCase())
   );
   const fullLCSSet = new Set(aIndices);
 
   const infToSrcMap = new Map();
-  for (let k = 0; k < aIndices.length; k++) infToSrcMap.set(aIndices[k], bIndices[k]);
+  for (let k = 0; k < aIndices.length; k++) infToSrcMap.set(aIndices[k], bIndices[k] + lcsOffset);
 
   const mandatoryRemovals = new Set();
   for (let i = 0; i < baseInf.length; i++) {
