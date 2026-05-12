@@ -639,7 +639,8 @@ function buildVerbForms(verb, tgtFor) {
       const yo = getYoPresent();
       base = yo.endsWith("o") ? yo.slice(0, -1) : yo;
     } else if (def.stemType === "present_subjunctive_full") {
-      const subj = buildForm("present_subjunctive", person);
+      const subjPerson = person === "usted" ? "él" : person === "ustedes" ? "ellos" : person;
+      const subj = buildForm("present_subjunctive", subjPerson);
       return subj ? `no ${subj}` : null;
     } else if (def.stemType === "imperative_affirmative") {
       const subjDef  = getTenseDef("present_subjunctive");
