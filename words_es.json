@@ -143955,18 +143955,6 @@
     ]
   },
   {
-    "id": "farfalle_noun",
-    "es": "farfalle",
-    "en": "farfalle pasta",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 1,
-    "noun_class": "f_std",
-    "en_syn": [
-      "bow-tie pasta"
-    ]
-  },
-  {
     "id": "animale_fattoria_noun",
     "es": "animal de granja",
     "en": "farm animal",
