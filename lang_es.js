@@ -238,7 +238,12 @@ function _pluralizeToken(s) {
 // Handles "X of Y" constructions by pluralizing the head noun and leaving
 // the "of …" tail unchanged ("sheet of paper" → "sheets of paper").
 function _pluralizeEnglish(en) {
-  const s = (en || "").trim();
+  let s = (en || "").trim();
+
+  // Strip trailing parenthetical like "(f)" or "(m)" so it doesn't get "s" appended to it
+  const parenMatch = s.match(/^(.*?)\s*(\([^)]+\))$/);
+  const suffix = parenMatch ? " " + parenMatch[2] : "";
+  if (parenMatch) s = parenMatch[1].trim();
 
   // "X of Y" — pluralize only the head noun (last word before " of ")
   const ofIdx = s.toLowerCase().indexOf(" of ");
@@ -247,10 +252,10 @@ function _pluralizeEnglish(en) {
     const tail = s.slice(ofIdx);          // e.g. " of paper"
     const headWords = head.split(" ");
     headWords[headWords.length - 1] = _pluralizeToken(headWords[headWords.length - 1]);
-    return headWords.join(" ") + tail;
+    return headWords.join(" ") + tail + suffix;
   }
 
-  return _pluralizeToken(s);
+  return _pluralizeToken(s) + suffix;
 }
 
 // Returns the display word (and optional gender label) for the noun typing prompt.
