@@ -463,15 +463,13 @@ function addGistButton() {
   controls.appendChild(btn);
 }
 
-// Map a word's rating (1–5, higher = more common/important) to its starting weight.
-// Scale: 5→10, 4→8, 3→6, 2→2, 1→1
+// Map a word's frequency rating (1–10, 1 = most common) to its starting selection weight.
+// Weights derived from: weight(1)/weight(r) equals the user-specified multipliers.
+const RATING_WEIGHTS = [20, 10, 20/3, 20/7, 20/9, 20/12, 20/14, 20/16, 20/18, 1];
 function ratingToWeight(rating) {
-  const r = typeof rating === "number" ? rating : 3;
-  if (r >= 5) return 10;
-  if (r >= 4) return 8;
-  if (r >= 3) return 6;
-  if (r >= 2) return 2;
-  return 1;
+  const r = typeof rating === "number" ? Math.round(rating) : 5;
+  const idx = Math.max(0, Math.min(9, r - 1));
+  return RATING_WEIGHTS[idx];
 }
 
 
@@ -2049,13 +2047,14 @@ function addQuickStartButton() {
 function decayWords() {
   const now = Date.now();
   allWords.forEach(w => {
+    const cap = ratingToWeight(w.rating);
     const days = (now - w.lastSeen) / 86400000;
-    if (days > DECAY_DAYS && w.weight < 5) {
-      w.weight++;
+    if (days > DECAY_DAYS && w.weight < cap) {
+      w.weight = Math.min(w.weight + 1, cap);
     }
     const typingDays = (now - w.typing_lastSeen) / 86400000;
-    if (typingDays > DECAY_DAYS && w.typing_weight < 5) {
-      w.typing_weight++;
+    if (typingDays > DECAY_DAYS && w.typing_weight < cap) {
+      w.typing_weight = Math.min(w.typing_weight + 1, cap);
     }
   });
 }
@@ -3454,18 +3453,22 @@ function pickWeighted(pool, n, useTypingWeight = false) {
     return shuffle([...pool]);
   }
 
-  const bag = [];
-  pool.forEach(w => {
-    const wt = useTypingWeight
-  ? (w.typing_weight ?? w.typeWeight ?? 1)
-  : (w.weight ?? w.matchWeight ?? 1);
-
-    for (let i = 0; i < wt; i++) bag.push(w);
-  });
+  // Cumulative-weight selection — works correctly with float weights.
+  const weights = pool.map(w => useTypingWeight
+    ? (w.typing_weight ?? w.typeWeight ?? 1)
+    : (w.weight ?? w.matchWeight ?? 1));
+  const cumulative = [];
+  let total = 0;
+  for (const wt of weights) { total += wt; cumulative.push(total); }
 
   const set = new Set();
-  while (set.size < n && bag.length) {
-    set.add(bag[Math.floor(Math.random() * bag.length)]);
+  let attempts = 0;
+  while (set.size < n && attempts < pool.length * 50) {
+    attempts++;
+    const r = Math.random() * total;
+    let idx = cumulative.findIndex(c => r < c);
+    if (idx < 0) idx = pool.length - 1;
+    set.add(pool[idx]);
   }
   return [...set];
 }
