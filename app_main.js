@@ -2931,7 +2931,16 @@ function _vtRenderEntering(segments, blankFills) {
     <div class="vt-instruction">Type the missing letters in each blank (accents optional)</div>
   `;
 
-  // Populate accent buttons — insert into whichever blank has focus.
+  const inputs   = [...area.querySelectorAll(".vt-replace-input")];
+  const pronInp  = area.querySelector(".vt-pronoun-input");
+  const allInps  = [...(pronInp ? [pronInp] : []), ...inputs];
+  const btn      = document.getElementById("vtEnterBtn");
+  const fbDiv    = document.getElementById("vtFeedback");
+
+  // Track last-focused input so accent buttons know where to insert.
+  let lastFocusedInput = allInps[0] ?? null;
+
+  // Populate accent buttons — insert into whichever blank was last focused.
   const vtAccentDiv = document.getElementById("vtAccentButtons");
   if (vtAccentDiv && Array.isArray(LANG.accentButtons)) {
     LANG.accentButtons.forEach(({ ch, label }) => {
@@ -2941,26 +2950,24 @@ function _vtRenderEntering(segments, blankFills) {
       b.textContent = label || ch;
       vtAccentDiv.appendChild(b);
     });
+    // Prevent mousedown from stealing focus away from the active input.
+    vtAccentDiv.addEventListener("mousedown", e => e.preventDefault());
     vtAccentDiv.addEventListener("click", e => {
       const b = e.target.closest("button");
       if (!b) return;
       const ch = b.dataset.ch || b.textContent;
       const active = area.querySelector(".vt-pronoun-input:focus, .vt-replace-input:focus")
+                  || lastFocusedInput
                   || area.querySelector(".vt-replace-input");
-      if (active) insertAtCursor(active, ch);
+      if (active) { insertAtCursor(active, ch); active.focus(); }
     });
   }
-
-  const inputs   = [...area.querySelectorAll(".vt-replace-input")];
-  const pronInp  = area.querySelector(".vt-pronoun-input");
-  const allInps  = [...(pronInp ? [pronInp] : []), ...inputs];
-  const btn      = document.getElementById("vtEnterBtn");
-  const fbDiv    = document.getElementById("vtFeedback");
 
   if (allInps.length) allInps[0].focus();
 
   // Move focus to next input on Enter, submit on last input's Enter.
   allInps.forEach((inp, k) => {
+    inp.addEventListener("focus", () => { lastFocusedInput = inp; });
     inp.addEventListener("keydown", e => {
       if (e.key !== "Enter") return;
       e.preventDefault();
