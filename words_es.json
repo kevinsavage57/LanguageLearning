@@ -110671,9 +110671,8 @@
     "es": "préstamelo",
     "en": "lend it to me",
     "level": "B1",
-    "pos": "noun",
-    "rating": 7,
-    "noun_class": "m_std"
+    "pos": "phrase",
+    "rating": 7
   },
   {
     "id": "prestamo_noun",
