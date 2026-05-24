@@ -10494,12 +10494,11 @@
     "es": "aprenda",
     "en": "learns",
     "level": "B1",
-    "pos": "noun",
+    "pos": "phrase",
     "en_syn": [
       "learn"
     ],
-    "rating": 7,
-    "noun_class": "f_std"
+    "rating": 7
   },
   {
     "id": "aprender_verb",
@@ -16461,9 +16460,8 @@
     "es": "ayudándolas",
     "en": "helping them",
     "level": "B1",
-    "pos": "noun",
-    "rating": 5,
-    "noun_class": "m_std"
+    "pos": "phrase",
+    "rating": 5
   },
   {
     "id": "ayuntamiento_noun",
@@ -30836,13 +30834,12 @@
     "es": "comencé",
     "en": "started",
     "level": "B1",
-    "pos": "noun",
+    "pos": "phrase",
     "en_syn": [
       "started with",
       "began"
     ],
     "rating": 4,
-    "noun_class": "m_std",
     "es_syn": [
       "empecé"
     ]
@@ -39331,12 +39328,11 @@
     "es": "corrigiendo",
     "en": "reading",
     "level": "B1",
-    "pos": "noun",
+    "pos": "phrase",
     "en_syn": [
       "correcting"
     ],
     "rating": 4,
-    "noun_class": "m_std",
     "es_syn": [
       "lector",
       "leyendo"
@@ -44952,12 +44948,11 @@
     "es": "dame",
     "en": "give me",
     "level": "A2",
-    "pos": "noun",
+    "pos": "phrase",
     "en_syn": [
       "me"
     ],
-    "rating": 3,
-    "noun_class": "m_std"
+    "rating": 3
   },
   {
     "id": "damnificado_noun",
@@ -57582,12 +57577,11 @@
     "es": "durmiendo",
     "en": "falling asleep",
     "level": "B1",
-    "pos": "noun",
+    "pos": "phrase",
     "en_syn": [
       "sleeping"
     ],
-    "rating": 6,
-    "noun_class": "m_std"
+    "rating": 6
   },
   {
     "id": "duro_adjective",
@@ -57617,9 +57611,8 @@
     "es": "dámela",
     "en": "give it to me",
     "level": "A2",
-    "pos": "noun",
-    "rating": 3,
-    "noun_class": "f_std"
+    "pos": "phrase",
+    "rating": 3
   },
   {
     "id": "dársena_noun",
@@ -57740,13 +57733,12 @@
     "es": "déjame",
     "en": "let (me)!",
     "level": "A2",
-    "pos": "noun",
+    "pos": "phrase",
     "en_syn": [
       "allow (me)!",
       "leave (me)!"
     ],
-    "rating": 3,
-    "noun_class": "m_std"
+    "rating": 3
   },
   {
     "id": "déjà_vu_noun",
@@ -57777,14 +57769,13 @@
     "es": "déselo",
     "en": "give it to them",
     "level": "A2",
-    "pos": "noun",
+    "pos": "phrase",
     "en_syn": [
       "give it to her",
       "give it to him",
       "give it"
     ],
-    "rating": 3,
-    "noun_class": "m_std"
+    "rating": 3
   },
   {
     "id": "dia_noun",
@@ -59536,12 +59527,11 @@
     "es": "empecé",
     "en": "started",
     "level": "A2",
-    "pos": "noun",
+    "pos": "phrase",
     "en_syn": [
       "began"
     ],
     "rating": 4,
-    "noun_class": "m_std",
     "es_syn": [
       "comencé"
     ]
@@ -62861,12 +62851,11 @@
     "es": "enviándole",
     "en": "sending",
     "level": "B1",
-    "pos": "noun",
+    "pos": "phrase",
     "en_syn": [
       "send"
     ],
-    "rating": 5,
-    "noun_class": "m_std"
+    "rating": 5
   },
   {
     "id": "envolver_verb",
@@ -64724,12 +64713,11 @@
     "es": "espere",
     "en": "hold on",
     "level": "A2",
-    "pos": "noun",
+    "pos": "phrase",
     "en_syn": [
       "wait"
     ],
-    "rating": 4,
-    "noun_class": "m_std"
+    "rating": 4
   },
   {
     "id": "espeso_adjective",
@@ -85460,9 +85448,8 @@
     "es": "levántate",
     "en": "get up",
     "level": "B1",
-    "pos": "noun",
+    "pos": "phrase",
     "rating": 2,
-    "noun_class": "m_std",
     "es_syn": [
       "levántese"
     ]
@@ -85472,9 +85459,8 @@
     "es": "levántese",
     "en": "get up",
     "level": "B1",
-    "pos": "noun",
+    "pos": "phrase",
     "rating": 2,
-    "noun_class": "m_std",
     "es_syn": [
       "levántate"
     ]
@@ -85511,9 +85497,8 @@
     "es": "leyendo",
     "en": "reading",
     "level": "B1",
-    "pos": "noun",
+    "pos": "phrase",
     "rating": 4,
-    "noun_class": "m_std",
     "es_syn": [
       "corrigiendo",
       "lector"
@@ -86348,18 +86333,16 @@
     "es": "llamándola",
     "en": "calling her",
     "level": "B1",
-    "pos": "noun",
-    "rating": 5,
-    "noun_class": "f_std"
+    "pos": "phrase",
+    "rating": 5
   },
   {
     "id": "llamándolo_noun",
     "es": "llamándolo",
     "en": "calling him",
     "level": "B1",
-    "pos": "noun",
-    "rating": 5,
-    "noun_class": "m_std"
+    "pos": "phrase",
+    "rating": 5
   },
   {
     "id": "llano_adjective",
@@ -93415,9 +93398,8 @@
     "es": "mueva",
     "en": "moves",
     "level": "A2",
-    "pos": "noun",
-    "rating": 5,
-    "noun_class": "f_std"
+    "pos": "phrase",
+    "rating": 5
   },
   {
     "id": "mujer_noun",
@@ -105890,14 +105872,13 @@
     "es": "pongan",
     "en": "put in!",
     "level": "A2",
-    "pos": "noun",
+    "pos": "phrase",
     "en_syn": [
       "put!",
       "put on!",
       "put in"
     ],
-    "rating": 3,
-    "noun_class": "m_std"
+    "rating": 3
   },
   {
     "id": "poni_noun",
@@ -107133,13 +107114,12 @@
     "es": "practiqué",
     "en": "played",
     "level": "B1",
-    "pos": "noun",
+    "pos": "phrase",
     "en_syn": [
       "play",
       "practiced"
     ],
     "rating": 4,
-    "noun_class": "m_std",
     "es_syn": [
       "toqué"
     ]
@@ -115511,9 +115491,8 @@
     "es": "regalártelo",
     "en": "give it as a gift",
     "level": "B1",
-    "pos": "noun",
-    "rating": 5,
-    "noun_class": "m_std"
+    "pos": "phrase",
+    "rating": 5
   },
   {
     "id": "regar_verb",
@@ -121832,13 +121811,12 @@
     "es": "salgan",
     "en": "get out",
     "level": "A2",
-    "pos": "noun",
+    "pos": "phrase",
     "en_syn": [
       "leave",
       "will turn out"
     ],
-    "rating": 2,
-    "noun_class": "m_std"
+    "rating": 2
   },
   {
     "id": "salida_noun",
@@ -124706,9 +124684,8 @@
     "es": "siguiendo",
     "en": "following",
     "level": "B1",
-    "pos": "noun",
+    "pos": "phrase",
     "rating": 4,
-    "noun_class": "m_std",
     "es_syn": [
       "siguiente"
     ]
@@ -132881,14 +132858,13 @@
     "es": "toqué",
     "en": "played",
     "level": "A2",
-    "pos": "noun",
+    "pos": "phrase",
     "en_syn": [
       "touched",
       "touch",
       "play"
     ],
     "rating": 4,
-    "noun_class": "m_std",
     "es_syn": [
       "practiqué"
     ]
@@ -139436,14 +139412,13 @@
     "es": "visto",
     "en": "looked",
     "level": "A2",
-    "pos": "noun",
+    "pos": "phrase",
     "en_syn": [
       "watched",
       "seen",
       "wear"
     ],
-    "rating": 4,
-    "noun_class": "m_std"
+    "rating": 4
   },
   {
     "id": "visualizar_verb",
@@ -140113,14 +140088,13 @@
     "es": "vuelva",
     "en": "get back",
     "level": "A2",
-    "pos": "noun",
+    "pos": "phrase",
     "en_syn": [
       "come back",
       "returns",
       "return"
     ],
-    "rating": 2,
-    "noun_class": "f_std"
+    "rating": 2
   },
   {
     "id": "vuelvo_noun",
