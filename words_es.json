@@ -39591,11 +39591,11 @@
   {
     "id": "corte_de_pelo_phrase",
     "es": "corte de pelo",
-    "en": "cut",
+    "en": "haircut",
     "level": "B1",
     "pos": "phrase",
     "en_syn": [
-      "haircut"
+      "cut"
     ],
     "rating": 4,
     "es_syn": []
@@ -112015,7 +112015,7 @@
   {
     "id": "quedarse_atrás_phrase",
     "es": "quedarse atrás",
-    "en": "fall",
+    "en": "fall behind",
     "level": "B1",
     "pos": "phrase",
     "rating": 4,
