@@ -149665,7 +149665,14 @@
     "rating": 7,
     "noun_class": "irregular",
     "en_syn": [
-      "parking garage"
+      "multi-story car park",
+      "multistorey car park",
+      "multistory car park",
+      "multi storey car park",
+      "multi story car park",
+      "multi-level car park",
+      "multi-level parking garage",
+      "multistory parking garage"
     ],
     "noun_override": {
       "base": "aparcamiento de varias plantas",
