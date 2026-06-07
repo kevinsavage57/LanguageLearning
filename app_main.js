@@ -2335,20 +2335,40 @@ function buildVerbAnswerSlots(c) {
 }
 
 // Order-independent check: each user value must satisfy a distinct slot.
+// Returns { correct: bool, boxResults: bool[] } where boxResults[i] = whether box i matched.
 function checkMultiBoxAnswers(userValues, slots) {
   const slotMatched = new Array(slots.length).fill(false);
-  for (const raw of userValues) {
+  const boxMatched  = new Array(userValues.length).fill(false);
+  for (let bi = 0; bi < userValues.length; bi++) {
+    const raw  = userValues[bi];
     const norm = LANG.normalizeAnswer(raw.trim());
     for (let si = 0; si < slots.length; si++) {
       if (slotMatched[si]) continue;
-      if (slots[si].has(norm)) { slotMatched[si] = true; break; }
-      for (const exp of slots[si]) {
-        if (isAnswerCorrect(raw, exp)) { slotMatched[si] = true; break; }
-      }
-      if (slotMatched[si]) break;
+      let hit = slots[si].has(norm);
+      if (!hit) { for (const exp of slots[si]) { if (isAnswerCorrect(raw, exp)) { hit = true; break; } } }
+      if (hit) { slotMatched[si] = true; boxMatched[bi] = true; break; }
     }
   }
-  return slotMatched.every(m => m);
+  return { correct: slotMatched.every(m => m), boxResults: boxMatched };
+}
+
+// Attach ✓ / ✗ spans after each input based on boxResults.
+function showPerBoxFeedback(boxResults) {
+  clearPerBoxFeedback();
+  const allInputs = [translationInput, ...extraInputsDiv.querySelectorAll("input")];
+  allInputs.forEach((inp, i) => {
+    const span = document.createElement("span");
+    span.className = "box-feedback";
+    span.textContent = boxResults[i] ? " ✓" : " ✗";
+    span.style.color = boxResults[i] ? "green" : "red";
+    span.style.fontWeight = "bold";
+    span.style.fontSize = "18px";
+    inp.insertAdjacentElement("afterend", span);
+  });
+}
+
+function clearPerBoxFeedback() {
+  document.querySelectorAll(".box-feedback").forEach(el => el.remove());
 }
 
 // Return all current verb typing input values (primary + extras).
@@ -2390,6 +2410,7 @@ function setVerbInputsDisabled(disabled) {
 
 // Clear all verb typing inputs and focus the first one.
 function clearAndFocusVerbInputs() {
+  clearPerBoxFeedback();
   translationInput.value = "";
   for (const inp of extraInputsDiv.querySelectorAll("input")) inp.value = "";
   translationInput.focus();
@@ -2570,9 +2591,13 @@ function handleVerbTypingSubmit() {
       feedbackDiv.style.color = "orange";
       return;
     }
-    correct = _multiBoxSlots
-      ? checkMultiBoxAnswers(values, _multiBoxSlots)
-      : isAnswerCorrect(translationInput.value.trim(), currentTarget);
+    if (_multiBoxSlots) {
+      const result = checkMultiBoxAnswers(values, _multiBoxSlots);
+      correct = result.correct;
+      if (_multiBoxSlots.length > 1) showPerBoxFeedback(result.boxResults);
+    } else {
+      correct = isAnswerCorrect(translationInput.value.trim(), currentTarget);
+    }
   } else {
     const value = translationInput.value.trim();
     correct = isAnswerCorrect(value, currentTarget);
