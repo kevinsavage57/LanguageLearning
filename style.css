@@ -117,6 +117,20 @@ body {
   width: min(520px, 90%);
 }
 
+#extraInputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.extra-input {
+  padding: 8px;
+  font-size: 16px;
+  width: min(520px, 90%);
+}
+
 #feedback {
   margin-top: 10px;
   font-weight: bold;

@@ -549,7 +549,11 @@ const importInput  = { onchange: null };
 const typingArea = document.getElementById("typingArea");
 const promptDiv = document.getElementById("prompt");
 const translationInput = document.getElementById("translationInput");
+const extraInputsDiv   = document.getElementById("extraInputs");
 const accentButtons = document.getElementById("accentButtons");
+let _lastFocusedInput = translationInput;
+let _multiBoxSlots    = null; // null = single-box; Array<Set<string>> = one Set per answer box
+translationInput.addEventListener("focus", () => { _lastFocusedInput = translationInput; });
 const submitTranslation = document.getElementById("submitTranslation");
 const feedbackDiv = document.getElementById("feedback");
 const continueBtn = document.getElementById("continueBtn");
@@ -1496,7 +1500,7 @@ function initAccentButtons() {
     const btn = e.target.closest("button");
     if (!btn) return;
     const ch = btn.dataset.ch || btn.textContent;
-    insertAtCursor(translationInput, ch);
+    insertAtCursor(_lastFocusedInput || translationInput, ch);
   });
 }
 
@@ -2260,6 +2264,137 @@ function isFormAmbiguousAcrossTenses(c, isEsToEn) {
   return false;
 }
 
+// Build per-slot accepted answer Sets for ES→EN verb typing.
+// Returns Array<Set<string>>: one Set per answer box needed.
+// Handles both person-ambiguity (same form, same tense, multiple persons)
+// and cross-tense ambiguity (same Spanish form in multiple selected tenses).
+function buildVerbAnswerSlots(c) {
+  const selectedTenses = getSelectedVerbTenses();
+
+  // Collect every (canonicalTenseKey → original tense string) that shares c.src for this verb.
+  const tensesWithForm = new Map();
+  for (const conj of conjugations) {
+    if (conj.infinitive !== c.infinitive || conj.src !== c.src) continue;
+    if (!selectedTenses.includes(conj.tense)) continue;
+    const tk = LANG.canonicalTenseKey(conj.tense);
+    if (!tensesWithForm.has(tk)) tensesWithForm.set(tk, conj.tense);
+  }
+
+  const verbWord = allWords.find(w => (w.src || w.es || w.it) === c.infinitive && w.group != null) ?? null;
+  const verbObj = verbWord ? {
+    id:             verbWord.id,
+    infinitive:     verbWord.src || verbWord.es || verbWord.it,
+    en:             verbWord.tgt || verbWord.en,
+    english:        verbWord.tgt ? [verbWord.tgt] : (verbWord.en ? [verbWord.en] : []),
+    group:          verbWord.group,
+    overrides:      verbWord.overrides     ?? {},
+    stemOverrides:  verbWord.stemOverrides ?? {},
+    irregularTags:  verbWord.irregularTags ?? [],
+    reflexive:      verbWord.reflexive,
+    aux:            verbWord.aux,
+    pastParticiple: verbWord.pastParticiple,
+  } : null;
+
+  const buildSlot = (person, tgt, tenseStr) => {
+    const pronounVariants = LANG.pronounVariantsForPerson(person) ?? [];
+    const out = new Set();
+    out.add(LANG.normalizeAnswer(tgt));
+    out.add(LANG.normalizeAnswer(tgt.replace(/ \((formal|informal)\)$/i, "")));
+    for (const pronoun of pronounVariants) {
+      if (verbObj) {
+        const gen = englishFor(verbObj, tenseStr, pronoun);
+        if (gen) {
+          out.add(LANG.normalizeAnswer(gen));
+          out.add(LANG.normalizeAnswer(gen.replace(/ \((formal|informal)\)$/i, "")));
+        }
+      }
+    }
+    return new Set([...out].filter(Boolean));
+  };
+
+  const slots = [];
+  for (const [tk, tenseStr] of tensesWithForm) {
+    const key = `${tk}|${c.infinitive}|${c.src}`;
+    const ambigArr = conjugationAmbiguity.get(key);
+    const persons = (Array.isArray(ambigArr) && ambigArr.length > 0)
+      ? ambigArr
+      : [{ person: c.person, tgt: c.tgt }];
+    for (const { person, tgt } of persons) {
+      slots.push(buildSlot(person, tgt, tenseStr));
+    }
+  }
+
+  // Deduplicate slots whose accepted answer sets are identical.
+  const deduped = [];
+  for (const slot of slots) {
+    const isDup = deduped.some(ex => slot.size === ex.size && [...slot].every(a => ex.has(a)));
+    if (!isDup) deduped.push(slot);
+  }
+
+  return deduped.length > 0 ? deduped : [buildSlot(c.person, c.tgt, c.tense)];
+}
+
+// Order-independent check: each user value must satisfy a distinct slot.
+function checkMultiBoxAnswers(userValues, slots) {
+  const slotMatched = new Array(slots.length).fill(false);
+  for (const raw of userValues) {
+    const norm = LANG.normalizeAnswer(raw.trim());
+    for (let si = 0; si < slots.length; si++) {
+      if (slotMatched[si]) continue;
+      if (slots[si].has(norm)) { slotMatched[si] = true; break; }
+      for (const exp of slots[si]) {
+        if (isAnswerCorrect(raw, exp)) { slotMatched[si] = true; break; }
+      }
+      if (slotMatched[si]) break;
+    }
+  }
+  return slotMatched.every(m => m);
+}
+
+// Return all current verb typing input values (primary + extras).
+function getVerbInputValues() {
+  const vals = [translationInput.value];
+  for (const inp of extraInputsDiv.querySelectorAll("input")) vals.push(inp.value);
+  return vals;
+}
+
+// Render N-1 extra input boxes (translationInput is always box 0).
+// n=1 hides the extras div; n>1 populates it.
+function renderVerbInputs(n) {
+  extraInputsDiv.innerHTML = "";
+  for (let i = 1; i < n; i++) {
+    const inp = document.createElement("input");
+    inp.type = "text";
+    inp.autocomplete = "off";
+    inp.autocorrect = "off";
+    inp.autocapitalize = "off";
+    inp.spellcheck = false;
+    inp.className = "extra-input";
+    inp.addEventListener("focus", () => { _lastFocusedInput = inp; });
+    inp.addEventListener("keydown", (e) => {
+      if (e.key === "Enter") {
+        e.preventDefault();
+        safeCall(handleVerbTypingSubmit, "verb typing submit (Enter)");
+      }
+    });
+    extraInputsDiv.appendChild(inp);
+  }
+  extraInputsDiv.style.display = n > 1 ? "" : "none";
+}
+
+// Disable or enable all verb typing inputs.
+function setVerbInputsDisabled(disabled) {
+  translationInput.disabled = disabled;
+  for (const inp of extraInputsDiv.querySelectorAll("input")) inp.disabled = disabled;
+}
+
+// Clear all verb typing inputs and focus the first one.
+function clearAndFocusVerbInputs() {
+  translationInput.value = "";
+  for (const inp of extraInputsDiv.querySelectorAll("input")) inp.value = "";
+  translationInput.focus();
+}
+
 function showNextVerbTyping() {
   if (currentIndex >= currentRound.length) {
     const isMixed = modeSelect.value === "mixed-mode";
@@ -2271,12 +2406,12 @@ function showNextVerbTyping() {
   const isEsToEn = Math.random() < 0.5;
 
   if (isEsToEn) {
-    const showTense = isFormAmbiguousAcrossTenses(c, true);
-    const prefix = showTense ? `(${LANG.formatTenseLabel(c.tense)}) ` : "";
-    promptDiv.textContent = `${prefix}Type the ${LANG.targetLang} for: ${c.src}`;
+    _multiBoxSlots = buildVerbAnswerSlots(c);
+    promptDiv.textContent = `Type the ${LANG.targetLang} for: ${c.src}`;
     currentVerbTypingIsEsToEn = true;
     currentTarget = c.tgt;
   } else {
+    _multiBoxSlots = null;
     const showTense = isFormAmbiguousAcrossTenses(c, false);
     const prefix = showTense ? `(${LANG.formatTenseLabel(c.tense)}) ` : "";
     const imperativeSuffix = c.tense?.startsWith("imperative") ? ` (Command - ${c.person})` : "";
@@ -2286,8 +2421,8 @@ function showNextVerbTyping() {
   }
 
   currentWord = c;
-  translationInput.value = "";
-  translationInput.focus();
+  renderVerbInputs(_multiBoxSlots ? _multiBoxSlots.length : 1);
+  clearAndFocusVerbInputs();
   feedbackDiv.textContent = "";
 }
 
@@ -2322,7 +2457,7 @@ let _waitingForContinue = false;
 function awaitContinue(onContinue) {
   _waitingForContinue = true;
   submitTranslation.disabled = true;
-  translationInput.disabled = true;
+  setVerbInputsDisabled(true);
   if (continueBtn) {
     continueBtn.style.display = "inline-block";
   }
@@ -2335,9 +2470,8 @@ function awaitContinue(onContinue) {
     if (continueBtn) continueBtn.style.display = "none";
     if (continueBtn) continueBtn.removeEventListener("click", proceed);
     submitTranslation.disabled = false;
-    translationInput.disabled = false;
-    translationInput.value = "";
-    translationInput.focus();
+    setVerbInputsDisabled(false);
+    clearAndFocusVerbInputs();
     onContinue();
   };
 
@@ -2428,65 +2562,19 @@ function isAnswerCorrect(userAnswer, correctAnswer) {
 
 function handleVerbTypingSubmit() {
   if (_waitingForContinue) return;
-  const value = translationInput.value.trim();
   let correct;
   if (currentVerbTypingIsEsToEn) {
-    const expectedList = (function(){
-      const t = LANG.canonicalTenseKey(currentWord?.tense);
-      const key = (t && currentWord?.infinitive && currentWord?.src) ? `${t}|${currentWord.infinitive}|${currentWord.src}` : null;
-      const arr = key ? conjugationAmbiguity.get(key) : null;
-
-      // Build the verbObj needed to call englishFor directly
-      const verbWord = allWords.find(w => (w.src || w.es || w.it) === currentWord?.infinitive && w.group != null) ?? null;
-      const verbObj = verbWord ? {
-        id:            verbWord.id,
-        infinitive:    verbWord.src || verbWord.es || verbWord.it,
-        en:            verbWord.tgt || verbWord.en,
-        english:       verbWord.tgt ? [verbWord.tgt] : (verbWord.en ? [verbWord.en] : []),
-        group:         verbWord.group,
-        overrides:     verbWord.overrides     ?? {},
-        stemOverrides: verbWord.stemOverrides ?? {},
-        irregularTags: verbWord.irregularTags ?? [],
-        reflexive:     verbWord.reflexive,
-        aux:           verbWord.aux,
-        pastParticiple:verbWord.pastParticiple,
-      } : null;
-
-      // Generate accepted answers by calling englishFor with each valid pronoun variant.
-      // This correctly conjugates each pronoun (he knows / she knows / you know) rather than
-      // trying to re-attach a body extracted from one pronoun's conjugation to another.
-      const buildForPerson = (person) => {
-        const pronounVariants = LANG.pronounVariantsForPerson(person) ?? [];
-        const out = new Set();
-        // Always accept the stored tgt (stripping any formality tag for leniency)
-        out.add(LANG.normalizeAnswer(currentTarget));
-        out.add(LANG.normalizeAnswer(currentTarget.replace(/ \((formal|informal)\)$/i, "")));
-        for (const pronoun of pronounVariants) {
-          if (verbObj) {
-            const generated = englishFor(verbObj, currentWord.tense, pronoun);
-            out.add(LANG.normalizeAnswer(generated));
-            // Also accept without formality tag
-            out.add(LANG.normalizeAnswer(generated.replace(/ \((formal|informal)\)$/i, "")));
-          }
-        }
-        return Array.from(out).filter(Boolean);
-      };
-
-      // If the Spanish form is ambiguous across multiple persons, union all their variants
-      if (Array.isArray(arr) && arr.length) {
-        const out = new Set();
-        for (const it of arr) {
-          buildForPerson(it.person).forEach(x => out.add(x));
-        }
-        return Array.from(out);
-      }
-
-      return buildForPerson(currentWord?.person);
-    })();
-    // expectedList entries are already normalizeAnswer'd; compare directly
-    const userNorm = LANG.normalizeAnswer(value);
-    correct = expectedList.some(exp => userNorm === exp || isAnswerCorrect(value, exp));
+    const values = getVerbInputValues();
+    if (_multiBoxSlots && _multiBoxSlots.length > 1 && values.some(v => !v.trim())) {
+      feedbackDiv.textContent = "Fill in all boxes before submitting.";
+      feedbackDiv.style.color = "orange";
+      return;
+    }
+    correct = _multiBoxSlots
+      ? checkMultiBoxAnswers(values, _multiBoxSlots)
+      : isAnswerCorrect(translationInput.value.trim(), currentTarget);
   } else {
+    const value = translationInput.value.trim();
     correct = isAnswerCorrect(value, currentTarget);
   }
 
@@ -3119,6 +3207,9 @@ function renderTyping() {
   translationInput.disabled = false;
   submitTranslation.disabled = false;
   if (continueBtn) continueBtn.style.display = "none";
+  extraInputsDiv.innerHTML = "";
+  extraInputsDiv.style.display = "none";
+  _multiBoxSlots = null;
 
   currentIndex = 0;
   feedbackDiv.textContent = "";
