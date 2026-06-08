@@ -2352,18 +2352,19 @@ function checkMultiBoxAnswers(userValues, slots) {
   return { correct: slotMatched.every(m => m), boxResults: boxMatched };
 }
 
-// Attach ✓ / ✗ spans after each input based on boxResults.
+// Attach ✓ / ✗ spans inside each input's .input-row so they sit to the right of the box.
 function showPerBoxFeedback(boxResults) {
   clearPerBoxFeedback();
   const allInputs = [translationInput, ...extraInputsDiv.querySelectorAll("input")];
   allInputs.forEach((inp, i) => {
     const span = document.createElement("span");
     span.className = "box-feedback";
-    span.textContent = boxResults[i] ? " ✓" : " ✗";
+    span.textContent = boxResults[i] ? "✓" : "✗";
     span.style.color = boxResults[i] ? "green" : "red";
     span.style.fontWeight = "bold";
     span.style.fontSize = "18px";
-    inp.insertAdjacentElement("afterend", span);
+    span.style.flexShrink = "0";
+    inp.parentElement.appendChild(span);
   });
 }
 
@@ -2397,7 +2398,10 @@ function renderVerbInputs(n) {
         safeCall(handleVerbTypingSubmit, "verb typing submit (Enter)");
       }
     });
-    extraInputsDiv.appendChild(inp);
+    const row = document.createElement("div");
+    row.className = "input-row";
+    row.appendChild(inp);
+    extraInputsDiv.appendChild(row);
   }
   extraInputsDiv.style.display = n > 1 ? "" : "none";
 }
