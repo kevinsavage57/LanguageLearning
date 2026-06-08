@@ -2622,21 +2622,17 @@ function handleVerbTypingSubmit() {
   const buildVerbFeedbackLabel = () => {
     if (!currentVerbTypingIsEsToEn) return currentTarget;
 
-    const t = LANG.canonicalTenseKey(currentWord?.tense);
-    const key = (t && currentWord?.infinitive && currentWord?.src)
-      ? `${t}|${currentWord.infinitive}|${currentWord.src}` : null;
+    // Collect every selected tense that shares this Spanish form for this verb,
+    // so feedback shows all correct answers across tenses and persons.
+    const selectedTenses = getSelectedVerbTenses();
+    const tensesWithForm = new Map();
+    for (const conj of conjugations) {
+      if (conj.infinitive !== currentWord?.infinitive || conj.src !== currentWord?.src) continue;
+      if (!selectedTenses.includes(conj.tense)) continue;
+      const tk = LANG.canonicalTenseKey(conj.tense);
+      if (!tensesWithForm.has(tk)) tensesWithForm.set(tk, conj.tense);
+    }
 
-    // Step 1: collect all persons that share this Spanish form (form-ambiguity).
-    // Falls back to just the current word's person if no ambiguity exists.
-    const ambigArr = key ? conjugationAmbiguity.get(key) : null;
-    const personsForThisForm = (Array.isArray(ambigArr) && ambigArr.length > 0)
-      ? ambigArr.map(it => it.person)
-      : [currentWord?.person].filter(Boolean);
-
-    // Step 2: for each person, expand to all valid English pronoun variants.
-    // _pronounVariantsForSpanishPerson returns e.g. ["he","she","you"] for él/usted,
-    // ["they","you all"] for ellos/ustedes, or null for persons with a single pronoun.
-    // We use the verb object so englishFor() handles irregular conjugation correctly.
     const verbWord = allWords.find(w => (w.src || w.es || w.it) === currentWord?.infinitive && w.group != null) ?? null;
     const verbObj = verbWord ? {
       id:            verbWord.id,
@@ -2654,35 +2650,39 @@ function handleVerbTypingSubmit() {
 
     const seen = new Set();
     const labels = [];
-
     const addLabel = (str) => {
       const s = (str || "").trim();
       if (s && !seen.has(s)) { seen.add(s); labels.push(s); }
     };
 
-    for (const person of personsForThisForm) {
-      const pronounVariants = LANG.pronounVariantsForPerson(person);
+    for (const [tk, tenseStr] of tensesWithForm) {
+      const key = `${tk}|${currentWord.infinitive}|${currentWord.src}`;
+      const ambigArr = conjugationAmbiguity.get(key);
+      const persons = (Array.isArray(ambigArr) && ambigArr.length > 0)
+        ? ambigArr.map(it => it.person)
+        : [currentWord?.person].filter(Boolean);
 
-      if (!pronounVariants || pronounVariants.length <= 1) {
-        // Single-pronoun person (yo, tú, nosotros, vosotros): just use stored en value.
-        // vosotros maps to ["you all"] (length 1) and must never show "they" or other
-        // 3p variants — using the stored en directly is both correct and safe.
-        const stored = ambigArr?.find(it => it.person === person)?.tgt ?? currentWord?.tgt;
-        addLabel(stored);
-        continue;
-      }
+      for (const person of persons) {
+        const pronounVariants = LANG.pronounVariantsForPerson(person);
 
-      // Multi-pronoun person: generate English for each concrete pronoun subject.
-      for (const pronoun of pronounVariants) {
-        if (verbObj) {
-          // Derive via englishFor so conjugation is always correct (handles irregulars,
-          // phrasal verbs, "that + subj" subjunctive, etc.).
-          addLabel(englishFor(verbObj, currentWord.tense, pronoun));
-        } else {
-          // Fallback: swap the pronoun in the stored English string.
-          const stored = ambigArr?.find(it => it.person === person)?.tgt ?? currentWord?.tgt ?? "";
-          const { body } = LANG.splitPronounAndBody(stored);
-          addLabel(body ? `${pronoun} ${body}` : stored);
+        if (!pronounVariants || pronounVariants.length <= 1) {
+          const stored = Array.isArray(ambigArr)
+            ? (ambigArr.find(it => it.person === person)?.tgt ?? currentWord?.tgt)
+            : currentWord?.tgt;
+          addLabel(stored);
+          continue;
+        }
+
+        for (const pronoun of pronounVariants) {
+          if (verbObj) {
+            addLabel(englishFor(verbObj, tenseStr, pronoun));
+          } else {
+            const stored = Array.isArray(ambigArr)
+              ? (ambigArr.find(it => it.person === person)?.tgt ?? currentWord?.tgt ?? "")
+              : (currentWord?.tgt ?? "");
+            const { body } = LANG.splitPronounAndBody(stored);
+            addLabel(body ? `${pronoun} ${body}` : stored);
+          }
         }
       }
     }
