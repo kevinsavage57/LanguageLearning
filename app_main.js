@@ -16,8 +16,13 @@ let _mixedModeCurrentPick = null; // tracks which sub-mode mixed-mode selected
 
 const conjugationAmbiguity = new Map(); // key `${tense}|${infinitive}|${es}` => Set(person)
 const MASTERED_STREAK = 4;
-const DECAY_DAYS = 7;
 const INITIAL_POOL_SIZE = 25; // Starting number of unlocked words
+
+// SM-2 spaced repetition constants
+const EASE_DEFAULT = 2.5;
+const EASE_MIN     = 1.3;
+const EASE_BONUS   = 0.05;  // ease factor increase per correct answer
+const EASE_PENALTY = 0.20;  // ease factor decrease per wrong answer
 
 // ── GitHub Gist sync — multi-profile with passwords ──────────────────────────
 // One shared Gist holds all profiles: { "Alice": {hash, words, verbTenseProgress}, ... }
@@ -431,10 +436,14 @@ function showGistSettings() {
         w.unlocked = false;
         w.streak = 0;
         w.misses = 0;
-        w.weight = ratingToWeight(w.rating);
+        w.easeFactor = EASE_DEFAULT;
+        w.interval = 0;
+        w.nextReview = 0;
         w.typing_streak = 0;
         w.typing_misses = 0;
-        w.typing_weight = ratingToWeight(w.rating);
+        w.typing_easeFactor = EASE_DEFAULT;
+        w.typing_interval = 0;
+        w.typing_nextReview = 0;
         w.noun_typing_singular_ok = false;
         w.noun_typing_plural_ok = false;
         w.quickStartUnlocked = false;
@@ -1699,12 +1708,16 @@ function mergeProgress(savedWords, freshData) {
         ...base,
         streak:                  saved.streak                  ?? 0,
         misses:                  saved.misses                  ?? 0,
-        weight:                  saved.weight                  ?? 5,
         lastSeen:                saved.lastSeen                ?? Date.now(),
+        easeFactor:              saved.easeFactor              ?? EASE_DEFAULT,
+        interval:                saved.interval                ?? 0,
+        nextReview:              saved.nextReview              ?? 0,
         typing_streak:           saved.typing_streak           ?? 0,
         typing_misses:           saved.typing_misses           ?? 0,
-        typing_weight:           saved.typing_weight           ?? 5,
         typing_lastSeen:         saved.typing_lastSeen         ?? Date.now(),
+        typing_easeFactor:       saved.typing_easeFactor       ?? EASE_DEFAULT,
+        typing_interval:         saved.typing_interval         ?? 0,
+        typing_nextReview:       saved.typing_nextReview       ?? 0,
         noun_typing_singular_ok: saved.noun_typing_singular_ok ?? false,
         noun_typing_plural_ok:   saved.noun_typing_plural_ok   ?? false,
         unlocked:                saved.unlocked                ?? false,
@@ -1715,8 +1728,10 @@ function mergeProgress(savedWords, freshData) {
     // New word not in saved progress yet — locked, all defaults
     return {
       ...base,
-      streak: 0, misses: 0, weight: ratingToWeight(raw.rating), lastSeen: Date.now(),
-      typing_streak: 0, typing_misses: 0, typing_weight: ratingToWeight(raw.rating), typing_lastSeen: Date.now(),
+      streak: 0, misses: 0, lastSeen: Date.now(),
+      easeFactor: EASE_DEFAULT, interval: 0, nextReview: 0,
+      typing_streak: 0, typing_misses: 0, typing_lastSeen: Date.now(),
+      typing_easeFactor: EASE_DEFAULT, typing_interval: 0, typing_nextReview: 0,
       noun_typing_singular_ok: false,
       noun_typing_plural_ok:   false,
       unlocked: false,
@@ -2049,18 +2064,8 @@ function addQuickStartButton() {
 }
 
 function decayWords() {
-  const now = Date.now();
-  allWords.forEach(w => {
-    const cap = ratingToWeight(w.rating);
-    const days = (now - w.lastSeen) / 86400000;
-    if (days > DECAY_DAYS && w.weight < cap) {
-      w.weight = Math.min(w.weight + 1, cap);
-    }
-    const typingDays = (now - w.typing_lastSeen) / 86400000;
-    if (typingDays > DECAY_DAYS && w.typing_weight < cap) {
-      w.typing_weight = Math.min(w.typing_weight + 1, cap);
-    }
-  });
+  // Weight-based decay replaced by SM-2 scheduling.
+  // Selection urgency is computed live in srsWeight() from nextReview timestamps.
 }
 
 
@@ -2145,8 +2150,16 @@ function startNextRound() {
 
   } else if (mode === "review") {
     isTyping = false;
-    // ✅ review ONLY includes matching-mastered words
-    pool = pool.filter(w => w.streak >= MASTERED_STREAK);
+    const masteredAll = pool.filter(w => w.streak >= MASTERED_STREAK);
+    const now = Date.now();
+    // Show only words due for review today (within 24 h window)
+    const dueMastered = masteredAll.filter(w =>
+      !w.nextReview || w.nextReview <= now + 86400000
+    );
+    // If nothing is due, fall back to the soonest-due words (early review)
+    pool = dueMastered.length > 0
+      ? dueMastered
+      : masteredAll.sort((a, b) => (a.nextReview ?? 0) - (b.nextReview ?? 0)).slice(0, 10);
   } else {
     // mode === "all" (normal matching)
     isTyping = false;
@@ -3494,11 +3507,11 @@ setTimeout(() => {
 
 function correct(w) {
   w.streak++;
-  w.weight = Math.max(1, w.weight - 1);
   w.lastSeen = Date.now();
+  w.easeFactor = Math.min(EASE_DEFAULT, (w.easeFactor ?? EASE_DEFAULT) + EASE_BONUS);
+  w.interval   = srsNextInterval(w.interval ?? 0, w.easeFactor);
+  w.nextReview = Date.now() + w.interval * 86400000;
 
-
-  // New: If just mastered in matching, unlock a new word
   if (w.streak === MASTERED_STREAK) {
     unlockNewWord();
   }
@@ -3507,13 +3520,15 @@ function correct(w) {
   updateStats();
   buildConjugationPool();
   unlockVerbModes();
-
 }
 
 function wrong(w) {
   w.streak = 0;
   w.misses++;
-  w.weight += 2;
+  w.lastSeen   = Date.now();
+  w.easeFactor = Math.max(EASE_MIN, (w.easeFactor ?? EASE_DEFAULT) - EASE_PENALTY);
+  w.interval   = 1;
+  w.nextReview = Date.now() + 86400000; // due tomorrow
   save();
 }
 
@@ -3522,11 +3537,12 @@ function typing_correct(w) {
     console.warn("typing_correct called with empty word");
     return;
   }
-w.typing_streak++;
-  w.typing_weight = Math.max(1, w.typing_weight - 1);
-  w.typing_lastSeen = Date.now();
+  w.typing_streak++;
+  w.typing_lastSeen  = Date.now();
+  w.typing_easeFactor = Math.min(EASE_DEFAULT, (w.typing_easeFactor ?? EASE_DEFAULT) + EASE_BONUS);
+  w.typing_interval   = srsNextInterval(w.typing_interval ?? 0, w.typing_easeFactor);
+  w.typing_nextReview = Date.now() + w.typing_interval * 86400000;
 
-  // New: If just mastered in typing, unlock a new word
   if (w.typing_streak === MASTERED_STREAK) {
     unlockNewWord();
   }
@@ -3543,9 +3559,11 @@ function typing_wrong(w) {
     console.warn("typing_wrong called with empty word");
     return;
   }
-w.typing_streak = 0;
+  w.typing_streak = 0;
   w.typing_misses++;
-  w.typing_weight += 2;
+  w.typing_easeFactor = Math.max(EASE_MIN, (w.typing_easeFactor ?? EASE_DEFAULT) - EASE_PENALTY);
+  w.typing_interval   = 1;
+  w.typing_nextReview = Date.now() + 86400000; // due tomorrow
   save();
 }
 function verb_match_correct(c) {
@@ -3572,6 +3590,25 @@ function isVerbUnlocked(verb) {
 }
 
 
+// SM-2 next interval: 0→1→3→round(prev×EF) days
+function srsNextInterval(current, easeFactor) {
+  if (!current) return 1;
+  if (current < 3) return 3;
+  return Math.round(current * easeFactor);
+}
+
+// Selection weight driven by SRS schedule.
+// Overdue items get an urgency boost; items not yet due get near-zero weight
+// so they act only as occasional fillers.
+function srsWeight(w, isTyping = false) {
+  const nextReview = isTyping ? (w.typing_nextReview ?? 0) : (w.nextReview ?? 0);
+  const base = ratingToWeight(w.rating);
+  if (!nextReview) return base; // new word — use vocabulary frequency weight
+  const overdueDays = (Date.now() - nextReview) / 86400000;
+  if (overdueDays >= 0) return base * Math.min(5, 1 + overdueDays); // urgency capped at 5×
+  return base * 0.05; // not yet due — minimal filler weight
+}
+
 function pickWeighted(pool, n, useTypingWeight = false) {
   if (pool.length === 0) return []; // Early return if no words
 
@@ -3580,10 +3617,8 @@ function pickWeighted(pool, n, useTypingWeight = false) {
     return shuffle([...pool]);
   }
 
-  // Cumulative-weight selection — works correctly with float weights.
-  const weights = pool.map(w => useTypingWeight
-    ? (w.typing_weight ?? w.typeWeight ?? 1)
-    : (w.weight ?? w.matchWeight ?? 1));
+  // Cumulative-weight selection using SRS-derived urgency weights.
+  const weights = pool.map(w => srsWeight(w, useTypingWeight));
   const cumulative = [];
   let total = 0;
   for (const wt of weights) { total += wt; cumulative.push(total); }

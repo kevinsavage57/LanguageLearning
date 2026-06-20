@@ -26,8 +26,9 @@ No build step required — this is a pure static site with vanilla JS ES6 module
 
 - Users practice a rotating pool of 25 words. Each mastered word unlocks exactly one new word.
 - **Mastery threshold**: 4 consecutive correct answers (`MASTERED_STREAK = 4`).
-- **Word weight** for selection is based on `rating` (1–5) plus a decay boost for words unseen 7+ days (`DECAY_DAYS = 7`).
+- **Word selection** uses SM-2 spaced repetition urgency weights. Overdue words get `base × min(5, 1 + overdueDays)`; not-yet-due words get `base × 0.05` (occasional filler); new words use vocabulary `rating` (1–5) as base weight.
 - **Verb tense unlock**: Tenses unlock sequentially as users accumulate 10+ correct answers per tense. Order: Present → Preterite → Imperfect → Future → Conditional → Present Subjunctive → Imperative (Affirmative) → Imperative (Negative).
+- **SM-2 spaced repetition**: Each word carries `interval` (days), `nextReview` (timestamp), and `easeFactor` (default 2.5, min 1.3). Correct answers grow the interval (`0→1→3→round(prev×EF)`) and nudge EF up by 0.05 (capped at 2.5). Wrong answers reset interval to 1 day and decrease EF by 0.20. Typing game tracks separate `typing_*` fields. `decayWords()` is a no-op; urgency is computed live in `srsWeight()`.
 
 ### Game Modes
 
