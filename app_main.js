@@ -73,7 +73,15 @@ async function fetchAllProfiles() {
       return { error: msg };
     }
     const json = await res.json();
-    const content = json.files?.[GIST_FILENAME]?.content;
+    const fileEntry = json.files?.[GIST_FILENAME];
+    // GitHub truncates files >921 KB in the API response — fetch raw content if needed.
+    let content = fileEntry?.content;
+    if (fileEntry?.truncated) {
+      const rawRes = await fetch(fileEntry.raw_url, {
+        headers: { "Authorization": `token ${gistToken()}` }
+      });
+      content = rawRes.ok ? await rawRes.text() : content;
+    }
     if (!content || content.trim() === "{}") { _lastKnownProfiles = {}; return {}; }
     const parsed = JSON.parse(content);
     // Support upgrading from old single-profile format
@@ -127,7 +135,9 @@ async function loadFromGist() {
 async function saveToGist(bundle) {
   if (!gistConfigured()) return;
   const profiles = await fetchAllProfiles();
-  const safe = (!profiles || profiles.error) ? {} : profiles;
+  // If we can't read the current Gist, abort — never overwrite other profiles' data with an empty shell.
+  if (!profiles || profiles.error) return;
+  const safe = profiles;
   if (!safe[gistProfile()]) safe[gistProfile()] = {};
   // Preserve the hash — never overwrite it during a normal save
   const existingHash = safe[gistProfile()].hash;
@@ -3737,7 +3747,9 @@ const STATIC_WORD_FIELDS = new Set([
 
 function slimProgress(words) {
   // Only save progress-state fields, and only for words that have any non-default progress.
-  // Static data (en, pos, synonyms, etc.) is re-hydrated from words_es.json on load.
+  // Static data (en, pos, synonyms, etc.) is re-hydrated from words_XX.json on load.
+  // Words that are merely unlocked (never answered) are stored as {src, unlocked:true}
+  // to keep the Gist well under GitHub's 921 KB API response limit.
   return words
     .filter(w =>
       w.unlocked ||
@@ -3746,6 +3758,12 @@ function slimProgress(words) {
       w.noun_typing_singular_ok || w.noun_typing_plural_ok
     )
     .map(w => {
+      const hasRealProgress = (
+        w.streak > 0 || w.misses > 0 ||
+        w.typing_streak > 0 || w.typing_misses > 0 ||
+        w.noun_typing_singular_ok || w.noun_typing_plural_ok
+      );
+      if (!hasRealProgress && w.unlocked) return { src: w.src, unlocked: true };
       const slim = {};
       for (const k of Object.keys(w)) {
         if (!STATIC_WORD_FIELDS.has(k)) slim[k] = w[k];
