@@ -25143,6 +25143,17 @@
     ]
   },
   {
+    "id": "casco_noun",
+    "es": "casco",
+    "en": "helmet",
+    "level": "A2",
+    "pos": "noun",
+    "rating": 5,
+    "en_syn": [],
+    "es_syn": [],
+    "noun_class": "m_std"
+  },
+  {
     "id": "casco_antiguo_noun",
     "es": "casco antiguo",
     "en": "old town",
@@ -39486,7 +39497,8 @@
     "level": "B2",
     "pos": "noun",
     "noun_class": "m_std",
-    "rating": 9
+    "rating": 9,
+    "archaic": true
   },
   {
     "id": "corsé_noun",
@@ -41644,7 +41656,8 @@
     "level": "B2",
     "pos": "noun",
     "noun_class": "m_std",
-    "rating": 8
+    "rating": 8,
+    "archaic": true
   },
   {
     "es": "cruzar",
@@ -145820,7 +145833,7 @@
   {
     "id": "casco_medieval_noun",
     "es": "casco medieval",
-    "en": "helmet (medieval)",
+    "en": "medieval old town",
     "level": "B1",
     "pos": "noun",
     "rating": 6,
@@ -145831,7 +145844,13 @@
       "article_sg": "el",
       "article_pl": "los"
     },
-    "audited": "v7-audit-2026-04-12"
+    "audited": "v7-audit-2026-04-12",
+    "en_syn": [
+      "medieval quarter"
+    ],
+    "es_syn": [
+      "casco antiguo"
+    ]
   },
   {
     "id": "cáñamo_noun",
