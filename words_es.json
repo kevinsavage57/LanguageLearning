@@ -2270,6 +2270,19 @@
     ]
   },
   {
+    "id": "achicoria_noun",
+    "es": "achicoria",
+    "en": "chicory",
+    "level": "B2",
+    "pos": "noun",
+    "rating": 9,
+    "en_syn": [
+      "radicchio"
+    ],
+    "es_syn": [],
+    "noun_class": "f_std"
+  },
+  {
     "id": "aclamar_verb",
     "es": "aclamar",
     "en": "to acclaim",
@@ -8970,7 +8983,7 @@
     "es_syn": [
       "añorar"
     ],
-    "rating": 3,
+    "rating": 8,
     "group": "ar",
     "overrides": {
       "present": {
@@ -9868,7 +9881,7 @@
     "en_syn": [
       "help down"
     ],
-    "rating": 3,
+    "rating": 9,
     "group": "ar",
     "overrides": {
       "imperative_affirmative": {
@@ -11061,7 +11074,7 @@
     "en": "on this side of",
     "level": "B2",
     "pos": "adverb",
-    "rating": 3
+    "rating": 10
   },
   {
     "id": "aquí_adverb",
@@ -14272,7 +14285,7 @@
     "en_syn": [
       "stuff"
     ],
-    "rating": 4,
+    "rating": 9,
     "group": "ar",
     "overrides": {
       "imperative_affirmative": {
@@ -15832,7 +15845,7 @@
     "es_syn": [
       "edad"
     ],
-    "rating": 4,
+    "rating": 10,
     "group": "ar",
     "overrides": {
       "imperative_affirmative": {
@@ -16317,7 +16330,7 @@
       "mirar",
       "vigilar"
     ],
-    "rating": 4,
+    "rating": 9,
     "group": "ar",
     "overrides": {
       "imperative_affirmative": {
@@ -24243,7 +24256,7 @@
     "en_syn": [
       "eat away"
     ],
-    "rating": 4,
+    "rating": 9,
     "group": "er",
     "overrides": {
       "imperative_affirmative": {
@@ -24265,7 +24278,7 @@
       "carta",
       "tarjeta"
     ],
-    "rating": 4,
+    "rating": 9,
     "group": "ar",
     "overrides": {
       "imperative_affirmative": {
@@ -25981,7 +25994,7 @@
     "en_syn": [
       "give way"
     ],
-    "rating": 3,
+    "rating": 9,
     "group": "ar",
     "overrides": {
       "imperative_affirmative": {
@@ -27562,7 +27575,7 @@
     "es_syn": [
       "respaldar"
     ],
-    "rating": 2,
+    "rating": 10,
     "group": "ar",
     "overrides": {
       "present": {
@@ -28326,13 +28339,13 @@
   {
     "id": "circo_noun",
     "es": "circo",
-    "en": "cirque",
+    "en": "circus",
     "level": "A2",
     "pos": "noun",
     "en_syn": [
-      "circus"
+      "cirque"
     ],
-    "rating": 9,
+    "rating": 6,
     "noun_class": "m_std"
   },
   {
@@ -28806,7 +28819,7 @@
       "claro",
       "despejar"
     ],
-    "rating": 4,
+    "rating": 9,
     "group": "ar",
     "overrides": {
       "imperative_affirmative": {
@@ -60128,14 +60141,15 @@
     ]
   },
   {
-    "id": "en_cualquier_modo_adverb",
-    "es": "en cualquier modo",
-    "en": "in any way",
+    "id": "de_cualquier_modo_adverb",
+    "es": "de cualquier modo",
+    "en": "in any case",
     "level": "B2",
     "pos": "adverb",
-    "rating": 2,
+    "rating": 4,
     "en_syn": [
-      "anyhow"
+      "anyhow",
+      "anyway"
     ]
   },
   {
@@ -66969,7 +66983,7 @@
       "leave out",
       "leave off"
     ],
-    "rating": 4,
+    "rating": 8,
     "group": "ar",
     "overrides": {
       "present": {
@@ -68953,21 +68967,17 @@
     "quickStart": true
   },
   {
-    "id": "feria_adjective",
+    "id": "feria_noun",
     "es": "feria",
-    "en": "series of bullfights",
+    "en": "fair",
     "level": "A2",
-    "pos": "adjective",
+    "pos": "noun",
     "en_syn": [
-      "sell",
-      "vacation",
-      "recess",
-      "dinero",
-      "fair",
-      "money",
+      "festival",
       "street market"
     ],
-    "rating": 10
+    "rating": 5,
+    "noun_class": "f_std"
   },
   {
     "id": "fermentado_adjective",
@@ -70048,19 +70058,6 @@
     "pos": "noun",
     "rating": 9,
     "noun_class": "f_std"
-  },
-  {
-    "id": "foreshadowing_noun",
-    "es": "foreshadowing",
-    "en": "foreshadowing",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 9,
-    "en_syn": [
-      "adumbration",
-      "prefiguration"
-    ],
-    "noun_class": "m_std"
   },
   {
     "id": "forma_noun",
@@ -78853,6 +78850,19 @@
     "rating": 8
   },
   {
+    "id": "incorporación_noun",
+    "es": "incorporación",
+    "en": "onboarding",
+    "level": "B2",
+    "pos": "noun",
+    "rating": 7,
+    "en_syn": [
+      "incorporation"
+    ],
+    "es_syn": [],
+    "noun_class": "f_std"
+  },
+  {
     "id": "incorporar_verb",
     "es": "incorporar",
     "en": "to incorporate",
@@ -82776,8 +82786,8 @@
     "noun_class": "f_std"
   },
   {
-    "id": "isótera_noun",
-    "es": "isótera",
+    "id": "isoterma_noun",
+    "es": "isoterma",
     "en": "isotherm",
     "level": "B2",
     "pos": "noun",
@@ -86849,17 +86859,14 @@
     "rating": 2
   },
   {
-    "id": "lobo_adjective",
+    "id": "lobo_noun",
     "es": "lobo",
-    "en": "garish",
+    "en": "wolf",
     "level": "A2",
-    "pos": "adjective",
-    "en_syn": [
-      "tacky",
-      "person with bad taste",
-      "wolf"
-    ],
-    "rating": 9
+    "pos": "noun",
+    "en_syn": [],
+    "rating": 6,
+    "noun_class": "m_std"
   },
   {
     "id": "local_adjective",
@@ -87645,8 +87652,8 @@
     }
   },
   {
-    "id": "líquen_noun",
-    "es": "líquen",
+    "id": "liquen_noun",
+    "es": "liquen",
     "en": "lichen",
     "level": "B2",
     "pos": "noun",
@@ -87883,7 +87890,7 @@
     "en": "early start",
     "level": "B1",
     "pos": "noun",
-    "rating": 4,
+    "rating": 8,
     "noun_class": "irregular",
     "noun_override": {
       "base": "madrugón",
@@ -88458,8 +88465,8 @@
     }
   },
   {
-    "id": "mandrilo_noun",
-    "es": "mandrilo",
+    "id": "mandril_noun",
+    "es": "mandril",
     "en": "mandrill",
     "level": "B2",
     "pos": "noun",
@@ -107851,6 +107858,22 @@
     "noun_class": "f_std"
   },
   {
+    "id": "presagio_noun",
+    "es": "presagio",
+    "en": "omen",
+    "level": "B2",
+    "pos": "noun",
+    "rating": 8,
+    "en_syn": [
+      "foreshadowing",
+      "premonition"
+    ],
+    "es_syn": [
+      "premonición"
+    ],
+    "noun_class": "m_std"
+  },
+  {
     "id": "prescindible_adjective",
     "es": "prescindible",
     "en": "dispensable",
@@ -110573,6 +110596,25 @@
     "noun_override": {
       "base": "prueba combinada",
       "plural": "pruebas combinadas",
+      "article_sg": "la",
+      "article_pl": "las"
+    }
+  },
+  {
+    "id": "prueba_de_sonido_noun",
+    "es": "prueba de sonido",
+    "en": "sound check",
+    "level": "B1",
+    "pos": "noun",
+    "rating": 7,
+    "en_syn": [
+      "soundcheck"
+    ],
+    "es_syn": [],
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "prueba de sonido",
+      "plural": "pruebas de sonido",
       "article_sg": "la",
       "article_pl": "las"
     }
@@ -127173,15 +127215,6 @@
     ]
   },
   {
-    "id": "soundcheck_noun",
-    "es": "soundcheck",
-    "en": "sound check",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 4,
-    "noun_class": "m_std"
-  },
-  {
     "id": "soñar_verb",
     "es": "soñar",
     "en": "to dream",
@@ -132864,7 +132897,7 @@
     "en_syn": [
       "turn (on lathe)"
     ],
-    "rating": 4,
+    "rating": 9,
     "group": "ar",
     "overrides": {
       "imperative_affirmative": {
@@ -143452,24 +143485,6 @@
     "noun_class": "m_std"
   },
   {
-    "id": "amaretti_noun",
-    "es": "amaretti",
-    "en": "amaretti biscuits",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "m_std"
-  },
-  {
-    "id": "amatriciana_noun",
-    "es": "amatriciana",
-    "en": "amatriciana (pasta sauce)",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "f_std"
-  },
-  {
     "id": "ámbar_noun",
     "es": "ámbar",
     "en": "amber",
@@ -146939,15 +146954,6 @@
     "audited": "v7-audit-2026-04-12"
   },
   {
-    "id": "involtini_noun",
-    "es": "involtini",
-    "en": "involtini (stuffed rolls)",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "m_std"
-  },
-  {
     "id": "iris_noun",
     "es": "iris",
     "en": "iris",
@@ -150270,15 +150276,6 @@
     "audited": "v7-audit-2026-04-12"
   },
   {
-    "id": "onboarding_noun",
-    "es": "onboarding",
-    "en": "onboarding",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 9,
-    "noun_class": "m_std"
-  },
-  {
     "id": "oncología_noun",
     "es": "oncología",
     "en": "oncology",
@@ -150677,15 +150674,6 @@
     "en_syn": [
       "osso buco"
     ]
-  },
-  {
-    "id": "ostería_noun",
-    "es": "ostería",
-    "en": "osteria (traditional tavern)",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "f_std"
   },
   {
     "id": "descubierto_bancario_noun",
@@ -151191,15 +151179,6 @@
       "article_sg": "la",
       "article_pl": "las"
     }
-  },
-  {
-    "id": "pendolino_noun",
-    "es": "pendolino",
-    "en": "pendolino (tilting train)",
-    "level": "B1",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "m_std"
   },
   {
     "id": "península_noun",
@@ -152811,15 +152790,6 @@
     "noun_class": "m_std"
   },
   {
-    "id": "radicchio_noun",
-    "es": "radicchio",
-    "en": "radicchio",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "m_std"
-  },
-  {
     "id": "noticias_de_radio_noun",
     "es": "noticias de radio",
     "en": "radio news",
@@ -153520,15 +153490,6 @@
     "audited": "v7-audit-2026-04-12"
   },
   {
-    "id": "ribollita_noun",
-    "es": "ribollita",
-    "en": "ribollita (Tuscan soup)",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "f_std"
-  },
-  {
     "id": "harina_de_arroz_noun",
     "es": "harina de arroz",
     "en": "rice flour",
@@ -154033,15 +153994,6 @@
     "audited": "v7-audit-2026-04-12"
   },
   {
-    "id": "saltimbocca_noun",
-    "es": "saltimbocca",
-    "en": "saltimbocca",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "m_std"
-  },
-  {
     "id": "salazón_noun",
     "es": "salazón",
     "en": "salting/curing",
@@ -154168,15 +154120,6 @@
     "rating": 9,
     "noun_class": "m_std",
     "en_syn": []
-  },
-  {
-    "id": "scamorza_noun",
-    "es": "scamorza",
-    "en": "scamorza cheese",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "f_std"
   },
   {
     "id": "escápula_noun",
@@ -156368,15 +156311,6 @@
     "level": "B2",
     "pos": "noun",
     "rating": 7,
-    "noun_class": "m_std"
-  },
-  {
-    "id": "stracchino_noun",
-    "es": "stracchino",
-    "en": "stracchino cheese",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
     "noun_class": "m_std"
   },
   {
@@ -159067,15 +159001,6 @@
     "level": "B2",
     "pos": "noun",
     "rating": 9,
-    "noun_class": "m_std"
-  },
-  {
-    "id": "arancino_noun",
-    "es": "arancino",
-    "en": "arancino (rice ball)",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
     "noun_class": "m_std"
   },
   {
@@ -168726,7 +168651,7 @@
     "en": "to rock/sway",
     "level": "B2",
     "pos": "verb",
-    "rating": 4
+    "rating": 8
   },
   {
     "id": "rotar_verb",
