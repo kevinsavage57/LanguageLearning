@@ -4785,7 +4785,8 @@
         "usted": "aglomere",
         "ustedes": "aglomeren"
       }
-    }
+    },
+    "technical": true
   },
   {
     "id": "agobiar_verb",
@@ -6920,7 +6921,8 @@
     "en_syn": [
       "across",
       "on the other side of"
-    ]
+    ],
+    "archaic": true
   },
   {
     "id": "allá_adverb",
@@ -8590,7 +8592,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "andén_noun",
@@ -9596,7 +9599,8 @@
       "annelid worm",
       "segmented worm"
     ],
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "anónimo_noun",
@@ -11074,7 +11078,8 @@
     "en": "on this side of",
     "level": "B2",
     "pos": "adverb",
-    "rating": 10
+    "rating": 10,
+    "archaic": true
   },
   {
     "id": "aquí_adverb",
@@ -14414,7 +14419,8 @@
     },
     "irregularTags": [
       "z-c"
-    ]
+    ],
+    "technical": true
   },
   {
     "id": "atormentar_verb",
@@ -14923,7 +14929,8 @@
     "pos": "noun",
     "rating": 9,
     "es_syn": [],
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "auditor_noun",
@@ -18713,7 +18720,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "biblioteca_noun",
@@ -19008,7 +19016,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "biografiar_verb",
@@ -19088,7 +19097,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 9,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "biomasa_noun",
@@ -22209,7 +22219,8 @@
     },
     "irregularTags": [
       "c-qu"
-    ]
+    ],
+    "technical": true
   },
   {
     "id": "calcinar_verb",
@@ -22227,7 +22238,8 @@
         "usted": "calcine",
         "ustedes": "calcinen"
       }
-    }
+    },
+    "technical": true
   },
   {
     "id": "calculador_adjective",
@@ -27605,7 +27617,8 @@
       "imperative_negative": {
         "tú": "no cíes"
       }
-    }
+    },
+    "archaic": true
   },
   {
     "id": "ciberataque_noun",
@@ -29231,7 +29244,8 @@
         "usted": "cloroforme",
         "ustedes": "cloroformen"
       }
-    }
+    },
+    "technical": true
   },
   {
     "id": "club_noun",
@@ -29295,7 +29309,8 @@
     "en_syn": [
       "coelenterate"
     ],
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "coacción_noun",
@@ -30864,7 +30879,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "comentar_verb",
@@ -35049,7 +35065,8 @@
       "blood-related",
       "cognate"
     ],
-    "rating": 10
+    "rating": 10,
+    "technical": true
   },
   {
     "id": "consciencia_noun",
@@ -38904,7 +38921,8 @@
     "en_syn": [
       "particle"
     ],
-    "rating": 10
+    "rating": 10,
+    "technical": true
   },
   {
     "id": "corral_noun",
@@ -39636,7 +39654,8 @@
     "en": "courtier",
     "level": "B2",
     "pos": "adjective",
-    "rating": 9
+    "rating": 9,
+    "archaic": true
   },
   {
     "id": "cortesía_noun",
@@ -39744,21 +39763,6 @@
     "level": "B2",
     "pos": "adjective",
     "rating": 8
-  },
-  {
-    "id": "corvo_adjective",
-    "es": "corvo",
-    "en": "curved",
-    "level": "B2",
-    "pos": "adjective",
-    "en_syn": [
-      "curving"
-    ],
-    "es_syn": [
-      "curvado",
-      "curvo"
-    ],
-    "rating": 7
   },
   {
     "id": "corán_noun",
@@ -41319,7 +41323,8 @@
     "level": "B2",
     "pos": "noun",
     "noun_class": "m_std",
-    "rating": 10
+    "rating": 10,
+    "technical": true
   },
   {
     "id": "cronista_noun",
@@ -41338,7 +41343,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "cronología_noun",
@@ -48087,7 +48093,8 @@
     "en": "deflationary",
     "level": "B2",
     "pos": "adjective",
-    "rating": 9
+    "rating": 9,
+    "technical": true
   },
   {
     "id": "deflación_noun",
@@ -49818,7 +49825,8 @@
       "demographist",
       "population scientist"
     ],
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "denegación_noun",
@@ -50595,7 +50603,8 @@
       "plural": "deponentes",
       "article_sg": "el",
       "article_pl": "los"
-    }
+    },
+    "technical": true
   },
   {
     "id": "deponer_verb",
@@ -52657,7 +52666,8 @@
     "en_syn": [
       "faded",
       "washed out"
-    ]
+    ],
+    "technical": true
   },
   {
     "id": "desayunar_verb",
@@ -52864,7 +52874,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "descomunal_adjective",
@@ -58098,7 +58109,8 @@
     "noun_class": "m_std",
     "es_syn": [
       "ecologista"
-    ]
+    ],
+    "technical": true
   },
   {
     "id": "edad_noun",
@@ -63017,7 +63029,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "equipaje_noun",
@@ -64794,7 +64807,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "esponja_noun",
@@ -71345,7 +71359,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "funcional_adjective",
@@ -75595,7 +75610,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "herramienta_noun",
@@ -76189,7 +76205,8 @@
     "en_syn": [
       "holistic theory"
     ],
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "hombre_noun",
@@ -77272,7 +77289,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "idas_y_vueltas_phrase",
@@ -79743,7 +79761,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "información_noun",
@@ -82783,7 +82802,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "isoterma_noun",
@@ -82792,7 +82812,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "italiano_adjective",
@@ -90632,7 +90653,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "mencionar_verb",
@@ -91380,7 +91402,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 9,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "microchip_noun",
@@ -91773,7 +91796,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "minimalismo_noun",
@@ -93717,7 +93741,8 @@
     "en_syn": [
       "symbiosis"
     ],
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "mutuamente_adverb",
@@ -97083,7 +97108,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 9,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "ochenta_noun",
@@ -100630,7 +100656,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "pasadizo_noun",
@@ -103879,8 +103906,7 @@
       "pilotar",
       "la pilota"
     ],
-    "rating": 5,
-    "gender_pair_id": "pilota_noun"
+    "rating": 5
   },
   {
     "id": "pimentero_noun",
@@ -104116,7 +104142,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "pirámide_noun",
@@ -104437,7 +104464,8 @@
       "plural": "plancton vegetal",
       "article_sg": "el",
       "article_pl": "los"
-    }
+    },
+    "technical": true
   },
   {
     "id": "planeador_noun",
@@ -105366,7 +105394,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "policía_noun",
@@ -107156,7 +107185,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "precavido_adjective",
@@ -108549,7 +108579,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "primavera_noun",
@@ -112396,7 +112427,8 @@
     "en_syn": [
       "masseur",
       "masseuse"
-    ]
+    ],
+    "technical": true
   },
   {
     "id": "quiropraxia_noun",
@@ -122941,7 +122973,8 @@
         "usted": "sedimente",
         "ustedes": "sedimenten"
       }
-    }
+    },
+    "technical": true
   },
   {
     "id": "sedimento_noun",
@@ -125506,7 +125539,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "sistema_noun",
@@ -125789,7 +125823,8 @@
     "en": "overexposed",
     "level": "B2",
     "pos": "adjective",
-    "rating": 9
+    "rating": 9,
+    "technical": true
   },
   {
     "id": "sobremesa_noun",
@@ -127460,7 +127495,8 @@
     "en": "underexposed",
     "level": "B2",
     "pos": "adjective",
-    "rating": 10
+    "rating": 10,
+    "technical": true
   },
   {
     "id": "subida_noun",
@@ -131513,7 +131549,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "termostato_noun",
@@ -139959,7 +139996,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "vulgar_adjective",
@@ -140952,7 +140990,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 9,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "zozobrar_verb",
@@ -141691,7 +141730,8 @@
     "en_syn": [
       "equine"
     ],
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "ética_noun",
@@ -142537,19 +142577,6 @@
     "rating": 6,
     "gender_pair_id": "perdedor_noun",
     "es_syn": []
-  },
-  {
-    "id": "pilota_noun",
-    "es": "pilota",
-    "en": "pilot",
-    "level": "A2",
-    "pos": "noun",
-    "noun_class": "f_std",
-    "es_syn": [
-      "el piloto"
-    ],
-    "rating": 5,
-    "gender_pair_id": "piloto_noun"
   },
   {
     "id": "pintora_noun",
@@ -144686,15 +144713,6 @@
     "noun_class": "m_std"
   },
   {
-    "id": "fusilli_noun",
-    "es": "fusilli",
-    "en": "fusilli pasta",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "m_std"
-  },
-  {
     "id": "futuros_noun",
     "es": "futuros",
     "en": "futures (financial)",
@@ -145128,22 +145146,6 @@
       "plural": "notas medias",
       "article_sg": "la",
       "article_pl": "las"
-    },
-    "audited": "v7-audit-2026-04-12"
-  },
-  {
-    "id": "grana_padano_noun",
-    "es": "Grana Padano",
-    "en": "Grana Padano cheese",
-    "level": "B1",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "Grana Padano",
-      "plural": "Granas Padanos",
-      "article_sg": "el",
-      "article_pl": "los"
     },
     "audited": "v7-audit-2026-04-12"
   },
@@ -146354,7 +146356,8 @@
     "level": "B1",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "hiena_noun",
@@ -146515,7 +146518,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 9,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "inmunoterapia_noun",
@@ -148730,7 +148734,8 @@
     "level": "B1",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "metáfora_noun",
@@ -148861,7 +148866,8 @@
     "level": "B1",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "edad_media_noun",
@@ -149999,7 +150005,7 @@
     "en": "north wind (tramontane)",
     "level": "B2",
     "pos": "noun",
-    "rating": 5,
+    "rating": 8,
     "noun_class": "f_std",
     "en_syn": [
       "tramontana"
@@ -150664,18 +150670,6 @@
     "audited": "v7-audit-2026-04-12"
   },
   {
-    "id": "ossobuco_noun",
-    "es": "ossobuco",
-    "en": "ossobuco",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "m_std",
-    "en_syn": [
-      "osso buco"
-    ]
-  },
-  {
     "id": "descubierto_bancario_noun",
     "es": "descubierto bancario",
     "en": "overdraft",
@@ -150754,7 +150748,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 9,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "espátula_de_pintura_noun",
@@ -150866,15 +150861,6 @@
     "pos": "noun",
     "rating": 7,
     "noun_class": "f_std"
-  },
-  {
-    "id": "pandoro_noun",
-    "es": "pandoro",
-    "en": "pandoro (Christmas cake)",
-    "level": "B1",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "m_std"
   },
   {
     "id": "despensa_noun",
@@ -151072,15 +151058,6 @@
       "article_pl": "los"
     },
     "audited": "v7-audit-2026-04-12"
-  },
-  {
-    "id": "peacekeeping_noun",
-    "es": "peacekeeping",
-    "en": "peacekeeping",
-    "level": "B1",
-    "pos": "noun",
-    "rating": 8,
-    "noun_class": "m_std"
   },
   {
     "id": "melocotonero_noun",
@@ -151632,7 +151609,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 9,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "alicates_noun",
@@ -152628,7 +152606,8 @@
     "level": "B1",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "puntualidad_noun",
@@ -153542,15 +153521,6 @@
     "noun_class": "m_std"
   },
   {
-    "id": "rigatoni_noun",
-    "es": "rigatoni",
-    "en": "rigatoni pasta",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "m_std"
-  },
-  {
     "id": "carretera_de_circunvalación_noun",
     "es": "carretera de circunvalación",
     "en": "ring road",
@@ -154047,15 +154017,6 @@
     "pos": "noun",
     "rating": 6,
     "noun_class": "f_std"
-  },
-  {
-    "id": "sanremo_noun",
-    "es": "Sanremo",
-    "en": "Sanremo (music festival)",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "m_std"
   },
   {
     "id": "zafiro_noun",
@@ -154936,22 +154897,6 @@
     "pos": "noun",
     "rating": 7,
     "noun_class": "f_std"
-  },
-  {
-    "id": "cannolo_siciliano_noun",
-    "es": "cannolo siciliano",
-    "en": "Sicilian cannolo",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "cannolo siciliano",
-      "plural": "cannolos sicilianos",
-      "article_sg": "el",
-      "article_pl": "los"
-    },
-    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "silo_noun",
@@ -156505,15 +156450,6 @@
     "noun_class": "f_std"
   },
   {
-    "id": "supplì_noun",
-    "es": "supplì",
-    "en": "supplì (rice fritter)",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "m_std"
-  },
-  {
     "id": "profesor_de_apoyo_noun",
     "es": "profesor de apoyo",
     "en": "support teacher",
@@ -156758,30 +156694,12 @@
     "noun_class": "m_std"
   },
   {
-    "id": "tagliatelle_noun",
-    "es": "tagliatelle",
-    "en": "tagliatelle pasta",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "f_std"
-  },
-  {
     "id": "talco_noun",
     "es": "talco",
     "en": "talcum powder",
     "level": "B1",
     "pos": "noun",
     "rating": 9,
-    "noun_class": "m_std"
-  },
-  {
-    "id": "taleggio_noun",
-    "es": "taleggio",
-    "en": "taleggio cheese",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
     "noun_class": "m_std"
   },
   {
@@ -156818,15 +156736,6 @@
     "pos": "noun",
     "rating": 9,
     "noun_class": "f_std"
-  },
-  {
-    "id": "tarallo_noun",
-    "es": "tarallo",
-    "en": "tarallo (Italian snack)",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "m_std"
   },
   {
     "id": "tártaro_noun",
@@ -157530,7 +157439,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 9,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "tractor_noun",
@@ -158400,22 +158310,6 @@
     "audited": "v7-audit-2026-04-12"
   },
   {
-    "id": "vía_francígena_noun",
-    "es": "Vía Francígena",
-    "en": "Via Francigena (pilgrimage route)",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "Vía Francígena",
-      "plural": "Vías Francígenas",
-      "article_sg": "la",
-      "article_pl": "las"
-    },
-    "audited": "v7-audit-2026-04-12"
-  },
-  {
     "id": "viaducto_noun",
     "es": "viaducto",
     "en": "viaduct",
@@ -158432,18 +158326,6 @@
     "pos": "noun",
     "rating": 6,
     "noun_class": "m_std"
-  },
-  {
-    "id": "videomaker_noun",
-    "es": "videomaker",
-    "en": "videomaker",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "m_std",
-    "en_syn": [
-      "videographer"
-    ]
   },
   {
     "id": "visualización_noun",
@@ -159124,15 +159006,6 @@
       "article_pl": "los"
     },
     "audited": "v7-audit-2026-04-12"
-  },
-  {
-    "id": "arrabbiata_noun",
-    "es": "arrabbiata",
-    "en": "arrabbiata (spicy pasta sauce)",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "f_std"
   },
   {
     "id": "orden_de_arresto_noun",
@@ -160052,7 +159925,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 6,
-    "noun_class": "m_std"
+    "noun_class": "m_std",
+    "technical": true
   },
   {
     "id": "xilófono_noun",
@@ -160061,15 +159935,6 @@
     "level": "B2",
     "pos": "noun",
     "rating": 9,
-    "noun_class": "m_std"
-  },
-  {
-    "id": "zabaglione_noun",
-    "es": "zabaglione",
-    "en": "zabaglione dessert",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
     "noun_class": "m_std"
   },
   {
@@ -160088,7 +159953,8 @@
     "level": "B1",
     "pos": "noun",
     "rating": 9,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "gimnasia_artística_noun",
@@ -160262,15 +160128,6 @@
     "level": "B1",
     "pos": "noun",
     "rating": 7,
-    "noun_class": "m_std"
-  },
-  {
-    "id": "ferragosto_noun",
-    "es": "ferragosto",
-    "en": "August holiday (Italian)",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 5,
     "noun_class": "m_std"
   },
   {
@@ -161706,15 +161563,6 @@
     "noun_class": "f_std"
   },
   {
-    "id": "bresaola_noun",
-    "es": "bresaola",
-    "en": "bresaola (cured beef)",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "f_std"
-  },
-  {
     "id": "brie_noun",
     "es": "brie",
     "en": "brie cheese",
@@ -161740,15 +161588,6 @@
     "pos": "noun",
     "rating": 8,
     "noun_class": "m_std"
-  },
-  {
-    "id": "briscola_noun",
-    "es": "briscola",
-    "en": "briscola (card game)",
-    "level": "B1",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "f_std"
   },
   {
     "id": "bronquios_noun",
@@ -162056,22 +161895,6 @@
     "noun_class": "f_std"
   },
   {
-    "id": "cacio_e_pepe_noun",
-    "es": "cacio e pepe",
-    "en": "cacio e pepe (pasta dish)",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "cacio e pepe",
-      "plural": "cacio e pepe",
-      "article_sg": "el",
-      "article_pl": "los"
-    },
-    "audited": "v7-audit-2026-04-12"
-  },
-  {
     "id": "molde_para_tartas_noun",
     "es": "molde para tartas",
     "en": "cake mould",
@@ -162190,27 +162013,6 @@
       "article_pl": "los"
     },
     "audited": "v7-audit-2026-04-12"
-  },
-  {
-    "id": "cantucci_noun",
-    "es": "cantucci",
-    "en": "cantucci biscuits",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "m_std",
-    "en_syn": [
-      "biscotti"
-    ]
-  },
-  {
-    "id": "caponata_noun",
-    "es": "caponata",
-    "en": "caponata (Sicilian dish)",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
-    "noun_class": "f_std"
   },
   {
     "id": "taller_mecánico_noun",
@@ -163928,7 +163730,8 @@
     "level": "B1",
     "pos": "noun",
     "rating": 9,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "pensamiento_crítico_noun",
@@ -163969,15 +163772,6 @@
     "level": "B2",
     "pos": "noun",
     "rating": 8,
-    "noun_class": "m_std"
-  },
-  {
-    "id": "crostino_noun",
-    "es": "crostino",
-    "en": "crostino (toasted bread)",
-    "level": "B2",
-    "pos": "noun",
-    "rating": 10,
     "noun_class": "m_std"
   },
   {
@@ -165101,7 +164895,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "documentalista_noun",
@@ -165899,7 +165694,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 9,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "epidermis_noun",
@@ -165995,7 +165791,8 @@
     "level": "B2",
     "pos": "noun",
     "rating": 10,
-    "noun_class": "f_std"
+    "noun_class": "f_std",
+    "technical": true
   },
   {
     "id": "directiva_comunitaria_noun",
@@ -171930,14 +171727,6 @@
     "es_syn": [
       "al contrario"
     ]
-  },
-  {
-    "id": "candidamente_adv",
-    "es": "candidamente",
-    "en": "candidly",
-    "level": "B1",
-    "pos": "adverb",
-    "rating": 9
   },
   {
     "id": "caracteristicamente_adv",

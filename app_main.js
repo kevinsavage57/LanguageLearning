@@ -484,7 +484,9 @@ function addGistButton() {
 
 // Map a word's frequency rating (1–10, 1 = most common) to its starting selection weight.
 // Weights derived from: weight(1)/weight(r) equals the user-specified multipliers.
-const RATING_WEIGHTS = [20, 10, 20/3, 20/7, 20/9, 20/12, 20/14, 20/16, 20/18, 1];
+// The tail (8–10) drops off steeply so very obscure words appear only very seldomly:
+// r8 is 40× rarer than r1, r9 100×, r10 400×.
+const RATING_WEIGHTS = [20, 10, 20/3, 20/7, 20/9, 20/12, 20/14, 0.5, 0.2, 0.05];
 function ratingToWeight(rating) {
   const r = typeof rating === "number" ? Math.round(rating) : 5;
   const idx = Math.max(0, Math.min(9, r - 1));
@@ -1534,6 +1536,10 @@ fetch(`words_${LANG.id}.json`)
   .then(async data => {
     console.log(`Data loaded from words_${LANG.id}.json`, data.length);
 
+    // Entries marked "technical": true or "archaic": true stay in the data file
+    // for reference but never enter the app (no unlock, no matching, no typing).
+    data = data.filter(entry => !entry.technical && !entry.archaic);
+
     // Split verb entries (those with conjugation metadata) into the verbs array.
     // A verb entry has conjugation data if it has a 'group' field.
     verbs = data.filter(entry => entry.pos === "verb" && entry.group != null);
@@ -1785,11 +1791,25 @@ function startVerbMatching() {
 
 
 
+// Pick one locked word at random, weighted by frequency rating
+// (ratingToWeight), so obscure words are unlocked only very seldomly.
+function pickLockedWordWeighted(lockedWords) {
+  let total = 0;
+  for (const w of lockedWords) total += ratingToWeight(w.rating);
+  let r = Math.random() * total;
+  for (const w of lockedWords) {
+    r -= ratingToWeight(w.rating);
+    if (r <= 0) return w;
+  }
+  return lockedWords[lockedWords.length - 1]; // float rounding fallback
+}
+
 function unlockInitialWords(words) {
-  // Shuffle and unlock the first 25
-  shuffle(words);
+  // Weighted draw without replacement: common words dominate the starting pool.
   for (let i = 0; i < Math.min(INITIAL_POOL_SIZE, words.length); i++) {
-    words[i].unlocked = true;
+    const locked = words.filter(w => !w.unlocked);
+    if (locked.length === 0) break;
+    pickLockedWordWeighted(locked).unlocked = true;
   }
 }
 
@@ -1810,7 +1830,7 @@ function unlockNewWord() {
     }
   }
 
-  const newWord = lockedWords[Math.floor(Math.random() * lockedWords.length)];
+  const newWord = pickLockedWordWeighted(lockedWords);
   newWord.unlocked = true;
   save();
   console.log(`Unlocked new word: ${newWord.src} - ${newWord.tgt}`);
