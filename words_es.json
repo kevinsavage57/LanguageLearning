@@ -89042,7 +89042,7 @@
   {
     "id": "maquis_noun",
     "es": "maquis",
-    "en": "maquis",
+    "en": "maquis (anti-Franco guerrilla)",
     "level": "B2",
     "pos": "noun",
     "rating": 9,
@@ -89052,7 +89052,8 @@
       "plural": "maquis",
       "article_sg": "el",
       "article_pl": "los"
-    }
+    },
+    "archaic": true
   },
   {
     "id": "mar_noun",
@@ -154687,22 +154688,6 @@
     "pos": "noun",
     "rating": 9,
     "noun_class": "f_std"
-  },
-  {
-    "id": "serie_b_noun",
-    "es": "Serie B",
-    "en": "Serie B (Italian football)",
-    "level": "B1",
-    "pos": "noun",
-    "rating": 8,
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "Serie B",
-      "plural": "Serie B",
-      "article_sg": "la",
-      "article_pl": "las"
-    },
-    "audited": "v7-audit-2026-04-12"
   },
   {
     "id": "servidor_noun",
