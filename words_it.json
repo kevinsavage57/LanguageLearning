@@ -589,7 +589,7 @@
     "pos": "verb",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4,
+    "rating": 9,
     "group": "are",
     "overrides": {
       "present": {},
@@ -7623,7 +7623,7 @@
     "pos": "verb",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4,
+    "rating": 8,
     "group": "are",
     "overrides": {
       "present": {},
@@ -15052,8 +15052,8 @@
     "audited": "v1-audit-2026-04-12"
   },
   {
-    "id": "camello_noun",
-    "it": "camello",
+    "id": "cammello_noun",
+    "it": "cammello",
     "en": "camel",
     "level": "A2",
     "pos": "noun",
@@ -26759,7 +26759,8 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "technical": true
   },
   {
     "id": "criminologia_noun",
@@ -26781,7 +26782,8 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "technical": true
   },
   {
     "id": "criptare_verb",
@@ -31801,16 +31803,6 @@
     "rating": 4
   },
   {
-    "id": "disruptivo_adjective",
-    "it": "disruptivo",
-    "en": "disruptive",
-    "level": "B2",
-    "pos": "adjective",
-    "en_syn": [],
-    "it_syn": [],
-    "rating": 8
-  },
-  {
     "id": "dissentire_verb",
     "it": "dissentire",
     "en": "to disagree",
@@ -32702,7 +32694,7 @@
     "pos": "verb",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4,
+    "rating": 8,
     "group": "are",
     "overrides": {
       "present": {},
@@ -34608,7 +34600,8 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "technical": true
   },
   {
     "id": "entomologo_noun",
@@ -34619,7 +34612,8 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "technical": true
   },
   {
     "id": "entrare_verb",
@@ -34754,7 +34748,8 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "technical": true
   },
   {
     "id": "epidemiologo_noun",
@@ -34765,7 +34760,8 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "technical": true
   },
   {
     "id": "epidermide_noun",
@@ -36437,7 +36433,8 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10
+    "rating": 10,
+    "technical": true
   },
   {
     "id": "etnologo_noun",
@@ -36448,7 +36445,8 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10
+    "rating": 10,
+    "technical": true
   },
   {
     "id": "etto_noun",
@@ -43345,17 +43343,6 @@
     "audited": "v1-audit-2026-04-12"
   },
   {
-    "id": "gincologa_noun",
-    "it": "gincologa",
-    "en": "gynaecologist",
-    "level": "B2",
-    "pos": "noun",
-    "noun_class": "f_std",
-    "en_syn": [],
-    "it_syn": [],
-    "rating": 9
-  },
-  {
     "id": "ginecologa_noun",
     "it": "ginecologa",
     "en": "gynaecologist",
@@ -46347,7 +46334,8 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10
+    "rating": 10,
+    "technical": true
   },
   {
     "id": "idrologo_noun",
@@ -46358,7 +46346,8 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10
+    "rating": 10,
+    "technical": true
   },
   {
     "id": "idrovolante_noun",
@@ -46892,7 +46881,8 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "technical": true
   },
   {
     "id": "immunologo_noun",
@@ -46903,7 +46893,8 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "technical": true
   },
   {
     "id": "immunoterapia_noun",
@@ -49196,8 +49187,8 @@
     "reflexive": true
   },
   {
-    "id": "ingenioso_adjective",
-    "it": "ingenioso",
+    "id": "ingegnoso_adjective",
+    "it": "ingegnoso",
     "en": "ingenious",
     "level": "B2",
     "pos": "adjective",
@@ -51526,7 +51517,8 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10
+    "rating": 10,
+    "technical": true
   },
   {
     "id": "isola_noun",
@@ -51594,7 +51586,8 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10
+    "rating": 10,
+    "technical": true
   },
   {
     "id": "ispettore_noun",
@@ -58351,7 +58344,8 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10
+    "rating": 10,
+    "technical": true
   },
   {
     "id": "metafisica_noun",
@@ -63688,7 +63682,7 @@
     "pos": "verb",
     "en_syn": [],
     "it_syn": [],
-    "rating": 3,
+    "rating": 8,
     "group": "are",
     "overrides": {
       "present": {},
@@ -66539,7 +66533,8 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "technical": true
   },
   {
     "id": "paleontologo_noun",
@@ -66550,7 +66545,8 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "technical": true
   },
   {
     "id": "Palermo_noun",
@@ -72249,7 +72245,8 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10
+    "rating": 10,
+    "technical": true
   },
   {
     "id": "pneumologo_noun",
@@ -72260,7 +72257,8 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10
+    "rating": 10,
+    "technical": true
   },
   {
     "id": "Po_noun",
@@ -72703,8 +72701,8 @@
     "rating": 8
   },
   {
-    "id": "polémico_adjective",
-    "it": "polémico",
+    "id": "polemico_adjective",
+    "it": "polemico",
     "en": "polemical",
     "level": "B2",
     "pos": "adjective",
@@ -72712,7 +72710,7 @@
       "controversial"
     ],
     "it_syn": [],
-    "rating": 9
+    "rating": 6
   },
   {
     "id": "pomata_noun",
@@ -81309,17 +81307,6 @@
     "rating": 9
   },
   {
-    "id": "reumatolog_noun",
-    "it": "reumatolog",
-    "en": "rheumatologist",
-    "level": "B2",
-    "pos": "noun",
-    "noun_class": "m_std",
-    "en_syn": [],
-    "it_syn": [],
-    "rating": 9
-  },
-  {
     "id": "reumatologo_noun",
     "it": "reumatologo",
     "en": "rheumatologist",
@@ -85037,17 +85024,6 @@
     "en_syn": [],
     "it_syn": [],
     "rating": 6
-  },
-  {
-    "id": "sabana_noun",
-    "it": "sabana",
-    "en": "savannah",
-    "level": "B2",
-    "pos": "noun",
-    "noun_class": "f_std",
-    "en_syn": [],
-    "it_syn": [],
-    "rating": 7
   },
   {
     "id": "sabato_noun",
@@ -94399,7 +94375,7 @@
     "pos": "verb",
     "en_syn": [],
     "it_syn": [],
-    "rating": 3,
+    "rating": 8,
     "group": "are",
     "overrides": {
       "present": {},
@@ -101070,17 +101046,6 @@
     "rating": 6
   },
   {
-    "id": "tossicolog_noun",
-    "it": "tossicolog",
-    "en": "toxicologist",
-    "level": "B2",
-    "pos": "noun",
-    "noun_class": "m_std",
-    "en_syn": [],
-    "it_syn": [],
-    "rating": 9
-  },
-  {
     "id": "tossicologo_noun",
     "it": "tossicologo",
     "en": "toxicologist",
@@ -101089,7 +101054,8 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "technical": true
   },
   {
     "id": "tossire_verb",
@@ -106012,7 +105978,7 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4
+    "rating": 8
   },
   {
     "id": "videochiamata_noun",
@@ -107688,7 +107654,8 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "technical": true
   },
   {
     "id": "zoologia_noun",
@@ -107702,17 +107669,6 @@
     "rating": 8
   },
   {
-    "id": "zoologico_noun",
-    "it": "zoologico",
-    "en": "zoologist",
-    "level": "B2",
-    "pos": "noun",
-    "noun_class": "m_std",
-    "en_syn": [],
-    "it_syn": [],
-    "rating": 9
-  },
-  {
     "id": "zoologo_noun",
     "it": "zoologo",
     "en": "zoologist",
@@ -107721,7 +107677,8 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "technical": true
   },
   {
     "id": "zooplancton_noun",
@@ -114665,7 +114622,7 @@
     "en": "know-it-all",
     "level": "B1",
     "pos": "noun",
-    "rating": 3,
+    "rating": 8,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std"
@@ -115356,17 +115313,6 @@
     ],
     "it_syn": [],
     "noun_class": "f_std"
-  },
-  {
-    "id": "manicurista_noun",
-    "it": "manicurista",
-    "en": "manicurist",
-    "level": "B1",
-    "pos": "noun",
-    "rating": 10,
-    "en_syn": [],
-    "it_syn": [],
-    "noun_class": "m_std"
   },
   {
     "id": "manifattura_noun",
@@ -130400,7 +130346,7 @@
     "en": "to pass away",
     "level": "B1",
     "pos": "verb",
-    "rating": 4,
+    "rating": 9,
     "en_syn": [
       "pass away",
       "die"
@@ -140356,58 +140302,88 @@
   },
   {
     "id": "tendine_achille_noun",
-    "es": "tendón de Aquiles",
     "en": "Achilles tendon",
     "level": "B1",
     "pos": "noun",
     "rating": 8,
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
-    "es_syn": []
+    "it": "tendine d'Achille",
+    "it_syn": [],
+    "noun_override": {
+      "base": "tendine d'Achille",
+      "plural": "tendini d'Achille",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "isole_eolie_noun",
-    "es": "Islas Eolias",
     "en": "Aeolian Islands",
     "level": "B1",
     "pos": "noun",
     "rating": 9,
-    "noun_class": "f_std",
+    "noun_class": "irregular",
     "en_syn": [],
-    "es_syn": []
+    "it": "Isole Eolie",
+    "it_syn": [],
+    "noun_override": {
+      "base": "Isole Eolie",
+      "plural": "Isole Eolie",
+      "article_sg": "le",
+      "article_pl": "le"
+    }
   },
   {
     "id": "sciroppo_agave_noun",
-    "es": "sirope de agave",
     "en": "agave syrup",
     "level": "B1",
     "pos": "noun",
     "rating": 9,
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
-    "es_syn": []
+    "it": "sciroppo d'agave",
+    "it_syn": [],
+    "noun_override": {
+      "base": "sciroppo d'agave",
+      "plural": "sciroppi d'agave",
+      "article_sg": "lo",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "ufficiale_aeronautica_noun",
-    "es": "oficial de la fuerza aérea",
     "en": "air force officer",
     "level": "B1",
     "pos": "noun",
-    "rating": 4,
-    "noun_class": "m_std",
+    "rating": 7,
+    "noun_class": "irregular",
     "en_syn": [],
-    "es_syn": []
+    "it": "ufficiale dell'aeronautica",
+    "it_syn": [],
+    "noun_override": {
+      "base": "ufficiale dell'aeronautica",
+      "plural": "ufficiali dell'aeronautica",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "farina_mandorle_noun",
-    "es": "harina de almendra",
     "en": "almond flour",
     "level": "B1",
     "pos": "noun",
     "rating": 7,
-    "noun_class": "f_std",
+    "noun_class": "irregular",
     "en_syn": [],
-    "es_syn": []
+    "it": "farina di mandorle",
+    "it_syn": [],
+    "noun_override": {
+      "base": "farina di mandorle",
+      "plural": "farine di mandorle",
+      "article_sg": "la",
+      "article_pl": "le"
+    }
   },
   {
     "id": "dovere_verb",
