@@ -582,7 +582,7 @@ const modeSelect = document.getElementById("mode");
 
 function updateFilterVisibility() {
   const mode = (modeSelect && modeSelect.value ? String(modeSelect.value) : "").toLowerCase();
-  const isVerbMode = (mode === "verb-match" || mode === "verb-type" || mode === "verb-transform");
+  const isVerbMode = (mode === "verb-match" || mode === "verb-type" || mode === "verb-transform" || mode === "tense-match");
 
   const levelEl = document.getElementById("level");
   if (!levelEl) return;
@@ -1756,6 +1756,7 @@ function mergeProgress(savedWords, freshData) {
 }
 
 function startVerbMatching() {
+  hideTenseMatchHeader();
   const _vtArea = document.getElementById("verbTransformArea");
   if (_vtArea) _vtArea.style.display = "none";
   // Verb matching uses the same matching UI
@@ -1790,6 +1791,89 @@ function startVerbMatching() {
 }
 
 
+
+function hideTenseMatchHeader() {
+  const h = document.getElementById("tenseMatchHeader");
+  if (h) h.style.display = "none";
+}
+
+// Tense Matching: one verb + one person, cards are conjugated forms in different tenses.
+// Source column shows tense labels; target column shows the conjugated forms.
+function startTenseMatching() {
+  const _vtArea = document.getElementById("verbTransformArea");
+  if (_vtArea) _vtArea.style.display = "none";
+  sourceCol.style.display = "";
+  targetCol.style.display = "";
+  typingArea.style.display = "none";
+
+  const unlockedTenses = getUnlockedTenses().map(LANG.canonicalTenseKey)
+    .filter((t, i, a) => a.indexOf(t) === i);
+
+  if (unlockedTenses.length < 2) {
+    alert("Unlock at least 2 tenses to play Tense Matching.");
+    return;
+  }
+
+  // Group conjugation entries by verbId + canonical person
+  const groups = new Map();
+  for (const c of conjugations) {
+    if (!unlockedTenses.includes(LANG.canonicalTenseKey(c.tense))) continue;
+    const key = `${c.verbId}|${LANG.canonicalPerson(c.person)}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(c);
+  }
+
+  // Keep groups with ≥2 distinct tenses
+  const validGroups = [...groups.values()].filter(g => {
+    const tenses = new Set(g.map(c => LANG.canonicalTenseKey(c.tense)));
+    return tenses.size >= 2;
+  });
+
+  if (validGroups.length === 0) {
+    alert("No verb conjugations available yet. Master a verb infinitive first.");
+    return;
+  }
+
+  const group = validGroups[Math.floor(Math.random() * validGroups.length)];
+
+  // Deduplicate by canonical tense (first entry per tense wins)
+  const byTense = new Map();
+  for (const c of group) {
+    const ct = LANG.canonicalTenseKey(c.tense);
+    if (!byTense.has(ct)) byTense.set(ct, c);
+  }
+  let entries = [...byTense.values()];
+
+  // Prefer unmastered entries, cap at 5
+  const unmastered = entries.filter(c => c.tenseMatchStreak < MASTERED_STREAK);
+  entries = shuffle(unmastered.length >= 2 ? unmastered : entries).slice(0, 5);
+
+  currentRound = entries;
+  selectedSource = null;
+  selectedTarget = null;
+
+  // Header: "infinitive — person"
+  let header = document.getElementById("tenseMatchHeader");
+  if (!header) {
+    header = document.createElement("div");
+    header.id = "tenseMatchHeader";
+    header.style.cssText = "text-align:center;font-size:1.1em;font-weight:600;margin-bottom:12px;color:#444;";
+    const game = document.querySelector(".game");
+    if (game) game.parentElement.insertBefore(header, game);
+  }
+  header.style.display = "";
+  header.textContent = `${entries[0].infinitive} — ${entries[0].person}`;
+
+  sourceCol.innerHTML = "";
+  targetCol.innerHTML = "";
+
+  entries.forEach(c =>
+    sourceCol.appendChild(makeWord(LANG.formatTenseLabel(c.tense), "src", c))
+  );
+  shuffle([...entries]).forEach(c =>
+    targetCol.appendChild(makeWord(c.src, "tgt", c))
+  );
+}
 
 // Pick one locked word at random, weighted by frequency rating
 // (ratingToWeight), so obscure words are unlocked only very seldomly.
@@ -1902,12 +1986,14 @@ function buildConjugationPool() {
         person:          form.person,
         src:             form.src,
         tgt:             form.tgt,
-        matchStreak:     0,
-        typeStreak:      0,
-        transformStreak: 0,
-        matchWeight:     baseVerbWeight,
-        typeWeight:      baseVerbWeight,
-        transformWeight: baseVerbWeight,
+        matchStreak:      0,
+        typeStreak:       0,
+        transformStreak:  0,
+        tenseMatchStreak: 0,
+        matchWeight:      baseVerbWeight,
+        typeWeight:       baseVerbWeight,
+        transformWeight:  baseVerbWeight,
+        tenseMatchWeight: baseVerbWeight,
       };
 
       conjugations.push(entry);
@@ -1936,10 +2022,12 @@ function unlockVerbModes() {
 
   // Be robust to older HTML versions that don't have option IDs.
   const vm  = document.getElementById("verbMatchOption")     || document.querySelector('option[value="verb-match"]');
+  const vtm = document.getElementById("tenseMatchOption")    || document.querySelector('option[value="tense-match"]');
   const vt  = document.getElementById("verbTypeOption")      || document.querySelector('option[value="verb-type"]');
   const vtr = document.getElementById("verbTransformOption") || document.querySelector('option[value="verb-transform"]');
 
   if (vm)  vm.disabled  = false;
+  if (vtm) vtm.disabled = false;
   if (vt)  vt.disabled  = false;
   if (vtr) vtr.disabled = false;
 }
@@ -1974,9 +2062,11 @@ function activateQuickStart() {
 
   // Enable verb mode dropdown options directly
   const vm  = document.getElementById("verbMatchOption")     || document.querySelector('option[value="verb-match"]');
+  const vtm = document.getElementById("tenseMatchOption")    || document.querySelector('option[value="tense-match"]');
   const vt  = document.getElementById("verbTypeOption")      || document.querySelector('option[value="verb-type"]');
   const vtr = document.getElementById("verbTransformOption") || document.querySelector('option[value="verb-transform"]');
   if (vm)  vm.disabled  = false;
+  if (vtm) vtm.disabled = false;
   if (vt)  vt.disabled  = false;
   if (vtr) vtr.disabled = false;
 
@@ -2138,6 +2228,7 @@ function isTypingMasteredWord(w) {
 
 
 function startNextRound() {
+  hideTenseMatchHeader();
   let mode = document.getElementById("mode").value;
   const level = document.getElementById("level").value;
 
@@ -2233,6 +2324,7 @@ if (mode !== "review") {
 
 
 function startVerbTyping() {
+  hideTenseMatchHeader();
   const _vtArea = document.getElementById("verbTransformArea");
   if (_vtArea) _vtArea.style.display = "none";
   // Hide matching columns, show typing UI (same as word typing)
@@ -2916,6 +3008,7 @@ function _vtBuildSegments(baseInf, baseSrc, actualRemovals, infToSrcMap) {
 }
 
 function startVerbTransforming() {
+  hideTenseMatchHeader();
   sourceCol.style.display = "none";
   targetCol.style.display = "none";
   typingArea.style.display = "none";
@@ -3455,6 +3548,8 @@ function check() {
   if (!selectedSource || !selectedTarget) return;
 
  const isVerb = !!selectedSource.word.tense; // conjugations have tense/person
+ const _checkMode = modeSelect.value === "tense-match" || _mixedModeCurrentPick === "tense-match";
+ const isTenseMatch = _checkMode;
 
 const sWord = selectedSource.word;
 const eWord = selectedTarget.word;
@@ -3490,7 +3585,9 @@ if (sameEntry || sameSourceSurface || englishOverlap || sameVerbMeaning) {
   selectedTarget.classList.add("matched");
 
   try {
-    if (isVerb) {
+    if (isTenseMatch) {
+      tense_match_correct(selectedSource.word);
+    } else if (isVerb) {
       verb_match_correct(selectedSource.word);
     } else {
       correct(selectedSource.word);
@@ -3500,7 +3597,9 @@ if (sameEntry || sameSourceSurface || englishOverlap || sameVerbMeaning) {
   }
 } else {
   try {
-    if (isVerb) {
+    if (isTenseMatch) {
+      tense_match_wrong(selectedSource.word);
+    } else if (isVerb) {
       verb_match_wrong(selectedSource.word);
     } else {
       wrong(selectedSource.word);
@@ -3529,6 +3628,7 @@ setTimeout(() => {
   hideIrregularVerbPanel();
   if (mode === "mixed-mode") startMixedRound();
   else if (mode === "verb-match") startVerbMatching();
+  else if (mode === "tense-match") startTenseMatching();
   else startNextRound();
 }, tableVisible ? 3500 : 600);
 
@@ -3605,6 +3705,17 @@ function verb_match_correct(c) {
 function verb_match_wrong(c) {
   c.matchStreak = 0;
   c.matchWeight += 2;
+}
+
+function tense_match_correct(c) {
+  c.tenseMatchStreak++;
+  recordVerbTenseCorrect(c.tense, c.person);
+  c.tenseMatchWeight = Math.max(1, c.tenseMatchWeight - verbWeightDecrement(c.tenseMatchStreak));
+}
+
+function tense_match_wrong(c) {
+  c.tenseMatchStreak = 0;
+  c.tenseMatchWeight += 2;
 }
 
 function isVerbUnlocked(verb) {
@@ -3696,9 +3807,11 @@ function updateStats() {
   let verbMatchMastered = 0;
   let verbTypeMastered = 0;
 
+  let tenseMatchMastered = 0;
   if (Array.isArray(conjugations)) {
-    verbMatchMastered = conjugations.filter(c => c.matchStreak >= MASTERED_STREAK).length;
-    verbTypeMastered = conjugations.filter(c => c.typeStreak >= MASTERED_STREAK).length;
+    verbMatchMastered   = conjugations.filter(c => c.matchStreak      >= MASTERED_STREAK).length;
+    verbTypeMastered    = conjugations.filter(c => c.typeStreak        >= MASTERED_STREAK).length;
+    tenseMatchMastered  = conjugations.filter(c => c.tenseMatchStreak  >= MASTERED_STREAK).length;
   }
 
 
@@ -3745,10 +3858,11 @@ function updateStats() {
     </div>`;
 
   mastery.innerHTML =
-    row("Matching Mastered",    `${matchingMastered}/${allWords.length}`) +
-    row("Typing Mastered",      `${typingMastered}/${matchingMastered}`) +
-    row("Unlocked Words",       `${unlockedWords}/${allWords.length}`) +
-    row("Infinitives Unlocked", `${verbsUnlockedCount}/${verbsTotal}`);
+    row("Matching Mastered",      `${matchingMastered}/${allWords.length}`) +
+    row("Typing Mastered",        `${typingMastered}/${matchingMastered}`) +
+    row("Unlocked Words",         `${unlockedWords}/${allWords.length}`) +
+    row("Infinitives Unlocked",   `${verbsUnlockedCount}/${verbsTotal}`) +
+    (tenseMatchMastered > 0 ? row("Tense Match Mastered", `${tenseMatchMastered}/${conjugations.length}`) : "");
 }
 
 
@@ -3835,6 +3949,11 @@ function routeModeChange() {
     return;
   }
 
+  if (mode === "tense-match") {
+    startTenseMatching();
+    return;
+  }
+
   if (mode === "verb-type") {
     startVerbTyping();
     return;
@@ -3853,11 +3972,12 @@ function routeModeChange() {
 // Randomly picks from all modes (weighted), skipping modes with empty pools.
 
 const MIXED_MODE_WEIGHTS = [
-  { mode: "all",        weight: 5   },   // Matching
-  { mode: "typing",     weight: 4.5 },   // Typing
-  { mode: "verb-match", weight: 3.5 },   // Verb Matching
-  { mode: "review",     weight: 2   },   // Review
-  { mode: "verb-type",  weight: 1   },   // Verb Typing
+  { mode: "all",          weight: 5   },   // Matching
+  { mode: "typing",       weight: 4.5 },   // Typing
+  { mode: "verb-match",   weight: 3.5 },   // Verb Matching
+  { mode: "tense-match",  weight: 3   },   // Tense Matching
+  { mode: "review",       weight: 2   },   // Review
+  { mode: "verb-type",    weight: 1   },   // Verb Typing
 ];
 
 function mixedModeHasPool(mode) {
@@ -3908,6 +4028,12 @@ function mixedModeHasPool(mode) {
     return pool.length > 0;
   }
 
+  if (mode === "tense-match") {
+    const unlocked = getUnlockedTenses().map(LANG.canonicalTenseKey)
+      .filter((t, i, a) => a.indexOf(t) === i);
+    return unlocked.length >= 2 && conjugations.length >= 2;
+  }
+
   return false;
 }
 
@@ -3935,7 +4061,7 @@ function startMixedRound() {
   // Track the current sub-mode so other functions can detect verb modes in mixed
   _mixedModeCurrentPick = picked;
 
-  const isVerbMode = picked === "verb-match" || picked === "verb-type";
+  const isVerbMode = picked === "verb-match" || picked === "verb-type" || picked === "tense-match";
 
   // For verb sub-modes in mixed: force tense selector to "mixed" so all unlocked
   // tenses are used, not just whatever it was last set to.
@@ -3959,6 +4085,8 @@ function startMixedRound() {
 
   if (picked === "verb-match") {
     startVerbMatching();
+  } else if (picked === "tense-match") {
+    startTenseMatching();
   } else if (picked === "verb-type") {
     startVerbTyping();
   } else {
