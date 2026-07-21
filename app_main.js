@@ -1868,7 +1868,7 @@ function startTenseMatching() {
   targetCol.innerHTML = "";
 
   entries.forEach(c =>
-    sourceCol.appendChild(makeWord(LANG.formatTenseLabel(c.tense), "src", c))
+    sourceCol.appendChild(makeWord(c.tgt, "src", c))
   );
   shuffle([...entries]).forEach(c =>
     targetCol.appendChild(makeWord(c.src, "tgt", c))
