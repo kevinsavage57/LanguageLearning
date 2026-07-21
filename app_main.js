@@ -1852,17 +1852,6 @@ function startTenseMatching() {
   selectedSource = null;
   selectedTarget = null;
 
-  // Header: "infinitive — person"
-  let header = document.getElementById("tenseMatchHeader");
-  if (!header) {
-    header = document.createElement("div");
-    header.id = "tenseMatchHeader";
-    header.style.cssText = "text-align:center;font-size:1.1em;font-weight:600;margin-bottom:12px;color:#444;";
-    const game = document.querySelector(".game");
-    if (game) game.parentElement.insertBefore(header, game);
-  }
-  header.style.display = "";
-  header.textContent = `${entries[0].infinitive} — ${entries[0].person}`;
 
   sourceCol.innerHTML = "";
   targetCol.innerHTML = "";
