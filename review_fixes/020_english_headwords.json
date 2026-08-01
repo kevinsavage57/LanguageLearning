@@ -8,14 +8,19 @@
   "foul": "used in Spanish sports commentary alongside falta",
   "slip": "genuine Spanish loanword for briefs",
   "rape": "a real Spanish word meaning monkfish -- the English collision is coincidental",
-  "zoning": "borderline urbanism jargon; the standard Spanish is zonificación, which is absent. Left in place rather than guessed at, but worth a look."
+  "zoning": "RESOLVED in 031_zoning.json -- the entry's own noun_override already carried base 'zonificación', so it was renamed rather than kept as-is or dropped."
  },
- "drop_ids": ["lawn_noun"],
+ "drop_ids": [
+  "lawn_noun"
+ ],
  "_drop_rationale": {
   "lawn_noun": "English word, not Spanish. césped is already in the deck and carries 'lawn' as a synonym, so nothing is lost."
  },
  "rows": [
-  {"es": "memoirs", "es_new": "memorias",
-   "_note": "English headword; the Spanish is memorias, which was absent. memoria (memory) exists separately and is a different sense."}
+  {
+   "es": "memoirs",
+   "es_new": "memorias",
+   "_note": "English headword; the Spanish is memorias, which was absent. memoria (memory) exists separately and is a different sense."
+  }
  ]
 }

@@ -1,0 +1,11 @@
+{
+ "reviewed": "resolves the zoning headword flagged in 020_english_headwords.json",
+ "_finding": "The entry was internally inconsistent. Its headword and gloss were both the English 'zoning', but its noun_override carried base 'zonificación' with feminine articles -- so the matching prompt showed 'zoning' while getNounForms() returned 'la zonificación'. The correct Spanish was present all along, just buried in the override rather than in the es field.",
+ "_why_the_override_stays": "First attempt set noun_class to f_std and dropped the override. That produced the plural 'las zonificaciónes', which is wrong -- Spanish drops the accent in the plural (zonificaciones). pluralizeNoun() in lang_es.js has no rule for that, which is why 219 of the file's 518 -ión nouns carry an explicit irregular override. This entry now matches that majority pattern rather than relying on the engine.",
+ "rows": [
+  {"es": "zoning", "es_new": "zonificación", "nc": "irregular",
+   "override": {"base": "zonificación", "plural": "zonificaciones",
+                "article_sg": "la", "article_pl": "las"},
+   "_note": "headword corrected to the Spanish word the override already named; the override itself is kept because the engine cannot pluralise -ión correctly"}
+ ]
+}

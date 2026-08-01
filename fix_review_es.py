@@ -50,7 +50,14 @@ def main():
         (dupes if r["es"] in seen else seen).add(r["es"])
     if dupes:
         print(f"WARNING: same headword fixed in two batches: {sorted(dupes)}")
-    fixes = {r["es"]: r for r in rows}
+    # Key each row by its old headword *and* its new one, so a rename still matches
+    # after it has been applied once. Without this a rename row silently stops firing
+    # and any other field it sets (pos, syn, noun_class) never lands.
+    fixes = {}
+    for r in rows:
+        fixes[r["es"]] = r
+        if "es_new" in r:
+            fixes[r["es_new"]] = r
 
     changes = []
     for w in words:
@@ -73,6 +80,12 @@ def main():
         # and the entry silently loses its articles.
         if "nc" in r:
             w["noun_class"] = r["nc"]
+            # noun_override only applies to the "irregular" class; leaving one behind on
+            # a regular noun means getNounForms() keeps using the stale override base.
+            if r["nc"] != "irregular":
+                w.pop("noun_override", None)
+        if "override" in r:
+            w["noun_override"] = dict(r["override"])
         if "syn" in r:
             w["en_syn"] = list(r["syn"])
         after = json.dumps(w, ensure_ascii=False, sort_keys=True)
