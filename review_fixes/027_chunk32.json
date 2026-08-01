@@ -1,0 +1,22 @@
+{
+ "reviewed": "entries 11064-11511 (chunk 32, rating 9)",
+ "rows": [
+  {"es": "camarón", "en": "shrimp", "syn": ["prawn"],
+   "_was": "snooze -- from the regional idiom echar un camarón (to nap)"},
+  {"es": "concepto", "en": "concept", "syn": ["notion", "idea"], "_was": "conceit"},
+  {"es": "cansancio", "pos": "noun", "nc": "m_std", "syn": ["fatigue", "weariness"],
+   "_was": "adjective, with the adjective 'tired' as its synonym"},
+  {"es": "cachear", "syn": ["to search", "to pat down"],
+   "_dropped": ["cavort", "run around", "romp -- the other sense of English 'frisk'"]},
+  {"es": "aterrar", "syn": ["to terrorize", "to land"],
+   "_dropped": ["etc.", "sand", "soil", "to cover with earth"]},
+  {"es": "asador", "syn": ["roaster", "spit", "grill house"],
+   "_dropped": ["restaurant specialising in roast meat (a definition)"]},
+  {"es": "cúmulo", "syn": ["cumulus cloud", "accumulation"],
+   "_note": "carried the same quantity-synonym block as montón and lote"},
+  {"es": "corrida", "syn": ["bullfighting"],
+   "_dropped": ["corrida -- the Spanish headword itself"]},
+  {"es": "crepitante", "syn": ["crackling sound"],
+   "_dropped": ["crackles", "rales -- clinical lung sounds"]}
+ ]
+}

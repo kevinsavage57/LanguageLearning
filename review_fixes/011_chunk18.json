@@ -1,0 +1,32 @@
+{
+ "reviewed": "entries 5564-5902 (chunk 18, rating 6)",
+ "rows": [
+  {"es": "ganga", "en": "bargain", "syn": ["steal", "deal"],
+   "_was": "stolen -- garbled from 'a steal'"},
+  {"es": "legislativo", "en": "legislative", "pos": "adjective", "syn": ["law-making"],
+   "_was": "legislature [noun]"},
+  {"es": "lastimado", "en": "injured", "pos": "adjective", "syn": ["hurt"],
+   "_was": "hurts [noun]"},
+  {"es": "letra", "en": "letter", "syn": ["lyrics", "handwriting"], "_was": "lyrics"},
+  {"es": "gravemente", "en": "seriously", "syn": ["gravely", "severely", "critically"]},
+  {"es": "hilo", "en": "thread", "syn": ["yarn", "wire"],
+   "_was": "thread (online) -- needlessly narrowed"},
+  {"es": "llame", "en": "call", "pos": "verb", "syn": ["phone"], "_was": "telephone [noun]"},
+  {"es": "hable", "en": "speak", "pos": "verb", "syn": ["talk"], "_was": "speaks [adjective]"},
+  {"es": "grites", "en": "you shout", "pos": "verb", "syn": ["yell"]},
+  {"es": "invite", "en": "invite", "pos": "verb", "syn": [],
+   "_note": "subjunctive of invitar, was tagged noun"},
+  {"es": "gramática", "pos": "noun", "nc": "f_std", "_was": "adjective"},
+  {"es": "gris", "pos": "adjective", "_was": "noun"},
+  {"es": "hablante nativo", "pos": "noun", "nc": "m_std", "_was": "adjective"},
+  {"es": "latín", "pos": "noun", "nc": "m_std",
+   "_note": "the language is a noun; the adjective is latino"},
+  {"es": "impresión", "syn": ["print", "printing"], "_dropped": ["capitalised Print"]},
+  {"es": "maquillaje", "syn": ["cosmetics"], "_dropped": ["composition"]},
+  {"es": "libra", "syn": ["British pound", "lb"],
+   "_dropped": ["libra -- the Spanish headword itself"]},
+  {"es": "humor", "syn": ["humour", "wit"]},
+  {"es": "herida", "syn": ["injury"], "_dropped": ["wounds", "hurt"]},
+  {"es": "huevo", "syn": [], "_dropped": ["eggs"]}
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "reviewed": "entries 4208-4546 (chunk 14, rating 5-6)",
+ "rows": [
+  {"es": "acceso", "en": "access", "syn": ["entrance", "approach"], "_was": "entrance"},
+  {"es": "agrio", "en": "sour", "syn": ["bitter", "tart", "sharp"], "_was": "sharp"},
+  {"es": "acogida", "en": "welcome", "syn": ["reception", "foster care"],
+   "_was": "foster care"},
+  {"es": "aceptable", "en": "acceptable", "syn": ["adequate"], "_was": "adequate"},
+  {"es": "urgente", "en": "urgent", "syn": ["express", "immediate"], "_was": "immediate"},
+  {"es": "aerosol", "en": "aerosol", "syn": ["spray", "spray paint"], "_was": "spray paint"},
+  {"es": "un poco", "en": "a little", "syn": ["a bit", "slightly"]},
+  {"es": "anciano", "en": "elderly man", "syn": ["old man", "elderly"],
+   "_was": "elderly man / gentleman"},
+  {"es": "almorcé", "en": "I had lunch", "pos": "verb", "syn": ["ate lunch"]},
+  {"es": "viento del suroeste", "en": "south-west wind", "syn": [],
+   "_dropped": ["libeccio -- Italian, not English"]},
+  {"es": "tráfico", "pos": "noun", "nc": "m_std", "_was": "adjective"},
+  {"es": "tumbado", "pos": "adjective", "_was": "adverb"},
+  {"es": "ventilador", "syn": ["electric fan"],
+   "_dropped": ["buff", "devotee", "lover -- those are fan-as-enthusiast"]},
+  {"es": "abrazo", "syn": ["embrace"], "_dropped": ["clinch", "squeeze"]},
+  {"es": "abrigo", "syn": ["overcoat", "shelter"],
+   "_dropped": ["blanket", "harbor", "haven", "quilt", "warm clothes"]},
+  {"es": "arrendar", "syn": ["to rent", "to let"],
+   "_dropped": ["to tie a horse's reins to something"]},
+  {"es": "arena", "syn": ["grit"], "_dropped": ["guts"]},
+  {"es": "acompañado", "syn": ["with company"], "_dropped": ["side dish"]},
+  {"es": "urgencias", "syn": ["A&E", "ER"], "_dropped": ["lowercase er"]},
+  {"es": "ventaja", "syn": ["edge", "benefit"], "_dropped": ["start"]},
+  {"es": "vuelo", "syn": ["flying"], "_dropped": ["fly"]},
+  {"es": "veintiuno", "syn": [], "_dropped": ["twenty first (that is the ordinal)"]}
+ ]
+}

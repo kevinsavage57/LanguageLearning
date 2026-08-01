@@ -1,0 +1,29 @@
+{
+ "reviewed": "entries 8555-8953 (chunk 26, rating 7)",
+ "rows": [
+  {"es": "prensajos", "es_new": "prensaajos",
+   "_note": "truncated compound; prensaajos is the standard form and was absent"},
+  {"es": "rendidor de cuentas", "es_new": "rendir cuentas", "en": "to be accountable",
+   "pos": "verb", "syn": ["to answer for"],
+   "_note": "'rendidor' is not a Spanish word. The real idiom is rendir cuentas, which was absent, so the entry is repaired rather than dropped."},
+  {"es": "participante", "en": "participant", "syn": ["competitor", "contestant"],
+   "_was": "competitor"},
+  {"es": "pañuelo", "en": "handkerchief", "syn": ["scarf", "headscarf"], "_was": "scarf"},
+  {"es": "rehabilitación", "en": "rehabilitation",
+   "syn": ["renovation", "physical therapy"], "_was": "renovation"},
+  {"es": "pionero", "en": "pioneer", "pos": "noun", "nc": "m_std", "syn": ["pioneering"],
+   "_was": "pioneering [adjective], while its feminine pionera was a noun"},
+  {"es": "reservación", "en": "reservation", "syn": ["booking"],
+   "_was": "reservations (plural)"},
+  {"es": "peatonal", "pos": "adjective", "_was": "noun"},
+  {"es": "perdone", "pos": "verb", "_was": "noun"},
+  {"es": "rubio", "pos": "adjective", "_was": "noun"},
+  {"es": "savia", "syn": ["plant juice"],
+   "_dropped": ["fool -- a thesaurus hop off the English word 'sap'"]},
+  {"es": "picnic", "syn": ["outing"], "_dropped": ["cinch"]},
+  {"es": "quiniela", "syn": ["betting pool"],
+   "_dropped": ["a sporting bet or pool", "any game for five people"]},
+  {"es": "químico", "syn": [], "_dropped": ["apothecary"]},
+  {"es": "paraguas", "syn": ["brolly"], "_dropped": ["umbrellas", "brollies"]}
+ ]
+}

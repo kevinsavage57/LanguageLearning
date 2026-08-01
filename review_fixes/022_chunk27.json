@@ -1,0 +1,32 @@
+{
+ "reviewed": "entries 8954-9351 (chunk 27, rating 7 into 8)",
+ "rows": [
+  {"es": "actualidad", "en": "current affairs", "syn": ["the present", "today"],
+   "_was": "actuality -- a false friend"},
+  {"es": "agencia", "en": "agency", "syn": ["branch", "dealership"],
+   "_was": "dealership", "_dropped": ["pawnshop"]},
+  {"es": "subida", "en": "rise", "syn": ["climb", "upload", "increase"], "_was": "upload"},
+  {"es": "suyo", "en": "his/hers", "syn": ["theirs", "yours"],
+   "_was": "hers -- one arbitrary person out of four"},
+  {"es": "sentado", "pos": "adjective", "_was": "adverb"},
+  {"es": "todo incluido", "pos": "adjective", "_was": "noun"},
+  {"es": "uy", "pos": "interjection", "_was": "noun"},
+  {"es": "vanidoso", "syn": ["conceited", "arrogant"],
+   "_dropped": ["fruitless", "futile -- the other sense of English 'vain'"]},
+  {"es": "ácido", "syn": ["acid", "acidic", "tart"], "_dropped": ["LSD"]},
+  {"es": "viruta", "syn": ["wood shaving", "chip"],
+   "_dropped": ["cash", "dosh", "dough -- money slang"]},
+  {"es": "almeja", "syn": [], "_dropped": ["dollar -- 'clam' slang"]},
+  {"es": "adosado", "syn": ["terraced house", "semi-detached"],
+   "_dropped": ["adjacent and touching (a definition)"]},
+  {"es": "sobrecogedor", "syn": ["overwhelming", "breathtaking"],
+   "_dropped": ["horrific", "shocking -- opposite valence"]},
+  {"es": "timo", "syn": ["con", "swindle"], "_dropped": ["cozenage"]},
+  {"es": "viajero", "syn": ["traveller", "passenger"], "_dropped": ["travelling"]},
+  {"es": "social", "syn": ["societal"],
+   "_dropped": ["company", "social -- duplicated the primary"]},
+  {"es": "aguacate", "syn": [], "_dropped": ["avocados"]},
+  {"es": "titanio", "syn": ["Ti"], "_was": "lowercase ti"},
+  {"es": "zinc", "syn": ["Zn"], "_was": "lowercase zn"}
+ ]
+}

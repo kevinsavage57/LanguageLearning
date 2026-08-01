@@ -1,0 +1,1338 @@
+{
+ "reviewed": "entries 0-2522 (chunks 1-8)",
+ "rows": [
+  {
+   "es": "los años",
+   "en": "the years"
+  },
+  {
+   "es": "al mismo tiempo",
+   "en": "at the same time"
+  },
+  {
+   "es": "manera",
+   "en": "way"
+  },
+  {
+   "es": "por todas partes",
+   "en": "everywhere"
+  },
+  {
+   "es": "por mi parte",
+   "en": "for my part"
+  },
+  {
+   "es": "había que",
+   "en": "it was necessary to"
+  },
+  {
+   "es": "por dónde",
+   "en": "which way"
+  },
+  {
+   "es": "tan",
+   "en": "so"
+  },
+  {
+   "es": "del",
+   "pos": "preposition",
+   "syn": [
+    "from the"
+   ]
+  },
+  {
+   "es": "así",
+   "pos": "adverb"
+  },
+  {
+   "es": "atrás",
+   "pos": "adverb"
+  },
+  {
+   "es": "cuáles",
+   "pos": "pronoun"
+  },
+  {
+   "es": "cuándo",
+   "pos": "adverb"
+  },
+  {
+   "es": "cuánta",
+   "pos": "adjective"
+  },
+  {
+   "es": "donde",
+   "pos": "adverb"
+  },
+  {
+   "es": "mi",
+   "pos": "adjective"
+  },
+  {
+   "es": "mis",
+   "pos": "adjective"
+  },
+  {
+   "es": "nuestro",
+   "pos": "adjective"
+  },
+  {
+   "es": "primer",
+   "pos": "adjective"
+  },
+  {
+   "es": "pues",
+   "pos": "conjunction"
+  },
+  {
+   "es": "quiénes",
+   "pos": "pronoun"
+  },
+  {
+   "es": "dicho",
+   "pos": "adjective"
+  },
+  {
+   "es": "al",
+   "syn": [
+    "to the",
+    "at the"
+   ]
+  },
+  {
+   "es": "le",
+   "syn": [
+    "to her",
+    "to him",
+    "him"
+   ]
+  },
+  {
+   "es": "nos",
+   "syn": [
+    "for us",
+    "ourselves",
+    "us"
+   ]
+  },
+  {
+   "es": "sus",
+   "syn": [
+    "his",
+    "her",
+    "their"
+   ]
+  },
+  {
+   "es": "nuevas",
+   "syn": []
+  },
+  {
+   "es": "nuevos",
+   "syn": []
+  },
+  {
+   "es": "buen",
+   "syn": [
+    "nice",
+    "great"
+   ]
+  },
+  {
+   "es": "no",
+   "syn": [
+    "eh?",
+    "isn't it?",
+    "not",
+    "right?"
+   ]
+  },
+  {
+   "es": "acaban de",
+   "syn": []
+  },
+  {
+   "es": "al salir",
+   "en": "on leaving"
+  },
+  {
+   "es": "alimentación",
+   "en": "nutrition",
+   "syn": [
+    "diet",
+    "food",
+    "power supply"
+   ]
+  },
+  {
+   "es": "de verdad",
+   "en": "really",
+   "syn": [
+    "for real",
+    "truly",
+    "honestly"
+   ]
+  },
+  {
+   "es": "desde cuándo",
+   "en": "since when"
+  },
+  {
+   "es": "despejado",
+   "en": "clear",
+   "pos": "adjective"
+  },
+  {
+   "es": "evento",
+   "en": "event",
+   "syn": [
+    "happening",
+    "occasion"
+   ]
+  },
+  {
+   "es": "global",
+   "en": "global",
+   "pos": "adjective",
+   "syn": [
+    "overall",
+    "comprehensive",
+    "worldwide"
+   ]
+  },
+  {
+   "es": "globo",
+   "en": "balloon",
+   "syn": [
+    "globe",
+    "world"
+   ]
+  },
+  {
+   "es": "hacerse entender",
+   "en": "to make oneself understood"
+  },
+  {
+   "es": "lo que",
+   "en": "what",
+   "syn": [
+    "that which",
+    "which"
+   ]
+  },
+  {
+   "es": "atractivo",
+   "en": "attractive",
+   "syn": [
+    "good looking",
+    "appealing"
+   ]
+  },
+  {
+   "es": "acá",
+   "pos": "adverb"
+  },
+  {
+   "es": "algunos",
+   "pos": "adjective",
+   "syn": [
+    "some",
+    "a few",
+    "any"
+   ]
+  },
+  {
+   "es": "contra",
+   "pos": "preposition",
+   "syn": []
+  },
+  {
+   "es": "cuántas",
+   "pos": "adjective"
+  },
+  {
+   "es": "dáselo",
+   "pos": "phrase"
+  },
+  {
+   "es": "enterado",
+   "pos": "adjective",
+   "syn": [
+    "well-informed",
+    "aware",
+    "know-it-all"
+   ]
+  },
+  {
+   "es": "eres",
+   "pos": "verb",
+   "syn": [
+    "are"
+   ]
+  },
+  {
+   "es": "gran",
+   "pos": "adjective"
+  },
+  {
+   "es": "iban",
+   "pos": "verb",
+   "syn": [
+    "used to go",
+    "were going"
+   ]
+  },
+  {
+   "es": "jamás",
+   "pos": "adverb"
+  },
+  {
+   "es": "laboral",
+   "pos": "adjective"
+  },
+  {
+   "es": "bienestar",
+   "syn": [
+    "welfare",
+    "wellness"
+   ]
+  },
+  {
+   "es": "así es",
+   "syn": [
+    "so it is",
+    "so it goes"
+   ]
+  },
+  {
+   "es": "confección",
+   "syn": [
+    "tailoring",
+    "creation",
+    "confection"
+   ]
+  },
+  {
+   "es": "mejor",
+   "en": "better",
+   "pos": "adjective",
+   "syn": [
+    "best",
+    "top"
+   ]
+  },
+  {
+   "es": "ni jota",
+   "en": "not a thing"
+  },
+  {
+   "es": "ponerse a",
+   "en": "to start",
+   "syn": [
+    "to begin",
+    "to set about"
+   ]
+  },
+  {
+   "es": "vas a",
+   "en": "you are going to",
+   "syn": [
+    "you will"
+   ]
+  },
+  {
+   "es": "a distancia",
+   "en": "at a distance",
+   "syn": [
+    "remote",
+    "from a distance",
+    "online"
+   ]
+  },
+  {
+   "es": "a la larga",
+   "en": "in the long run"
+  },
+  {
+   "es": "adicional",
+   "en": "additional",
+   "pos": "adjective",
+   "syn": [
+    "extra",
+    "spare"
+   ]
+  },
+  {
+   "es": "administración",
+   "en": "administration",
+   "syn": [
+    "management",
+    "admin department"
+   ]
+  },
+  {
+   "es": "alguien",
+   "en": "someone",
+   "pos": "pronoun",
+   "syn": [
+    "anyone",
+    "somebody",
+    "anybody"
+   ]
+  },
+  {
+   "es": "ambiente",
+   "en": "atmosphere",
+   "syn": [
+    "environment",
+    "room"
+   ]
+  },
+  {
+   "es": "amistad",
+   "en": "friendship",
+   "syn": [
+    "friends"
+   ]
+  },
+  {
+   "es": "sin embargo",
+   "en": "however",
+   "syn": [
+    "nevertheless",
+    "although",
+    "yet"
+   ]
+  },
+  {
+   "es": "mundial",
+   "pos": "adjective"
+  },
+  {
+   "es": "pequeñas",
+   "pos": "adjective"
+  },
+  {
+   "es": "pequeños",
+   "pos": "adjective"
+  },
+  {
+   "es": "quieto",
+   "pos": "adjective"
+  },
+  {
+   "es": "adentro",
+   "pos": "adverb"
+  },
+  {
+   "es": "agregué",
+   "pos": "verb"
+  },
+  {
+   "es": "mediante",
+   "pos": "preposition"
+  },
+  {
+   "es": "abras",
+   "pos": "verb",
+   "syn": [
+    "open"
+   ]
+  },
+  {
+   "es": "pleno",
+   "syn": [
+    "complete",
+    "in full"
+   ]
+  },
+  {
+   "es": "poquito",
+   "syn": [
+    "little bit",
+    "a bit"
+   ]
+  },
+  {
+   "es": "propio",
+   "syn": []
+  },
+  {
+   "es": "querer decir",
+   "syn": [
+    "to mean",
+    "want to say"
+   ]
+  },
+  {
+   "es": "tales",
+   "syn": []
+  },
+  {
+   "es": "a pesar de",
+   "syn": [
+    "in spite of",
+    "although"
+   ]
+  },
+  {
+   "es": "arrimar",
+   "syn": [
+    "to draw near",
+    "to bring closer"
+   ]
+  },
+  {
+   "es": "avenida",
+   "en": "avenue",
+   "syn": [
+    "boulevard",
+    "flood"
+   ]
+  },
+  {
+   "es": "bomba",
+   "en": "bomb",
+   "pos": "noun",
+   "nc": "f_std",
+   "syn": [
+    "pump",
+    "gas station"
+   ]
+  },
+  {
+   "es": "ciudadano",
+   "en": "citizen",
+   "syn": [
+    "national"
+   ]
+  },
+  {
+   "es": "claustro",
+   "en": "cloister",
+   "syn": [
+    "faculty",
+    "staff"
+   ]
+  },
+  {
+   "es": "clásico",
+   "en": "classic",
+   "syn": [
+    "classical",
+    "traditional"
+   ]
+  },
+  {
+   "es": "corrigiendo",
+   "en": "correcting",
+   "pos": "verb",
+   "syn": [
+    "marking"
+   ]
+  },
+  {
+   "es": "datos",
+   "en": "data",
+   "syn": [
+    "facts",
+    "information"
+   ]
+  },
+  {
+   "es": "dormitorio",
+   "en": "bedroom",
+   "syn": [
+    "dormitory",
+    "dorm"
+   ]
+  },
+  {
+   "es": "diverso",
+   "en": "diverse",
+   "syn": [
+    "various",
+    "several"
+   ]
+  },
+  {
+   "es": "con sinceridad",
+   "en": "sincerely"
+  },
+  {
+   "es": "base química",
+   "en": "chemical base"
+  },
+  {
+   "es": "capaz",
+   "pos": "adjective"
+  },
+  {
+   "es": "castaño",
+   "pos": "adjective"
+  },
+  {
+   "es": "clara",
+   "pos": "adjective",
+   "syn": [
+    "clear",
+    "egg white"
+   ]
+  },
+  {
+   "es": "comencé",
+   "pos": "verb"
+  },
+  {
+   "es": "descanse",
+   "pos": "verb"
+  },
+  {
+   "es": "divertida",
+   "pos": "adjective"
+  },
+  {
+   "es": "auto",
+   "syn": [
+    "car",
+    "automobile"
+   ]
+  },
+  {
+   "es": "ay",
+   "syn": [
+    "ouch",
+    "ah!",
+    "alas!",
+    "woe!"
+   ]
+  },
+  {
+   "es": "calor",
+   "syn": [
+    "warmth",
+    "warm"
+   ]
+  },
+  {
+   "es": "constipado",
+   "syn": [
+    "head cold",
+    "blocked up"
+   ]
+  },
+  {
+   "es": "cálido",
+   "syn": [
+    "warm"
+   ]
+  },
+  {
+   "es": "diciendo",
+   "syn": [
+    "telling"
+   ]
+  },
+  {
+   "es": "dobles",
+   "syn": []
+  },
+  {
+   "es": "banco mundial",
+   "syn": [
+    "IBRD"
+   ]
+  },
+  {
+   "es": "frijol",
+   "en": "bean",
+   "syn": [
+    "kidney bean"
+   ]
+  },
+  {
+   "es": "gripe",
+   "en": "flu",
+   "syn": [
+    "influenza"
+   ]
+  },
+  {
+   "es": "lector",
+   "en": "reader",
+   "syn": [
+    "language assistant"
+   ]
+  },
+  {
+   "es": "libro de texto",
+   "en": "textbook",
+   "syn": []
+  },
+  {
+   "es": "estación",
+   "en": "station",
+   "syn": [
+    "season"
+   ]
+  },
+  {
+   "es": "estilo",
+   "en": "style",
+   "syn": [
+    "kind",
+    "manner"
+   ]
+  },
+  {
+   "es": "empuje",
+   "en": "push",
+   "syn": [
+    "thrust",
+    "drive",
+    "boost"
+   ]
+  },
+  {
+   "es": "en seco",
+   "en": "abruptly",
+   "syn": [
+    "suddenly",
+    "dead stop"
+   ]
+  },
+  {
+   "es": "género",
+   "en": "genre",
+   "syn": [
+    "gender",
+    "kind",
+    "material"
+   ]
+  },
+  {
+   "es": "jóvenes",
+   "en": "young people",
+   "syn": [
+    "youths"
+   ]
+  },
+  {
+   "es": "hacer ejercicio",
+   "en": "to exercise",
+   "syn": [
+    "to work out"
+   ]
+  },
+  {
+   "es": "financiero",
+   "en": "financial"
+  },
+  {
+   "es": "electoral",
+   "en": "electoral",
+   "pos": "adjective",
+   "syn": [
+    "election"
+   ]
+  },
+  {
+   "es": "guardia civil",
+   "en": "Civil Guard",
+   "syn": [
+    "Spanish national police"
+   ]
+  },
+  {
+   "es": "hables",
+   "en": "you speak",
+   "pos": "verb",
+   "syn": [
+    "talk"
+   ]
+  },
+  {
+   "es": "empecé",
+   "pos": "verb"
+  },
+  {
+   "es": "escrito",
+   "pos": "adjective"
+  },
+  {
+   "es": "escúchalo",
+   "pos": "phrase"
+  },
+  {
+   "es": "estacione",
+   "pos": "verb"
+  },
+  {
+   "es": "estudies",
+   "pos": "verb"
+  },
+  {
+   "es": "evidente",
+   "pos": "adjective"
+  },
+  {
+   "es": "excepto",
+   "pos": "preposition"
+  },
+  {
+   "es": "has",
+   "pos": "verb"
+  },
+  {
+   "es": "leyendo",
+   "pos": "verb"
+  },
+  {
+   "es": "loco",
+   "pos": "adjective"
+  },
+  {
+   "es": "en reposo",
+   "syn": [
+    "resting",
+    "idle"
+   ]
+  },
+  {
+   "es": "intenso",
+   "syn": [
+    "intense",
+    "deep",
+    "heavy"
+   ]
+  },
+  {
+   "es": "internacional",
+   "syn": [
+    "global"
+   ]
+  },
+  {
+   "es": "importantes",
+   "syn": [
+    "considerable",
+    "significant"
+   ]
+  },
+  {
+   "es": "estacionar",
+   "syn": [
+    "to park"
+   ]
+  },
+  {
+   "es": "red",
+   "en": "network",
+   "syn": [
+    "net",
+    "internet",
+    "web"
+   ]
+  },
+  {
+   "es": "presupuesto",
+   "en": "budget",
+   "syn": [
+    "estimate"
+   ]
+  },
+  {
+   "es": "publicación",
+   "en": "publication",
+   "syn": [
+    "post"
+   ]
+  },
+  {
+   "es": "nacimiento",
+   "en": "birth",
+   "syn": [
+    "origin",
+    "source"
+   ]
+  },
+  {
+   "es": "nevada",
+   "en": "snowfall",
+   "syn": [
+    "snow"
+   ]
+  },
+  {
+   "es": "oscuridad",
+   "en": "darkness",
+   "syn": [
+    "dark"
+   ]
+  },
+  {
+   "es": "pensamiento",
+   "en": "thought",
+   "syn": [
+    "thinking",
+    "pansy"
+   ]
+  },
+  {
+   "es": "negocio",
+   "en": "business",
+   "syn": [
+    "deal",
+    "shop"
+   ]
+  },
+  {
+   "es": "postura",
+   "en": "position",
+   "syn": [
+    "stance",
+    "posture"
+   ]
+  },
+  {
+   "es": "prensa",
+   "en": "press",
+   "syn": [
+    "printing press",
+    "the media"
+   ]
+  },
+  {
+   "es": "quedarse con",
+   "en": "to keep",
+   "syn": [
+    "to hold on to"
+   ]
+  },
+  {
+   "es": "pentagrama",
+   "en": "musical staff",
+   "syn": [
+    "stave"
+   ]
+  },
+  {
+   "es": "momentito",
+   "en": "a moment"
+  },
+  {
+   "es": "médica",
+   "en": "medical",
+   "syn": [
+    "female doctor"
+   ]
+  },
+  {
+   "es": "pobreza",
+   "en": "poverty",
+   "pos": "noun",
+   "nc": "f_std",
+   "syn": [
+    "poorness"
+   ]
+  },
+  {
+   "es": "pienses",
+   "en": "you think",
+   "pos": "verb",
+   "syn": [
+    "think"
+   ]
+  },
+  {
+   "es": "practiqué",
+   "en": "practiced",
+   "pos": "verb",
+   "syn": [
+    "played",
+    "practised"
+   ]
+  },
+  {
+   "es": "pueblo",
+   "pos": "noun",
+   "nc": "m_std",
+   "syn": [
+    "people",
+    "village"
+   ]
+  },
+  {
+   "es": "mediano",
+   "pos": "adjective"
+  },
+  {
+   "es": "mío",
+   "pos": "pronoun"
+  },
+  {
+   "es": "marrón",
+   "pos": "adjective"
+  },
+  {
+   "es": "original",
+   "pos": "adjective",
+   "syn": [
+    "novel",
+    "first"
+   ]
+  },
+  {
+   "es": "pronto",
+   "pos": "adverb"
+  },
+  {
+   "es": "política",
+   "syn": [
+    "politics",
+    "policy"
+   ]
+  },
+  {
+   "es": "qué cosa",
+   "syn": [
+    "what a mess"
+   ]
+  },
+  {
+   "es": "me",
+   "syn": [
+    "me",
+    "for me",
+    "to me"
+   ]
+  },
+  {
+   "es": "modelo",
+   "syn": [
+    "pattern",
+    "example"
+   ]
+  },
+  {
+   "es": "multa",
+   "syn": [
+    "penalty",
+    "ticket"
+   ]
+  },
+  {
+   "es": "pasar a",
+   "syn": [
+    "to move on to",
+    "to proceed to"
+   ]
+  },
+  {
+   "es": "redondo",
+   "en": "round",
+   "pos": "adjective",
+   "syn": [
+    "round-trip",
+    "chubby"
+   ]
+  },
+  {
+   "es": "rendimiento",
+   "en": "performance",
+   "syn": [
+    "yield",
+    "return",
+    "output"
+   ]
+  },
+  {
+   "es": "ruta",
+   "en": "route",
+   "syn": [
+    "road",
+    "track"
+   ]
+  },
+  {
+   "es": "sitio",
+   "en": "place",
+   "syn": [
+    "site",
+    "location",
+    "spot"
+   ]
+  },
+  {
+   "es": "terreno",
+   "en": "land",
+   "syn": [
+    "ground",
+    "plot",
+    "site"
+   ]
+  },
+  {
+   "es": "tarifa",
+   "en": "rate",
+   "syn": [
+    "fare",
+    "fee",
+    "price"
+   ]
+  },
+  {
+   "es": "íntimo",
+   "en": "intimate",
+   "syn": [
+    "close",
+    "private"
+   ]
+  },
+  {
+   "es": "salir adelante",
+   "en": "to get by",
+   "syn": [
+    "to pull through",
+    "to succeed"
+   ]
+  },
+  {
+   "es": "salir con",
+   "en": "to go out with",
+   "syn": [
+    "to date"
+   ]
+  },
+  {
+   "es": "salir corriendo",
+   "en": "to run off",
+   "syn": [
+    "to dash off"
+   ]
+  },
+  {
+   "es": "seguidos",
+   "en": "consecutive",
+   "pos": "adjective",
+   "syn": [
+    "in a row",
+    "straight"
+   ]
+  },
+  {
+   "es": "visto",
+   "en": "seen",
+   "pos": "adjective",
+   "syn": [
+    "watched"
+   ]
+  },
+  {
+   "es": "toqué",
+   "en": "I played",
+   "pos": "verb",
+   "syn": [
+    "touched",
+    "played"
+   ]
+  },
+  {
+   "es": "acabarse",
+   "en": "to run out",
+   "syn": [
+    "to be used up",
+    "to finish"
+   ]
+  },
+  {
+   "es": "rojas",
+   "pos": "adjective"
+  },
+  {
+   "es": "rojos",
+   "pos": "adjective"
+  },
+  {
+   "es": "tinto",
+   "pos": "adjective",
+   "syn": [
+    "red wine"
+   ]
+  },
+  {
+   "es": "single",
+   "syn": [
+    "single record"
+   ]
+  },
+  {
+   "es": "tornar",
+   "syn": [
+    "to change",
+    "to return"
+   ]
+  },
+  {
+   "es": "vale",
+   "syn": [
+    "okay",
+    "voucher"
+   ]
+  },
+  {
+   "es": "vejez",
+   "syn": [
+    "senescence"
+   ]
+  },
+  {
+   "es": "verdes",
+   "syn": []
+  },
+  {
+   "es": "voz",
+   "syn": [
+    "word"
+   ]
+  },
+  {
+   "es": "unidad",
+   "syn": [
+    "unity",
+    "module"
+   ]
+  },
+  {
+   "es": "asiento",
+   "en": "seat",
+   "syn": [
+    "chair"
+   ]
+  },
+  {
+   "es": "atracción",
+   "en": "attraction",
+   "syn": [
+    "ride",
+    "appeal"
+   ]
+  },
+  {
+   "es": "archivador",
+   "en": "filing cabinet",
+   "syn": [
+    "binder",
+    "folder"
+   ]
+  },
+  {
+   "es": "ansioso",
+   "en": "anxious",
+   "syn": [
+    "eager",
+    "excited"
+   ]
+  },
+  {
+   "es": "actora",
+   "en": "actress",
+   "syn": [
+    "actor (f)"
+   ]
+  },
+  {
+   "es": "al vapor",
+   "en": "steamed",
+   "syn": [
+    "steam"
+   ]
+  },
+  {
+   "es": "agradezco",
+   "en": "I thank",
+   "pos": "verb",
+   "syn": [
+    "I appreciate"
+   ]
+  },
+  {
+   "es": "bienvenido",
+   "pos": "adjective"
+  },
+  {
+   "es": "adulto joven",
+   "pos": "noun",
+   "nc": "m_std"
+  },
+  {
+   "es": "alta",
+   "syn": [
+    "high"
+   ]
+  },
+  {
+   "es": "albarán",
+   "syn": [
+    "invoice",
+    "docket"
+   ]
+  },
+  {
+   "es": "belleza",
+   "syn": [
+    "loveliness"
+   ]
+  },
+  {
+   "es": "cansada",
+   "syn": [
+    "weary"
+   ]
+  },
+  {
+   "es": "almuerzo",
+   "syn": [
+    "midday meal"
+   ]
+  },
+  {
+   "es": "campeonato",
+   "syn": [
+    "title"
+   ]
+  },
+  {
+   "es": "atentar",
+   "syn": [
+    "to attack",
+    "to threaten"
+   ]
+  },
+  {
+   "es": "bar",
+   "syn": [
+    "pub"
+   ]
+  },
+  {
+   "es": "caballo",
+   "syn": [
+    "knight (chess)"
+   ]
+  },
+  {
+   "es": "camiseta",
+   "syn": [
+    "tee",
+    "jersey"
+   ]
+  },
+  {
+   "es": "aldea",
+   "syn": [
+    "hamlet"
+   ]
+  }
+ ]
+}

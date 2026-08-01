@@ -1,0 +1,25 @@
+{
+ "reviewed": "whole-file scan for corrupted Spanish headwords",
+ "_method": "single-word headwords with zero frequency in Spanish corpora, then checked by hand against the rest of the file",
+ "_note": "Most zero-frequency hits are legitimately rare Spanish (atañer, eviscerar, cerner, denuesto, derrelicto, txangurro) and were left alone. The entries below are not Spanish words. In every dropped case the correct word is already present in the file with the same gloss, so nothing is lost from the deck -- only the non-word is removed. Dropping loses any localStorage progress recorded against these ids, which is the right trade: they were teaching learners words that do not exist.",
+ "drop_ids": [
+  "bocear_verb",
+  "comulgación_noun",
+  "celosear_verb",
+  "tapicer_noun",
+  "prejudicar_verb",
+  "infiable_adjective"
+ ],
+ "_drop_rationale": {
+  "bocear_verb": "not Spanish; bostezar ('to yawn') already present with the same gloss",
+  "comulgación_noun": "not Spanish; comunión ('communion') already present with the same gloss",
+  "celosear_verb": "not Spanish; celar ('to be jealous') already present with the same gloss",
+  "tapicer_noun": "truncated word; tapiz ('tapestry') already present with the same gloss",
+  "prejudicar_verb": "misspelling of perjudicar, which is already present",
+  "infiable_adjective": "not Spanish; the real forms are 'poco fiable' / 'no fiable'"
+ },
+ "rows": [
+  {"es": "vandalisimo", "es_new": "vandalismo",
+   "_note": "misspelling; vandalismo is absent from the file, so renamed rather than dropped"}
+ ]
+}

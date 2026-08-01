@@ -1,0 +1,27 @@
+{
+ "reviewed": "entries 10626-11063 (chunk 31, rating 8 into 9)",
+ "rows": [
+  {"es": "pérdida", "en": "loss", "pos": "noun", "nc": "f_std",
+   "syn": ["waste", "miscarriage"], "_was": "miscarriage [adjective]"},
+  {"es": "aerodeslizador", "en": "hovercraft", "syn": ["air-cushion vehicle"],
+   "_was": "hydrofoil -- a different craft"},
+  {"es": "trillizo", "en": "triplet", "syn": ["one of triplets"],
+   "_was": "triplets -- plural gloss for a singular headword"},
+  {"es": "solvente", "syn": ["dissolvent", "financially sound"],
+   "_dropped": ["result", "answer", "solution -- those belong to solución"]},
+  {"es": "afinador", "syn": ["piano tuner"], "_dropped": ["radio"]},
+  {"es": "reflejo", "syn": ["reflection", "glare"],
+   "_note": "had three near-identical 'inborn/innate/instinctive reflex' variants"},
+  {"es": "quincena", "syn": ["two weeks", "fortnightly pay"],
+   "_dropped": ["a half month period", "specially applied for wage payment -- definitions"]},
+  {"es": "rompedor", "syn": ["bold", "innovative"],
+   "_dropped": ["breaker", "breaking", "destroying -- noun/verb senses on an adjective"]},
+  {"es": "venta", "syn": ["selling", "roadside inn"],
+   "_dropped": ["sale -- duplicated the primary"]},
+  {"es": "raqueta", "syn": ["snowshoe", "bat"], "_dropped": ["rake"]},
+  {"es": "adobo", "syn": ["marinated dish"], "_dropped": ["a delicacy of marinated meat"]},
+  {"es": "tramontana", "syn": ["tramontane"],
+   "_dropped": ["tramontana -- the Spanish headword itself"]},
+  {"es": "plomero", "syn": ["pipe fitter"], "_dropped": ["plumbers"]}
+ ]
+}

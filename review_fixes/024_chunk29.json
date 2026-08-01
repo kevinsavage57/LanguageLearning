@@ -1,0 +1,25 @@
+{
+ "reviewed": "entries 9770-10187 (chunk 29, rating 8)",
+ "rows": [
+  {"es": "fantasma", "en": "ghost", "syn": ["specter", "phantom"],
+   "_was": "specter", "_dropped": ["bogus", "mysterious character"]},
+  {"es": "cubierto", "en": "place setting", "syn": ["cover charge", "table setting"],
+   "_was": "cutlery -- duplicated cubertería; cubierto is the single setting"},
+  {"es": "galleta", "en": "biscuit", "syn": ["cookie", "cracker"],
+   "_was": "cracker", "_dropped": ["slap", "mess"]},
+  {"es": "criticón", "en": "nitpicker", "syn": ["faultfinder", "captious"],
+   "_was": "nit-picking -- an adjective gloss on a noun"},
+  {"es": "deficitario", "en": "loss-making", "syn": ["in deficit", "deficient"],
+   "_note": "had the identical synonym list as deficiente"},
+  {"es": "en detrimento de", "en": "to the detriment of", "_was": "the detriment of"},
+  {"es": "erasmus", "syn": ["Erasmus programme"],
+   "_dropped": ["desiderius erasmus", "geert geerts", "gerhard gerhards -- the Renaissance scholar, not the exchange scheme"]},
+  {"es": "deportar", "syn": ["to expel"],
+   "_dropped": ["behave", "conduct", "deliver -- confusion with comportar"]},
+  {"es": "filón", "syn": ["lode", "vein", "gold mine"], "_dropped": ["wrinkle"]},
+  {"es": "ganadero", "syn": ["livestock farmer"],
+   "_dropped": ["cattle", "livestock or cattle farmer (a definition)"]},
+  {"es": "farmacéutico", "syn": ["chemist"], "_dropped": ["apothecary"]},
+  {"es": "gamuza", "syn": ["chamois"], "_dropped": ["cloth"]}
+ ]
+}

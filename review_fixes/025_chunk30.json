@@ -1,0 +1,28 @@
+{
+ "reviewed": "entries 10188-10625 (chunk 30, rating 8)",
+ "rows": [
+  {"es": "humo", "en": "smoke", "syn": ["fumes"], "_was": "fumes"},
+  {"es": "ovni", "en": "UFO", "syn": ["flying saucer"], "_was": "flying saucer"},
+  {"es": "navaja", "en": "penknife", "syn": ["razor clam", "jackknife"],
+   "_was": "razor clam -- a secondary sense"},
+  {"es": "oca", "en": "goose", "syn": ["snakes and ladders"],
+   "_was": "snakes and ladders -- the board game named after the bird"},
+  {"es": "improvisado", "en": "improvised", "pos": "adjective",
+   "syn": ["impromptu", "makeshift"],
+   "_was": "impromptu [noun]", "_dropped": ["amateur bullfighter"]},
+  {"es": "los lunes", "en": "Mondays", "_was": "lowercase mondays"},
+  {"es": "novato", "pos": "noun", "nc": "m_std", "_was": "adjective"},
+  {"es": "pilates", "syn": ["Pilates method"],
+   "_dropped": ["pilate", "pontius pilate -- the Roman prefect"]},
+  {"es": "hamaca", "syn": ["deckchair"], "_dropped": ["hillock -- hummock confusion"]},
+  {"es": "medias", "syn": ["tights", "pantyhose"],
+   "_dropped": ["three of a kind -- a poker term"]},
+  {"es": "peregrina", "syn": [], "_dropped": ["hopscotch"]},
+  {"es": "peinado", "syn": ["hairdo"], "_dropped": ["done your hair", "combed", "sweep"]},
+  {"es": "laguna", "syn": ["gap", "loophole"],
+   "_dropped": ["laguna -- the Spanish headword itself", "lagune"]},
+  {"es": "hipo", "syn": ["hiccup"], "_dropped": ["longing"]},
+  {"es": "meridiano", "syn": ["midday line"], "_dropped": ["height", "top", "peak"]},
+  {"es": "plano", "syn": ["plan", "map"], "_dropped": ["flat -- the adjective sense"]}
+ ]
+}

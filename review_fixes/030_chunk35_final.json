@@ -1,0 +1,26 @@
+{
+ "reviewed": "entries 12447-12629 (chunk 35, rating 9-10) -- completes the full read",
+ "rows": [
+  {"es": "gimnasta", "en": "gymnast", "syn": [],
+   "_was": "gymnist -- not an English word"},
+  {"es": "zombi", "en": "zombie", "syn": [], "_was": "zombi -- misspelt in English"},
+  {"es": "británico", "en": "British", "syn": ["Briton", "British person"],
+   "_was": "Britisher -- archaic"},
+  {"es": "tríceps", "en": "triceps", "syn": [],
+   "_was": "tricep -- a back-formation, not the standard form"},
+  {"es": "micromachismo", "en": "everyday sexism", "syn": ["subtle sexism"],
+   "_was": "microaggression -- a broader, different concept"},
+  {"es": "portería", "syn": ["goal", "porter's lodge"],
+   "_dropped": ["lobby of a hotel", "reception desk"]},
+  {"es": "granizado", "syn": ["slush", "iced drink"],
+   "_dropped": ["a semi-frozen soft drink", "a typical summer drink -- definitions"]},
+  {"es": "cursilería", "syn": ["corniness", "mawkishness"],
+   "_dropped": ["something that is mawkish or corny (a definition)"]},
+  {"es": "herboristería", "syn": ["herb shop"],
+   "_dropped": ["the sale of medical plants"]},
+  {"es": "óptico", "syn": ["lens maker"],
+   "_dropped": ["optic", "optical -- adjective forms on a noun"]},
+  {"es": "cuatrillizo", "syn": ["one of quadruplets"], "_dropped": ["four"]},
+  {"es": "codo", "syn": ["bend"], "_dropped": ["elbow -- duplicated the primary"]}
+ ]
+}

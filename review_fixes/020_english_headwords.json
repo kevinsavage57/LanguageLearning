@@ -1,0 +1,21 @@
+{
+ "reviewed": "whole-file scan for English words sitting in the Spanish headword field",
+ "_method": "single-word lowercase headwords that are real English words (WordNet) and markedly commoner in English than Spanish corpora, then judged by hand",
+ "_kept": {
+  "brushing": "genuine Spanish hairdressing loanword (blow-dry)",
+  "snowboarding": "used in Spanish as-is",
+  "sample": "used in Spanish music-production jargon",
+  "foul": "used in Spanish sports commentary alongside falta",
+  "slip": "genuine Spanish loanword for briefs",
+  "rape": "a real Spanish word meaning monkfish -- the English collision is coincidental",
+  "zoning": "borderline urbanism jargon; the standard Spanish is zonificación, which is absent. Left in place rather than guessed at, but worth a look."
+ },
+ "drop_ids": ["lawn_noun"],
+ "_drop_rationale": {
+  "lawn_noun": "English word, not Spanish. césped is already in the deck and carries 'lawn' as a synonym, so nothing is lost."
+ },
+ "rows": [
+  {"es": "memoirs", "es_new": "memorias",
+   "_note": "English headword; the Spanish is memorias, which was absent. memoria (memory) exists separately and is a different sense."}
+ ]
+}

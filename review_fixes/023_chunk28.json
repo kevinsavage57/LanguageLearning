@@ -1,0 +1,31 @@
+{
+ "reviewed": "entries 9352-9769 (chunk 28, rating 8)",
+ "rows": [
+  {"es": "aparato", "en": "device", "syn": ["apparatus", "appliance", "machine"],
+   "_was": "gadget",
+   "_dropped": ["blower", "braces", "ceremony", "pomp", "willy -- eleven mixed senses"]},
+  {"es": "claridad", "en": "clarity", "syn": ["brightness", "light"], "_was": "sharpness"},
+  {"es": "clasificación", "en": "classification", "syn": ["ranking", "standings"],
+   "_was": "standings"},
+  {"es": "continuo", "en": "continuous", "pos": "adjective", "syn": ["ongoing"],
+   "_was": "continuum [noun]"},
+  {"es": "contento", "en": "happy", "pos": "adjective", "syn": ["pleased", "content"],
+   "_was": "contentment [noun]"},
+  {"es": "bienal", "en": "biennale", "syn": ["biennial"],
+   "_note": "tagged noun, so the art-exhibition sense; biennial is the adjective"},
+  {"es": "bedel", "en": "school caretaker", "syn": ["janitor", "porter"],
+   "_was": "school caretaker (f) -- bedel is masculine"},
+  {"es": "comas", "en": "commas", "syn": ["points"],
+   "_was": "comma -- singular gloss for a plural headword"},
+  {"es": "cachemira", "syn": ["Kashmir"],
+   "_dropped": ["'Kashmir  India; Pakistan and China)' -- malformed, unbalanced paren"]},
+  {"es": "constancia", "syn": ["persistence", "record"],
+   "_note": "had seven synonyms spanning perseverance, certainty and documentation"},
+  {"es": "contención", "syn": ["restraint", "self-control"],
+   "_dropped": ["act of holding back (a definition)", "argument", "debate"]},
+  {"es": "baldío", "syn": ["desolate", "uncultivated"],
+   "_dropped": ["wasteland -- a noun sense on an adjective"]},
+  {"es": "copo", "syn": ["snowflake", "tuft"], "_dropped": ["bit", "eccentric"]},
+  {"es": "botánica", "syn": ["plant science"], "_dropped": ["vegetation"]}
+ ]
+}

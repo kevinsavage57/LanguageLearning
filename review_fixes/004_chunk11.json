@@ -1,0 +1,31 @@
+{
+ "reviewed": "entries 3191-3529 (chunk 11, rating 5)",
+ "rows": [
+  {"es": "grupo", "en": "group", "syn": ["band"], "_was": "band", "_dropped": ["stood"]},
+  {"es": "manga", "en": "sleeve", "syn": ["hose"], "_was": "pack"},
+  {"es": "hacer efecto", "en": "to take effect", "syn": ["to kick in"], "_was": "acting"},
+  {"es": "ideal", "en": "ideal", "syn": ["perfect", "dream"], "_was": "dream"},
+  {"es": "fotocopia", "en": "photocopy", "syn": ["copy"]},
+  {"es": "los padres", "en": "the parents", "_was": "parent (singular)"},
+  {"es": "fábrica", "pos": "noun", "nc": "f_std", "syn": ["plant", "works"],
+   "_was": "adjective"},
+  {"es": "fundamental", "pos": "adjective"},
+  {"es": "guau", "pos": "interjection"},
+  {"es": "hacia", "pos": "preposition"},
+  {"es": "llene", "pos": "verb"},
+  {"es": "límpialas", "pos": "phrase"},
+  {"es": "masculino", "pos": "adjective"},
+  {"es": "low cost", "pos": "adjective"},
+  {"es": "hincha", "syn": ["supporter", "megafan"],
+   "_dropped": ["an annoying person", "annoying", "hatred"]},
+  {"es": "hallazgo", "syn": ["discovery", "find"], "_dropped": ["reward"]},
+  {"es": "garrafón", "syn": ["demijohn", "water jug"], "_dropped": ["tampered drink"]},
+  {"es": "juntarse", "syn": ["to get together", "to join"],
+   "_dropped": ["getting", "get", "got"]},
+  {"es": "maravilla", "syn": ["marvel"], "_dropped": ["wonder (duplicated the primary)"]},
+  {"es": "gallo", "syn": ["cock"], "_dropped": ["rooster (duplicated primary)", "stick"]},
+  {"es": "guía", "syn": ["guidebook", "tour guide"], "_dropped": ["guides", "lead"]},
+  {"es": "herramienta", "syn": ["implement"], "_dropped": ["tools"]},
+  {"es": "ingeniería", "syn": [], "_dropped": ["engineer (that is ingeniero)"]}
+ ]
+}

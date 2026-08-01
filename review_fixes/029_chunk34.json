@@ -1,0 +1,25 @@
+{
+ "reviewed": "entries 11969-12446 (chunk 34, rating 9)",
+ "rows": [
+  {"es": "precipitado", "en": "hasty", "pos": "adjective", "syn": ["rash", "precipitate"],
+   "_was": "precipitate [noun], with adjectival synonyms"},
+  {"es": "revoltoso", "en": "unruly", "syn": ["rebellious", "troublemaker"],
+   "_was": "troublemaker -- a noun gloss on an adjective"},
+  {"es": "periquito", "syn": ["budgerigar", "budgie"],
+   "_dropped": ["a person connected with RCD Espanyol", "an island of El Salvador", "as a player", "coach", "etc."]},
+  {"es": "morsa", "syn": [],
+   "_dropped": ["seahorse -- that is caballito de mar"]},
+  {"es": "sombra", "syn": ["shade", "shadow"], "_dropped": ["cooler", "nick -- prison slang"]},
+  {"es": "modista", "syn": ["seamstress", "fashion designer"],
+   "_dropped": ["a tailor, fashion designer, or milliner -- a definition"]},
+  {"es": "pajarera", "syn": ["birdcage"],
+   "_dropped": ["coop or large cage for birds", "very small room or house"]},
+  {"es": "sintetizador", "syn": ["synthesiser", "synth"],
+   "_dropped": ["which synthesizes -- a sentence fragment"]},
+  {"es": "rebatir", "syn": ["to refute", "to counter"],
+   "_dropped": ["To parry", "to refute or contest -- capitalised fragment"]},
+  {"es": "tártaro", "syn": ["Tatar", "tartar"], "_dropped": ["hell", "tartaric acid"]},
+  {"es": "miga", "syn": ["breadcrumb", "soft part of bread"], "_dropped": ["bum"]},
+  {"es": "sandalia", "syn": [], "_dropped": ["sandals"]}
+ ]
+}

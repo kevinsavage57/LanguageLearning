@@ -1,0 +1,23 @@
+{
+ "reviewed": "entries 2523-2851 (chunk 9, rating 5)",
+ "rows": [
+  {"es": "chal", "en": "shawl", "syn": ["wrap"], "_was": "throw"},
+  {"es": "confidencia", "en": "a secret", "syn": ["confidence (disclosure)"],
+   "_note": "confidencia is something told in confidence; self-assurance is confianza"},
+  {"es": "colorido", "en": "colorfulness", "syn": ["coloring", "colorful"]},
+  {"es": "dentera", "en": "teeth on edge", "syn": ["tingling teeth"],
+   "_note": "was glossed as the verb phrase 'set teeth on edge'"},
+  {"es": "característica", "pos": "noun", "nc": "f_std", "_was": "adjective"},
+  {"es": "comprándoles", "pos": "verb"},
+  {"es": "caña", "syn": ["reed", "cane", "draught beer"],
+   "_dropped": ["trifle", "trivia", "triviality"]},
+  {"es": "chiste", "syn": ["gag"], "_dropped": ["funny", "comic strips", "funnies"]},
+  {"es": "conde", "syn": ["earl"], "_dropped": ["counting"]},
+  {"es": "cota", "syn": ["elevation", "level"],
+   "_dropped": ["coat of arms", "mail"]},
+  {"es": "cárcel", "syn": ["jail", "gaol"], "_dropped": ["clamp", "can"]},
+  {"es": "de repente", "syn": ["all of a sudden"], "_dropped": ["perhaps"]},
+  {"es": "decenio", "syn": ["ten-year period"], "_dropped": ["ten"]},
+  {"es": "democracia", "syn": [], "_dropped": ["republic"]}
+ ]
+}

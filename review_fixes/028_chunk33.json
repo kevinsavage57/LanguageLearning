@@ -1,0 +1,27 @@
+{
+ "reviewed": "entries 11512-11968 (chunk 33, rating 9)",
+ "rows": [
+  {"es": "librería", "en": "bookshop", "syn": ["bookstore", "bookcase"],
+   "_was": "bookcase -- that is estantería"},
+  {"es": "industria", "en": "industry", "syn": ["ingenuity", "diligence"],
+   "_was": "resourcefulness"},
+  {"es": "especialista", "en": "specialist", "syn": ["expert", "stunt performer"],
+   "_was": "stuntman"},
+  {"es": "indiscreto", "en": "indiscreet", "pos": "adjective",
+   "syn": ["tactless", "prying"], "_was": "prying [noun]"},
+  {"es": "jugué", "en": "I played", "pos": "verb", "syn": ["gambled"],
+   "_dropped": ["put … at risk -- ellipsis junk"]},
+  {"es": "empanado", "pos": "adjective", "syn": ["crumbed"],
+   "_was": "noun", "_dropped": ["baffled", "confused", "not paying attention"]},
+  {"es": "gomoso", "syn": ["gummy", "rubbery"],
+   "_dropped": ["dandy", "toff", "jelly", "gelled"]},
+  {"es": "loma", "syn": ["knoll", "hummock", "ridge"],
+   "_dropped": ["a long hill or mountain", "a low hill", "suburb -- definitions"]},
+  {"es": "manzanilla", "syn": ["camomile", "manzanilla sherry"],
+   "_dropped": ["a type of wine from Cádiz (a definition)"]},
+  {"es": "grano", "syn": ["spot", "zit", "grain"],
+   "_note": "the grain sense was missing entirely"},
+  {"es": "impertinente", "syn": ["cheeky", "rude"],
+   "_dropped": ["smart -- only works in British English"]}
+ ]
+}
