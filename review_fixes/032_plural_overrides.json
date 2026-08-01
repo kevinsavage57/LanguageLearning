@@ -1,0 +1,22 @@
+{
+ "reviewed": "noun_override defects exposed by fixing pluralizeNoun in lang_es.js",
+ "_finding": "Correcting pluralizeNoun let the engine be checked against all 643 single-word overrides, which act as hand-written ground truth. The engine now reproduces 633 of them. Of the 10 remaining, five were the override being wrong and two had a misspelt base. The other three (foul, start-up, óptico-optometrista) are loanwords and a hyphenated compound that no general Spanish rule covers, so their overrides are correct and stay.",
+ "rows": [
+  {"es": "andén", "override": {"base": "andén", "plural": "andenes",
+    "article_sg": "el", "article_pl": "los"}, "_was_plural": "andénes"},
+  {"es": "comodín", "override": {"base": "comodín", "plural": "comodines",
+    "article_sg": "el", "article_pl": "los"}, "_was_plural": "comodínes"},
+  {"es": "confín", "override": {"base": "confín", "plural": "confines",
+    "article_sg": "el", "article_pl": "los"}, "_was_plural": "confínes"},
+  {"es": "delfín", "override": {"base": "delfín", "plural": "delfines",
+    "article_sg": "el", "article_pl": "los"}, "_was_plural": "delfínes"},
+  {"es": "jardín", "override": {"base": "jardín", "plural": "jardines",
+    "article_sg": "el", "article_pl": "los"}, "_was_plural": "jardínes"},
+  {"es": "mocasines", "override": {"base": "mocasín", "plural": "mocasines",
+    "article_sg": "el", "article_pl": "los"},
+   "_was_base": "mocasiín -- misspelt, so the app displayed 'el mocasiín' as the singular"},
+  {"es": "cuádriceps", "override": {"base": "cuádriceps", "plural": "cuádriceps",
+    "article_sg": "el", "article_pl": "los"},
+   "_was_base": "cuádricep -- a back-formation; the Spanish singular is cuádriceps"}
+ ]
+}

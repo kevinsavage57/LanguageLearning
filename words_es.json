@@ -8564,7 +8564,7 @@
     "rating": 5,
     "noun_override": {
       "base": "andén",
-      "plural": "andénes",
+      "plural": "andenes",
       "article_sg": "el",
       "article_pl": "los"
     },
@@ -31100,7 +31100,7 @@
     "rating": 5,
     "noun_override": {
       "base": "comodín",
-      "plural": "comodínes",
+      "plural": "comodines",
       "article_sg": "el",
       "article_pl": "los"
     }
@@ -34296,7 +34296,7 @@
     "rating": 9,
     "noun_override": {
       "base": "confín",
-      "plural": "confínes",
+      "plural": "confines",
       "article_sg": "el",
       "article_pl": "los"
     },
@@ -48637,7 +48637,7 @@
     "rating": 7,
     "noun_override": {
       "base": "delfín",
-      "plural": "delfínes",
+      "plural": "delfines",
       "article_sg": "el",
       "article_pl": "los"
     }
@@ -82502,7 +82502,7 @@
     "rating": 5,
     "noun_override": {
       "base": "jardín",
-      "plural": "jardínes",
+      "plural": "jardines",
       "article_sg": "el",
       "article_pl": "los"
     }
@@ -147071,7 +147071,7 @@
     "rating": 9,
     "noun_class": "irregular",
     "noun_override": {
-      "base": "mocasiín",
+      "base": "mocasín",
       "plural": "mocasines",
       "article_sg": "el",
       "article_pl": "los"
@@ -151737,7 +151737,7 @@
     "rating": 9,
     "noun_class": "irregular",
     "noun_override": {
-      "base": "cuádricep",
+      "base": "cuádriceps",
       "plural": "cuádriceps",
       "article_sg": "el",
       "article_pl": "los"

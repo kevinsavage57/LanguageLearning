@@ -167,11 +167,53 @@ function applyOrthography(baseStem, baseInf, tense, person, ending) {
 
 // ─── Noun gender / article / pluralisation ────────────────────────────────────
 
+const PLURAL_UNACCENT = { "á": "a", "é": "e", "í": "i", "ó": "o", "ú": "u" };
+const PLURAL_ACCENT   = { a: "á", e: "é", i: "í", o: "ó", u: "ú" };
+
 function pluralizeNoun(base) {
   const s = (base || "").trim();
+  if (!s) return s;
   const low = s.toLowerCase();
+
+  // Acronyms don't inflect: IVA, ONG, TPV, IRPF.
+  if (s === s.toUpperCase() && /[A-ZÁÉÍÓÚÑ]/.test(s)) return s;
+
   if (low.endsWith("z")) return s.slice(0, -1) + "ces";
-  if (/[aeiouáéíóú]$/.test(low)) return s + "s";
+
+  const vowels = [];
+  for (let i = 0; i < low.length; i++) if ("aeiouáéíóú".includes(low[i])) vowels.push(i);
+  if (!vowels.length) return s + "es";
+  const lastVowel = vowels[vowels.length - 1];
+
+  // Ends in -s/-x with an unstressed last syllable: invariable.
+  // lunes, crisis, análisis, antivirus, cortaúñas, tórax.
+  if ("sx".includes(low[low.length - 1]) &&
+      !"áéíóú".includes(low[lastVowel]) &&
+      vowels.length >= 2) {
+    return s;
+  }
+
+  // Written accent on the last syllable before -n/-s. The extra syllable makes the
+  // word regular, so the accent is dropped: nación → naciones, autobús → autobuses.
+  const stressed = low.match(/([áéíóú])[ns]$/);
+  if (stressed) {
+    const v = stressed[1];
+    const i = s.length - 2;
+    const prev = i > 0 ? low[i - 1] : "";
+    // ...unless the í/ú sits in a hiatus, where it keeps the accent: país → países.
+    if ("íú".includes(v) && "aeoáéó".includes(prev)) return s + "es";
+    return s.slice(0, i) + PLURAL_UNACCENT[v] + s.slice(i + 1) + "es";
+  }
+
+  // Unaccented and ending in -n, so stressed on the penultimate syllable. Adding a
+  // syllable pushes the stress back and it now needs a written accent:
+  // crimen → crímenes, examen → exámenes, orden → órdenes, volumen → volúmenes.
+  if (low.endsWith("n") && !/[áéíóú]/.test(low) && vowels.length >= 2) {
+    const j = vowels[vowels.length - 2];
+    return s.slice(0, j) + (PLURAL_ACCENT[low[j]] || low[j]) + s.slice(j + 1) + "es";
+  }
+
+  if (lastVowel === low.length - 1) return s + "s";
   return s + "es";
 }
 
