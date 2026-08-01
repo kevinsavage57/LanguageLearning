@@ -1,0 +1,24 @@
+{
+ "reviewed": "noun_override bases that are not Spanish words",
+ "_finding": "noun_override.base is what the app displays as the singular. Nine single-word bases were unknown to Spanish frequency data; seven were genuine back-formations produced by mechanically stripping the plural ending, so the app was showing 'el dulz', 'el abdominale', 'el crice', 'el convoye', 'el lunare', 'el estré'. hercio and escalopín are legitimate rare words and were left alone.",
+ "rows": [
+  {"es": "convoy", "nc": "m_std",
+   "_note": "base was 'convoye'. With base = headword the engine derives convoyes on its own, so the override is redundant and removed."},
+  {"es": "prensaajos", "nc": "m_std",
+   "_note": "base was 'prensajo', left over from the earlier prensajos->prensaajos rename. As a corta-/abre- style compound it is invariable, which the engine now derives, so the override is redundant and removed."},
+
+  {"es": "abdominales", "override": {"base": "abdominal", "plural": "abdominales",
+    "article_sg": "el", "article_pl": "los"}, "_was_base": "abdominale"},
+  {"es": "dulces", "override": {"base": "dulce", "plural": "dulces",
+    "article_sg": "el", "article_pl": "los"},
+   "_was_base": "dulz -- produced by reversing the z->ces rule"},
+  {"es": "lunares", "override": {"base": "lunar", "plural": "lunares",
+    "article_sg": "el", "article_pl": "los"}, "_was_base": "lunare"},
+  {"es": "cric", "override": {"base": "cric", "plural": "crics",
+    "article_sg": "el", "article_pl": "los"},
+   "_was_base": "crice", "_note": "override kept: the plural of cric is crics, which the -es rule cannot derive"},
+  {"es": "estrés", "override": {"base": "estrés", "plural": "estrés",
+    "article_sg": "el", "article_pl": "los"},
+   "_was_base": "estré", "_note": "override kept: estrés is treated as invariable here, where the engine would derive estreses"}
+ ]
+}

@@ -1,0 +1,2367 @@
+{
+ "reviewed": "remove noun_override entries the engine now reproduces on its own",
+ "_finding": "After pluralizeNoun was corrected, 590 of the 2,288 irregular overrides became dead weight: the base matched the headword, the plural matched what the engine derives, and the articles matched a standard gender class. Each is replaced by the plain noun_class it was emulating. The other 1,698 stay -- 1,591 are multi-word phrases whose plural no general rule derives (abeja reina -> abejas reina), 95 have a base that differs from the headword, and 12 use article combinations outside the standard classes.",
+ "_verification": "getNounForms output was snapshotted for all entries before and after; every rendered singular, plural, base and pluralBase is unchanged.",
+ "rows": [
+  {
+   "es": "acción",
+   "nc": "f_std"
+  },
+  {
+   "es": "actor",
+   "nc": "m_std"
+  },
+  {
+   "es": "actriz",
+   "nc": "f_std"
+  },
+  {
+   "es": "afición",
+   "nc": "f_std"
+  },
+  {
+   "es": "afirmación",
+   "nc": "f_std"
+  },
+  {
+   "es": "agujetas",
+   "nc": "f_std"
+  },
+  {
+   "es": "ajedrez",
+   "nc": "m_std"
+  },
+  {
+   "es": "algodón",
+   "nc": "m_std"
+  },
+  {
+   "es": "andén",
+   "nc": "m_std"
+  },
+  {
+   "es": "anfitrión",
+   "nc": "m_std"
+  },
+  {
+   "es": "animal",
+   "nc": "m_std"
+  },
+  {
+   "es": "antivirus",
+   "nc": "m_std"
+  },
+  {
+   "es": "antítesis",
+   "nc": "f_std"
+  },
+  {
+   "es": "análisis",
+   "nc": "m_std"
+  },
+  {
+   "es": "apunte",
+   "nc": "m_std"
+  },
+  {
+   "es": "arroz",
+   "nc": "m_std"
+  },
+  {
+   "es": "artritis",
+   "nc": "f_std"
+  },
+  {
+   "es": "ascensor",
+   "nc": "m_std"
+  },
+  {
+   "es": "autobús",
+   "nc": "m_std"
+  },
+  {
+   "es": "autopista",
+   "nc": "m_std"
+  },
+  {
+   "es": "avión",
+   "nc": "m_std"
+  },
+  {
+   "es": "azúcar",
+   "nc": "m_std"
+  },
+  {
+   "es": "balcón",
+   "nc": "m_std"
+  },
+  {
+   "es": "balón",
+   "nc": "m_std"
+  },
+  {
+   "es": "billete",
+   "nc": "m_std"
+  },
+  {
+   "es": "bonus",
+   "nc": "m_std"
+  },
+  {
+   "es": "borde",
+   "nc": "m_std"
+  },
+  {
+   "es": "bosque",
+   "nc": "m_std"
+  },
+  {
+   "es": "bronquitis",
+   "nc": "f_std"
+  },
+  {
+   "es": "budista",
+   "nc": "m_std"
+  },
+  {
+   "es": "béisbol",
+   "nc": "m_std"
+  },
+  {
+   "es": "cable",
+   "nc": "m_std"
+  },
+  {
+   "es": "cactus",
+   "nc": "m_std"
+  },
+  {
+   "es": "café",
+   "nc": "m_std"
+  },
+  {
+   "es": "cajón",
+   "nc": "m_std"
+  },
+  {
+   "es": "calle",
+   "nc": "f_std"
+  },
+  {
+   "es": "campus",
+   "nc": "m_std"
+  },
+  {
+   "es": "canal",
+   "nc": "m_std"
+  },
+  {
+   "es": "canción",
+   "nc": "f_std"
+  },
+  {
+   "es": "cantante",
+   "nc": "m_std"
+  },
+  {
+   "es": "caos",
+   "nc": "m_std"
+  },
+  {
+   "es": "cargador",
+   "nc": "m_std"
+  },
+  {
+   "es": "carne",
+   "nc": "m_std"
+  },
+  {
+   "es": "champú",
+   "nc": "m_std"
+  },
+  {
+   "es": "cibercrimen",
+   "nc": "m_std"
+  },
+  {
+   "es": "ciencia ficción",
+   "nc": "f_std"
+  },
+  {
+   "es": "cirrosis",
+   "nc": "f_std"
+  },
+  {
+   "es": "clase",
+   "nc": "f_std"
+  },
+  {
+   "es": "cliente",
+   "nc": "m_std"
+  },
+  {
+   "es": "coacción",
+   "nc": "f_std"
+  },
+  {
+   "es": "coalición",
+   "nc": "f_std"
+  },
+  {
+   "es": "cobre",
+   "nc": "m_std"
+  },
+  {
+   "es": "coche",
+   "nc": "m_std"
+  },
+  {
+   "es": "coeficiente",
+   "nc": "m_std"
+  },
+  {
+   "es": "coerción",
+   "nc": "f_std"
+  },
+  {
+   "es": "cognición",
+   "nc": "f_std"
+  },
+  {
+   "es": "cohesión",
+   "nc": "f_std"
+  },
+  {
+   "es": "cohete",
+   "nc": "m_std"
+  },
+  {
+   "es": "colaboración",
+   "nc": "f_std"
+  },
+  {
+   "es": "colaborador",
+   "nc": "m_std"
+  },
+  {
+   "es": "colisión",
+   "nc": "f_std"
+  },
+  {
+   "es": "colocación",
+   "nc": "f_std"
+  },
+  {
+   "es": "colonización",
+   "nc": "f_std"
+  },
+  {
+   "es": "color",
+   "nc": "m_std"
+  },
+  {
+   "es": "comandante",
+   "nc": "m_std"
+  },
+  {
+   "es": "combate",
+   "nc": "m_std"
+  },
+  {
+   "es": "combinación",
+   "nc": "f_std"
+  },
+  {
+   "es": "combustible",
+   "nc": "m_std"
+  },
+  {
+   "es": "combustión",
+   "nc": "f_std"
+  },
+  {
+   "es": "comediante",
+   "nc": "m_std"
+  },
+  {
+   "es": "comedor",
+   "nc": "m_std"
+  },
+  {
+   "es": "comisión",
+   "nc": "f_std"
+  },
+  {
+   "es": "comité",
+   "nc": "m_std"
+  },
+  {
+   "es": "comodín",
+   "nc": "m_std"
+  },
+  {
+   "es": "comparación",
+   "nc": "f_std"
+  },
+  {
+   "es": "compasión",
+   "nc": "f_std"
+  },
+  {
+   "es": "compensación",
+   "nc": "f_std"
+  },
+  {
+   "es": "competidor",
+   "nc": "m_std"
+  },
+  {
+   "es": "compilación",
+   "nc": "f_std"
+  },
+  {
+   "es": "complicación",
+   "nc": "f_std"
+  },
+  {
+   "es": "componente",
+   "nc": "m_std"
+  },
+  {
+   "es": "composición",
+   "nc": "f_std"
+  },
+  {
+   "es": "compositor",
+   "nc": "m_std"
+  },
+  {
+   "es": "comprador",
+   "nc": "m_std"
+  },
+  {
+   "es": "comprensión",
+   "nc": "f_std"
+  },
+  {
+   "es": "compresión",
+   "nc": "f_std"
+  },
+  {
+   "es": "comprobación",
+   "nc": "f_std"
+  },
+  {
+   "es": "comprobante",
+   "nc": "m_std"
+  },
+  {
+   "es": "compulsión",
+   "nc": "f_std"
+  },
+  {
+   "es": "compás",
+   "nc": "m_std"
+  },
+  {
+   "es": "comunicación",
+   "nc": "f_std"
+  },
+  {
+   "es": "concesión",
+   "nc": "f_std"
+  },
+  {
+   "es": "concienciación",
+   "nc": "f_std"
+  },
+  {
+   "es": "conciliación",
+   "nc": "f_std"
+  },
+  {
+   "es": "concisión",
+   "nc": "f_std"
+  },
+  {
+   "es": "conclusión",
+   "nc": "f_std"
+  },
+  {
+   "es": "concreción",
+   "nc": "f_std"
+  },
+  {
+   "es": "conde",
+   "nc": "m_std"
+  },
+  {
+   "es": "condecoración",
+   "nc": "f_std"
+  },
+  {
+   "es": "condensación",
+   "nc": "f_std"
+  },
+  {
+   "es": "condición",
+   "nc": "f_std"
+  },
+  {
+   "es": "conducción",
+   "nc": "f_std"
+  },
+  {
+   "es": "conductor",
+   "nc": "m_std"
+  },
+  {
+   "es": "conector",
+   "nc": "m_std"
+  },
+  {
+   "es": "conexión",
+   "nc": "f_std"
+  },
+  {
+   "es": "confección",
+   "nc": "f_std"
+  },
+  {
+   "es": "confederación",
+   "nc": "f_std"
+  },
+  {
+   "es": "confesión",
+   "nc": "f_std"
+  },
+  {
+   "es": "confesor",
+   "nc": "m_std"
+  },
+  {
+   "es": "confidente",
+   "nc": "m_std"
+  },
+  {
+   "es": "configuración",
+   "nc": "f_std"
+  },
+  {
+   "es": "confirmación",
+   "nc": "f_std"
+  },
+  {
+   "es": "confiscación",
+   "nc": "f_std"
+  },
+  {
+   "es": "conflagración",
+   "nc": "f_std"
+  },
+  {
+   "es": "conformación",
+   "nc": "f_std"
+  },
+  {
+   "es": "confort",
+   "nc": "m_std"
+  },
+  {
+   "es": "confrontación",
+   "nc": "f_std"
+  },
+  {
+   "es": "confusión",
+   "nc": "f_std"
+  },
+  {
+   "es": "confín",
+   "nc": "m_std"
+  },
+  {
+   "es": "congelación",
+   "nc": "f_std"
+  },
+  {
+   "es": "congelador",
+   "nc": "m_std"
+  },
+  {
+   "es": "congestión",
+   "nc": "f_std"
+  },
+  {
+   "es": "conjugación",
+   "nc": "f_std"
+  },
+  {
+   "es": "conjuntivitis",
+   "nc": "f_std"
+  },
+  {
+   "es": "conmemoración",
+   "nc": "f_std"
+  },
+  {
+   "es": "conmoción",
+   "nc": "f_std"
+  },
+  {
+   "es": "conmutador",
+   "nc": "m_std"
+  },
+  {
+   "es": "connotación",
+   "nc": "f_std"
+  },
+  {
+   "es": "conocedor",
+   "nc": "m_std"
+  },
+  {
+   "es": "conquistador",
+   "nc": "m_std"
+  },
+  {
+   "es": "consagración",
+   "nc": "f_std"
+  },
+  {
+   "es": "consecución",
+   "nc": "f_std"
+  },
+  {
+   "es": "conserje",
+   "nc": "m_std"
+  },
+  {
+   "es": "conservación",
+   "nc": "f_std"
+  },
+  {
+   "es": "conservante",
+   "nc": "m_std"
+  },
+  {
+   "es": "consideración",
+   "nc": "f_std"
+  },
+  {
+   "es": "consignación",
+   "nc": "f_std"
+  },
+  {
+   "es": "consolidación",
+   "nc": "f_std"
+  },
+  {
+   "es": "consonante",
+   "nc": "m_std"
+  },
+  {
+   "es": "consorte",
+   "nc": "m_std"
+  },
+  {
+   "es": "conspiración",
+   "nc": "f_std"
+  },
+  {
+   "es": "conspirador",
+   "nc": "m_std"
+  },
+  {
+   "es": "constatación",
+   "nc": "f_std"
+  },
+  {
+   "es": "constelación",
+   "nc": "f_std"
+  },
+  {
+   "es": "consternación",
+   "nc": "f_std"
+  },
+  {
+   "es": "constitución",
+   "nc": "f_std"
+  },
+  {
+   "es": "constricción",
+   "nc": "f_std"
+  },
+  {
+   "es": "construcción",
+   "nc": "f_std"
+  },
+  {
+   "es": "constructor",
+   "nc": "m_std"
+  },
+  {
+   "es": "consultor",
+   "nc": "m_std"
+  },
+  {
+   "es": "consumación",
+   "nc": "f_std"
+  },
+  {
+   "es": "consumidor",
+   "nc": "m_std"
+  },
+  {
+   "es": "contable",
+   "nc": "m_std"
+  },
+  {
+   "es": "contador",
+   "nc": "m_std"
+  },
+  {
+   "es": "contaminación",
+   "nc": "f_std"
+  },
+  {
+   "es": "contención",
+   "nc": "f_std"
+  },
+  {
+   "es": "contendiente",
+   "nc": "m_std"
+  },
+  {
+   "es": "contenedor",
+   "nc": "m_std"
+  },
+  {
+   "es": "contestación",
+   "nc": "f_std"
+  },
+  {
+   "es": "continente",
+   "nc": "m_std"
+  },
+  {
+   "es": "contingente",
+   "nc": "m_std"
+  },
+  {
+   "es": "continuación",
+   "nc": "f_std"
+  },
+  {
+   "es": "contorsión",
+   "nc": "f_std"
+  },
+  {
+   "es": "contraataque",
+   "nc": "m_std"
+  },
+  {
+   "es": "contracción",
+   "nc": "f_std"
+  },
+  {
+   "es": "contracorriente",
+   "nc": "m_std"
+  },
+  {
+   "es": "contradicción",
+   "nc": "f_std"
+  },
+  {
+   "es": "contraste",
+   "nc": "m_std"
+  },
+  {
+   "es": "contravención",
+   "nc": "f_std"
+  },
+  {
+   "es": "contribución",
+   "nc": "f_std"
+  },
+  {
+   "es": "contribuyente",
+   "nc": "m_std"
+  },
+  {
+   "es": "contrición",
+   "nc": "f_std"
+  },
+  {
+   "es": "contrincante",
+   "nc": "m_std"
+  },
+  {
+   "es": "control",
+   "nc": "m_std"
+  },
+  {
+   "es": "contusión",
+   "nc": "f_std"
+  },
+  {
+   "es": "convalidación",
+   "nc": "f_std"
+  },
+  {
+   "es": "convección",
+   "nc": "f_std"
+  },
+  {
+   "es": "convención",
+   "nc": "f_std"
+  },
+  {
+   "es": "conversación",
+   "nc": "f_std"
+  },
+  {
+   "es": "conversión",
+   "nc": "f_std"
+  },
+  {
+   "es": "convicción",
+   "nc": "f_std"
+  },
+  {
+   "es": "convite",
+   "nc": "m_std"
+  },
+  {
+   "es": "convulsión",
+   "nc": "f_std"
+  },
+  {
+   "es": "cooperación",
+   "nc": "f_std"
+  },
+  {
+   "es": "coordinación",
+   "nc": "f_std"
+  },
+  {
+   "es": "coordinador",
+   "nc": "m_std"
+  },
+  {
+   "es": "coproducción",
+   "nc": "f_std"
+  },
+  {
+   "es": "coraje",
+   "nc": "m_std"
+  },
+  {
+   "es": "coral",
+   "nc": "m_std"
+  },
+  {
+   "es": "corazón",
+   "nc": "m_std"
+  },
+  {
+   "es": "cordón",
+   "nc": "m_std"
+  },
+  {
+   "es": "coronación",
+   "nc": "f_std"
+  },
+  {
+   "es": "coronel",
+   "nc": "m_std"
+  },
+  {
+   "es": "corporación",
+   "nc": "f_std"
+  },
+  {
+   "es": "corral",
+   "nc": "m_std"
+  },
+  {
+   "es": "correccional",
+   "nc": "m_std"
+  },
+  {
+   "es": "corrección",
+   "nc": "f_std"
+  },
+  {
+   "es": "corredor",
+   "nc": "m_std"
+  },
+  {
+   "es": "correlación",
+   "nc": "f_std"
+  },
+  {
+   "es": "corresponsal",
+   "nc": "m_std"
+  },
+  {
+   "es": "corriente",
+   "nc": "m_std"
+  },
+  {
+   "es": "corroboración",
+   "nc": "f_std"
+  },
+  {
+   "es": "corrosión",
+   "nc": "f_std"
+  },
+  {
+   "es": "corrupción",
+   "nc": "f_std"
+  },
+  {
+   "es": "corsé",
+   "nc": "m_std"
+  },
+  {
+   "es": "cortaplumas",
+   "nc": "m_std"
+  },
+  {
+   "es": "cortauñas",
+   "nc": "m_std"
+  },
+  {
+   "es": "cortaúñas",
+   "nc": "m_std"
+  },
+  {
+   "es": "corte",
+   "nc": "m_std"
+  },
+  {
+   "es": "cortometraje",
+   "nc": "m_std"
+  },
+  {
+   "es": "cosmos",
+   "nc": "m_std"
+  },
+  {
+   "es": "cosquillas",
+   "nc": "m_std"
+  },
+  {
+   "es": "costal",
+   "nc": "m_std"
+  },
+  {
+   "es": "coste",
+   "nc": "m_std"
+  },
+  {
+   "es": "costumbre",
+   "nc": "f_std"
+  },
+  {
+   "es": "cotización",
+   "nc": "f_std"
+  },
+  {
+   "es": "coyote",
+   "nc": "m_std"
+  },
+  {
+   "es": "creación",
+   "nc": "f_std"
+  },
+  {
+   "es": "creador",
+   "nc": "m_std"
+  },
+  {
+   "es": "credencial",
+   "nc": "m_std"
+  },
+  {
+   "es": "cremación",
+   "nc": "f_std"
+  },
+  {
+   "es": "creyente",
+   "nc": "m_std"
+  },
+  {
+   "es": "criador",
+   "nc": "m_std"
+  },
+  {
+   "es": "crimen",
+   "nc": "m_std"
+  },
+  {
+   "es": "criminal",
+   "nc": "m_std"
+  },
+  {
+   "es": "crin",
+   "nc": "m_std"
+  },
+  {
+   "es": "crisis",
+   "nc": "f_std"
+  },
+  {
+   "es": "crisis financiera",
+   "nc": "f_std"
+  },
+  {
+   "es": "crisol",
+   "nc": "m_std"
+  },
+  {
+   "es": "cristal",
+   "nc": "m_std"
+  },
+  {
+   "es": "cristalización",
+   "nc": "f_std"
+  },
+  {
+   "es": "croquis",
+   "nc": "m_std"
+  },
+  {
+   "es": "cruce",
+   "nc": "m_std"
+  },
+  {
+   "es": "crucifixión",
+   "nc": "f_std"
+  },
+  {
+   "es": "cruz",
+   "nc": "m_std"
+  },
+  {
+   "es": "cráter",
+   "nc": "m_std"
+  },
+  {
+   "es": "cuadrante",
+   "nc": "m_std"
+  },
+  {
+   "es": "cualificación",
+   "nc": "f_std"
+  },
+  {
+   "es": "cuartel",
+   "nc": "m_std"
+  },
+  {
+   "es": "cubil",
+   "nc": "m_std"
+  },
+  {
+   "es": "cubilete",
+   "nc": "m_std"
+  },
+  {
+   "es": "cucharón",
+   "nc": "m_std"
+  },
+  {
+   "es": "cuchitril",
+   "nc": "m_std"
+  },
+  {
+   "es": "cuentagotas",
+   "nc": "m_std"
+  },
+  {
+   "es": "cuentakilómetros",
+   "nc": "m_std"
+  },
+  {
+   "es": "cuestión",
+   "nc": "f_std"
+  },
+  {
+   "es": "culebrón",
+   "nc": "m_std"
+  },
+  {
+   "es": "culminación",
+   "nc": "f_std"
+  },
+  {
+   "es": "cumbre",
+   "nc": "f_std"
+  },
+  {
+   "es": "cumpleaños",
+   "nc": "m_std"
+  },
+  {
+   "es": "cupé",
+   "nc": "m_std"
+  },
+  {
+   "es": "cupón",
+   "nc": "m_std"
+  },
+  {
+   "es": "curación",
+   "nc": "f_std"
+  },
+  {
+   "es": "cursor",
+   "nc": "m_std"
+  },
+  {
+   "es": "cutis",
+   "nc": "m_std"
+  },
+  {
+   "es": "cómplice",
+   "nc": "m_std"
+  },
+  {
+   "es": "cónsul",
+   "nc": "m_std"
+  },
+  {
+   "es": "cónyuge",
+   "nc": "m_std"
+  },
+  {
+   "es": "cúspide",
+   "nc": "m_std"
+  },
+  {
+   "es": "dandi",
+   "nc": "m_std"
+  },
+  {
+   "es": "debacle",
+   "nc": "m_std"
+  },
+  {
+   "es": "debate",
+   "nc": "m_std"
+  },
+  {
+   "es": "deberes",
+   "nc": "m_std"
+  },
+  {
+   "es": "debut",
+   "nc": "m_std"
+  },
+  {
+   "es": "decepción",
+   "nc": "f_std"
+  },
+  {
+   "es": "decisión",
+   "nc": "f_std"
+  },
+  {
+   "es": "declamación",
+   "nc": "f_std"
+  },
+  {
+   "es": "declaración",
+   "nc": "f_std"
+  },
+  {
+   "es": "declarante",
+   "nc": "m_std"
+  },
+  {
+   "es": "declinación",
+   "nc": "f_std"
+  },
+  {
+   "es": "declive",
+   "nc": "m_std"
+  },
+  {
+   "es": "decoración",
+   "nc": "f_std"
+  },
+  {
+   "es": "decorador",
+   "nc": "m_std"
+  },
+  {
+   "es": "dedal",
+   "nc": "m_std"
+  },
+  {
+   "es": "dedicación",
+   "nc": "f_std"
+  },
+  {
+   "es": "deducción",
+   "nc": "f_std"
+  },
+  {
+   "es": "defección",
+   "nc": "f_std"
+  },
+  {
+   "es": "defensor",
+   "nc": "m_std"
+  },
+  {
+   "es": "definición",
+   "nc": "f_std"
+  },
+  {
+   "es": "deflación",
+   "nc": "f_std"
+  },
+  {
+   "es": "deformación",
+   "nc": "f_std"
+  },
+  {
+   "es": "defunción",
+   "nc": "f_std"
+  },
+  {
+   "es": "degeneración",
+   "nc": "f_std"
+  },
+  {
+   "es": "degradación",
+   "nc": "f_std"
+  },
+  {
+   "es": "degustación",
+   "nc": "f_std"
+  },
+  {
+   "es": "deificación",
+   "nc": "f_std"
+  },
+  {
+   "es": "dejadez",
+   "nc": "m_std"
+  },
+  {
+   "es": "delación",
+   "nc": "f_std"
+  },
+  {
+   "es": "delantal",
+   "nc": "m_std"
+  },
+  {
+   "es": "delator",
+   "nc": "m_std"
+  },
+  {
+   "es": "delegación",
+   "nc": "f_std"
+  },
+  {
+   "es": "deleite",
+   "nc": "m_std"
+  },
+  {
+   "es": "delfín",
+   "nc": "m_std"
+  },
+  {
+   "es": "delgadez",
+   "nc": "f_std"
+  },
+  {
+   "es": "deliberación",
+   "nc": "f_std"
+  },
+  {
+   "es": "delincuente",
+   "nc": "m_std"
+  },
+  {
+   "es": "delineación",
+   "nc": "f_std"
+  },
+  {
+   "es": "demandante",
+   "nc": "m_std"
+  },
+  {
+   "es": "demarcación",
+   "nc": "f_std"
+  },
+  {
+   "es": "democratización",
+   "nc": "f_std"
+  },
+  {
+   "es": "demolición",
+   "nc": "f_std"
+  },
+  {
+   "es": "demostración",
+   "nc": "f_std"
+  },
+  {
+   "es": "denegación",
+   "nc": "f_std"
+  },
+  {
+   "es": "dengue",
+   "nc": "m_std"
+  },
+  {
+   "es": "denigración",
+   "nc": "f_std"
+  },
+  {
+   "es": "denominación",
+   "nc": "f_std"
+  },
+  {
+   "es": "denominador",
+   "nc": "m_std"
+  },
+  {
+   "es": "dentición",
+   "nc": "f_std"
+  },
+  {
+   "es": "denunciante",
+   "nc": "m_std"
+  },
+  {
+   "es": "depauperación",
+   "nc": "f_std"
+  },
+  {
+   "es": "dependiente",
+   "nc": "m_std"
+  },
+  {
+   "es": "deponente",
+   "nc": "m_std"
+  },
+  {
+   "es": "deportación",
+   "nc": "f_std"
+  },
+  {
+   "es": "deporte",
+   "nc": "m_std"
+  },
+  {
+   "es": "deposición",
+   "nc": "f_std"
+  },
+  {
+   "es": "depositante",
+   "nc": "m_std"
+  },
+  {
+   "es": "depravación",
+   "nc": "f_std"
+  },
+  {
+   "es": "depreciación",
+   "nc": "f_std"
+  },
+  {
+   "es": "depredación",
+   "nc": "f_std"
+  },
+  {
+   "es": "depredador",
+   "nc": "m_std"
+  },
+  {
+   "es": "depresión",
+   "nc": "f_std"
+  },
+  {
+   "es": "depuración",
+   "nc": "f_std"
+  },
+  {
+   "es": "depurador",
+   "nc": "m_std"
+  },
+  {
+   "es": "derivación",
+   "nc": "f_std"
+  },
+  {
+   "es": "dermatitis",
+   "nc": "f_std"
+  },
+  {
+   "es": "dermis",
+   "nc": "m_std"
+  },
+  {
+   "es": "derogación",
+   "nc": "f_std"
+  },
+  {
+   "es": "derrame",
+   "nc": "m_std"
+  },
+  {
+   "es": "derrape",
+   "nc": "m_std"
+  },
+  {
+   "es": "derredor",
+   "nc": "m_std"
+  },
+  {
+   "es": "derroche",
+   "nc": "m_std"
+  },
+  {
+   "es": "derrumbe",
+   "nc": "m_std"
+  },
+  {
+   "es": "desaceleración",
+   "nc": "f_std"
+  },
+  {
+   "es": "desadaptación",
+   "nc": "f_std"
+  },
+  {
+   "es": "dimensión",
+   "nc": "f_std"
+  },
+  {
+   "es": "dirección",
+   "nc": "f_std"
+  },
+  {
+   "es": "director",
+   "nc": "m_std"
+  },
+  {
+   "es": "directora",
+   "nc": "f_std"
+  },
+  {
+   "es": "discusión",
+   "nc": "f_std"
+  },
+  {
+   "es": "diversión",
+   "nc": "f_std"
+  },
+  {
+   "es": "diálisis",
+   "nc": "f_std"
+  },
+  {
+   "es": "DNI",
+   "nc": "m_std"
+  },
+  {
+   "es": "documental",
+   "nc": "m_std"
+  },
+  {
+   "es": "duración",
+   "nc": "f_std"
+  },
+  {
+   "es": "dátil",
+   "nc": "m_std"
+  },
+  {
+   "es": "déficit",
+   "nc": "m_std"
+  },
+  {
+   "es": "ecologista",
+   "nc": "m_std"
+  },
+  {
+   "es": "elección",
+   "nc": "f_std"
+  },
+  {
+   "es": "electrólisis",
+   "nc": "f_std"
+  },
+  {
+   "es": "empate",
+   "nc": "m_std"
+  },
+  {
+   "es": "enchufe",
+   "nc": "m_std"
+  },
+  {
+   "es": "enfoque",
+   "nc": "m_std"
+  },
+  {
+   "es": "entrenador",
+   "nc": "m_std"
+  },
+  {
+   "es": "equipaje",
+   "nc": "m_std"
+  },
+  {
+   "es": "erasmus",
+   "nc": "m_std"
+  },
+  {
+   "es": "ERTE",
+   "nc": "m_std"
+  },
+  {
+   "es": "escritor",
+   "nc": "m_std"
+  },
+  {
+   "es": "escritora",
+   "nc": "f_std"
+  },
+  {
+   "es": "especialista",
+   "nc": "m_std"
+  },
+  {
+   "es": "estación",
+   "nc": "f_std"
+  },
+  {
+   "es": "este",
+   "nc": "m_std"
+  },
+  {
+   "es": "estimación",
+   "nc": "f_std"
+  },
+  {
+   "es": "estudiante",
+   "nc": "m_std"
+  },
+  {
+   "es": "evaluación",
+   "nc": "f_std"
+  },
+  {
+   "es": "examen",
+   "nc": "m_std"
+  },
+  {
+   "es": "exterior",
+   "nc": "m_std"
+  },
+  {
+   "es": "fase",
+   "nc": "m_std"
+  },
+  {
+   "es": "flor",
+   "nc": "f_std"
+  },
+  {
+   "es": "FMI",
+   "nc": "m_std"
+  },
+  {
+   "es": "frase",
+   "nc": "f_std"
+  },
+  {
+   "es": "futbolista",
+   "nc": "m_std"
+  },
+  {
+   "es": "fútbol",
+   "nc": "m_std"
+  },
+  {
+   "es": "gafas",
+   "nc": "f_std"
+  },
+  {
+   "es": "garaje",
+   "nc": "m_std"
+  },
+  {
+   "es": "gas",
+   "nc": "m_std"
+  },
+  {
+   "es": "gente",
+   "nc": "f_std"
+  },
+  {
+   "es": "gol",
+   "nc": "m_std"
+  },
+  {
+   "es": "golfista",
+   "nc": "m_std"
+  },
+  {
+   "es": "GPS",
+   "nc": "m_std"
+  },
+  {
+   "es": "guitarrista",
+   "nc": "m_std"
+  },
+  {
+   "es": "habitación",
+   "nc": "f_std"
+  },
+  {
+   "es": "hepatitis",
+   "nc": "f_std"
+  },
+  {
+   "es": "hipótesis",
+   "nc": "f_std"
+  },
+  {
+   "es": "hombre",
+   "nc": "m_std"
+  },
+  {
+   "es": "honor",
+   "nc": "m_std"
+  },
+  {
+   "es": "hospital",
+   "nc": "m_std"
+  },
+  {
+   "es": "hotel",
+   "nc": "m_std"
+  },
+  {
+   "es": "héroe",
+   "nc": "m_std"
+  },
+  {
+   "es": "imagen",
+   "nc": "f_std"
+  },
+  {
+   "es": "información",
+   "nc": "f_std"
+  },
+  {
+   "es": "informe",
+   "nc": "m_std"
+  },
+  {
+   "es": "instante",
+   "nc": "m_std"
+  },
+  {
+   "es": "intención",
+   "nc": "f_std"
+  },
+  {
+   "es": "interior",
+   "nc": "m_std"
+  },
+  {
+   "es": "interruptor",
+   "nc": "m_std"
+  },
+  {
+   "es": "interés",
+   "nc": "m_std"
+  },
+  {
+   "es": "inversión",
+   "nc": "f_std"
+  },
+  {
+   "es": "investigación",
+   "nc": "f_std"
+  },
+  {
+   "es": "investigador",
+   "nc": "m_std"
+  },
+  {
+   "es": "IPC",
+   "nc": "m_std"
+  },
+  {
+   "es": "IRPF",
+   "nc": "m_std"
+  },
+  {
+   "es": "IVA",
+   "nc": "m_std"
+  },
+  {
+   "es": "jabón",
+   "nc": "m_std"
+  },
+  {
+   "es": "jardín",
+   "nc": "m_std"
+  },
+  {
+   "es": "jefa",
+   "nc": "f_std"
+  },
+  {
+   "es": "jefe",
+   "nc": "m_std"
+  },
+  {
+   "es": "joint venture",
+   "nc": "m_std"
+  },
+  {
+   "es": "jugador",
+   "nc": "m_std"
+  },
+  {
+   "es": "juguete",
+   "nc": "m_std"
+  },
+  {
+   "es": "kárate",
+   "nc": "m_std"
+  },
+  {
+   "es": "leche",
+   "nc": "f_std"
+  },
+  {
+   "es": "lugar",
+   "nc": "m_std"
+  },
+  {
+   "es": "luz",
+   "nc": "m_std"
+  },
+  {
+   "es": "lápiz",
+   "nc": "m_std"
+  },
+  {
+   "es": "límite",
+   "nc": "m_std"
+  },
+  {
+   "es": "madre",
+   "nc": "m_std"
+  },
+  {
+   "es": "madrugón",
+   "nc": "m_std"
+  },
+  {
+   "es": "maquillaje",
+   "nc": "m_std"
+  },
+  {
+   "es": "maquis",
+   "nc": "m_std"
+  },
+  {
+   "es": "mar",
+   "nc": "m_std"
+  },
+  {
+   "es": "maratón",
+   "nc": "m_std"
+  },
+  {
+   "es": "medio ambiente",
+   "nc": "m_std"
+  },
+  {
+   "es": "mensaje",
+   "nc": "m_std"
+  },
+  {
+   "es": "mes",
+   "nc": "m_std"
+  },
+  {
+   "es": "metal",
+   "nc": "m_std"
+  },
+  {
+   "es": "metamorfosis",
+   "nc": "f_std"
+  },
+  {
+   "es": "metrópolis",
+   "nc": "f_std"
+  },
+  {
+   "es": "mindfulness",
+   "nc": "m_std"
+  },
+  {
+   "es": "mitosis",
+   "nc": "f_std"
+  },
+  {
+   "es": "mueble",
+   "nc": "m_std"
+  },
+  {
+   "es": "muerte",
+   "nc": "f_std"
+  },
+  {
+   "es": "mujer",
+   "nc": "m_std"
+  },
+  {
+   "es": "nariz",
+   "nc": "f_std"
+  },
+  {
+   "es": "natación",
+   "nc": "f_std"
+  },
+  {
+   "es": "neurosis",
+   "nc": "f_std"
+  },
+  {
+   "es": "NFT",
+   "nc": "m_std"
+  },
+  {
+   "es": "nieve",
+   "nc": "m_std"
+  },
+  {
+   "es": "nivel",
+   "nc": "m_std"
+  },
+  {
+   "es": "noche",
+   "nc": "f_std"
+  },
+  {
+   "es": "nombre",
+   "nc": "m_std"
+  },
+  {
+   "es": "norte",
+   "nc": "m_std"
+  },
+  {
+   "es": "nube",
+   "nc": "f_std"
+  },
+  {
+   "es": "obligación",
+   "nc": "f_std"
+  },
+  {
+   "es": "observación",
+   "nc": "f_std"
+  },
+  {
+   "es": "oculista",
+   "nc": "m_std"
+  },
+  {
+   "es": "oeste",
+   "nc": "m_std"
+  },
+  {
+   "es": "ONG",
+   "nc": "f_std"
+  },
+  {
+   "es": "ONU",
+   "nc": "f_std"
+  },
+  {
+   "es": "opción",
+   "nc": "f_std"
+  },
+  {
+   "es": "opinión",
+   "nc": "m_std"
+  },
+  {
+   "es": "oración",
+   "nc": "f_std"
+  },
+  {
+   "es": "orden",
+   "nc": "m_std"
+  },
+  {
+   "es": "ordenador",
+   "nc": "m_std"
+  },
+  {
+   "es": "origen",
+   "nc": "m_std"
+  },
+  {
+   "es": "osteoporosis",
+   "nc": "f_std"
+  },
+  {
+   "es": "OTAN",
+   "nc": "f_std"
+  },
+  {
+   "es": "padre",
+   "nc": "m_std"
+  },
+  {
+   "es": "pan",
+   "nc": "m_std"
+  },
+  {
+   "es": "pantalón",
+   "nc": "m_std"
+  },
+  {
+   "es": "papel",
+   "nc": "m_std"
+  },
+  {
+   "es": "pared",
+   "nc": "m_std"
+  },
+  {
+   "es": "parte",
+   "nc": "f_std"
+  },
+  {
+   "es": "pasaje",
+   "nc": "m_std"
+  },
+  {
+   "es": "pasaporte",
+   "nc": "m_std"
+  },
+  {
+   "es": "país",
+   "nc": "m_std"
+  },
+  {
+   "es": "peine",
+   "nc": "m_std"
+  },
+  {
+   "es": "perfeccionista",
+   "nc": "m_std"
+  },
+  {
+   "es": "perfume",
+   "nc": "m_std"
+  },
+  {
+   "es": "personaje",
+   "nc": "m_std"
+  },
+  {
+   "es": "pianista",
+   "nc": "m_std"
+  },
+  {
+   "es": "pie",
+   "nc": "m_std"
+  },
+  {
+   "es": "pilates",
+   "nc": "m_std"
+  },
+  {
+   "es": "pintor",
+   "nc": "m_std"
+  },
+  {
+   "es": "profesor",
+   "nc": "m_std"
+  },
+  {
+   "es": "proporción",
+   "nc": "f_std"
+  },
+  {
+   "es": "prótesis",
+   "nc": "f_std"
+  },
+  {
+   "es": "psicosis",
+   "nc": "f_std"
+  },
+  {
+   "es": "psoriasis",
+   "nc": "f_std"
+  },
+  {
+   "es": "PVC",
+   "nc": "m_std"
+  },
+  {
+   "es": "páncreas",
+   "nc": "m_std"
+  },
+  {
+   "es": "ratón",
+   "nc": "m_std"
+  },
+  {
+   "es": "razón",
+   "nc": "m_std"
+  },
+  {
+   "es": "reacción",
+   "nc": "f_std"
+  },
+  {
+   "es": "reciclaje",
+   "nc": "m_std"
+  },
+  {
+   "es": "región",
+   "nc": "m_std"
+  },
+  {
+   "es": "rencor",
+   "nc": "m_std"
+  },
+  {
+   "es": "reporte",
+   "nc": "m_std"
+  },
+  {
+   "es": "reputación",
+   "nc": "f_std"
+  },
+  {
+   "es": "resolución",
+   "nc": "f_std"
+  },
+  {
+   "es": "restaurante",
+   "nc": "m_std"
+  },
+  {
+   "es": "romance",
+   "nc": "m_std"
+  },
+  {
+   "es": "rompecabezas",
+   "nc": "m_std"
+  },
+  {
+   "es": "sal",
+   "nc": "f_std"
+  },
+  {
+   "es": "saltamontes",
+   "nc": "m_std"
+  },
+  {
+   "es": "sector",
+   "nc": "m_std"
+  },
+  {
+   "es": "selección",
+   "nc": "f_std"
+  },
+  {
+   "es": "serie",
+   "nc": "f_std"
+  },
+  {
+   "es": "sillón",
+   "nc": "m_std"
+  },
+  {
+   "es": "simbiosis",
+   "nc": "f_std"
+  },
+  {
+   "es": "sinusitis",
+   "nc": "f_std"
+  },
+  {
+   "es": "sofá",
+   "nc": "m_std"
+  },
+  {
+   "es": "sol",
+   "nc": "m_std"
+  },
+  {
+   "es": "solución",
+   "nc": "f_std"
+  },
+  {
+   "es": "superficie",
+   "nc": "f_std"
+  },
+  {
+   "es": "sur",
+   "nc": "m_std"
+  },
+  {
+   "es": "síntesis",
+   "nc": "f_std"
+  },
+  {
+   "es": "TAC",
+   "nc": "m_std"
+  },
+  {
+   "es": "tarde",
+   "nc": "f_std"
+  },
+  {
+   "es": "televisión",
+   "nc": "f_std"
+  },
+  {
+   "es": "tenis",
+   "nc": "m_std"
+  },
+  {
+   "es": "tenista",
+   "nc": "m_std"
+  },
+  {
+   "es": "terror",
+   "nc": "m_std"
+  },
+  {
+   "es": "tesis",
+   "nc": "f_std"
+  },
+  {
+   "es": "TPV",
+   "nc": "m_std"
+  },
+  {
+   "es": "trabajadora",
+   "nc": "f_std"
+  },
+  {
+   "es": "tren",
+   "nc": "m_std"
+  },
+  {
+   "es": "tuberculosis",
+   "nc": "f_std"
+  },
+  {
+   "es": "turista",
+   "nc": "m_std"
+  },
+  {
+   "es": "té",
+   "nc": "m_std"
+  },
+  {
+   "es": "UCI",
+   "nc": "f_std"
+  },
+  {
+   "es": "UE",
+   "nc": "f_std"
+  },
+  {
+   "es": "valle",
+   "nc": "m_std"
+  },
+  {
+   "es": "valoración",
+   "nc": "f_std"
+  },
+  {
+   "es": "vaqueros",
+   "nc": "m_std"
+  },
+  {
+   "es": "vendedor",
+   "nc": "m_std"
+  },
+  {
+   "es": "violín",
+   "nc": "m_std"
+  },
+  {
+   "es": "virus",
+   "nc": "m_std"
+  },
+  {
+   "es": "virus informático",
+   "nc": "m_std"
+  },
+  {
+   "es": "voleibol",
+   "nc": "m_std"
+  },
+  {
+   "es": "volumen",
+   "nc": "m_std"
+  },
+  {
+   "es": "VPN",
+   "nc": "f_std"
+  },
+  {
+   "es": "zonificación",
+   "nc": "f_std"
+  },
+  {
+   "es": "álbum",
+   "nc": "m_std"
+  },
+  {
+   "es": "árbol",
+   "nc": "m_std"
+  },
+  {
+   "es": "Islas Eolias",
+   "nc": "f_std"
+  },
+  {
+   "es": "costes fijos",
+   "nc": "m_std"
+  },
+  {
+   "es": "huevos fritos",
+   "nc": "m_std"
+  },
+  {
+   "es": "gastritis",
+   "nc": "f_std"
+  },
+  {
+   "es": "guantes",
+   "nc": "m_std"
+  },
+  {
+   "es": "judías verdes",
+   "nc": "f_std"
+  },
+  {
+   "es": "huevos duros",
+   "nc": "m_std"
+  },
+  {
+   "es": "arnés",
+   "nc": "m_std"
+  },
+  {
+   "es": "tacones altos",
+   "nc": "m_std"
+  },
+  {
+   "es": "hipnosis",
+   "nc": "f_std"
+  },
+  {
+   "es": "cuidados intensivos",
+   "nc": "m_std"
+  },
+  {
+   "es": "iris",
+   "nc": "m_std"
+  },
+  {
+   "es": "mes pasado",
+   "nc": "m_std"
+  },
+  {
+   "es": "últimos sacramentos",
+   "nc": "m_std"
+  },
+  {
+   "es": "leggings",
+   "nc": "m_std"
+  },
+  {
+   "es": "habilidades auditivas",
+   "nc": "f_std"
+  },
+  {
+   "es": "marines",
+   "nc": "m_std"
+  },
+  {
+   "es": "metanálisis",
+   "nc": "m_std"
+  },
+  {
+   "es": "metástasis",
+   "nc": "f_std"
+  },
+  {
+   "es": "minibús",
+   "nc": "m_std"
+  },
+  {
+   "es": "valores morales",
+   "nc": "m_std"
+  },
+  {
+   "es": "tasas negativas",
+   "nc": "f_std"
+  },
+  {
+   "es": "valores nutricionales",
+   "nc": "m_std"
+  },
+  {
+   "es": "oasis",
+   "nc": "f_std"
+  },
+  {
+   "es": "cuidados paliativos",
+   "nc": "m_std"
+  },
+  {
+   "es": "pancreatitis",
+   "nc": "f_std"
+  },
+  {
+   "es": "pelvis",
+   "nc": "f_std"
+  },
+  {
+   "es": "alicates",
+   "nc": "m_std"
+  },
+  {
+   "es": "huevos escalfados",
+   "nc": "m_std"
+  },
+  {
+   "es": "ciencias políticas",
+   "nc": "f_std"
+  },
+  {
+   "es": "jardines públicos",
+   "nc": "m_std"
+  },
+  {
+   "es": "cuádriceps",
+   "nc": "m_std"
+  },
+  {
+   "es": "huevos revueltos",
+   "nc": "m_std"
+  },
+  {
+   "es": "servicios secretos",
+   "nc": "m_std"
+  },
+  {
+   "es": "patines",
+   "nc": "m_std"
+  },
+  {
+   "es": "tijeras pequeñas",
+   "nc": "f_std"
+  },
+  {
+   "es": "redes sociales",
+   "nc": "f_std"
+  },
+  {
+   "es": "calcetines",
+   "nc": "m_std"
+  },
+  {
+   "es": "fuerzas especiales",
+   "nc": "f_std"
+  },
+  {
+   "es": "trolebús",
+   "nc": "m_std"
+  },
+  {
+   "es": "pantalones",
+   "nc": "m_std"
+  },
+  {
+   "es": "pinzas",
+   "nc": "f_std"
+  },
+  {
+   "es": "costes variables",
+   "nc": "m_std"
+  },
+  {
+   "es": "vacaciones anuales",
+   "nc": "f_std"
+  },
+  {
+   "es": "apendicitis",
+   "nc": "f_std"
+  },
+  {
+   "es": "atlas",
+   "nc": "m_std"
+  },
+  {
+   "es": "prismáticos",
+   "nc": "m_std"
+  },
+  {
+   "es": "frijoles negros",
+   "nc": "m_std"
+  },
+  {
+   "es": "bóxeres",
+   "nc": "m_std"
+  },
+  {
+   "es": "tirantes",
+   "nc": "m_std"
+  },
+  {
+   "es": "coles de Bruselas",
+   "nc": "f_std"
+  },
+  {
+   "es": "labios agrietados",
+   "nc": "m_std"
+  },
+  {
+   "es": "derechos civiles",
+   "nc": "m_std"
+  },
+  {
+   "es": "colitis",
+   "nc": "f_std"
+  },
+  {
+   "es": "diabetes",
+   "nc": "f_std"
+  },
+  {
+   "es": "epidermis",
+   "nc": "f_std"
+  }
+ ]
+}
