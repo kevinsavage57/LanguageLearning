@@ -102,13 +102,17 @@ def main():
         if "override" in r:
             w["noun_class"] = "irregular"
             w["noun_override"] = dict(r["override"])
+        if "pp" in r:
+            w["pastParticiple"] = r["pp"]
+        if "aux" in r:
+            w["aux"] = r["aux"]
         if "syn" in r:
             w["en_syn"] = list(r["syn"])
         after = json.dumps(w, ensure_ascii=False, sort_keys=True)
         if before != after:
             b, a = json.loads(before), json.loads(after)
             bits = []
-            for k in ("it", "en", "pos", "en_syn", "noun_class"):
+            for k in ("it", "en", "pos", "en_syn", "noun_class", "pastParticiple", "aux"):
                 if b.get(k) != a.get(k):
                     bits.append("%s: %r -> %r" % (k, b.get(k), a.get(k)))
             if b.get("noun_override") != a.get("noun_override"):

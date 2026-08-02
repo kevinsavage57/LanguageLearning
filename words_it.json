@@ -1168,7 +1168,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "acceso"
   },
   {
     "id": "accennare_verb",
@@ -1353,7 +1354,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "accolto"
   },
   {
     "id": "acconto_noun",
@@ -2853,7 +2855,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "aggiunto"
   },
   {
     "id": "agglomerato_urbano_noun",
@@ -3937,7 +3940,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "alluso"
   },
   {
     "id": "alluminio_noun",
@@ -4633,7 +4637,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "ammesso"
   },
   {
     "id": "amministratore_delegato_noun",
@@ -6375,7 +6380,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "aux": "essere"
   },
   {
     "id": "appassito_adjective",
@@ -6813,7 +6819,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true
+    "quickStart": true,
+    "pastParticiple": "aperto"
   },
   {
     "id": "aprire_lapp_verb",
@@ -7717,7 +7724,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "aux": "essere"
   },
   {
     "id": "arrostire_verb",
@@ -8618,7 +8626,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "assistito"
   },
   {
     "id": "associazione_noun",
@@ -8694,7 +8703,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "assolto"
   },
   {
     "id": "assomigliare_a_verb",
@@ -8729,7 +8739,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "assunto"
   },
   {
     "id": "assurdo_adjective",
@@ -11536,7 +11547,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true
+    "quickStart": true,
+    "pastParticiple": "bevuto"
   },
   {
     "id": "bergamotto_noun",
@@ -14504,7 +14516,8 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": []
+    "irregularTags": [],
+    "aux": "essere"
   },
   {
     "id": "caffetteria_noun",
@@ -19254,7 +19267,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true
+    "quickStart": true,
+    "pastParticiple": "chiesto"
   },
   {
     "id": "chiedere_in_prestito_verb",
@@ -19472,7 +19486,8 @@
     "stemOverrides": {},
     "irregularTags": [],
     "reflexive": false,
-    "quickStart": true
+    "quickStart": true,
+    "pastParticiple": "chiuso"
   },
   {
     "id": "chiudere_lapp_verb",
@@ -22315,7 +22330,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "compianto"
   },
   {
     "id": "compito_noun",
@@ -22799,7 +22815,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "compromesso"
   },
   {
     "id": "computer_noun",
@@ -23134,7 +23151,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "concluso"
   },
   {
     "id": "concordare_verb",
@@ -23305,7 +23323,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "condiviso"
   },
   {
     "id": "condividere_sui_social_verb",
@@ -23832,7 +23851,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true
+    "quickStart": true,
+    "pastParticiple": "conosciuto"
   },
   {
     "id": "consapevole_adjective",
@@ -24542,7 +24562,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "contorto"
   },
   {
     "id": "contorno_noun",
@@ -24609,7 +24630,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "contraddetto"
   },
   {
     "id": "contraddirsi_verb",
@@ -24632,7 +24654,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "contraddetto"
   },
   {
     "id": "contraddittorio_adjective",
@@ -25024,7 +25047,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "convinto"
   },
   {
     "id": "convincimento_noun",
@@ -25084,7 +25108,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "convissuto"
   },
   {
     "id": "cooperare_verb",
@@ -25326,7 +25351,8 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": []
+    "irregularTags": [],
+    "pastParticiple": "coperto"
   },
   {
     "id": "copywriting_noun",
@@ -25587,7 +25613,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "corretto"
   },
   {
     "id": "correggere_le_bozze_verb",
@@ -25658,7 +25685,8 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": []
+    "irregularTags": [],
+    "pastParticiple": "corso"
   },
   {
     "id": "correttamente_adverb",
@@ -26175,7 +26203,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "aux": "essere"
   },
   {
     "id": "costi_fissi_noun",
@@ -26755,7 +26784,9 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "cresciuto",
+    "aux": "essere"
   },
   {
     "id": "crescere_in_famiglia_verb",
@@ -28481,7 +28512,8 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": []
+    "irregularTags": [],
+    "pastParticiple": "deciso"
   },
   {
     "id": "decifrare_verb",
@@ -29545,7 +29577,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "descritto"
   },
   {
     "id": "desertico_adjective",
@@ -30414,7 +30447,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "difeso"
   },
   {
     "id": "difendere_la_tesi_verb",
@@ -30702,7 +30736,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "dimesso"
   },
   {
     "id": "diminuire_verb",
@@ -30889,7 +30924,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "dipinto"
   },
   {
     "id": "dipingere_un_quadro_verb",
@@ -31190,7 +31226,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "diretto"
   },
   {
     "id": "dirigere_unorchestra_verb",
@@ -31453,7 +31490,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "disconnesso"
   },
   {
     "id": "discoteca_noun",
@@ -31534,7 +31572,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "discusso"
   },
   {
     "id": "disdire_verb",
@@ -31557,7 +31596,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "disdetto"
   },
   {
     "id": "disdire_labbonamento_verb",
@@ -31892,7 +31932,9 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "dispiaciuto",
+    "aux": "essere"
   },
   {
     "id": "disponibile_adjective",
@@ -32000,7 +32042,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "distinto"
   },
   {
     "id": "distinti_saluti_phrase",
@@ -32292,7 +32335,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "diviso"
   },
   {
     "id": "divieto_noun",
@@ -33997,7 +34041,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "eletto"
   },
   {
     "id": "elencare_verb",
@@ -34279,7 +34324,9 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "emerso",
+    "aux": "essere"
   },
   {
     "id": "emettere_fattura_verb",
@@ -34745,7 +34792,8 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": []
+    "irregularTags": [],
+    "aux": "essere"
   },
   {
     "id": "entusiasmarsi_verb",
@@ -35490,7 +35538,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "escluso"
   },
   {
     "id": "esclusivo_adjective",
@@ -35739,7 +35788,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "espanso"
   },
   {
     "id": "espandersi_verb",
@@ -35762,7 +35812,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "espanso"
   },
   {
     "id": "espellere_verb",
@@ -35787,7 +35838,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "espulso"
   },
   {
     "id": "esperienza_noun",
@@ -36087,7 +36139,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "espresso"
   },
   {
     "id": "esproprio_noun",
@@ -36362,7 +36415,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "estinto"
   },
   {
     "id": "estorcere_verb",
@@ -36385,7 +36439,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "estorto"
   },
   {
     "id": "estratto_conto_noun",
@@ -40128,7 +40183,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "aux": "essere"
   },
   {
     "id": "Firenze_noun",
@@ -40754,7 +40810,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "fuso"
   },
   {
     "id": "fondo_di_investimento_noun",
@@ -41493,7 +41550,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "frainteso"
   },
   {
     "id": "fraintendimento_noun",
@@ -41736,7 +41794,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "fritto"
   },
   {
     "id": "friggitoria_noun",
@@ -42070,7 +42129,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "aux": "essere"
   },
   {
     "id": "fulmine_noun",
@@ -45425,7 +45485,8 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": []
+    "irregularTags": [],
+    "aux": "essere"
   },
   {
     "id": "guerra_noun",
@@ -46961,7 +47022,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "immerso"
   },
   {
     "id": "immigrata_noun",
@@ -47076,7 +47138,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "aux": "essere"
   },
   {
     "id": "imparare_verb",
@@ -48232,7 +48295,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "incluso"
   },
   {
     "id": "inclusione_noun",
@@ -50087,7 +50151,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "insistito"
   },
   {
     "id": "insoddisfacente_adjective",
@@ -50645,7 +50710,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "interrotto"
   },
   {
     "id": "interruttore_noun",
@@ -50791,7 +50857,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "intravisto"
   },
   {
     "id": "introdurre_verb",
@@ -50952,7 +51019,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "aux": "essere"
   },
   {
     "id": "invece_adverb",
@@ -51602,7 +51670,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "iscritto"
   },
   {
     "id": "iscriversi_a_un_corso_verb",
@@ -53514,7 +53583,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true
+    "quickStart": true,
+    "pastParticiple": "letto"
   },
   {
     "id": "leggere_un_libro_verb",
@@ -58788,7 +58858,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true
+    "quickStart": true,
+    "pastParticiple": "messo"
   },
   {
     "id": "mettere_in_ordine_verb",
@@ -58852,7 +58923,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "messo"
   },
   {
     "id": "mettersi_il_profumo_verb",
@@ -60908,7 +60980,9 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "morto",
+    "aux": "essere"
   },
   {
     "id": "mormorare_verb",
@@ -61827,7 +61901,9 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "nato",
+    "aux": "essere"
   },
   {
     "id": "nascondere_verb",
@@ -61852,7 +61928,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "nascosto"
   },
   {
     "id": "nascondersi_verb",
@@ -61875,7 +61952,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "nascosto"
   },
   {
     "id": "naso_noun",
@@ -64477,7 +64555,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "offeso"
   },
   {
     "id": "offerta_noun",
@@ -64554,7 +64633,8 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": []
+    "irregularTags": [],
+    "pastParticiple": "offerto"
   },
   {
     "id": "oggi_noun",
@@ -68196,7 +68276,8 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": []
+    "irregularTags": [],
+    "aux": "essere"
   },
   {
     "id": "partita_noun",
@@ -69905,7 +69986,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true
+    "quickStart": true,
+    "pastParticiple": "perso"
   },
   {
     "id": "perdere_il_treno_verb",
@@ -69968,7 +70050,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "perso"
   },
   {
     "id": "perdita_noun",
@@ -70474,7 +70557,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "persuaso"
   },
   {
     "id": "persuasivo_adjective",
@@ -70969,7 +71053,9 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "piaciuto",
+    "aux": "essere"
   },
   {
     "id": "piadina_noun",
@@ -71036,7 +71122,8 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": []
+    "irregularTags": [],
+    "pastParticiple": "pianto"
   },
   {
     "id": "piangere_la_perdita_verb",
@@ -74515,7 +74602,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true
+    "quickStart": true,
+    "pastParticiple": "preso"
   },
   {
     "id": "prendere_a_prestito_verb",
@@ -74845,7 +74933,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "prescritto"
   },
   {
     "id": "presentare_verb",
@@ -75236,7 +75325,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "previsto"
   },
   {
     "id": "prevedibile_adjective",
@@ -76595,7 +76685,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "promesso"
   },
   {
     "id": "promontorio_noun",
@@ -76682,7 +76773,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "promosso"
   },
   {
     "id": "pronipote_noun",
@@ -77016,7 +77108,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "protetto"
   },
   {
     "id": "proteggere_lambiente_verb",
@@ -77683,7 +77776,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "punto"
   },
   {
     "id": "punire_verb",
@@ -78765,7 +78859,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "raccolto"
   },
   {
     "id": "raccogliere_dati_verb",
@@ -78998,7 +79093,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "raso"
   },
   {
     "id": "radersi_la_testa_verb",
@@ -79228,7 +79324,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "raggiunto"
   },
   {
     "id": "raggiungere_un_obiettivo_verb",
@@ -81366,7 +81463,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "ristretto"
   },
   {
     "id": "restructuring_noun",
@@ -81604,7 +81702,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "riassunto"
   },
   {
     "id": "riassunto_noun",
@@ -82066,7 +82165,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "richiesto"
   },
   {
     "id": "riciclabile_adjective",
@@ -82218,7 +82318,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "ricongiunto"
   },
   {
     "id": "riconoscenza_noun",
@@ -82252,7 +82353,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "riconosciuto"
   },
   {
     "id": "riconoscimento_facciale_noun",
@@ -82450,7 +82552,8 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": []
+    "irregularTags": [],
+    "pastParticiple": "riso"
   },
   {
     "id": "ridimensionare_verb",
@@ -82756,7 +82859,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "riflesso"
   },
   {
     "id": "riforma_noun",
@@ -83171,7 +83275,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "rimpianto"
   },
   {
     "id": "rimpianto_noun",
@@ -83492,7 +83597,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "aux": "essere"
   },
   {
     "id": "ripetente_noun",
@@ -83608,7 +83714,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "ripreso"
   },
   {
     "id": "riprendersi_da_un_intervento_verb",
@@ -83847,7 +83954,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "risolto"
   },
   {
     "id": "risonanza_magnetica_noun",
@@ -84061,7 +84169,8 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": []
+    "irregularTags": [],
+    "pastParticiple": "risposto"
   },
   {
     "id": "rispondere_a_verb",
@@ -84380,7 +84489,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "aux": "essere"
   },
   {
     "id": "rivelare_verb",
@@ -86817,7 +86927,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "aux": "essere"
   },
   {
     "id": "scarabeo_noun",
@@ -87026,7 +87137,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "scelto"
   },
   {
     "id": "scegliere_il_regalo_verb",
@@ -87103,7 +87215,9 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "sceso",
+    "aux": "essere"
   },
   {
     "id": "scendere_dallautobus_verb",
@@ -87782,7 +87896,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "scommesso"
   },
   {
     "id": "scomodo_adjective",
@@ -87992,7 +88107,8 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": []
+    "irregularTags": [],
+    "pastParticiple": "scoperto"
   },
   {
     "id": "scopritore_noun",
@@ -88085,7 +88201,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "scorto"
   },
   {
     "id": "scorpione_noun",
@@ -88122,7 +88239,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "scorso"
   },
   {
     "id": "scorrere_verso_il_basso_verb",
@@ -88245,7 +88363,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true
+    "quickStart": true,
+    "pastParticiple": "scritto"
   },
   {
     "id": "scrivere_un_romanzo_verb",
@@ -91800,7 +91919,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "soffritto"
   },
   {
     "id": "soffrire_verb",
@@ -91824,7 +91944,8 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": []
+    "irregularTags": [],
+    "pastParticiple": "sofferto"
   },
   {
     "id": "soffritto_noun",
@@ -92532,7 +92653,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "soppresso"
   },
   {
     "id": "sopra_preposition",
@@ -92691,7 +92813,9 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "sorto",
+    "aux": "essere"
   },
   {
     "id": "sorpassare_verb",
@@ -92757,7 +92881,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "sorpreso"
   },
   {
     "id": "sorpresa_noun",
@@ -92800,7 +92925,8 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": []
+    "irregularTags": [],
+    "pastParticiple": "sorriso"
   },
   {
     "id": "sorseggiare_verb",
@@ -92887,7 +93013,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "sospeso"
   },
   {
     "id": "sospetto_noun",
@@ -93039,7 +93166,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "sottinteso"
   },
   {
     "id": "sotto_preposition",
@@ -93800,7 +93928,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "spento"
   },
   {
     "id": "spendere_verb",
@@ -93823,7 +93952,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "speso"
   },
   {
     "id": "spendere_troppo_verb",
@@ -94129,7 +94259,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "spinto"
   },
   {
     "id": "spinoso_adjective",
@@ -97564,7 +97695,9 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "svenuto",
+    "aux": "essere"
   },
   {
     "id": "Svezia_noun",
@@ -100583,7 +100716,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "tinto"
   },
   {
     "id": "tingere_i_capelli_verb",
@@ -100864,7 +100998,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "tolto"
   },
   {
     "id": "togliersi_verb",
@@ -100887,7 +101022,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true
+    "reflexive": true,
+    "pastParticiple": "tolto"
   },
   {
     "id": "tolleranza_noun",
@@ -101098,7 +101234,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true
+    "quickStart": true,
+    "aux": "essere"
   },
   {
     "id": "tornare_a_casa_verb",
@@ -105101,7 +105238,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true
+    "quickStart": true,
+    "pastParticiple": "visto"
   },
   {
     "id": "vedova_noun",
@@ -106500,7 +106638,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false
+    "reflexive": false,
+    "pastParticiple": "vinto"
   },
   {
     "id": "vincere_un_appalto_verb",
@@ -106997,7 +107136,8 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true
+    "quickStart": true,
+    "pastParticiple": "vissuto"
   },
   {
     "id": "vocabolario_noun",
@@ -128022,7 +128162,9 @@
       "be equivalent",
       "equal"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "equivalso",
+    "aux": "essere"
   },
   {
     "id": "essere_urgente_verb",
@@ -128046,7 +128188,9 @@
     "en_syn": [
       "be worth"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "valso",
+    "aux": "essere"
   },
   {
     "id": "supplicare_verb",
@@ -128084,7 +128228,8 @@
     "en_syn": [
       "bite"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "morso"
   },
   {
     "id": "sanguinare_verb",
@@ -128147,7 +128292,8 @@
       "break down",
       "break"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "rotto"
   },
   {
     "id": "scoppiare_verb",
@@ -128198,7 +128344,8 @@
       "capsize",
       "overturn"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "capovolto"
   },
   {
     "id": "catturare_verb",
@@ -128287,7 +128434,8 @@
     "en_syn": [
       "coincide"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "coinciso"
   },
   {
     "id": "combinare_verb",
@@ -128313,7 +128461,9 @@
       "originate"
     ],
     "it_yn": [],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "provenuto",
+    "aux": "essere"
   },
   {
     "id": "confortare_verb",
@@ -128339,7 +128489,8 @@
       "commit",
       "carry out"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "commesso"
   },
   {
     "id": "suicidarsi_verb",
@@ -128426,7 +128577,8 @@
     "en_syn": [
       "connect"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "connesso"
   },
   {
     "id": "conquistare_verb",
@@ -128463,7 +128615,9 @@
     "en_syn": [
       "consist"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "consistito",
+    "aux": "essere"
   },
   {
     "id": "consolare_verb",
@@ -128573,7 +128727,8 @@
     "en_syn": [
       "correspond"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "corrisposto"
   },
   {
     "id": "contare_verb",
@@ -128623,7 +128778,8 @@
     "en_syn": [
       "demand"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "esatto"
   },
   {
     "id": "dedicare_verb",
@@ -128684,7 +128840,8 @@
     "en_syn": [
       "destroy"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "distrutto"
   },
   {
     "id": "dettagliare_verb",
@@ -128734,7 +128891,8 @@
       "disappear",
       "vanish"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "aux": "essere"
   },
   {
     "id": "deludere_verb",
@@ -128747,7 +128905,8 @@
       "disappoint",
       "let down"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "deluso"
   },
   {
     "id": "disapprovare_verb",
@@ -128785,7 +128944,8 @@
     "en_syn": [
       "disconnect"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "disconnesso"
   },
   {
     "id": "discriminare_verb",
@@ -128836,7 +128996,8 @@
       "disperse",
       "scatter"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "disperso"
   },
   {
     "id": "sconvolgere_verb",
@@ -128849,7 +129010,8 @@
       "disrupt",
       "upset"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "sconvolto"
   },
   {
     "id": "distorcere_verb",
@@ -128862,7 +129024,8 @@
       "distort",
       "twist"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "distorto"
   },
   {
     "id": "distrarre_verb",
@@ -129012,7 +129175,8 @@
       "elapse",
       "pass"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "trascorso"
   },
   {
     "id": "emettere_verb",
@@ -129025,7 +129189,8 @@
       "emit",
       "let out"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "emesso"
   },
   {
     "id": "impiegare_verb",
@@ -129151,7 +129316,8 @@
       "evolve",
       "develop"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "evoluto"
   },
   {
     "id": "esagerare_verb",
@@ -129225,7 +129391,9 @@
     "en_syn": [
       "exist"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "esistito",
+    "aux": "essere"
   },
   {
     "id": "esplodere_verb",
@@ -129238,7 +129406,8 @@
       "explode",
       "break out"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "esploso"
   },
   {
     "id": "sfruttare_verb",
@@ -129263,7 +129432,8 @@
       "extend",
       "spread"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "esteso"
   },
   {
     "id": "estrarre_verb",
@@ -129505,7 +129675,8 @@
       "grant",
       "allow"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "concesso"
   },
   {
     "id": "indovinare_verb",
@@ -129530,7 +129701,8 @@
       "hang up",
       "hang"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "appeso"
   },
   {
     "id": "succedere_verb",
@@ -129543,7 +129715,9 @@
       "happen",
       "occur"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "successo",
+    "aux": "essere"
   },
   {
     "id": "danneggiare_verb",
@@ -129645,7 +129819,8 @@
     "en_syn": [
       "have repercussions"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "ripercosso"
   },
   {
     "id": "agganciare_verb",
@@ -129859,7 +130034,9 @@
     "en_syn": [
       "incur"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "incorso",
+    "aux": "essere"
   },
   {
     "id": "industrializzare_verb",
@@ -129883,7 +130060,8 @@
     "en_syn": [
       "inflict"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "inflitto"
   },
   {
     "id": "influire_verb",
@@ -130019,7 +130197,8 @@
       "intend",
       "claim"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "preteso"
   },
   {
     "id": "intensificare_verb",
@@ -130055,7 +130234,9 @@
     "en_syn": [
       "intervene"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "intervenuto",
+    "aux": "essere"
   },
   {
     "id": "intimidire_verb",
@@ -130091,7 +130272,8 @@
     "en_syn": [
       "invade"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "invaso"
   },
   {
     "id": "inventare_verb",
@@ -130115,7 +130297,8 @@
     "en_syn": [
       "involve"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "coinvolto"
   },
   {
     "id": "irritare_verb",
@@ -130164,7 +130347,8 @@
     "en_syn": [
       "juxtapose"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "giustapposto"
   },
   {
     "id": "uccidere_verb",
@@ -130176,7 +130360,8 @@
     "en_syn": [
       "kill"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "ucciso"
   },
   {
     "id": "lavorare_a_maglia_verb",
@@ -130601,7 +130786,8 @@
       "occur",
       "happen"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "aux": "essere"
   },
   {
     "id": "omettere_verb",
@@ -130614,7 +130800,8 @@
       "omit",
       "leave out"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "omesso"
   },
   {
     "id": "opinare_verb",
@@ -130639,7 +130826,8 @@
     "en_syn": [
       "oppose"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "opposto"
   },
   {
     "id": "opprimere_verb",
@@ -130651,7 +130839,8 @@
     "en_syn": [
       "oppress"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "oppresso"
   },
   {
     "id": "optare_verb",
@@ -130754,7 +130943,8 @@
       "pass away",
       "die"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "aux": "essere"
   },
   {
     "id": "mettere_in_pausa_verb",
@@ -130814,7 +131004,8 @@
     "en_syn": [
       "persist"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "persistito"
   },
   {
     "id": "plagiare_verb",
@@ -130864,7 +131055,8 @@
       "portray",
       "depict"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "ritratto"
   },
   {
     "id": "porre_verb",
@@ -130877,7 +131069,8 @@
       "pose",
       "raise"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "posto"
   },
   {
     "id": "possedere_verb",
@@ -130927,7 +131120,8 @@
       "predict",
       "forecast"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "predetto"
   },
   {
     "id": "predominare_verb",
@@ -130965,7 +131159,8 @@
       "presume",
       "assume"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "presunto"
   },
   {
     "id": "presupporre_verb",
@@ -130977,7 +131172,8 @@
     "en_syn": [
       "presuppose"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "presupposto"
   },
   {
     "id": "fingere_verb",
@@ -130990,7 +131186,8 @@
       "pretend",
       "feign"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "finto"
   },
   {
     "id": "prevalere_verb",
@@ -131002,7 +131199,9 @@
     "en_syn": [
       "prevail"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "prevalso",
+    "aux": "essere"
   },
   {
     "id": "priorizzare_verb",
@@ -131361,7 +131560,8 @@
     "en_syn": [
       "reelect"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "rieletto"
   },
   {
     "id": "raffinare_verb",
@@ -131411,7 +131611,8 @@
       "register",
       "enroll"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "iscritto"
   },
   {
     "id": "regolarizzare_verb",
@@ -131586,7 +131787,8 @@
       "remove",
       "take away"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "rimosso"
   },
   {
     "id": "remunerare_verb",
@@ -131636,7 +131838,8 @@
       "repress",
       "suppress"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "represso"
   },
   {
     "id": "riprodurre_verb",
@@ -131648,7 +131851,8 @@
     "en_syn": [
       "reproduce"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "riprodotto"
   },
   {
     "id": "ripudiare_verb",
@@ -131674,7 +131878,8 @@
       "rescue",
       "save"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "soccorso"
   },
   {
     "id": "risentirsi_verb",
@@ -131711,7 +131916,8 @@
     "en_syn": [
       "resist"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "resistito"
   },
   {
     "id": "risuonare_verb",
@@ -131737,7 +131943,8 @@
       "restrict",
       "limit"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "ristretto"
   },
   {
     "id": "risultare_in_verb",
@@ -131762,7 +131969,9 @@
       "resurge",
       "rise again"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "risorto",
+    "aux": "essere"
   },
   {
     "id": "resuscitare_verb",
@@ -131838,7 +132047,8 @@
       "revive",
       "relive"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "rivissuto"
   },
   {
     "id": "revocare_verb",
@@ -132052,7 +132262,8 @@
       "seem",
       "appear"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "aux": "essere"
   },
   {
     "id": "segregare_verb",
@@ -132114,7 +132325,8 @@
     "en_syn": [
       "shake"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "scosso"
   },
   {
     "id": "brillare_verb",
@@ -132253,7 +132465,8 @@
       "stand out",
       "excel"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "distinto"
   },
   {
     "id": "fare_le_ore_piccole_verb",
@@ -132316,7 +132529,8 @@
       "submit",
       "subdue"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "sottomesso"
   },
   {
     "id": "sussistere_verb",
@@ -132329,7 +132543,8 @@
       "subsist",
       "survive"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "sussistito"
   },
   {
     "id": "soccombere_verb",
@@ -132495,7 +132710,9 @@
     "en_syn": [
       "survive"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "sopravvissuto",
+    "aux": "essere"
   },
   {
     "id": "truffare_verb",
@@ -132597,7 +132814,8 @@
       "tend",
       "be inclined"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "teso"
   },
   {
     "id": "gettare_verb",
@@ -132659,7 +132877,8 @@
     "en_syn": [
       "transcend"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "trasceso"
   },
   {
     "id": "trascrivere_verb",
@@ -132671,7 +132890,8 @@
     "en_syn": [
       "transcribe"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "trascritto"
   },
   {
     "id": "trasgredire_verb",
@@ -132710,7 +132930,8 @@
       "transmit",
       "broadcast"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "trasmesso"
   },
   {
     "id": "traumatizzare_verb",
@@ -132735,7 +132956,8 @@
       "travel through",
       "cover"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "percorso"
   },
   {
     "id": "trattare_verb",
@@ -132812,7 +133034,8 @@
       "turn over",
       "flip"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "capovolto"
   },
   {
     "id": "digitare_verb",
@@ -132849,7 +133072,8 @@
       "undertake",
       "embark on"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "intrapreso"
   },
   {
     "id": "disfare_verb",
@@ -133086,7 +133310,8 @@
     "en_syn": [
       "wrap"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "avvolto"
   },
   {
     "id": "redigere_verb",
@@ -133099,7 +133324,8 @@
       "write",
       "draft"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "redatto"
   },
   {
     "id": "zigzagare_verb",

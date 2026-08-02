@@ -85,13 +85,30 @@ function getReflexivePronoun(person) {
 
 // ─── Verb infinitive helpers ──────────────────────────────────────────────────
 
+// Reflexives built on a contracted infinitive need the whole -re back, not just -e.
+const CONTRACTED_REFLEXIVE = new Set(["ridursi", "opporsi"]);
+
 function isReflexiveInfinitive(inf) {
-  return typeof inf === "string" && inf.toLowerCase().endsWith("si");
+  // Must be a one-word infinitive in -arsi/-ersi/-irsi/-orsi/-ursi. Testing for a
+  // bare "si" also matched phrases like "fare un brindisi" and "difendere la tesi",
+  // which were then conjugated with reflexive pronouns attached.
+  return typeof inf === "string" && !/\s/.test(inf) && /[aeiou]rsi$/i.test(inf);
 }
 
 function getBaseInfinitive(inf) {
   if (!inf) return inf;
-  return isReflexiveInfinitive(inf) ? inf.slice(0, -2) : inf;
+  if (!isReflexiveInfinitive(inf)) return inf;
+  // The infinitive drops its final -e before -si (lavare -> lavarsi), so the -e has
+  // to go back on. Stripping -si alone leaves "lavar", which pluralised out to
+  // participles like "lavarato".
+  return inf.slice(0, -2) + (CONTRACTED_REFLEXIVE.has(inf.toLowerCase()) ? "re" : "e");
+}
+
+// Reflexive verbs always form compound tenses with essere.
+function auxFor(verb) {
+  if (verb.aux) return verb.aux;
+  const reflexive = verb.reflexive === true || isReflexiveInfinitive(verb.infinitive);
+  return reflexive ? "essere" : "avere";
 }
 
 // ─── Orthographic adjustments ─────────────────────────────────────────────────
@@ -118,9 +135,7 @@ function applyOrthography(baseStem, baseInf, tense, person, ending) {
 // ─── Passato prossimo auxiliary + past participle ─────────────────────────────
 
 function getAuxiliary(verb, person) {
-  // Verbs that take "essere" store aux: "essere" in their data.
-  // Default is "avere".
-  const aux = verb.aux || "avere";
+  const aux = auxFor(verb);
   if (aux !== "essere") {
     // avere auxiliary — conjugated in present
     const avere = {
@@ -142,7 +157,7 @@ function getPastParticiple(verb, person) {
   if (verb.pastParticiple) {
     const pp = verb.pastParticiple;
     // If essere auxiliary, agree with canonical person
-    if ((verb.aux || "avere") === "essere") {
+    if (auxFor(verb) === "essere") {
       const p = (person || "").toLowerCase();
       if (p === "io" || p === "tu" || p === "lui") return pp; // masc sg (default)
       if (p === "noi" || p === "voi" || p === "loro") return pp.replace(/o$/, "i"); // masc pl
@@ -157,7 +172,7 @@ function getPastParticiple(verb, person) {
   else if (inf.endsWith("ire")) pp = inf.slice(0, -3) + "ito";
   else pp = inf + "ato";
 
-  if ((verb.aux || "avere") === "essere") {
+  if (auxFor(verb) === "essere") {
     const p = (person || "").toLowerCase();
     if (p === "noi" || p === "voi" || p === "loro") pp = pp.replace(/o$/, "i");
   }
