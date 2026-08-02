@@ -180,19 +180,41 @@ function getFuturoStem(verb) {
 
 // ─── Noun gender / article / pluralisation ────────────────────────────────────
 
+// Nouns whose final -io carries the stress, so the plural keeps both i's.
+const PLURAL_STRESSED_IO = new Set([
+  "zio", "addio", "pendio", "rinvio", "brusio", "mormorio", "ronzio",
+  "fruscio", "scintillio", "calpestio", "formicolio", "oblio", "leggio"
+]);
+
 function pluralizeNoun(base, nounClass) {
   const s = (base || "").trim();
   const low = s.toLowerCase();
+
+  if (nounClass === "m_inv" || nounClass === "f_inv") return s;
 
   // Nouns ending in accented vowel or consonant are invariable
   if (/[àèìòùáéíóú]$/.test(low) || /[^aeiou]$/.test(low)) return s;
 
   if (nounClass === "m_std" || nounClass === "m_o") {
+    // Unstressed -io drops its i: figlio -> figli, viaggio -> viaggi, studio -> studi.
+    // A stressed -io keeps both: zio -> zii, addio -> addii.
+    if (low.endsWith("io")) {
+      return PLURAL_STRESSED_IO.has(low) ? s.slice(0, -1) + "i" : s.slice(0, -2) + "i";
+    }
+    // -co/-go is deliberately left soft. Hardening depends on where the stress
+    // falls (albergo -> alberghi but medico -> medici), which is not recoverable
+    // from the spelling, so the words that harden carry a noun_override instead.
     if (low.endsWith("o")) return s.slice(0, -1) + "i";
     if (low.endsWith("e")) return s.slice(0, -1) + "i";
     return s;
   }
   if (nounClass === "f_std" || nounClass === "f_a") {
+    // -cia/-gia: the i survives only after a vowel.
+    // camicia -> camicie, ciliegia -> ciliegie, but faccia -> facce, spiaggia -> spiagge.
+    const soft = low.match(/([aeiou])?[cg]ia$/);
+    if (soft) return s.slice(0, -2) + (soft[1] ? "ie" : "e");
+    // -ca/-ga keep the hard consonant: amica -> amiche, alga -> alghe.
+    if (/[cg]a$/.test(low)) return s.slice(0, -1) + "he";
     if (low.endsWith("a")) return s.slice(0, -1) + "e";
     if (low.endsWith("e")) return s.slice(0, -1) + "i";
     return s;
@@ -213,12 +235,13 @@ function nounArticlesForClass(nounClass, wordBase) {
   const startsX = /^x/.test(w);
   const needsLo = startsZ || startsGn || startsPS || startsX || /^s[^aeiou]/.test(w);
 
-  if (nounClass === "m_std") {
+  // The _inv classes take ordinary articles; only their plural form is invariable.
+  if (nounClass === "m_std" || nounClass === "m_inv") {
     if (startsVowel) return { sg: "l'", pl: "gli" };
     if (needsLo)     return { sg: "lo", pl: "gli" };
     return               { sg: "il", pl: "i" };
   }
-  if (nounClass === "f_std") {
+  if (nounClass === "f_std" || nounClass === "f_inv") {
     if (startsVowel) return { sg: "l'", pl: "le" };
     return               { sg: "la", pl: "le" };
   }

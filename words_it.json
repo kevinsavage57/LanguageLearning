@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "id": "a_preposition",
     "it": "a",
@@ -2508,10 +2508,16 @@
     "en": "fresco",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 8,
+    "noun_override": {
+      "base": "affresco",
+      "plural": "affreschi",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "affrontare_verb",
@@ -3248,10 +3254,16 @@
     "en": "hotel",
     "level": "A1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5
+    "rating": 5,
+    "noun_override": {
+      "base": "albergo",
+      "plural": "alberghi",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "albero_noun",
@@ -3310,10 +3322,16 @@
     "en": "apricot tree",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "noun_override": {
+      "base": "albicocco",
+      "plural": "albicocchi",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "album_noun",
@@ -6861,7 +6879,7 @@
     "rating": 6,
     "noun_override": {
       "base": "Arabia Saudita",
-      "plural": "Arabie Saudite",
+      "plural": "Arabia Saudita",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -7070,10 +7088,16 @@
     "en": "archipelago",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 8,
+    "noun_override": {
+      "base": "arcipelago",
+      "plural": "arcipelaghi",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "arco_di_trionfo_noun",
@@ -7948,7 +7972,7 @@
     "rating": 6,
     "noun_override": {
       "base": "Artico (oceano)",
-      "plural": "Artici (oceano)",
+      "plural": "Artico (oceano)",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -10683,7 +10707,7 @@
     "rating": 4,
     "noun_override": {
       "base": "Banca Mondiale",
-      "plural": "Banche Mondiali",
+      "plural": "Banca Mondiale",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -10716,10 +10740,16 @@
     "en": "school desk",
     "level": "A1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 6,
+    "noun_override": {
+      "base": "banco",
+      "plural": "banchi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "banco_del_sangue_noun",
@@ -12030,7 +12060,7 @@
     "en": "bingo",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "m_inv",
     "en_syn": [],
     "it_syn": [],
     "rating": 7
@@ -12869,7 +12899,7 @@
     "rating": 7,
     "noun_override": {
       "base": "Booker Prize",
-      "plural": "Booker Prizi",
+      "plural": "Booker Prize",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -12916,12 +12946,18 @@
     "en": "village",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [
       "medieval village"
     ],
     "it_syn": [],
-    "rating": 5
+    "rating": 5,
+    "noun_override": {
+      "base": "borgo",
+      "plural": "borghi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "borsa_noun",
@@ -13024,12 +13060,18 @@
     "en": "wood",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [
       "woodland"
     ],
     "it_syn": [],
-    "rating": 5
+    "rating": 5,
+    "noun_override": {
+      "base": "bosco",
+      "plural": "boschi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "bosco_di_querce_noun",
@@ -13581,10 +13623,16 @@
     "en": "caterpillar",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 8,
+    "noun_override": {
+      "base": "bruco",
+      "plural": "bruchi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "brufolo_noun",
@@ -14379,10 +14427,16 @@
     "en": "cacciucco",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10
+    "rating": 10,
+    "noun_override": {
+      "base": "cacciucco",
+      "plural": "cacciucchi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "cachi_noun",
@@ -15634,7 +15688,7 @@
     "rating": 8,
     "noun_override": {
       "base": "Canale di Sicilia",
-      "plural": "Canali di Sicilia",
+      "plural": "Canale di Sicilia",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -17403,10 +17457,16 @@
     "en": "house husband",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4
+    "rating": 4,
+    "noun_override": {
+      "base": "casalingo",
+      "plural": "casalinghi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "cascata_noun",
@@ -17659,10 +17719,16 @@
     "en": "catalogue",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 7,
+    "noun_override": {
+      "base": "catalogo",
+      "plural": "cataloghi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "Catania_noun",
@@ -18804,7 +18870,7 @@
     "rating": 5,
     "noun_override": {
       "base": "Champions League",
-      "plural": "Champions Leagui",
+      "plural": "Champions League",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -19303,10 +19369,16 @@
     "en": "kiosk",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 8,
+    "noun_override": {
+      "base": "chiosco",
+      "plural": "chioschi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "chirurga_noun",
@@ -19337,11 +19409,17 @@
     "en": "surgeon",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
     "rating": 6,
-    "gender_pair_id": "chirurga_noun"
+    "gender_pair_id": "chirurga_noun",
+    "noun_override": {
+      "base": "chirurgo",
+      "plural": "chirurghi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "chitarra_noun",
@@ -23633,7 +23711,7 @@
     "en": "Congo",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "m_inv",
     "en_syn": [],
     "it_syn": [],
     "rating": 7
@@ -24072,7 +24150,7 @@
     "rating": 4,
     "noun_override": {
       "base": "Consiglio di Sicurezza",
-      "plural": "Consigli di Sicurezza",
+      "plural": "Consiglio di Sicurezza",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -25378,7 +25456,7 @@
     "rating": 5,
     "noun_override": {
       "base": "Corea del Sud",
-      "plural": "Coree del Sud",
+      "plural": "Corea del Sud",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -26145,7 +26223,7 @@
     "rating": 9,
     "noun_override": {
       "base": "Costiera Amalfitana",
-      "plural": "Costiere Amalfitane",
+      "plural": "Costiera Amalfitana",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -27027,7 +27105,7 @@
     "rating": 7,
     "noun_override": {
       "base": "crociera nel Mediterraneo",
-      "plural": "crociere nel Mediterranei",
+      "plural": "crociere nel Mediterraneo",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -27458,11 +27536,17 @@
     "en": "cook",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
     "rating": 5,
-    "gender_pair_id": "cuoca_noun"
+    "gender_pair_id": "cuoca_noun",
+    "noun_override": {
+      "base": "cuoco",
+      "plural": "cuochi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "cuoio_noun",
@@ -27679,10 +27763,16 @@
     "en": "cyberattack",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "noun_override": {
+      "base": "cyberattacco",
+      "plural": "cyberattacchi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "cyberbullismo_noun",
@@ -30099,10 +30189,16 @@
     "en": "dialogue",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 6,
+    "noun_override": {
+      "base": "dialogo",
+      "plural": "dialoghi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "diamante_noun",
@@ -30706,10 +30802,16 @@
     "en": "God",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 3
+    "rating": 3,
+    "noun_override": {
+      "base": "Dio",
+      "plural": "dei",
+      "article_sg": "il",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "dipartimento_noun",
@@ -34123,10 +34225,16 @@
     "en": "embargo",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 8,
+    "noun_override": {
+      "base": "embargo",
+      "plural": "embarghi",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "emblema_noun",
@@ -34791,10 +34899,16 @@
     "en": "epilogue",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 8,
+    "noun_override": {
+      "base": "epilogo",
+      "plural": "epiloghi",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "episodio_noun",
@@ -37049,10 +37163,16 @@
     "en": "falcon",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 7,
+    "noun_override": {
+      "base": "falco",
+      "plural": "falchi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "falegname_noun",
@@ -39156,10 +39276,16 @@
     "en": "fig tree",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 6,
+    "noun_override": {
+      "base": "fico",
+      "plural": "fichi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "fico_dIndia_noun",
@@ -42013,13 +42139,19 @@
     "en": "fungus",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [
       "mushroom",
       "mould"
     ],
     "it_syn": [],
-    "rating": 7
+    "rating": 7,
+    "noun_override": {
+      "base": "fungo",
+      "plural": "funghi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "funicolare_noun",
@@ -42108,7 +42240,7 @@
     "en": "offside",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "m_inv",
     "en_syn": [],
     "it_syn": [],
     "rating": 8
@@ -43063,7 +43195,7 @@
     "rating": 6,
     "noun_override": {
       "base": "Georgia (paese)",
-      "plural": "Georgie (paese)",
+      "plural": "Georgia (paese)",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -44225,7 +44357,7 @@
     "rating": 6,
     "noun_override": {
       "base": "Golden Globe",
-      "plural": "Golden Globi",
+      "plural": "Golden Globe",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -46703,10 +46835,16 @@
     "en": "boarding",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 7,
+    "noun_override": {
+      "base": "imbarco",
+      "plural": "imbarchi",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "imbianchino_noun",
@@ -51543,7 +51681,7 @@
     "rating": 9,
     "noun_override": {
       "base": "isola d'Elba",
-      "plural": "isole d'Elbe",
+      "plural": "isola d'Elba",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -51559,23 +51697,6 @@
     "en_syn": [],
     "it_syn": [],
     "rating": 6
-  },
-  {
-    "id": "isole_Eolie_noun",
-    "it": "isole Eolie",
-    "en": "Aeolian Islands",
-    "level": "B1",
-    "pos": "noun",
-    "noun_class": "f_std",
-    "en_syn": [],
-    "it_syn": [],
-    "rating": 9,
-    "noun_override": {
-      "base": "isole Eolie",
-      "plural": "isole Eolie",
-      "article_sg": "le",
-      "article_pl": "le"
-    }
   },
   {
     "id": "isoterma_noun",
@@ -52305,10 +52426,16 @@
     "en": "lake",
     "level": "A1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5
+    "rating": 5,
+    "noun_override": {
+      "base": "lago",
+      "plural": "laghi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "Lago_di_Como_noun",
@@ -52322,7 +52449,7 @@
     "rating": 8,
     "noun_override": {
       "base": "Lago di Como",
-      "plural": "Lagi di Como",
+      "plural": "Lago di Como",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -52340,7 +52467,7 @@
     "rating": 9,
     "noun_override": {
       "base": "Lago di Garda",
-      "plural": "Lagi di Garda",
+      "plural": "Lago di Garda",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -52358,7 +52485,7 @@
     "rating": 9,
     "noun_override": {
       "base": "Lago Maggiore",
-      "plural": "Lagi Maggiori",
+      "plural": "Lago Maggiore",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -52615,10 +52742,16 @@
     "en": "small square",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5
+    "rating": 5,
+    "noun_override": {
+      "base": "largo",
+      "plural": "larghi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "laringe_noun",
@@ -54864,10 +54997,16 @@
     "en": "logo",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 6,
+    "noun_override": {
+      "base": "logo",
+      "plural": "loghi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "logopedista_noun",
@@ -54914,10 +55053,16 @@
     "en": "earthworm",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "noun_override": {
+      "base": "lombrico",
+      "plural": "lombrichi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "longitudine_noun",
@@ -56228,10 +56373,16 @@
     "en": "mango",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 7,
+    "noun_override": {
+      "base": "mango",
+      "plural": "manghi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "mangroveto_noun",
@@ -56483,7 +56634,7 @@
     "rating": 7,
     "noun_override": {
       "base": "mar Mediterraneo",
-      "plural": "mar Mediterranei",
+      "plural": "mar Mediterraneo",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -56764,7 +56915,7 @@
     "en": "Morocco",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "m_inv",
     "en_syn": [],
     "it_syn": [],
     "rating": 7
@@ -59182,10 +59333,16 @@
     "en": "microsurgeon",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10
+    "rating": 10,
+    "noun_override": {
+      "base": "microchirurgo",
+      "plural": "microchirurghi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "microeconomico_adjective",
@@ -60196,10 +60353,16 @@
     "en": "mollusc",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "noun_override": {
+      "base": "mollusco",
+      "plural": "molluschi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "molo_noun",
@@ -60305,7 +60468,7 @@
     "rating": 7,
     "noun_override": {
       "base": "Monaco di Baviera",
-      "plural": "Monaci di Baviera",
+      "plural": "Monaco di Baviera",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -60565,7 +60728,7 @@
     "rating": 8,
     "noun_override": {
       "base": "Monte Bianco",
-      "plural": "Monti Bianci",
+      "plural": "Monte Bianco",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -60583,7 +60746,7 @@
     "rating": 9,
     "noun_override": {
       "base": "Monte Etna",
-      "plural": "Monti Etni",
+      "plural": "Monte Etna",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -63841,7 +64004,7 @@
     "rating": 5,
     "noun_override": {
       "base": "Nuova Zelanda",
-      "plural": "Nuove Zelande",
+      "plural": "Nuova Zelanda",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -64027,10 +64190,16 @@
     "en": "obligation",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 6,
+    "noun_override": {
+      "base": "obbligo",
+      "plural": "obblighi",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "obelisco_noun",
@@ -64038,10 +64207,16 @@
     "en": "obelisk",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "noun_override": {
+      "base": "obelisco",
+      "plural": "obelischi",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "obiettivamente_adverb",
@@ -65016,7 +65191,7 @@
     "rating": 4,
     "noun_override": {
       "base": "ora e mezza",
-      "plural": "ore i mezze",
+      "plural": "ore e mezza",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -65803,10 +65978,16 @@
     "en": "ossobuco",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10
+    "rating": 10,
+    "noun_override": {
+      "base": "ossobuco",
+      "plural": "ossibuchi",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "ostacolare_verb",
@@ -67424,10 +67605,16 @@
     "en": "park",
     "level": "A1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4
+    "rating": 4,
+    "noun_override": {
+      "base": "parco",
+      "plural": "parchi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "parco_acquatico_noun",
@@ -70519,10 +70706,16 @@
     "en": "peach tree",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 7,
+    "noun_override": {
+      "base": "pesco",
+      "plural": "peschi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "pesistica_noun",
@@ -75936,11 +76129,17 @@
     "en": "refugee",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
     "rating": 7,
-    "gender_pair_id": "profuga_noun"
+    "gender_pair_id": "profuga_noun",
+    "noun_override": {
+      "base": "profugo",
+      "plural": "profughi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "profugo_di_guerra_noun",
@@ -76343,10 +76542,16 @@
     "en": "prologue",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 8,
+    "noun_override": {
+      "base": "prologo",
+      "plural": "prologhi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "prolunga_noun",
@@ -76731,10 +76936,16 @@
     "en": "prosecco",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "noun_override": {
+      "base": "prosecco",
+      "plural": "prosecchi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "prospettiva_noun",
@@ -80357,7 +80568,7 @@
     "rating": 5,
     "noun_override": {
       "base": "Regno Unito",
-      "plural": "Regni Uniti",
+      "plural": "Regno Unito",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -85746,7 +85957,7 @@
     "rating": 8,
     "noun_override": {
       "base": "san Marino",
-      "plural": "san Marini",
+      "plural": "san Marino",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -86143,10 +86354,16 @@
     "en": "disembarkation",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10
+    "rating": 10,
+    "noun_override": {
+      "base": "sbarco",
+      "plural": "sbarchi",
+      "article_sg": "lo",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "sbattere_verb",
@@ -86666,10 +86883,16 @@
     "en": "drain",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 6,
+    "noun_override": {
+      "base": "scarico",
+      "plural": "scarichi",
+      "article_sg": "lo",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "scarpe_noun",
@@ -87337,10 +87560,16 @@
     "en": "sirocco",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10
+    "rating": 10,
+    "noun_override": {
+      "base": "scirocco",
+      "plural": "scirocchi",
+      "article_sg": "lo",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "sciroppo_noun",
@@ -90386,7 +90615,7 @@
     "rating": 8,
     "noun_override": {
       "base": "Siciliano (stretto)",
-      "plural": "Siciliani (stretto)",
+      "plural": "Siciliano (stretto)",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -96578,10 +96807,16 @@
     "en": "juice",
     "level": "A1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 6,
+    "noun_override": {
+      "base": "succo",
+      "plural": "succhi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "succo_di_frutta_noun",
@@ -96755,13 +96990,19 @@
     "en": "tomato sauce",
     "level": "A1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [
       "gravy",
       "sauce"
     ],
     "it_syn": [],
-    "rating": 7
+    "rating": 7,
+    "noun_override": {
+      "base": "sugo",
+      "plural": "sughi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "Sul_mio_onore_phrase",
@@ -97461,7 +97702,7 @@
     "rating": 6,
     "noun_override": {
       "base": "Svizzera italiana",
-      "plural": "Svizzere italiane",
+      "plural": "Svizzera italiana",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -97621,10 +97862,16 @@
     "en": "heel",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 7,
+    "noun_override": {
+      "base": "tacco",
+      "plural": "tacchi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "tacco_a_spillo_noun",
@@ -97863,10 +98110,16 @@
     "en": "talcum powder",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "noun_override": {
+      "base": "talco",
+      "plural": "talchi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "taleggio_noun",
@@ -99226,7 +99479,7 @@
     "rating": 8,
     "noun_override": {
       "base": "tendine d'Achille",
-      "plural": "tendini d'Achilli",
+      "plural": "tendini d'Achille",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -101134,7 +101387,7 @@
     "rating": 5,
     "noun_override": {
       "base": "tour de France",
-      "plural": "tour di Franci",
+      "plural": "tour de France",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -102290,7 +102543,7 @@
     "rating": 10,
     "noun_override": {
       "base": "Trentino-Alto Adige",
-      "plural": "Trentino-Alti Adigi",
+      "plural": "Trentino-Alto Adige",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -102367,10 +102620,16 @@
     "en": "walrus",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "noun_override": {
+      "base": "tricheco",
+      "plural": "trichechi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "Trieste_noun",
@@ -103282,8 +103541,8 @@
     "noun_override": {
       "base": "ufficiale dell'aeronautica",
       "plural": "ufficiali dell'aeronautica",
-      "article_sg": "la",
-      "article_pl": "le"
+      "article_sg": "l'",
+      "article_pl": "gli"
     },
     "audited": "v1-audit-2026-04-12"
   },
@@ -103725,7 +103984,7 @@
     "rating": 4,
     "noun_override": {
       "base": "Unione Europea",
-      "plural": "Unioni Europee",
+      "plural": "Unione Europea",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -104474,7 +104733,7 @@
     "rating": 9,
     "noun_override": {
       "base": "Valle d'Aosta",
-      "plural": "Valli d'Aoste",
+      "plural": "Valle d'Aosta",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -105902,12 +106161,18 @@
     "en": "lane",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [
       "alley"
     ],
     "it_syn": [],
-    "rating": 5
+    "rating": 5,
+    "noun_override": {
+      "base": "vico",
+      "plural": "vichi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "vicolo_noun",
@@ -106008,10 +106273,16 @@
     "en": "video game",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4
+    "rating": 4,
+    "noun_override": {
+      "base": "videogioco",
+      "plural": "videogiochi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "videomaker_noun",
@@ -107546,10 +107817,16 @@
     "en": "zinc",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 7,
+    "noun_override": {
+      "base": "zinco",
+      "plural": "zinchi",
+      "article_sg": "lo",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "zio_noun",
@@ -108544,8 +108821,14 @@
     "en_syn": [],
     "it_syn": [],
     "rating": 5,
-    "noun_class": "m_std",
-    "audited": "v1-audit-2026-04-12"
+    "noun_class": "irregular",
+    "audited": "v1-audit-2026-04-12",
+    "noun_override": {
+      "base": "braccio",
+      "plural": "braccia",
+      "article_sg": "il",
+      "article_pl": "le"
+    }
   },
   {
     "id": "breve_adjective",
@@ -108566,7 +108849,13 @@
     "en_syn": [],
     "it_syn": [],
     "rating": 5,
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "buco",
+      "plural": "buchi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "camerino_noun",
@@ -108719,7 +109008,13 @@
     "en_syn": [],
     "it_syn": [],
     "rating": 7,
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "circo",
+      "plural": "circhi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "coda_noun",
@@ -109252,7 +109547,13 @@
     "en_syn": [],
     "it_syn": [],
     "rating": 5,
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "fiasco",
+      "plural": "fiaschi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "finanza_noun",
@@ -109601,7 +109902,13 @@
     "en_syn": [],
     "it_syn": [],
     "rating": 3,
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "luogo",
+      "plural": "luoghi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "maga_noun",
@@ -111279,12 +111586,18 @@
     "en": "fire",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [
       "flame"
     ],
     "it_syn": [],
-    "rating": 4
+    "rating": 4,
+    "noun_override": {
+      "base": "fuoco",
+      "plural": "fuochi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "genitori_noun",
@@ -111329,12 +111642,18 @@
     "en": "game",
     "level": "A1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [
       "play"
     ],
     "it_syn": [],
-    "rating": 3
+    "rating": 3,
+    "noun_override": {
+      "base": "gioco",
+      "plural": "giochi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "gruppo_noun",
@@ -112576,7 +112895,13 @@
     "rating": 6,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "arco",
+      "plural": "archi",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "area_noun",
@@ -113026,7 +113351,13 @@
     "rating": 5,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "tedesco",
+      "plural": "tedeschi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "escapata_noun",
@@ -115299,7 +115630,13 @@
     "rating": 6,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "trucco",
+      "plural": "trucchi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "gestione_noun",
@@ -116142,7 +116479,13 @@
     "rating": 6,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "fango",
+      "plural": "fanghi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "muffin_noun",
@@ -116329,7 +116672,13 @@
       "belly button"
     ],
     "it_syn": [],
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "ombelico",
+      "plural": "ombelichi",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "nido_noun",
@@ -116815,7 +117164,13 @@
       "bundle"
     ],
     "it_syn": [],
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "pacco",
+      "plural": "pacchi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "imballaggio_noun",
@@ -117077,7 +117432,13 @@
       "beak"
     ],
     "it_syn": [],
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "picco",
+      "plural": "picchi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "arachide_noun",
@@ -118640,7 +119001,13 @@
       "bag"
     ],
     "it_syn": [],
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "sacco",
+      "plural": "sacchi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "barriera_noun",
@@ -120041,7 +120408,13 @@
     "rating": 7,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "stinco",
+      "plural": "stinchi",
+      "article_sg": "lo",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "calzoleria_noun",
@@ -121203,7 +121576,13 @@
     "rating": 7,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "sobborgo",
+      "plural": "sobborghi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "sofferenza_noun",
@@ -121835,7 +122214,13 @@
     "rating": 6,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "tabacco",
+      "plural": "tabacchi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "gettone_noun",
@@ -122010,7 +122395,13 @@
     "rating": 6,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "ingorgo",
+      "plural": "ingorghi",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "trampolino_noun",
@@ -122196,7 +122587,13 @@
       "log"
     ],
     "it_syn": [],
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "tronco",
+      "plural": "tronchi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "tulipano_noun",
@@ -126183,7 +126580,13 @@
       "work"
     ],
     "it_syn": [],
-    "noun_class": "m_std"
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "impiego",
+      "plural": "impieghi",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "inglese_noun",
@@ -140301,23 +140704,6 @@
     "it_syn": []
   },
   {
-    "id": "tendine_achille_noun",
-    "en": "Achilles tendon",
-    "level": "B1",
-    "pos": "noun",
-    "rating": 8,
-    "noun_class": "irregular",
-    "en_syn": [],
-    "it": "tendine d'Achille",
-    "it_syn": [],
-    "noun_override": {
-      "base": "tendine d'Achille",
-      "plural": "tendini d'Achille",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
-  },
-  {
     "id": "isole_eolie_noun",
     "en": "Aeolian Islands",
     "level": "B1",
@@ -140349,40 +140735,6 @@
       "plural": "sciroppi d'agave",
       "article_sg": "lo",
       "article_pl": "gli"
-    }
-  },
-  {
-    "id": "ufficiale_aeronautica_noun",
-    "en": "air force officer",
-    "level": "B1",
-    "pos": "noun",
-    "rating": 7,
-    "noun_class": "irregular",
-    "en_syn": [],
-    "it": "ufficiale dell'aeronautica",
-    "it_syn": [],
-    "noun_override": {
-      "base": "ufficiale dell'aeronautica",
-      "plural": "ufficiali dell'aeronautica",
-      "article_sg": "l'",
-      "article_pl": "gli"
-    }
-  },
-  {
-    "id": "farina_mandorle_noun",
-    "en": "almond flour",
-    "level": "B1",
-    "pos": "noun",
-    "rating": 7,
-    "noun_class": "irregular",
-    "en_syn": [],
-    "it": "farina di mandorle",
-    "it_syn": [],
-    "noun_override": {
-      "base": "farina di mandorle",
-      "plural": "farine di mandorle",
-      "article_sg": "la",
-      "article_pl": "le"
     }
   },
   {
