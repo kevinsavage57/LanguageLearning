@@ -1,4 +1,4 @@
-﻿[
+[
   {
     "id": "a_preposition",
     "it": "a",
@@ -1168,8 +1168,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "acceso"
+    "reflexive": false
   },
   {
     "id": "accennare_verb",
@@ -1354,8 +1353,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "accolto"
+    "reflexive": false
   },
   {
     "id": "acconto_noun",
@@ -2496,14 +2494,11 @@
   },
   {
     "id": "affrancate_una_lettera_verb",
-    "it": "affrancare una lettera",
-    "en": "to stamp a letter",
+    "it": "affrancate una lettera",
+    "en": "to frank a letter",
     "level": "B2",
     "pos": "verb",
-    "en_syn": [
-      "stamp a letter",
-      "frank a letter"
-    ],
+    "en_syn": [],
     "it_syn": [],
     "rating": 5
   },
@@ -2513,16 +2508,10 @@
     "en": "fresco",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8,
-    "noun_override": {
-      "base": "affresco",
-      "plural": "affreschi",
-      "article_sg": "l'",
-      "article_pl": "gli"
-    }
+    "rating": 8
   },
   {
     "id": "affrontare_verb",
@@ -2858,8 +2847,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "aggiunto"
+    "reflexive": false
   },
   {
     "id": "agglomerato_urbano_noun",
@@ -3260,16 +3248,10 @@
     "en": "hotel",
     "level": "A1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5,
-    "noun_override": {
-      "base": "albergo",
-      "plural": "alberghi",
-      "article_sg": "l'",
-      "article_pl": "gli"
-    }
+    "rating": 5
   },
   {
     "id": "albero_noun",
@@ -3328,16 +3310,10 @@
     "en": "apricot tree",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9,
-    "noun_override": {
-      "base": "albicocco",
-      "plural": "albicocchi",
-      "article_sg": "l'",
-      "article_pl": "gli"
-    }
+    "rating": 9
   },
   {
     "id": "album_noun",
@@ -3943,8 +3919,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "alluso"
+    "reflexive": false
   },
   {
     "id": "alluminio_noun",
@@ -4640,8 +4615,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "ammesso"
+    "reflexive": false
   },
   {
     "id": "amministratore_delegato_noun",
@@ -6383,8 +6357,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "appassito_adjective",
@@ -6822,8 +6795,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true,
-    "pastParticiple": "aperto"
+    "quickStart": true
   },
   {
     "id": "aprire_lapp_verb",
@@ -6889,7 +6861,7 @@
     "rating": 6,
     "noun_override": {
       "base": "Arabia Saudita",
-      "plural": "Arabia Saudita",
+      "plural": "Arabie Saudite",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -7098,16 +7070,10 @@
     "en": "archipelago",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8,
-    "noun_override": {
-      "base": "arcipelago",
-      "plural": "arcipelaghi",
-      "article_sg": "l'",
-      "article_pl": "gli"
-    }
+    "rating": 8
   },
   {
     "id": "arco_di_trionfo_noun",
@@ -7266,14 +7232,13 @@
   {
     "id": "argomento_noun",
     "it": "argomento",
-    "en": "topic/subject",
+    "en": "argument",
     "level": "B1",
     "pos": "noun",
     "noun_class": "m_std",
     "en_syn": [
       "topic",
-      "subject",
-      "argument"
+      "subject"
     ],
     "it_syn": [],
     "rating": 5
@@ -7728,8 +7693,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "arrostire_verb",
@@ -7984,7 +7948,7 @@
     "rating": 6,
     "noun_override": {
       "base": "Artico (oceano)",
-      "plural": "Artico (oceano)",
+      "plural": "Artici (oceano)",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -8630,8 +8594,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "assistito"
+    "reflexive": false
   },
   {
     "id": "associazione_noun",
@@ -8707,8 +8670,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "assolto"
+    "reflexive": false
   },
   {
     "id": "assomigliare_a_verb",
@@ -8743,8 +8705,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "assunto"
+    "reflexive": false
   },
   {
     "id": "assurdo_adjective",
@@ -9230,15 +9191,11 @@
   {
     "id": "attitudine_noun",
     "it": "attitudine",
-    "en": "aptitude",
+    "en": "attitude",
     "level": "A2",
     "pos": "noun",
     "noun_class": "f_std",
-    "en_syn": [
-      "aptitude",
-      "talent",
-      "flair"
-    ],
+    "en_syn": [],
     "it_syn": [],
     "rating": 5
   },
@@ -10236,14 +10193,13 @@
   {
     "id": "azione_noun",
     "it": "azione",
-    "en": "action",
+    "en": "share",
     "level": "B1",
     "pos": "noun",
     "noun_class": "f_std",
     "en_syn": [
-      "action",
-      "share",
-      "stock"
+      "stock",
+      "action"
     ],
     "it_syn": [],
     "rating": 4
@@ -10727,7 +10683,7 @@
     "rating": 4,
     "noun_override": {
       "base": "Banca Mondiale",
-      "plural": "Banca Mondiale",
+      "plural": "Banche Mondiali",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -10760,16 +10716,10 @@
     "en": "school desk",
     "level": "A1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
-    "noun_override": {
-      "base": "banco",
-      "plural": "banchi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 6
   },
   {
     "id": "banco_del_sangue_noun",
@@ -11556,8 +11506,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true,
-    "pastParticiple": "bevuto"
+    "quickStart": true
   },
   {
     "id": "bergamotto_noun",
@@ -12081,7 +12030,7 @@
     "en": "bingo",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_inv",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
     "rating": 7
@@ -12920,7 +12869,7 @@
     "rating": 7,
     "noun_override": {
       "base": "Booker Prize",
-      "plural": "Booker Prize",
+      "plural": "Booker Prizi",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -12967,18 +12916,12 @@
     "en": "village",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [
       "medieval village"
     ],
     "it_syn": [],
-    "rating": 5,
-    "noun_override": {
-      "base": "borgo",
-      "plural": "borghi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 5
   },
   {
     "id": "borsa_noun",
@@ -13081,18 +13024,12 @@
     "en": "wood",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [
       "woodland"
     ],
     "it_syn": [],
-    "rating": 5,
-    "noun_override": {
-      "base": "bosco",
-      "plural": "boschi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 5
   },
   {
     "id": "bosco_di_querce_noun",
@@ -13644,16 +13581,10 @@
     "en": "caterpillar",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8,
-    "noun_override": {
-      "base": "bruco",
-      "plural": "bruchi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 8
   },
   {
     "id": "brufolo_noun",
@@ -14448,16 +14379,10 @@
     "en": "cacciucco",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10,
-    "noun_override": {
-      "base": "cacciucco",
-      "plural": "cacciucchi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 10
   },
   {
     "id": "cachi_noun",
@@ -14525,8 +14450,7 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": [],
-    "aux": "essere"
+    "irregularTags": []
   },
   {
     "id": "caffetteria_noun",
@@ -15710,7 +15634,7 @@
     "rating": 8,
     "noun_override": {
       "base": "Canale di Sicilia",
-      "plural": "Canale di Sicilia",
+      "plural": "Canali di Sicilia",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -17479,16 +17403,10 @@
     "en": "house husband",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4,
-    "noun_override": {
-      "base": "casalingo",
-      "plural": "casalinghi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 4
   },
   {
     "id": "cascata_noun",
@@ -17741,16 +17659,10 @@
     "en": "catalogue",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7,
-    "noun_override": {
-      "base": "catalogo",
-      "plural": "cataloghi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 7
   },
   {
     "id": "Catania_noun",
@@ -18892,7 +18804,7 @@
     "rating": 5,
     "noun_override": {
       "base": "Champions League",
-      "plural": "Champions League",
+      "plural": "Champions Leagui",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -19276,8 +19188,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true,
-    "pastParticiple": "chiesto"
+    "quickStart": true
   },
   {
     "id": "chiedere_in_prestito_verb",
@@ -19392,16 +19303,10 @@
     "en": "kiosk",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8,
-    "noun_override": {
-      "base": "chiosco",
-      "plural": "chioschi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 8
   },
   {
     "id": "chirurga_noun",
@@ -19432,17 +19337,11 @@
     "en": "surgeon",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
     "rating": 6,
-    "gender_pair_id": "chirurga_noun",
-    "noun_override": {
-      "base": "chirurgo",
-      "plural": "chirurghi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "gender_pair_id": "chirurga_noun"
   },
   {
     "id": "chitarra_noun",
@@ -19495,8 +19394,7 @@
     "stemOverrides": {},
     "irregularTags": [],
     "reflexive": false,
-    "quickStart": true,
-    "pastParticiple": "chiuso"
+    "quickStart": true
   },
   {
     "id": "chiudere_lapp_verb",
@@ -22339,8 +22237,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "compianto"
+    "reflexive": true
   },
   {
     "id": "compito_noun",
@@ -22824,8 +22721,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "compromesso"
+    "reflexive": false
   },
   {
     "id": "computer_noun",
@@ -23160,8 +23056,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "concluso"
+    "reflexive": false
   },
   {
     "id": "concordare_verb",
@@ -23332,8 +23227,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "condiviso"
+    "reflexive": false
   },
   {
     "id": "condividere_sui_social_verb",
@@ -23358,14 +23252,11 @@
   {
     "id": "condivisione_noun",
     "it": "condivisione",
-    "en": "sharing",
+    "en": "share",
     "level": "A2",
     "pos": "noun",
     "noun_class": "f_std",
-    "en_syn": [
-      "sharing",
-      "share"
-    ],
+    "en_syn": [],
     "it_syn": [],
     "rating": 4
   },
@@ -23742,7 +23633,7 @@
     "en": "Congo",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_inv",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
     "rating": 7
@@ -23863,8 +23754,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true,
-    "pastParticiple": "conosciuto"
+    "quickStart": true
   },
   {
     "id": "consapevole_adjective",
@@ -24182,7 +24072,7 @@
     "rating": 4,
     "noun_override": {
       "base": "Consiglio di Sicurezza",
-      "plural": "Consiglio di Sicurezza",
+      "plural": "Consigli di Sicurezza",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -24574,8 +24464,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "contorto"
+    "reflexive": true
   },
   {
     "id": "contorno_noun",
@@ -24642,8 +24531,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "contraddetto"
+    "reflexive": false
   },
   {
     "id": "contraddirsi_verb",
@@ -24666,8 +24554,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "contraddetto"
+    "reflexive": true
   },
   {
     "id": "contraddittorio_adjective",
@@ -25059,8 +24946,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "convinto"
+    "reflexive": false
   },
   {
     "id": "convincimento_noun",
@@ -25120,8 +25006,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "convissuto"
+    "reflexive": false
   },
   {
     "id": "cooperare_verb",
@@ -25363,8 +25248,7 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": [],
-    "pastParticiple": "coperto"
+    "irregularTags": []
   },
   {
     "id": "copywriting_noun",
@@ -25494,7 +25378,7 @@
     "rating": 5,
     "noun_override": {
       "base": "Corea del Sud",
-      "plural": "Corea del Sud",
+      "plural": "Coree del Sud",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -25625,8 +25509,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "corretto"
+    "reflexive": false
   },
   {
     "id": "correggere_le_bozze_verb",
@@ -25697,8 +25580,7 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": [],
-    "pastParticiple": "corso"
+    "irregularTags": []
   },
   {
     "id": "correttamente_adverb",
@@ -26215,8 +26097,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "costi_fissi_noun",
@@ -26264,7 +26145,7 @@
     "rating": 9,
     "noun_override": {
       "base": "Costiera Amalfitana",
-      "plural": "Costiera Amalfitana",
+      "plural": "Costiere Amalfitane",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -26796,9 +26677,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "cresciuto",
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "crescere_in_famiglia_verb",
@@ -27148,7 +27027,7 @@
     "rating": 7,
     "noun_override": {
       "base": "crociera nel Mediterraneo",
-      "plural": "crociere nel Mediterraneo",
+      "plural": "crociere nel Mediterranei",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -27579,17 +27458,11 @@
     "en": "cook",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
     "rating": 5,
-    "gender_pair_id": "cuoca_noun",
-    "noun_override": {
-      "base": "cuoco",
-      "plural": "cuochi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "gender_pair_id": "cuoca_noun"
   },
   {
     "id": "cuoio_noun",
@@ -27806,16 +27679,10 @@
     "en": "cyberattack",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9,
-    "noun_override": {
-      "base": "cyberattacco",
-      "plural": "cyberattacchi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 9
   },
   {
     "id": "cyberbullismo_noun",
@@ -28524,8 +28391,7 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": [],
-    "pastParticiple": "deciso"
+    "irregularTags": []
   },
   {
     "id": "decifrare_verb",
@@ -29589,8 +29455,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "descritto"
+    "reflexive": false
   },
   {
     "id": "desertico_adjective",
@@ -30234,16 +30099,10 @@
     "en": "dialogue",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
-    "noun_override": {
-      "base": "dialogo",
-      "plural": "dialoghi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 6
   },
   {
     "id": "diamante_noun",
@@ -30459,8 +30318,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "difeso"
+    "reflexive": false
   },
   {
     "id": "difendere_la_tesi_verb",
@@ -30748,8 +30606,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "dimesso"
+    "reflexive": true
   },
   {
     "id": "diminuire_verb",
@@ -30849,16 +30706,10 @@
     "en": "God",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 3,
-    "noun_override": {
-      "base": "Dio",
-      "plural": "dei",
-      "article_sg": "il",
-      "article_pl": "gli"
-    }
+    "rating": 3
   },
   {
     "id": "dipartimento_noun",
@@ -30936,8 +30787,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "dipinto"
+    "reflexive": false
   },
   {
     "id": "dipingere_un_quadro_verb",
@@ -31238,8 +31088,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "diretto"
+    "reflexive": false
   },
   {
     "id": "dirigere_unorchestra_verb",
@@ -31502,8 +31351,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "disconnesso"
+    "reflexive": true
   },
   {
     "id": "discoteca_noun",
@@ -31584,8 +31432,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "discusso"
+    "reflexive": false
   },
   {
     "id": "disdire_verb",
@@ -31608,8 +31455,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "disdetto"
+    "reflexive": false
   },
   {
     "id": "disdire_labbonamento_verb",
@@ -31944,9 +31790,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "dispiaciuto",
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "disponibile_adjective",
@@ -32054,8 +31898,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "distinto"
+    "reflexive": false
   },
   {
     "id": "distinti_saluti_phrase",
@@ -32347,8 +32190,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "diviso"
+    "reflexive": false
   },
   {
     "id": "divieto_noun",
@@ -34053,8 +33895,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "eletto"
+    "reflexive": false
   },
   {
     "id": "elencare_verb",
@@ -34282,16 +34123,10 @@
     "en": "embargo",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8,
-    "noun_override": {
-      "base": "embargo",
-      "plural": "embarghi",
-      "article_sg": "l'",
-      "article_pl": "gli"
-    }
+    "rating": 8
   },
   {
     "id": "emblema_noun",
@@ -34336,9 +34171,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "emerso",
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "emettere_fattura_verb",
@@ -34804,8 +34637,7 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": [],
-    "aux": "essere"
+    "irregularTags": []
   },
   {
     "id": "entusiasmarsi_verb",
@@ -34959,16 +34791,10 @@
     "en": "epilogue",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8,
-    "noun_override": {
-      "base": "epilogo",
-      "plural": "epiloghi",
-      "article_sg": "l'",
-      "article_pl": "gli"
-    }
+    "rating": 8
   },
   {
     "id": "episodio_noun",
@@ -35550,8 +35376,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "escluso"
+    "reflexive": false
   },
   {
     "id": "esclusivo_adjective",
@@ -35800,8 +35625,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "espanso"
+    "reflexive": false
   },
   {
     "id": "espandersi_verb",
@@ -35824,8 +35648,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "espanso"
+    "reflexive": true
   },
   {
     "id": "espellere_verb",
@@ -35850,8 +35673,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "espulso"
+    "reflexive": false
   },
   {
     "id": "esperienza_noun",
@@ -36151,8 +35973,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "espresso"
+    "reflexive": true
   },
   {
     "id": "esproprio_noun",
@@ -36427,8 +36248,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "estinto"
+    "reflexive": true
   },
   {
     "id": "estorcere_verb",
@@ -36451,8 +36271,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "estorto"
+    "reflexive": false
   },
   {
     "id": "estratto_conto_noun",
@@ -37230,16 +37049,10 @@
     "en": "falcon",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7,
-    "noun_override": {
-      "base": "falco",
-      "plural": "falchi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 7
   },
   {
     "id": "falegname_noun",
@@ -39343,16 +39156,10 @@
     "en": "fig tree",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
-    "noun_override": {
-      "base": "fico",
-      "plural": "fichi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 6
   },
   {
     "id": "fico_dIndia_noun",
@@ -40195,8 +40002,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "Firenze_noun",
@@ -40822,8 +40628,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "fuso"
+    "reflexive": true
   },
   {
     "id": "fondo_di_investimento_noun",
@@ -41562,8 +41367,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "frainteso"
+    "reflexive": false
   },
   {
     "id": "fraintendimento_noun",
@@ -41806,8 +41610,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "fritto"
+    "reflexive": false
   },
   {
     "id": "friggitoria_noun",
@@ -42141,8 +41944,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "fulmine_noun",
@@ -42211,19 +42013,13 @@
     "en": "fungus",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [
       "mushroom",
       "mould"
     ],
     "it_syn": [],
-    "rating": 7,
-    "noun_override": {
-      "base": "fungo",
-      "plural": "funghi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 7
   },
   {
     "id": "funicolare_noun",
@@ -42312,7 +42108,7 @@
     "en": "offside",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_inv",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
     "rating": 8
@@ -43267,7 +43063,7 @@
     "rating": 6,
     "noun_override": {
       "base": "Georgia (paese)",
-      "plural": "Georgia (paese)",
+      "plural": "Georgie (paese)",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -44429,7 +44225,7 @@
     "rating": 6,
     "noun_override": {
       "base": "Golden Globe",
-      "plural": "Golden Globe",
+      "plural": "Golden Globi",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -45497,8 +45293,7 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": [],
-    "aux": "essere"
+    "irregularTags": []
   },
   {
     "id": "guerra_noun",
@@ -46908,16 +46703,10 @@
     "en": "boarding",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7,
-    "noun_override": {
-      "base": "imbarco",
-      "plural": "imbarchi",
-      "article_sg": "l'",
-      "article_pl": "gli"
-    }
+    "rating": 7
   },
   {
     "id": "imbianchino_noun",
@@ -47034,8 +46823,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "immerso"
+    "reflexive": true
   },
   {
     "id": "immigrata_noun",
@@ -47150,8 +46938,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "imparare_verb",
@@ -48307,8 +48094,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "incluso"
+    "reflexive": false
   },
   {
     "id": "inclusione_noun",
@@ -50163,8 +49949,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "insistito"
+    "reflexive": false
   },
   {
     "id": "insoddisfacente_adjective",
@@ -50722,8 +50507,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "interrotto"
+    "reflexive": false
   },
   {
     "id": "interruttore_noun",
@@ -50869,8 +50653,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "intravisto"
+    "reflexive": false
   },
   {
     "id": "introdurre_verb",
@@ -51031,8 +50814,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "invece_adverb",
@@ -51682,8 +51464,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "iscritto"
+    "reflexive": true
   },
   {
     "id": "iscriversi_a_un_corso_verb",
@@ -51762,7 +51543,7 @@
     "rating": 9,
     "noun_override": {
       "base": "isola d'Elba",
-      "plural": "isola d'Elba",
+      "plural": "isole d'Elbe",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -51778,6 +51559,23 @@
     "en_syn": [],
     "it_syn": [],
     "rating": 6
+  },
+  {
+    "id": "isole_Eolie_noun",
+    "it": "isole Eolie",
+    "en": "Aeolian Islands",
+    "level": "B1",
+    "pos": "noun",
+    "noun_class": "f_std",
+    "en_syn": [],
+    "it_syn": [],
+    "rating": 9,
+    "noun_override": {
+      "base": "isole Eolie",
+      "plural": "isole Eolie",
+      "article_sg": "le",
+      "article_pl": "le"
+    }
   },
   {
     "id": "isoterma_noun",
@@ -52507,16 +52305,10 @@
     "en": "lake",
     "level": "A1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5,
-    "noun_override": {
-      "base": "lago",
-      "plural": "laghi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 5
   },
   {
     "id": "Lago_di_Como_noun",
@@ -52530,7 +52322,7 @@
     "rating": 8,
     "noun_override": {
       "base": "Lago di Como",
-      "plural": "Lago di Como",
+      "plural": "Lagi di Como",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -52548,7 +52340,7 @@
     "rating": 9,
     "noun_override": {
       "base": "Lago di Garda",
-      "plural": "Lago di Garda",
+      "plural": "Lagi di Garda",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -52566,7 +52358,7 @@
     "rating": 9,
     "noun_override": {
       "base": "Lago Maggiore",
-      "plural": "Lago Maggiore",
+      "plural": "Lagi Maggiori",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -52823,16 +52615,10 @@
     "en": "small square",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5,
-    "noun_override": {
-      "base": "largo",
-      "plural": "larghi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 5
   },
   {
     "id": "laringe_noun",
@@ -53595,8 +53381,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true,
-    "pastParticiple": "letto"
+    "quickStart": true
   },
   {
     "id": "leggere_un_libro_verb",
@@ -55079,16 +54864,10 @@
     "en": "logo",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
-    "noun_override": {
-      "base": "logo",
-      "plural": "loghi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 6
   },
   {
     "id": "logopedista_noun",
@@ -55135,16 +54914,10 @@
     "en": "earthworm",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9,
-    "noun_override": {
-      "base": "lombrico",
-      "plural": "lombrichi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 9
   },
   {
     "id": "longitudine_noun",
@@ -56455,16 +56228,10 @@
     "en": "mango",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7,
-    "noun_override": {
-      "base": "mango",
-      "plural": "manghi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 7
   },
   {
     "id": "mangroveto_noun",
@@ -56716,7 +56483,7 @@
     "rating": 7,
     "noun_override": {
       "base": "mar Mediterraneo",
-      "plural": "mar Mediterraneo",
+      "plural": "mar Mediterranei",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -56997,7 +56764,7 @@
     "en": "Morocco",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_inv",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
     "rating": 7
@@ -58870,8 +58637,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true,
-    "pastParticiple": "messo"
+    "quickStart": true
   },
   {
     "id": "mettere_in_ordine_verb",
@@ -58935,8 +58701,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "messo"
+    "reflexive": true
   },
   {
     "id": "mettersi_il_profumo_verb",
@@ -59417,16 +59182,10 @@
     "en": "microsurgeon",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10,
-    "noun_override": {
-      "base": "microchirurgo",
-      "plural": "microchirurghi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 10
   },
   {
     "id": "microeconomico_adjective",
@@ -60437,16 +60196,10 @@
     "en": "mollusc",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9,
-    "noun_override": {
-      "base": "mollusco",
-      "plural": "molluschi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 9
   },
   {
     "id": "molo_noun",
@@ -60552,7 +60305,7 @@
     "rating": 7,
     "noun_override": {
       "base": "Monaco di Baviera",
-      "plural": "Monaco di Baviera",
+      "plural": "Monaci di Baviera",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -60812,7 +60565,7 @@
     "rating": 8,
     "noun_override": {
       "base": "Monte Bianco",
-      "plural": "Monte Bianco",
+      "plural": "Monti Bianci",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -60830,7 +60583,7 @@
     "rating": 9,
     "noun_override": {
       "base": "Monte Etna",
-      "plural": "Monte Etna",
+      "plural": "Monti Etni",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -60992,9 +60745,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "morto",
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "mormorare_verb",
@@ -61913,9 +61664,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "nato",
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "nascondere_verb",
@@ -61940,8 +61689,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "nascosto"
+    "reflexive": false
   },
   {
     "id": "nascondersi_verb",
@@ -61964,8 +61712,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "nascosto"
+    "reflexive": true
   },
   {
     "id": "naso_noun",
@@ -64094,7 +63841,7 @@
     "rating": 5,
     "noun_override": {
       "base": "Nuova Zelanda",
-      "plural": "Nuova Zelanda",
+      "plural": "Nuove Zelande",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -64280,16 +64027,10 @@
     "en": "obligation",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
-    "noun_override": {
-      "base": "obbligo",
-      "plural": "obblighi",
-      "article_sg": "l'",
-      "article_pl": "gli"
-    }
+    "rating": 6
   },
   {
     "id": "obelisco_noun",
@@ -64297,16 +64038,10 @@
     "en": "obelisk",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9,
-    "noun_override": {
-      "base": "obelisco",
-      "plural": "obelischi",
-      "article_sg": "l'",
-      "article_pl": "gli"
-    }
+    "rating": 9
   },
   {
     "id": "obiettivamente_adverb",
@@ -64567,8 +64302,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "offeso"
+    "reflexive": false
   },
   {
     "id": "offerta_noun",
@@ -64645,8 +64379,7 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": [],
-    "pastParticiple": "offerto"
+    "irregularTags": []
   },
   {
     "id": "oggi_noun",
@@ -65043,13 +64776,12 @@
   {
     "id": "opera_noun",
     "it": "opera",
-    "en": "work/opera",
+    "en": "opera",
     "level": "A2",
     "pos": "noun",
     "noun_class": "f_std",
     "en_syn": [
-      "work",
-      "opera"
+      "work"
     ],
     "it_syn": [],
     "rating": 6
@@ -65284,7 +65016,7 @@
     "rating": 4,
     "noun_override": {
       "base": "ora e mezza",
-      "plural": "ore e mezza",
+      "plural": "ore i mezze",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -65393,13 +65125,11 @@
   {
     "id": "ordinare_verb",
     "it": "ordinare",
-    "en": "to order",
+    "en": "to sort",
     "level": "A2",
     "pos": "verb",
     "en_syn": [
-      "order",
-      "sort",
-      "arrange"
+      "to order"
     ],
     "it_syn": [],
     "rating": 4,
@@ -66073,16 +65803,10 @@
     "en": "ossobuco",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10,
-    "noun_override": {
-      "base": "ossobuco",
-      "plural": "ossibuchi",
-      "article_sg": "l'",
-      "article_pl": "gli"
-    }
+    "rating": 10
   },
   {
     "id": "ostacolare_verb",
@@ -67700,16 +67424,10 @@
     "en": "park",
     "level": "A1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4,
-    "noun_override": {
-      "base": "parco",
-      "plural": "parchi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 4
   },
   {
     "id": "parco_acquatico_noun",
@@ -68291,8 +68009,7 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": [],
-    "aux": "essere"
+    "irregularTags": []
   },
   {
     "id": "partita_noun",
@@ -70001,8 +69718,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true,
-    "pastParticiple": "perso"
+    "quickStart": true
   },
   {
     "id": "perdere_il_treno_verb",
@@ -70065,8 +69781,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "perso"
+    "reflexive": true
   },
   {
     "id": "perdita_noun",
@@ -70572,8 +70287,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "persuaso"
+    "reflexive": false
   },
   {
     "id": "persuasivo_adjective",
@@ -70805,16 +70519,10 @@
     "en": "peach tree",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7,
-    "noun_override": {
-      "base": "pesco",
-      "plural": "peschi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 7
   },
   {
     "id": "pesistica_noun",
@@ -71068,9 +70776,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "piaciuto",
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "piadina_noun",
@@ -71137,8 +70843,7 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": [],
-    "pastParticiple": "pianto"
+    "irregularTags": []
   },
   {
     "id": "piangere_la_perdita_verb",
@@ -74617,8 +74322,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true,
-    "pastParticiple": "preso"
+    "quickStart": true
   },
   {
     "id": "prendere_a_prestito_verb",
@@ -74948,8 +74652,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "prescritto"
+    "reflexive": false
   },
   {
     "id": "presentare_verb",
@@ -75340,8 +75043,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "previsto"
+    "reflexive": false
   },
   {
     "id": "prevedibile_adjective",
@@ -76234,17 +75936,11 @@
     "en": "refugee",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
     "rating": 7,
-    "gender_pair_id": "profuga_noun",
-    "noun_override": {
-      "base": "profugo",
-      "plural": "profughi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "gender_pair_id": "profuga_noun"
   },
   {
     "id": "profugo_di_guerra_noun",
@@ -76647,16 +76343,10 @@
     "en": "prologue",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8,
-    "noun_override": {
-      "base": "prologo",
-      "plural": "prologhi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 8
   },
   {
     "id": "prolunga_noun",
@@ -76700,8 +76390,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "promesso"
+    "reflexive": false
   },
   {
     "id": "promontorio_noun",
@@ -76788,8 +76477,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "promosso"
+    "reflexive": false
   },
   {
     "id": "pronipote_noun",
@@ -77043,16 +76731,10 @@
     "en": "prosecco",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9,
-    "noun_override": {
-      "base": "prosecco",
-      "plural": "prosecchi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 9
   },
   {
     "id": "prospettiva_noun",
@@ -77123,8 +76805,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "protetto"
+    "reflexive": false
   },
   {
     "id": "proteggere_lambiente_verb",
@@ -77791,8 +77472,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "punto"
+    "reflexive": false
   },
   {
     "id": "punire_verb",
@@ -78874,8 +78554,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "raccolto"
+    "reflexive": false
   },
   {
     "id": "raccogliere_dati_verb",
@@ -79108,8 +78787,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "raso"
+    "reflexive": true
   },
   {
     "id": "radersi_la_testa_verb",
@@ -79339,8 +79017,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "raggiunto"
+    "reflexive": false
   },
   {
     "id": "raggiungere_un_obiettivo_verb",
@@ -80680,7 +80357,7 @@
     "rating": 5,
     "noun_override": {
       "base": "Regno Unito",
-      "plural": "Regno Unito",
+      "plural": "Regni Uniti",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -81478,8 +81155,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "ristretto"
+    "reflexive": true
   },
   {
     "id": "restructuring_noun",
@@ -81717,8 +81393,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "riassunto"
+    "reflexive": false
   },
   {
     "id": "riassunto_noun",
@@ -82180,8 +81855,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "richiesto"
+    "reflexive": false
   },
   {
     "id": "riciclabile_adjective",
@@ -82333,8 +82007,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "ricongiunto"
+    "reflexive": true
   },
   {
     "id": "riconoscenza_noun",
@@ -82368,8 +82041,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "riconosciuto"
+    "reflexive": false
   },
   {
     "id": "riconoscimento_facciale_noun",
@@ -82567,8 +82239,7 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": [],
-    "pastParticiple": "riso"
+    "irregularTags": []
   },
   {
     "id": "ridimensionare_verb",
@@ -82874,8 +82545,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "riflesso"
+    "reflexive": false
   },
   {
     "id": "riforma_noun",
@@ -83290,8 +82960,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "rimpianto"
+    "reflexive": false
   },
   {
     "id": "rimpianto_noun",
@@ -83612,8 +83281,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "ripetente_noun",
@@ -83729,8 +83397,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "ripreso"
+    "reflexive": false
   },
   {
     "id": "riprendersi_da_un_intervento_verb",
@@ -83969,8 +83636,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "risolto"
+    "reflexive": false
   },
   {
     "id": "risonanza_magnetica_noun",
@@ -84184,8 +83850,7 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": [],
-    "pastParticiple": "risposto"
+    "irregularTags": []
   },
   {
     "id": "rispondere_a_verb",
@@ -84504,8 +84169,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "rivelare_verb",
@@ -86082,7 +85746,7 @@
     "rating": 8,
     "noun_override": {
       "base": "san Marino",
-      "plural": "san Marino",
+      "plural": "san Marini",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -86479,16 +86143,10 @@
     "en": "disembarkation",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10,
-    "noun_override": {
-      "base": "sbarco",
-      "plural": "sbarchi",
-      "article_sg": "lo",
-      "article_pl": "gli"
-    }
+    "rating": 10
   },
   {
     "id": "sbattere_verb",
@@ -86942,8 +86600,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "scarabeo_noun",
@@ -87009,16 +86666,10 @@
     "en": "drain",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
-    "noun_override": {
-      "base": "scarico",
-      "plural": "scarichi",
-      "article_sg": "lo",
-      "article_pl": "gli"
-    }
+    "rating": 6
   },
   {
     "id": "scarpe_noun",
@@ -87152,8 +86803,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "scelto"
+    "reflexive": false
   },
   {
     "id": "scegliere_il_regalo_verb",
@@ -87230,9 +86880,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "sceso",
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "scendere_dallautobus_verb",
@@ -87689,16 +87337,10 @@
     "en": "sirocco",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10,
-    "noun_override": {
-      "base": "scirocco",
-      "plural": "scirocchi",
-      "article_sg": "lo",
-      "article_pl": "gli"
-    }
+    "rating": 10
   },
   {
     "id": "sciroppo_noun",
@@ -87911,8 +87553,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "scommesso"
+    "reflexive": false
   },
   {
     "id": "scomodo_adjective",
@@ -88122,8 +87763,7 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": [],
-    "pastParticiple": "scoperto"
+    "irregularTags": []
   },
   {
     "id": "scopritore_noun",
@@ -88216,8 +87856,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "scorto"
+    "reflexive": false
   },
   {
     "id": "scorpione_noun",
@@ -88254,8 +87893,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "scorso"
+    "reflexive": false
   },
   {
     "id": "scorrere_verso_il_basso_verb",
@@ -88378,8 +88016,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true,
-    "pastParticiple": "scritto"
+    "quickStart": true
   },
   {
     "id": "scrivere_un_romanzo_verb",
@@ -88862,11 +88499,10 @@
   {
     "id": "secondo_me_phrase",
     "it": "secondo me",
-    "en": "in my opinion",
+    "en": "according to me",
     "level": "A2",
     "pos": "phrase",
     "en_syn": [
-      "in my opinion",
       "in my view"
     ],
     "it_syn": [],
@@ -90750,7 +90386,7 @@
     "rating": 8,
     "noun_override": {
       "base": "Siciliano (stretto)",
-      "plural": "Siciliano (stretto)",
+      "plural": "Siciliani (stretto)",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -91935,8 +91571,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "soffritto"
+    "reflexive": false
   },
   {
     "id": "soffrire_verb",
@@ -91960,8 +91595,7 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": [],
-    "pastParticiple": "sofferto"
+    "irregularTags": []
   },
   {
     "id": "soffritto_noun",
@@ -92669,8 +92303,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "soppresso"
+    "reflexive": false
   },
   {
     "id": "sopra_preposition",
@@ -92829,9 +92462,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "sorto",
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "sorpassare_verb",
@@ -92897,8 +92528,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "sorpreso"
+    "reflexive": true
   },
   {
     "id": "sorpresa_noun",
@@ -92941,8 +92571,7 @@
       "imperativo": {}
     },
     "stemOverrides": {},
-    "irregularTags": [],
-    "pastParticiple": "sorriso"
+    "irregularTags": []
   },
   {
     "id": "sorseggiare_verb",
@@ -93029,8 +92658,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "sospeso"
+    "reflexive": false
   },
   {
     "id": "sospetto_noun",
@@ -93182,8 +92810,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "sottinteso"
+    "reflexive": false
   },
   {
     "id": "sotto_preposition",
@@ -93944,8 +93571,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "spento"
+    "reflexive": false
   },
   {
     "id": "spendere_verb",
@@ -93968,8 +93594,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "speso"
+    "reflexive": false
   },
   {
     "id": "spendere_troppo_verb",
@@ -94275,8 +93900,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "spinto"
+    "reflexive": false
   },
   {
     "id": "spinoso_adjective",
@@ -96008,7 +95632,7 @@
     "pos": "noun",
     "noun_class": "m_std",
     "en_syn": [
-      "stop"
+      "trap"
     ],
     "it_syn": [],
     "rating": 3
@@ -96954,16 +96578,10 @@
     "en": "juice",
     "level": "A1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
-    "noun_override": {
-      "base": "succo",
-      "plural": "succhi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 6
   },
   {
     "id": "succo_di_frutta_noun",
@@ -97137,19 +96755,13 @@
     "en": "tomato sauce",
     "level": "A1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [
       "gravy",
       "sauce"
     ],
     "it_syn": [],
-    "rating": 7,
-    "noun_override": {
-      "base": "sugo",
-      "plural": "sughi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 7
   },
   {
     "id": "Sul_mio_onore_phrase",
@@ -97711,9 +97323,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "svenuto",
-    "aux": "essere"
+    "reflexive": false
   },
   {
     "id": "Svezia_noun",
@@ -97851,7 +97461,7 @@
     "rating": 6,
     "noun_override": {
       "base": "Svizzera italiana",
-      "plural": "Svizzera italiana",
+      "plural": "Svizzere italiane",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -98011,16 +97621,10 @@
     "en": "heel",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7,
-    "noun_override": {
-      "base": "tacco",
-      "plural": "tacchi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 7
   },
   {
     "id": "tacco_a_spillo_noun",
@@ -98259,16 +97863,10 @@
     "en": "talcum powder",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9,
-    "noun_override": {
-      "base": "talco",
-      "plural": "talchi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 9
   },
   {
     "id": "taleggio_noun",
@@ -99491,7 +99089,7 @@
   {
     "id": "tempo_noun",
     "it": "tempo",
-    "en": "time/weather",
+    "en": "weather",
     "level": "A1",
     "pos": "noun",
     "noun_class": "m_std",
@@ -99628,7 +99226,7 @@
     "rating": 8,
     "noun_override": {
       "base": "tendine d'Achille",
-      "plural": "tendini d'Achille",
+      "plural": "tendini d'Achilli",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -100732,8 +100330,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "tinto"
+    "reflexive": false
   },
   {
     "id": "tingere_i_capelli_verb",
@@ -101014,8 +100611,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "tolto"
+    "reflexive": false
   },
   {
     "id": "togliersi_verb",
@@ -101038,8 +100634,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": true,
-    "pastParticiple": "tolto"
+    "reflexive": true
   },
   {
     "id": "tolleranza_noun",
@@ -101250,8 +100845,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true,
-    "aux": "essere"
+    "quickStart": true
   },
   {
     "id": "tornare_a_casa_verb",
@@ -101540,7 +101134,7 @@
     "rating": 5,
     "noun_override": {
       "base": "tour de France",
-      "plural": "tour de France",
+      "plural": "tour di Franci",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -102696,7 +102290,7 @@
     "rating": 10,
     "noun_override": {
       "base": "Trentino-Alto Adige",
-      "plural": "Trentino-Alto Adige",
+      "plural": "Trentino-Alti Adigi",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -102773,16 +102367,10 @@
     "en": "walrus",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9,
-    "noun_override": {
-      "base": "tricheco",
-      "plural": "trichechi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 9
   },
   {
     "id": "Trieste_noun",
@@ -103694,8 +103282,8 @@
     "noun_override": {
       "base": "ufficiale dell'aeronautica",
       "plural": "ufficiali dell'aeronautica",
-      "article_sg": "l'",
-      "article_pl": "gli"
+      "article_sg": "la",
+      "article_pl": "le"
     },
     "audited": "v1-audit-2026-04-12"
   },
@@ -104137,7 +103725,7 @@
     "rating": 4,
     "noun_override": {
       "base": "Unione Europea",
-      "plural": "Unione Europea",
+      "plural": "Unioni Europee",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -104886,7 +104474,7 @@
     "rating": 9,
     "noun_override": {
       "base": "Valle d'Aosta",
-      "plural": "Valle d'Aosta",
+      "plural": "Valli d'Aoste",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -105254,8 +104842,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true,
-    "pastParticiple": "visto"
+    "quickStart": true
   },
   {
     "id": "vedova_noun",
@@ -106315,18 +105902,12 @@
     "en": "lane",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [
       "alley"
     ],
     "it_syn": [],
-    "rating": 5,
-    "noun_override": {
-      "base": "vico",
-      "plural": "vichi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 5
   },
   {
     "id": "vicolo_noun",
@@ -106427,16 +106008,10 @@
     "en": "video game",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4,
-    "noun_override": {
-      "base": "videogioco",
-      "plural": "videogiochi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 4
   },
   {
     "id": "videomaker_noun",
@@ -106654,8 +106229,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "reflexive": false,
-    "pastParticiple": "vinto"
+    "reflexive": false
   },
   {
     "id": "vincere_un_appalto_verb",
@@ -107152,8 +106726,7 @@
     },
     "stemOverrides": {},
     "irregularTags": [],
-    "quickStart": true,
-    "pastParticiple": "vissuto"
+    "quickStart": true
   },
   {
     "id": "vocabolario_noun",
@@ -107973,16 +107546,10 @@
     "en": "zinc",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7,
-    "noun_override": {
-      "base": "zinco",
-      "plural": "zinchi",
-      "article_sg": "lo",
-      "article_pl": "gli"
-    }
+    "rating": 7
   },
   {
     "id": "zio_noun",
@@ -108977,14 +108544,8 @@
     "en_syn": [],
     "it_syn": [],
     "rating": 5,
-    "noun_class": "irregular",
-    "audited": "v1-audit-2026-04-12",
-    "noun_override": {
-      "base": "braccio",
-      "plural": "braccia",
-      "article_sg": "il",
-      "article_pl": "le"
-    }
+    "noun_class": "m_std",
+    "audited": "v1-audit-2026-04-12"
   },
   {
     "id": "breve_adjective",
@@ -109005,13 +108566,7 @@
     "en_syn": [],
     "it_syn": [],
     "rating": 5,
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "buco",
-      "plural": "buchi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "camerino_noun",
@@ -109164,13 +108719,7 @@
     "en_syn": [],
     "it_syn": [],
     "rating": 7,
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "circo",
-      "plural": "circhi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "coda_noun",
@@ -109703,13 +109252,7 @@
     "en_syn": [],
     "it_syn": [],
     "rating": 5,
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "fiasco",
-      "plural": "fiaschi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "finanza_noun",
@@ -110058,13 +109601,7 @@
     "en_syn": [],
     "it_syn": [],
     "rating": 3,
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "luogo",
-      "plural": "luoghi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "maga_noun",
@@ -111742,18 +111279,12 @@
     "en": "fire",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [
       "flame"
     ],
     "it_syn": [],
-    "rating": 4,
-    "noun_override": {
-      "base": "fuoco",
-      "plural": "fuochi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 4
   },
   {
     "id": "genitori_noun",
@@ -111798,18 +111329,12 @@
     "en": "game",
     "level": "A1",
     "pos": "noun",
-    "noun_class": "irregular",
+    "noun_class": "m_std",
     "en_syn": [
       "play"
     ],
     "it_syn": [],
-    "rating": 3,
-    "noun_override": {
-      "base": "gioco",
-      "plural": "giochi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "rating": 3
   },
   {
     "id": "gruppo_noun",
@@ -113051,13 +112576,7 @@
     "rating": 6,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "arco",
-      "plural": "archi",
-      "article_sg": "l'",
-      "article_pl": "gli"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "area_noun",
@@ -113507,13 +113026,7 @@
     "rating": 5,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "tedesco",
-      "plural": "tedeschi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "escapata_noun",
@@ -115786,13 +115299,7 @@
     "rating": 6,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "trucco",
-      "plural": "trucchi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "gestione_noun",
@@ -116635,13 +116142,7 @@
     "rating": 6,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "fango",
-      "plural": "fanghi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "muffin_noun",
@@ -116828,13 +116329,7 @@
       "belly button"
     ],
     "it_syn": [],
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "ombelico",
-      "plural": "ombelichi",
-      "article_sg": "l'",
-      "article_pl": "gli"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "nido_noun",
@@ -117320,13 +116815,7 @@
       "bundle"
     ],
     "it_syn": [],
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "pacco",
-      "plural": "pacchi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "imballaggio_noun",
@@ -117588,13 +117077,7 @@
       "beak"
     ],
     "it_syn": [],
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "picco",
-      "plural": "picchi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "arachide_noun",
@@ -119157,13 +118640,7 @@
       "bag"
     ],
     "it_syn": [],
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "sacco",
-      "plural": "sacchi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "barriera_noun",
@@ -120564,13 +120041,7 @@
     "rating": 7,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "stinco",
-      "plural": "stinchi",
-      "article_sg": "lo",
-      "article_pl": "gli"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "calzoleria_noun",
@@ -121732,13 +121203,7 @@
     "rating": 7,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "sobborgo",
-      "plural": "sobborghi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "sofferenza_noun",
@@ -122370,13 +121835,7 @@
     "rating": 6,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "tabacco",
-      "plural": "tabacchi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "gettone_noun",
@@ -122551,13 +122010,7 @@
     "rating": 6,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "ingorgo",
-      "plural": "ingorghi",
-      "article_sg": "l'",
-      "article_pl": "gli"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "trampolino_noun",
@@ -122743,13 +122196,7 @@
       "log"
     ],
     "it_syn": [],
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "tronco",
-      "plural": "tronchi",
-      "article_sg": "il",
-      "article_pl": "i"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "tulipano_noun",
@@ -126736,13 +126183,7 @@
       "work"
     ],
     "it_syn": [],
-    "noun_class": "irregular",
-    "noun_override": {
-      "base": "impiego",
-      "plural": "impieghi",
-      "article_sg": "l'",
-      "article_pl": "gli"
-    }
+    "noun_class": "m_std"
   },
   {
     "id": "inglese_noun",
@@ -128178,9 +127619,7 @@
       "be equivalent",
       "equal"
     ],
-    "it_syn": [],
-    "pastParticiple": "equivalso",
-    "aux": "essere"
+    "it_syn": []
   },
   {
     "id": "essere_urgente_verb",
@@ -128204,9 +127643,7 @@
     "en_syn": [
       "be worth"
     ],
-    "it_syn": [],
-    "pastParticiple": "valso",
-    "aux": "essere"
+    "it_syn": []
   },
   {
     "id": "supplicare_verb",
@@ -128244,8 +127681,7 @@
     "en_syn": [
       "bite"
     ],
-    "it_syn": [],
-    "pastParticiple": "morso"
+    "it_syn": []
   },
   {
     "id": "sanguinare_verb",
@@ -128308,8 +127744,7 @@
       "break down",
       "break"
     ],
-    "it_syn": [],
-    "pastParticiple": "rotto"
+    "it_syn": []
   },
   {
     "id": "scoppiare_verb",
@@ -128360,8 +127795,7 @@
       "capsize",
       "overturn"
     ],
-    "it_syn": [],
-    "pastParticiple": "capovolto"
+    "it_syn": []
   },
   {
     "id": "catturare_verb",
@@ -128450,8 +127884,7 @@
     "en_syn": [
       "coincide"
     ],
-    "it_syn": [],
-    "pastParticiple": "coinciso"
+    "it_syn": []
   },
   {
     "id": "combinare_verb",
@@ -128477,9 +127910,7 @@
       "originate"
     ],
     "it_yn": [],
-    "it_syn": [],
-    "pastParticiple": "provenuto",
-    "aux": "essere"
+    "it_syn": []
   },
   {
     "id": "confortare_verb",
@@ -128505,8 +127936,7 @@
       "commit",
       "carry out"
     ],
-    "it_syn": [],
-    "pastParticiple": "commesso"
+    "it_syn": []
   },
   {
     "id": "suicidarsi_verb",
@@ -128593,8 +128023,7 @@
     "en_syn": [
       "connect"
     ],
-    "it_syn": [],
-    "pastParticiple": "connesso"
+    "it_syn": []
   },
   {
     "id": "conquistare_verb",
@@ -128631,9 +128060,7 @@
     "en_syn": [
       "consist"
     ],
-    "it_syn": [],
-    "pastParticiple": "consistito",
-    "aux": "essere"
+    "it_syn": []
   },
   {
     "id": "consolare_verb",
@@ -128743,8 +128170,7 @@
     "en_syn": [
       "correspond"
     ],
-    "it_syn": [],
-    "pastParticiple": "corrisposto"
+    "it_syn": []
   },
   {
     "id": "contare_verb",
@@ -128794,8 +128220,7 @@
     "en_syn": [
       "demand"
     ],
-    "it_syn": [],
-    "pastParticiple": "esatto"
+    "it_syn": []
   },
   {
     "id": "dedicare_verb",
@@ -128856,8 +128281,7 @@
     "en_syn": [
       "destroy"
     ],
-    "it_syn": [],
-    "pastParticiple": "distrutto"
+    "it_syn": []
   },
   {
     "id": "dettagliare_verb",
@@ -128907,8 +128331,7 @@
       "disappear",
       "vanish"
     ],
-    "it_syn": [],
-    "aux": "essere"
+    "it_syn": []
   },
   {
     "id": "deludere_verb",
@@ -128921,8 +128344,7 @@
       "disappoint",
       "let down"
     ],
-    "it_syn": [],
-    "pastParticiple": "deluso"
+    "it_syn": []
   },
   {
     "id": "disapprovare_verb",
@@ -128960,8 +128382,7 @@
     "en_syn": [
       "disconnect"
     ],
-    "it_syn": [],
-    "pastParticiple": "disconnesso"
+    "it_syn": []
   },
   {
     "id": "discriminare_verb",
@@ -129012,8 +128433,7 @@
       "disperse",
       "scatter"
     ],
-    "it_syn": [],
-    "pastParticiple": "disperso"
+    "it_syn": []
   },
   {
     "id": "sconvolgere_verb",
@@ -129026,8 +128446,7 @@
       "disrupt",
       "upset"
     ],
-    "it_syn": [],
-    "pastParticiple": "sconvolto"
+    "it_syn": []
   },
   {
     "id": "distorcere_verb",
@@ -129040,8 +128459,7 @@
       "distort",
       "twist"
     ],
-    "it_syn": [],
-    "pastParticiple": "distorto"
+    "it_syn": []
   },
   {
     "id": "distrarre_verb",
@@ -129191,8 +128609,7 @@
       "elapse",
       "pass"
     ],
-    "it_syn": [],
-    "pastParticiple": "trascorso"
+    "it_syn": []
   },
   {
     "id": "emettere_verb",
@@ -129205,8 +128622,7 @@
       "emit",
       "let out"
     ],
-    "it_syn": [],
-    "pastParticiple": "emesso"
+    "it_syn": []
   },
   {
     "id": "impiegare_verb",
@@ -129332,8 +128748,7 @@
       "evolve",
       "develop"
     ],
-    "it_syn": [],
-    "pastParticiple": "evoluto"
+    "it_syn": []
   },
   {
     "id": "esagerare_verb",
@@ -129407,9 +128822,7 @@
     "en_syn": [
       "exist"
     ],
-    "it_syn": [],
-    "pastParticiple": "esistito",
-    "aux": "essere"
+    "it_syn": []
   },
   {
     "id": "esplodere_verb",
@@ -129422,8 +128835,7 @@
       "explode",
       "break out"
     ],
-    "it_syn": [],
-    "pastParticiple": "esploso"
+    "it_syn": []
   },
   {
     "id": "sfruttare_verb",
@@ -129448,8 +128860,7 @@
       "extend",
       "spread"
     ],
-    "it_syn": [],
-    "pastParticiple": "esteso"
+    "it_syn": []
   },
   {
     "id": "estrarre_verb",
@@ -129691,8 +129102,7 @@
       "grant",
       "allow"
     ],
-    "it_syn": [],
-    "pastParticiple": "concesso"
+    "it_syn": []
   },
   {
     "id": "indovinare_verb",
@@ -129717,8 +129127,7 @@
       "hang up",
       "hang"
     ],
-    "it_syn": [],
-    "pastParticiple": "appeso"
+    "it_syn": []
   },
   {
     "id": "succedere_verb",
@@ -129731,9 +129140,7 @@
       "happen",
       "occur"
     ],
-    "it_syn": [],
-    "pastParticiple": "successo",
-    "aux": "essere"
+    "it_syn": []
   },
   {
     "id": "danneggiare_verb",
@@ -129835,8 +129242,7 @@
     "en_syn": [
       "have repercussions"
     ],
-    "it_syn": [],
-    "pastParticiple": "ripercosso"
+    "it_syn": []
   },
   {
     "id": "agganciare_verb",
@@ -130050,9 +129456,7 @@
     "en_syn": [
       "incur"
     ],
-    "it_syn": [],
-    "pastParticiple": "incorso",
-    "aux": "essere"
+    "it_syn": []
   },
   {
     "id": "industrializzare_verb",
@@ -130076,8 +129480,7 @@
     "en_syn": [
       "inflict"
     ],
-    "it_syn": [],
-    "pastParticiple": "inflitto"
+    "it_syn": []
   },
   {
     "id": "influire_verb",
@@ -130213,8 +129616,7 @@
       "intend",
       "claim"
     ],
-    "it_syn": [],
-    "pastParticiple": "preteso"
+    "it_syn": []
   },
   {
     "id": "intensificare_verb",
@@ -130250,9 +129652,7 @@
     "en_syn": [
       "intervene"
     ],
-    "it_syn": [],
-    "pastParticiple": "intervenuto",
-    "aux": "essere"
+    "it_syn": []
   },
   {
     "id": "intimidire_verb",
@@ -130288,8 +129688,7 @@
     "en_syn": [
       "invade"
     ],
-    "it_syn": [],
-    "pastParticiple": "invaso"
+    "it_syn": []
   },
   {
     "id": "inventare_verb",
@@ -130313,8 +129712,7 @@
     "en_syn": [
       "involve"
     ],
-    "it_syn": [],
-    "pastParticiple": "coinvolto"
+    "it_syn": []
   },
   {
     "id": "irritare_verb",
@@ -130363,8 +129761,7 @@
     "en_syn": [
       "juxtapose"
     ],
-    "it_syn": [],
-    "pastParticiple": "giustapposto"
+    "it_syn": []
   },
   {
     "id": "uccidere_verb",
@@ -130376,8 +129773,7 @@
     "en_syn": [
       "kill"
     ],
-    "it_syn": [],
-    "pastParticiple": "ucciso"
+    "it_syn": []
   },
   {
     "id": "lavorare_a_maglia_verb",
@@ -130802,8 +130198,7 @@
       "occur",
       "happen"
     ],
-    "it_syn": [],
-    "aux": "essere"
+    "it_syn": []
   },
   {
     "id": "omettere_verb",
@@ -130816,8 +130211,7 @@
       "omit",
       "leave out"
     ],
-    "it_syn": [],
-    "pastParticiple": "omesso"
+    "it_syn": []
   },
   {
     "id": "opinare_verb",
@@ -130842,8 +130236,7 @@
     "en_syn": [
       "oppose"
     ],
-    "it_syn": [],
-    "pastParticiple": "opposto"
+    "it_syn": []
   },
   {
     "id": "opprimere_verb",
@@ -130855,8 +130248,7 @@
     "en_syn": [
       "oppress"
     ],
-    "it_syn": [],
-    "pastParticiple": "oppresso"
+    "it_syn": []
   },
   {
     "id": "optare_verb",
@@ -130959,8 +130351,7 @@
       "pass away",
       "die"
     ],
-    "it_syn": [],
-    "aux": "essere"
+    "it_syn": []
   },
   {
     "id": "mettere_in_pausa_verb",
@@ -131020,8 +130411,7 @@
     "en_syn": [
       "persist"
     ],
-    "it_syn": [],
-    "pastParticiple": "persistito"
+    "it_syn": []
   },
   {
     "id": "plagiare_verb",
@@ -131071,8 +130461,7 @@
       "portray",
       "depict"
     ],
-    "it_syn": [],
-    "pastParticiple": "ritratto"
+    "it_syn": []
   },
   {
     "id": "porre_verb",
@@ -131085,8 +130474,7 @@
       "pose",
       "raise"
     ],
-    "it_syn": [],
-    "pastParticiple": "posto"
+    "it_syn": []
   },
   {
     "id": "possedere_verb",
@@ -131136,8 +130524,7 @@
       "predict",
       "forecast"
     ],
-    "it_syn": [],
-    "pastParticiple": "predetto"
+    "it_syn": []
   },
   {
     "id": "predominare_verb",
@@ -131175,8 +130562,7 @@
       "presume",
       "assume"
     ],
-    "it_syn": [],
-    "pastParticiple": "presunto"
+    "it_syn": []
   },
   {
     "id": "presupporre_verb",
@@ -131188,8 +130574,7 @@
     "en_syn": [
       "presuppose"
     ],
-    "it_syn": [],
-    "pastParticiple": "presupposto"
+    "it_syn": []
   },
   {
     "id": "fingere_verb",
@@ -131202,8 +130587,7 @@
       "pretend",
       "feign"
     ],
-    "it_syn": [],
-    "pastParticiple": "finto"
+    "it_syn": []
   },
   {
     "id": "prevalere_verb",
@@ -131215,9 +130599,7 @@
     "en_syn": [
       "prevail"
     ],
-    "it_syn": [],
-    "pastParticiple": "prevalso",
-    "aux": "essere"
+    "it_syn": []
   },
   {
     "id": "priorizzare_verb",
@@ -131576,8 +130958,7 @@
     "en_syn": [
       "reelect"
     ],
-    "it_syn": [],
-    "pastParticiple": "rieletto"
+    "it_syn": []
   },
   {
     "id": "raffinare_verb",
@@ -131627,8 +131008,7 @@
       "register",
       "enroll"
     ],
-    "it_syn": [],
-    "pastParticiple": "iscritto"
+    "it_syn": []
   },
   {
     "id": "regolarizzare_verb",
@@ -131803,8 +131183,7 @@
       "remove",
       "take away"
     ],
-    "it_syn": [],
-    "pastParticiple": "rimosso"
+    "it_syn": []
   },
   {
     "id": "remunerare_verb",
@@ -131854,8 +131233,7 @@
       "repress",
       "suppress"
     ],
-    "it_syn": [],
-    "pastParticiple": "represso"
+    "it_syn": []
   },
   {
     "id": "riprodurre_verb",
@@ -131867,8 +131245,7 @@
     "en_syn": [
       "reproduce"
     ],
-    "it_syn": [],
-    "pastParticiple": "riprodotto"
+    "it_syn": []
   },
   {
     "id": "ripudiare_verb",
@@ -131894,8 +131271,7 @@
       "rescue",
       "save"
     ],
-    "it_syn": [],
-    "pastParticiple": "soccorso"
+    "it_syn": []
   },
   {
     "id": "risentirsi_verb",
@@ -131932,8 +131308,7 @@
     "en_syn": [
       "resist"
     ],
-    "it_syn": [],
-    "pastParticiple": "resistito"
+    "it_syn": []
   },
   {
     "id": "risuonare_verb",
@@ -131959,8 +131334,7 @@
       "restrict",
       "limit"
     ],
-    "it_syn": [],
-    "pastParticiple": "ristretto"
+    "it_syn": []
   },
   {
     "id": "risultare_in_verb",
@@ -131985,9 +131359,7 @@
       "resurge",
       "rise again"
     ],
-    "it_syn": [],
-    "pastParticiple": "risorto",
-    "aux": "essere"
+    "it_syn": []
   },
   {
     "id": "resuscitare_verb",
@@ -132063,8 +131435,7 @@
       "revive",
       "relive"
     ],
-    "it_syn": [],
-    "pastParticiple": "rivissuto"
+    "it_syn": []
   },
   {
     "id": "revocare_verb",
@@ -132278,8 +131649,7 @@
       "seem",
       "appear"
     ],
-    "it_syn": [],
-    "aux": "essere"
+    "it_syn": []
   },
   {
     "id": "segregare_verb",
@@ -132341,8 +131711,7 @@
     "en_syn": [
       "shake"
     ],
-    "it_syn": [],
-    "pastParticiple": "scosso"
+    "it_syn": []
   },
   {
     "id": "brillare_verb",
@@ -132481,8 +131850,7 @@
       "stand out",
       "excel"
     ],
-    "it_syn": [],
-    "pastParticiple": "distinto"
+    "it_syn": []
   },
   {
     "id": "fare_le_ore_piccole_verb",
@@ -132545,8 +131913,7 @@
       "submit",
       "subdue"
     ],
-    "it_syn": [],
-    "pastParticiple": "sottomesso"
+    "it_syn": []
   },
   {
     "id": "sussistere_verb",
@@ -132559,8 +131926,7 @@
       "subsist",
       "survive"
     ],
-    "it_syn": [],
-    "pastParticiple": "sussistito"
+    "it_syn": []
   },
   {
     "id": "soccombere_verb",
@@ -132616,15 +131982,13 @@
   {
     "id": "sopportare_verb",
     "it": "sopportare",
-    "en": "to bear/tolerate",
+    "en": "to support/tolerate",
     "level": "B1",
     "pos": "verb",
     "rating": 3,
     "en_syn": [
-      "bear",
-      "tolerate",
-      "put up with",
-      "endure"
+      "support",
+      "tolerate"
     ],
     "it_syn": []
   },
@@ -132728,9 +132092,7 @@
     "en_syn": [
       "survive"
     ],
-    "it_syn": [],
-    "pastParticiple": "sopravvissuto",
-    "aux": "essere"
+    "it_syn": []
   },
   {
     "id": "truffare_verb",
@@ -132832,8 +132194,7 @@
       "tend",
       "be inclined"
     ],
-    "it_syn": [],
-    "pastParticiple": "teso"
+    "it_syn": []
   },
   {
     "id": "gettare_verb",
@@ -132895,8 +132256,7 @@
     "en_syn": [
       "transcend"
     ],
-    "it_syn": [],
-    "pastParticiple": "trasceso"
+    "it_syn": []
   },
   {
     "id": "trascrivere_verb",
@@ -132908,8 +132268,7 @@
     "en_syn": [
       "transcribe"
     ],
-    "it_syn": [],
-    "pastParticiple": "trascritto"
+    "it_syn": []
   },
   {
     "id": "trasgredire_verb",
@@ -132948,8 +132307,7 @@
       "transmit",
       "broadcast"
     ],
-    "it_syn": [],
-    "pastParticiple": "trasmesso"
+    "it_syn": []
   },
   {
     "id": "traumatizzare_verb",
@@ -132974,8 +132332,7 @@
       "travel through",
       "cover"
     ],
-    "it_syn": [],
-    "pastParticiple": "percorso"
+    "it_syn": []
   },
   {
     "id": "trattare_verb",
@@ -133052,8 +132409,7 @@
       "turn over",
       "flip"
     ],
-    "it_syn": [],
-    "pastParticiple": "capovolto"
+    "it_syn": []
   },
   {
     "id": "digitare_verb",
@@ -133090,8 +132446,7 @@
       "undertake",
       "embark on"
     ],
-    "it_syn": [],
-    "pastParticiple": "intrapreso"
+    "it_syn": []
   },
   {
     "id": "disfare_verb",
@@ -133328,8 +132683,7 @@
     "en_syn": [
       "wrap"
     ],
-    "it_syn": [],
-    "pastParticiple": "avvolto"
+    "it_syn": []
   },
   {
     "id": "redigere_verb",
@@ -133342,8 +132696,7 @@
       "write",
       "draft"
     ],
-    "it_syn": [],
-    "pastParticiple": "redatto"
+    "it_syn": []
   },
   {
     "id": "zigzagare_verb",
@@ -140948,6 +140301,23 @@
     "it_syn": []
   },
   {
+    "id": "tendine_achille_noun",
+    "en": "Achilles tendon",
+    "level": "B1",
+    "pos": "noun",
+    "rating": 8,
+    "noun_class": "irregular",
+    "en_syn": [],
+    "it": "tendine d'Achille",
+    "it_syn": [],
+    "noun_override": {
+      "base": "tendine d'Achille",
+      "plural": "tendini d'Achille",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
+  },
+  {
     "id": "isole_eolie_noun",
     "en": "Aeolian Islands",
     "level": "B1",
@@ -140979,6 +140349,40 @@
       "plural": "sciroppi d'agave",
       "article_sg": "lo",
       "article_pl": "gli"
+    }
+  },
+  {
+    "id": "ufficiale_aeronautica_noun",
+    "en": "air force officer",
+    "level": "B1",
+    "pos": "noun",
+    "rating": 7,
+    "noun_class": "irregular",
+    "en_syn": [],
+    "it": "ufficiale dell'aeronautica",
+    "it_syn": [],
+    "noun_override": {
+      "base": "ufficiale dell'aeronautica",
+      "plural": "ufficiali dell'aeronautica",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
+  },
+  {
+    "id": "farina_mandorle_noun",
+    "en": "almond flour",
+    "level": "B1",
+    "pos": "noun",
+    "rating": 7,
+    "noun_class": "irregular",
+    "en_syn": [],
+    "it": "farina di mandorle",
+    "it_syn": [],
+    "noun_override": {
+      "base": "farina di mandorle",
+      "plural": "farine di mandorle",
+      "article_sg": "la",
+      "article_pl": "le"
     }
   },
   {

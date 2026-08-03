@@ -1,0 +1,17 @@
+{
+ "reviewed": "false friends and a malformed headword, entries 950-1860 (ratings 4-5)",
+ "_finding": "The defects left in this file are almost all English-side: an Italian word glossed with its English lookalike rather than its meaning. attitudine is the clearest --- it means aptitude, and the entry sat directly beside atteggiamento 'attitude', so the matching game offered two entries with the same answer and only one was right.",
+ "rows": [
+  {"it": "attitudine", "en": "aptitude", "syn": ["aptitude", "talent", "flair"],
+   "_was": "en was 'attitude', which is atteggiamento --- already in the file, correctly glossed, and adjacent to this entry in rating order."},
+  {"it": "argomento", "en": "topic/subject", "syn": ["topic", "subject", "argument"],
+   "_was": "en was 'argument' with topic and subject demoted. An argomento is what something is about; a quarrel is a discussione or a litigio."},
+  {"it": "ordinare", "en": "to order", "syn": ["order", "sort", "arrange"],
+   "_was": "en was 'to sort' with 'to order' demoted. Ordering food or giving an order is the everyday sense, and the file already leans on it in 'sono pronto per ordinare'."},
+  {"it": "secondo me", "en": "in my opinion", "syn": ["in my opinion", "in my view"],
+   "_was": "en was 'according to me', which is not idiomatic English."},
+  {"it": "affrancate una lettera", "it_new": "affrancare una lettera",
+   "en": "to stamp a letter", "syn": ["stamp a letter", "frank a letter"],
+   "_was": "the headword was the conjugated 'affrancate' rather than an infinitive, unlike every other verb entry, and 'to frank' alone is opaque to most learners."}
+ ]
+}

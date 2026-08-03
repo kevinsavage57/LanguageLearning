@@ -1,0 +1,18 @@
+{
+ "reviewed": "gloss demotions found reading entries in rating order (ratings 1-4) and by frequency gap",
+ "_finding": "The Italian file has none of the corruption that ran through words_es.json --- no cross-language contamination, no Wiktionary bleed, no fabricated headwords, no encyclopedic glosses. What it does share is the demotion pattern: the ordinary sense of a word sitting in en_syn while a narrower one holds the primary gloss. tempo and azione are the same defect as gota 'squeeze' and red 'internet'.",
+ "rows": [
+  {"it": "tempo", "en": "time/weather", "syn": ["time", "weather"],
+   "_was": "en was 'weather' with 'time' demoted to a synonym. tempo is one of the commonest Italian nouns and its basic sense is time; the file already relies on that reading in tempo libero, nel tempo and per tempo."},
+  {"it": "azione", "en": "action", "syn": ["action", "share", "stock"],
+   "_was": "en was 'share' with 'action' demoted. The stock-market sense is real but secondary, and this entry is rated 4, so it is one learners meet early."},
+  {"it": "sopportare", "en": "to bear/tolerate", "syn": ["bear", "tolerate", "put up with", "endure"],
+   "_was": "en was 'to support/tolerate'. Support is a false friend here: sopportare is to endure or put up with, never to back someone --- that is sostenere or appoggiare, and sostenere is already in the file glossed 'to support'."},
+  {"it": "condivisione", "en": "sharing", "syn": ["sharing", "share"],
+   "_was": "en was 'share', which collides with azione. condivisione is the act of sharing."},
+  {"it": "opera", "en": "work/opera", "syn": ["work", "opera"],
+   "_was": "en was 'opera' alone, with 'work' demoted. Both senses are common and the entry now leads with the broader one."},
+  {"it": "stop", "en": "stop", "syn": ["stop"],
+   "_was": "en_syn held 'trap', the football sense of controlling a ball. en_syn entries are graded as correct answers, so the app was accepting 'trap' for stop."}
+ ]
+}
