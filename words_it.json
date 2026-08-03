@@ -13805,7 +13805,7 @@
   },
   {
     "id": "buffala_noun",
-    "it": "buffala",
+    "it": "bufala",
     "en": "buffalo mozzarella",
     "level": "B1",
     "pos": "noun",
@@ -17698,7 +17698,9 @@
     "level": "B1",
     "pos": "adjective",
     "en_syn": [
-      "casual"
+      "random",
+      "accidental",
+      "chance"
     ],
     "it_syn": [],
     "rating": 5
@@ -17963,7 +17965,7 @@
   },
   {
     "id": "cavaturaccioli_noun",
-    "it": "cavaturaccioli",
+    "it": "cavatappi",
     "en": "corkscrew",
     "level": "A2",
     "pos": "noun",
@@ -19822,11 +19824,14 @@
   {
     "id": "cilindro_noun",
     "it": "cilindro",
-    "en": "top hat",
+    "en": "cylinder",
     "level": "B2",
     "pos": "noun",
     "noun_class": "m_std",
-    "en_syn": [],
+    "en_syn": [
+      "cylinder",
+      "top hat"
+    ],
     "it_syn": [],
     "rating": 5
   },
@@ -23771,7 +23776,7 @@
   },
   {
     "id": "coniglieria_noun",
-    "it": "coniglieria",
+    "it": "conigliera",
     "en": "rabbit hutch",
     "level": "B2",
     "pos": "noun",
@@ -29062,17 +29067,6 @@
     "rating": 6
   },
   {
-    "id": "deltaplane_noun",
-    "it": "deltaplane",
-    "en": "hang gliding",
-    "level": "B2",
-    "pos": "noun",
-    "noun_class": "m_std",
-    "en_syn": [],
-    "it_syn": [],
-    "rating": 8
-  },
-  {
     "id": "deltaplano_noun",
     "it": "deltaplano",
     "en": "hang-glider",
@@ -33175,7 +33169,7 @@
   },
   {
     "id": "droghere_noun",
-    "it": "droghere",
+    "it": "droghiere",
     "en": "draper",
     "level": "B2",
     "pos": "noun",
@@ -35067,16 +35061,6 @@
     "level": "B1",
     "pos": "noun",
     "noun_class": "f_std",
-    "en_syn": [],
-    "it_syn": [],
-    "rating": 6
-  },
-  {
-    "id": "equilbrato_adjective",
-    "it": "equilbrato",
-    "en": "balanced",
-    "level": "B1",
-    "pos": "adjective",
     "en_syn": [],
     "it_syn": [],
     "rating": 6
@@ -44613,7 +44597,7 @@
   },
   {
     "id": "graffettrice_noun",
-    "it": "graffettrice",
+    "it": "graffettatrice",
     "en": "stapler",
     "level": "B1",
     "pos": "noun",
@@ -45763,7 +45747,7 @@
   },
   {
     "id": "hackare_verb",
-    "it": "hackare",
+    "it": "hackerare",
     "en": "to hack",
     "level": "B2",
     "pos": "verb",
@@ -48674,7 +48658,7 @@
   },
   {
     "id": "Indiano_noun",
-    "it": "Indiano",
+    "it": "Indiano (oceano)",
     "en": "Indian Ocean",
     "level": "B1",
     "pos": "noun",
@@ -52232,7 +52216,7 @@
   },
   {
     "id": "komodovaran_noun",
-    "it": "komodovaran",
+    "it": "varano di Komodo",
     "en": "Komodo dragon",
     "level": "B2",
     "pos": "noun",
@@ -61464,7 +61448,7 @@
   },
   {
     "id": "munfico_adjective",
-    "it": "munfico",
+    "it": "munifico",
     "en": "munificent",
     "level": "B2",
     "pos": "adjective",
@@ -65892,7 +65876,7 @@
   },
   {
     "id": "ortopedie_noun",
-    "it": "ortopedie",
+    "it": "ortopedia",
     "en": "orthopaedic shop",
     "level": "B2",
     "pos": "noun",
@@ -69031,17 +69015,6 @@
     "en_syn": [],
     "it_syn": [],
     "rating": 5
-  },
-  {
-    "id": "peciatrician_noun",
-    "it": "peciatrician",
-    "en": "paediatrician",
-    "level": "B2",
-    "pos": "noun",
-    "noun_class": "m_std",
-    "en_syn": [],
-    "it_syn": [],
-    "rating": 9
   },
   {
     "id": "pecora_noun",
@@ -74264,7 +74237,7 @@
   },
   {
     "id": "precoscio_noun",
-    "it": "precoscio",
+    "it": "preconscio",
     "en": "preconscious",
     "level": "B2",
     "pos": "noun",
@@ -77468,7 +77441,7 @@
   },
   {
     "id": "pruricare_verb",
-    "it": "pruricare",
+    "it": "prudere",
     "en": "to itch",
     "level": "B1",
     "pos": "verb",
@@ -77545,17 +77518,6 @@
     "en_syn": [],
     "it_syn": [],
     "rating": 6
-  },
-  {
-    "id": "psychiatra_noun",
-    "it": "psychiatra",
-    "en": "psychiatrist",
-    "level": "B2",
-    "pos": "noun",
-    "noun_class": "f_std",
-    "en_syn": [],
-    "it_syn": [],
-    "rating": 7
   },
   {
     "id": "pub_noun",
@@ -78226,11 +78188,15 @@
   {
     "id": "quadro_noun",
     "it": "quadro",
-    "en": "middle manager",
+    "en": "painting/picture",
     "level": "B2",
     "pos": "noun",
     "noun_class": "m_std",
-    "en_syn": [],
+    "en_syn": [
+      "painting",
+      "picture",
+      "frame"
+    ],
     "it_syn": [],
     "rating": 5
   },
@@ -80928,17 +80894,6 @@
       "article_sg": "le",
       "article_pl": "le"
     }
-  },
-  {
-    "id": "rematura_noun",
-    "it": "rematura",
-    "en": "rowing",
-    "level": "B1",
-    "pos": "noun",
-    "noun_class": "f_std",
-    "en_syn": [],
-    "it_syn": [],
-    "rating": 8
   },
   {
     "id": "remix_noun",
@@ -85698,12 +85653,13 @@
   {
     "id": "saldo_noun",
     "it": "saldo",
-    "en": "sale",
+    "en": "balance",
     "level": "A2",
     "pos": "noun",
     "noun_class": "m_std",
     "en_syn": [
-      "balance"
+      "balance",
+      "settlement"
     ],
     "it_syn": [],
     "rating": 5
@@ -94383,7 +94339,7 @@
   },
   {
     "id": "spiumare_verb",
-    "it": "spiumare",
+    "it": "spennare",
     "en": "to pluck",
     "level": "B2",
     "pos": "verb",
@@ -94711,7 +94667,7 @@
   },
   {
     "id": "spuntinare_verb",
-    "it": "spuntinare",
+    "it": "fare uno spuntino",
     "en": "to have a snack",
     "level": "A2",
     "pos": "verb",
@@ -95979,17 +95935,6 @@
     "rating": 6
   },
   {
-    "id": "stomatolog_noun",
-    "it": "stomatolog",
-    "en": "oral surgeon",
-    "level": "B2",
-    "pos": "noun",
-    "noun_class": "m_std",
-    "en_syn": [],
-    "it_syn": [],
-    "rating": 6
-  },
-  {
     "id": "stomatologo_noun",
     "it": "stomatologo",
     "en": "oral surgeon",
@@ -96880,7 +96825,7 @@
   },
   {
     "id": "subcoscienza_noun",
-    "it": "subcoscienza",
+    "it": "subconscio",
     "en": "subconscious",
     "level": "B2",
     "pos": "noun",
@@ -105043,7 +104988,7 @@
   },
   {
     "id": "vandalizare_verb",
-    "it": "vandalizare",
+    "it": "vandalizzare",
     "en": "to vandalize",
     "level": "B1",
     "pos": "verb",
@@ -107390,7 +107335,7 @@
   },
   {
     "id": "volontarizzare_verb",
-    "it": "volontarizzare",
+    "it": "fare volontariato",
     "en": "to volunteer",
     "level": "B1",
     "pos": "verb",
@@ -112809,11 +112754,12 @@
   {
     "id": "dopopranzo_noun",
     "it": "dopopranzo",
-    "en": "after-dinner chat",
+    "en": "early afternoon",
     "level": "B1",
     "pos": "noun",
     "rating": 5,
     "en_syn": [
+      "early afternoon",
       "after lunch"
     ],
     "it_syn": [],
@@ -113517,7 +113463,7 @@
   },
   {
     "id": "escapata_noun",
-    "it": "escapata",
+    "it": "fuga",
     "en": "getaway",
     "level": "B1",
     "pos": "noun",
@@ -123062,19 +123008,6 @@
     }
   },
   {
-    "id": "verdureria_noun",
-    "it": "verdureria",
-    "en": "vegetable shop",
-    "level": "A2",
-    "pos": "noun",
-    "rating": 7,
-    "en_syn": [
-      "greengrocer"
-    ],
-    "it_syn": [],
-    "noun_class": "f_std"
-  },
-  {
     "id": "revisione_del_veicolo_noun",
     "it": "revisione del veicolo",
     "en": "vehicle inspection",
@@ -127339,12 +127272,13 @@
   {
     "id": "pescivendolo_noun",
     "it": "pescivendolo",
-    "en": "fish shop",
+    "en": "fishmonger",
     "level": "A2",
     "pos": "noun",
     "rating": 5,
     "en_syn": [
-      "fishmonger"
+      "fishmonger",
+      "fish seller"
     ],
     "it_syn": [],
     "noun_class": "m_std"
@@ -136521,7 +136455,7 @@
   },
   {
     "id": "insociabile_adjective",
-    "it": "insociabile",
+    "it": "insocievole",
     "en": "unsociable",
     "level": "B1",
     "pos": "adjective",
@@ -136951,13 +136885,14 @@
   {
     "id": "definitivamente_adverb",
     "it": "definitivamente",
-    "en": "definitely",
+    "en": "definitively/for good",
     "level": "B1",
     "pos": "adverb",
     "rating": 5,
     "en_syn": [
-      "certainly",
-      "absolutely"
+      "definitively",
+      "for good",
+      "permanently"
     ],
     "it_syn": []
   },
@@ -137556,7 +137491,7 @@
     "it": "disteso",
     "en": "lying down",
     "level": "B1",
-    "pos": "adverb",
+    "pos": "adjective",
     "rating": 5,
     "en_syn": [],
     "it_syn": []

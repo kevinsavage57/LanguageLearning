@@ -1,0 +1,41 @@
+{
+ "reviewed": "single-word headwords unknown to Italian frequency data",
+ "_finding": "Checking every one-word lowercase headword against wordfreq's Italian corpus flagged 68 entries. Most were legitimate rare or technical words the corpus simply lacks (antonimo, piastrellatore, gramscismo, eucalipteto). Twenty-five were not Italian: misspellings, a Greek/English spelling, a truncated word, and two Spanish words that had leaked in. Seven of them duplicated an entry that was already present and correctly spelled, so those are dropped; the rest are renamed with their ids preserved so learner progress survives.",
+ "drop_ids": ["psychiatra_noun", "peciatrician_noun", "deltaplane_noun",
+              "equilbrato_adjective", "stomatolog_noun", "verdureria_noun",
+              "rematura_noun"],
+ "_dropped": [
+  "psychiatra_noun -- Greek/English spelling; psichiatra already present",
+  "peciatrician_noun -- garbled; pediatra already present",
+  "deltaplane_noun -- French spelling; deltaplano already present",
+  "equilbrato_adjective -- missing an i; equilibrato already present",
+  "stomatolog_noun -- truncated; stomatologo already present",
+  "verdureria_noun -- Spanish verduleria; fruttivendolo already present",
+  "rematura_noun -- not Italian; canottaggio already present"
+ ],
+ "rows": [
+  {"it": "droghere", "it_new": "droghiere"},
+  {"it": "vandalizare", "it_new": "vandalizzare", "_was": "single z"},
+  {"it": "munfico", "it_new": "munifico"},
+  {"it": "buffala", "it_new": "bufala", "_was": "double f"},
+  {"it": "coniglieria", "it_new": "conigliera"},
+  {"it": "precoscio", "it_new": "preconscio"},
+  {"it": "subcoscienza", "it_new": "subconscio"},
+  {"it": "insociabile", "it_new": "insocievole"},
+  {"it": "cavaturaccioli", "it_new": "cavatappi"},
+  {"it": "graffettrice", "it_new": "graffettatrice"},
+  {"it": "spiumare", "it_new": "spennare"},
+  {"it": "pruricare", "it_new": "prudere",
+   "_was": "pruricare is not a verb; to itch is prudere"},
+  {"it": "ortopedie", "it_new": "ortopedia"},
+  {"it": "hackare", "it_new": "hackerare"},
+  {"it": "komodovaran", "it_new": "varano di Komodo",
+   "_was": "komodovaran is not Italian at all"},
+  {"it": "escapata", "it_new": "fuga",
+   "_was": "Spanish escapada. Same cross-language leak that put Guardia di Finanza and libeccio into the Spanish file."},
+  {"it": "spuntinare", "it_new": "fare uno spuntino",
+   "_was": "no such verb; Italian uses the light-verb phrase"},
+  {"it": "volontarizzare", "it_new": "fare volontariato",
+   "_was": "no such verb; Italian uses the light-verb phrase"}
+ ]
+}

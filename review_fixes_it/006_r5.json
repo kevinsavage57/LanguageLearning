@@ -1,0 +1,23 @@
+{
+ "reviewed": "entries 1860-3220 (rating 5)",
+ "rows": [
+  {"it": "quadro", "en": "painting/picture", "syn": ["painting", "picture", "frame"],
+   "_was": "en was 'middle manager'. That is a real but narrow business sense (quadro aziendale); the everyday meaning is a painting, which the file itself relies on in 'dipingere un quadro = to paint a picture'."},
+  {"it": "saldo", "en": "balance", "syn": ["balance", "settlement"],
+   "_was": "en was 'sale' with 'balance' demoted. The sales are i saldi, plural; the singular saldo is an account balance, as the file's own 'saldo del conto = account balance' shows."},
+  {"it": "pescivendolo", "en": "fishmonger", "syn": ["fishmonger", "fish seller"],
+   "_was": "en was 'fish shop'. A pescivendolo is the person; the shop is a pescheria."},
+  {"it": "definitivamente", "en": "definitively/for good", "syn": ["definitively", "for good", "permanently"],
+   "_was": "en was 'definitely'. False friend: 'definitely' is sicuramente or certamente. definitivamente means once and for all."},
+  {"it": "dopopranzo", "en": "early afternoon", "syn": ["early afternoon", "after lunch"],
+   "_was": "en was 'after-dinner chat', which would be dopocena and is not what this word means."},
+  {"it": "cilindro", "en": "cylinder", "syn": ["cylinder", "top hat"],
+   "_was": "en was 'top hat' alone. That sense exists but the basic meaning is cylinder, and nothing else in the file covers it."},
+  {"it": "casuale", "en": "random", "syn": ["random", "accidental", "chance"],
+   "_was": "en_syn held 'casual', a false friend graded as a correct answer. Casual in the informal-clothing sense is informale."},
+  {"it": "Indiano", "it_new": "Indiano (oceano)",
+   "_note": "the bare headword reads as 'Indian person'; disambiguated the way the file already handles 'Artico (oceano)' and 'Georgia (paese)'."},
+  {"it": "disteso", "pos": "adjective",
+   "_was": "pos was adverb; disteso is a participial adjective."}
+ ]
+}
