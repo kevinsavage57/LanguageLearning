@@ -1,0 +1,17 @@
+{
+ "reviewed": "entries 4240-5650 (rating 6)",
+ "rows": [
+  {"it": "simpatia", "en": "friendliness/likeability", "syn": ["friendliness", "likeability", "warmth"],
+   "_was": "en led with 'sympathy'. False friend: sympathy in the sense of compassion is compassione or solidarieta. simpatia is how likeable someone is."},
+  {"it": "pretendere", "en": "to demand/expect", "syn": ["demand", "expect", "claim"],
+   "_was": "en was 'to intend/claim'. pretendere is to demand or expect as one's due. It is famously not 'to pretend', which is fingere --- already correct in the file."},
+  {"it": "innovatore", "en": "innovator", "pos": "noun", "syn": ["innovator", "pioneer"],
+   "_was": "glossed 'innovative' as an adjective, which duplicated innovativo sitting immediately before it. innovatore is the person."},
+  {"it": "legislativo", "en": "legislative", "pos": "adjective", "syn": ["legislative"],
+   "_was": "glossed as the noun 'legislature'. That is legislatura; legislativo is the adjective."},
+  {"it": "sommario", "en": "cursory/brief", "syn": ["cursory", "brief", "summary"],
+   "_was": "pos is adjective but the gloss was the noun 'summary', which is riassunto and already in the file."},
+  {"it": "in bianco", "en": "blank/plain", "syn": ["blank", "plain", "unseasoned"],
+   "_was": "en was 'blank/in blank'; 'in blank' is not English."}
+ ]
+}

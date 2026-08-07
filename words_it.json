@@ -2914,8 +2914,7 @@
     "it": "agile",
     "en": "agile",
     "level": "B2",
-    "pos": "noun",
-    "noun_class": "m_std",
+    "pos": "adjective",
     "en_syn": [],
     "it_syn": [],
     "rating": 8
@@ -8084,10 +8083,14 @@
   {
     "id": "artigianato_noun",
     "it": "artigianato",
-    "en": "handcrafted",
+    "en": "craftsmanship",
     "level": "B2",
     "pos": "noun",
-    "en_syn": [],
+    "en_syn": [
+      "craftsmanship",
+      "handicrafts",
+      "crafts"
+    ],
     "it_syn": [],
     "rating": 9,
     "noun_class": "m_std"
@@ -16917,10 +16920,17 @@
     "it": "carisma",
     "en": "charisma",
     "level": "B2",
-    "pos": "adjective",
+    "pos": "noun",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 8,
+    "noun_class": "irregular",
+    "noun_override": {
+      "base": "carisma",
+      "plural": "carismi",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "carismatico_adjective",
@@ -18316,11 +18326,15 @@
   {
     "id": "censo_noun",
     "it": "censo",
-    "en": "census",
+    "en": "wealth/means",
     "level": "B2",
     "pos": "noun",
     "noun_class": "m_std",
-    "en_syn": [],
+    "en_syn": [
+      "wealth",
+      "means",
+      "property"
+    ],
     "it_syn": [],
     "rating": 6
   },
@@ -27087,11 +27101,13 @@
   {
     "id": "croccante_noun",
     "it": "croccante",
-    "en": "brittle",
+    "en": "crunchy/crispy",
     "level": "B2",
-    "pos": "noun",
-    "noun_class": "m_std",
-    "en_syn": [],
+    "pos": "adjective",
+    "en_syn": [
+      "crunchy",
+      "crispy"
+    ],
     "it_syn": [],
     "rating": 8
   },
@@ -33170,11 +33186,14 @@
   {
     "id": "droghere_noun",
     "it": "droghiere",
-    "en": "draper",
+    "en": "grocer",
     "level": "B2",
     "pos": "noun",
     "noun_class": "m_std",
-    "en_syn": [],
+    "en_syn": [
+      "grocer",
+      "grocery shopkeeper"
+    ],
     "it_syn": [],
     "rating": 8
   },
@@ -34545,11 +34564,13 @@
   {
     "id": "endemia_noun",
     "it": "endemia",
-    "en": "endemic",
+    "en": "endemic disease",
     "level": "B2",
     "pos": "noun",
     "noun_class": "f_std",
-    "en_syn": [],
+    "en_syn": [
+      "endemic disease"
+    ],
     "it_syn": [],
     "rating": 8
   },
@@ -35180,11 +35201,14 @@
   {
     "id": "erbicida_noun",
     "it": "erbicida",
-    "en": "wherbicide",
+    "en": "herbicide",
     "level": "B2",
     "pos": "noun",
     "noun_class": "m_std",
-    "en_syn": [],
+    "en_syn": [
+      "herbicide",
+      "weedkiller"
+    ],
     "it_syn": [],
     "rating": 10
   },
@@ -35895,17 +35919,6 @@
     "en": "explicit",
     "level": "B2",
     "pos": "adjective",
-    "en_syn": [],
-    "it_syn": [],
-    "rating": 7
-  },
-  {
-    "id": "esplora_noun",
-    "it": "esplora",
-    "en": "explorer",
-    "level": "B1",
-    "pos": "noun",
-    "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
     "rating": 7
@@ -40859,11 +40872,14 @@
   {
     "id": "foniatria_noun",
     "it": "foniatria",
-    "en": "speech therapist",
+    "en": "phoniatrics",
     "level": "B2",
     "pos": "noun",
     "noun_class": "f_std",
-    "en_syn": [],
+    "en_syn": [
+      "phoniatrics",
+      "speech therapy"
+    ],
     "it_syn": [],
     "rating": 7
   },
@@ -49722,12 +49738,16 @@
   {
     "id": "innovatore_adjective",
     "it": "innovatore",
-    "en": "innovative",
+    "en": "innovator",
     "level": "B1",
-    "pos": "adjective",
-    "en_syn": [],
+    "pos": "noun",
+    "en_syn": [
+      "innovator",
+      "pioneer"
+    ],
     "it_syn": [],
-    "rating": 6
+    "rating": 6,
+    "noun_class": "m_std"
   },
   {
     "id": "innovazione_noun",
@@ -52661,10 +52681,14 @@
   {
     "id": "lampeggiare_verb",
     "it": "lampeggiare",
-    "en": "to lighten",
+    "en": "to flash",
     "level": "A2",
     "pos": "verb",
-    "en_syn": [],
+    "en_syn": [
+      "flash",
+      "flicker",
+      "blink"
+    ],
     "it_syn": [],
     "rating": 8,
     "group": "are",
@@ -55637,11 +55661,14 @@
   {
     "id": "macelleria_noun",
     "it": "macelleria",
-    "en": "butcher",
+    "en": "butcher's shop",
     "level": "A2",
     "pos": "noun",
     "noun_class": "f_std",
-    "en_syn": [],
+    "en_syn": [
+      "butcher's shop",
+      "butcher's"
+    ],
     "it_syn": [],
     "rating": 7
   },
@@ -70764,11 +70791,14 @@
   {
     "id": "pescheria_noun",
     "it": "pescheria",
-    "en": "fishmonger",
+    "en": "fish shop",
     "level": "A2",
     "pos": "noun",
     "noun_class": "f_std",
-    "en_syn": [],
+    "en_syn": [
+      "fish shop",
+      "fishmonger's"
+    ],
     "it_syn": [],
     "rating": 9
   },
@@ -75272,10 +75302,14 @@
   {
     "id": "prevalente_adverb",
     "it": "prevalente",
-    "en": "predominantly",
+    "en": "prevailing",
     "level": "B2",
-    "pos": "adverb",
-    "en_syn": [],
+    "pos": "adjective",
+    "en_syn": [
+      "prevailing",
+      "predominant",
+      "prevalent"
+    ],
     "it_syn": [],
     "rating": 7
   },
@@ -91115,13 +91149,14 @@
   {
     "id": "sinistro_noun",
     "it": "sinistro",
-    "en": "claim",
+    "en": "accident (insurance)",
     "level": "B1",
     "pos": "noun",
     "noun_class": "m_std",
     "en_syn": [
       "accident",
-      "disaster"
+      "incident",
+      "claim"
     ],
     "it_syn": [],
     "rating": 5
@@ -92344,12 +92379,13 @@
   {
     "id": "sommario_adjective",
     "it": "sommario",
-    "en": "summary",
+    "en": "cursory/brief",
     "level": "B2",
     "pos": "adjective",
     "en_syn": [
+      "cursory",
       "brief",
-      "cursory"
+      "summary"
     ],
     "it_syn": [],
     "rating": 6
@@ -100873,13 +100909,15 @@
   {
     "id": "titolo_noun",
     "it": "titolo",
-    "en": "bond",
+    "en": "title",
     "level": "B1",
     "pos": "noun",
     "noun_class": "m_std",
     "en_syn": [
       "title",
-      "security"
+      "bond",
+      "security",
+      "qualification"
     ],
     "it_syn": [],
     "rating": 5
@@ -103739,7 +103777,7 @@
   },
   {
     "id": "ufficio_samente_adverb",
-    "it": "ufficio samente",
+    "it": "ufficiosamente",
     "en": "unofficially",
     "level": "B2",
     "pos": "adverb",
@@ -106831,11 +106869,13 @@
   {
     "id": "visitare_verb",
     "it": "visitare",
-    "en": "to examine",
+    "en": "to visit",
     "level": "A2",
     "pos": "verb",
     "en_syn": [
-      "to visit"
+      "visit",
+      "examine",
+      "see"
     ],
     "it_syn": [],
     "rating": 6,
@@ -113050,13 +113090,15 @@
   {
     "id": "arrogante_noun",
     "it": "arrogante",
-    "en": "arrogant person",
+    "en": "arrogant",
     "level": "B1",
-    "pos": "noun",
+    "pos": "adjective",
     "rating": 7,
-    "en_syn": [],
-    "it_syn": [],
-    "noun_class": "m_std"
+    "en_syn": [
+      "arrogant",
+      "haughty"
+    ],
+    "it_syn": []
   },
   {
     "id": "educazione_artistica_noun",
@@ -115252,13 +115294,14 @@
   {
     "id": "legislativo_noun",
     "it": "legislativo",
-    "en": "legislature",
+    "en": "legislative",
     "level": "B1",
-    "pos": "noun",
+    "pos": "adjective",
     "rating": 6,
-    "en_syn": [],
-    "it_syn": [],
-    "noun_class": "m_std"
+    "en_syn": [
+      "legislative"
+    ],
+    "it_syn": []
   },
   {
     "id": "Lego_noun",
@@ -116253,11 +116296,15 @@
   {
     "id": "strada_statale_noun",
     "it": "strada statale",
-    "en": "motorway",
+    "en": "trunk road",
     "level": "B1",
     "pos": "noun",
     "rating": 8,
-    "en_syn": [],
+    "en_syn": [
+      "trunk road",
+      "state road",
+      "A road"
+    ],
     "it_syn": [],
     "noun_class": "f_std",
     "noun_override": {
@@ -119498,13 +119545,16 @@
   {
     "id": "prepotente_noun",
     "it": "prepotente",
-    "en": "bossy person",
+    "en": "overbearing",
     "level": "A2",
-    "pos": "noun",
+    "pos": "adjective",
     "rating": 9,
-    "en_syn": [],
-    "it_syn": [],
-    "noun_class": "m_std"
+    "en_syn": [
+      "overbearing",
+      "bossy",
+      "domineering"
+    ],
+    "it_syn": []
   },
   {
     "id": "apribottiglie_noun",
@@ -119526,13 +119576,13 @@
   {
     "id": "sfondo_noun",
     "it": "sfondo",
-    "en": "bottom/background",
+    "en": "background",
     "level": "A2",
     "pos": "noun",
     "rating": 5,
     "en_syn": [
       "background",
-      "bottom"
+      "backdrop"
     ],
     "it_syn": [],
     "noun_class": "m_std"
@@ -119610,11 +119660,10 @@
     "it": "impanato",
     "en": "breaded",
     "level": "B1",
-    "pos": "noun",
+    "pos": "adjective",
     "rating": 9,
     "en_syn": [],
-    "it_syn": [],
-    "noun_class": "m_std"
+    "it_syn": []
   },
   {
     "id": "colazione_inclusa_noun",
@@ -121921,12 +121970,14 @@
   {
     "id": "simpatia_noun",
     "it": "simpatia",
-    "en": "sympathy/friendliness",
+    "en": "friendliness/likeability",
     "level": "B1",
     "pos": "noun",
     "rating": 6,
     "en_syn": [
-      "sympathy"
+      "friendliness",
+      "likeability",
+      "warmth"
     ],
     "it_syn": [],
     "noun_class": "f_std"
@@ -122341,13 +122392,15 @@
   {
     "id": "tollerante_noun",
     "it": "tollerante",
-    "en": "tolerant person",
+    "en": "tolerant",
     "level": "B1",
-    "pos": "noun",
+    "pos": "adjective",
     "rating": 7,
-    "en_syn": [],
-    "it_syn": [],
-    "noun_class": "m_std"
+    "en_syn": [
+      "tolerant",
+      "open-minded"
+    ],
+    "it_syn": []
   },
   {
     "id": "tonnellata_noun",
@@ -124242,11 +124295,14 @@
   {
     "id": "canottaggio_noun",
     "it": "canottaggio",
-    "en": "canoeing",
+    "en": "rowing",
     "level": "B1",
     "pos": "noun",
     "rating": 9,
-    "en_syn": [],
+    "en_syn": [
+      "rowing",
+      "crew"
+    ],
     "it_syn": [],
     "noun_class": "m_std"
   },
@@ -126143,12 +126199,14 @@
   {
     "id": "vetrina_noun",
     "it": "vetrina",
-    "en": "display cabinet",
+    "en": "shop window",
     "level": "B1",
     "pos": "noun",
     "rating": 6,
     "en_syn": [
-      "shop window"
+      "shop window",
+      "display case",
+      "display cabinet"
     ],
     "it_syn": [],
     "noun_class": "f_std"
@@ -127832,12 +127890,14 @@
   {
     "id": "grinza_noun",
     "it": "grinza",
-    "en": "grimace/wrinkle",
+    "en": "crease/wrinkle",
     "level": "B1",
     "pos": "noun",
     "rating": 9,
     "en_syn": [
-      "wrinkle"
+      "crease",
+      "wrinkle",
+      "pucker"
     ],
     "it_syn": [],
     "noun_class": "f_std"
@@ -128820,13 +128880,13 @@
   {
     "id": "comporre_il_numero_verb",
     "it": "comporre il numero",
-    "en": "to dial/mark",
+    "en": "to dial",
     "level": "A2",
     "pos": "verb",
     "rating": 7,
     "en_syn": [
       "dial",
-      "mark"
+      "dial the number"
     ],
     "it_syn": []
   },
@@ -130139,12 +130199,13 @@
   {
     "id": "pretendere_verb",
     "it": "pretendere",
-    "en": "to intend/claim",
+    "en": "to demand/expect",
     "level": "B1",
     "pos": "verb",
     "rating": 6,
     "en_syn": [
-      "intend",
+      "demand",
+      "expect",
       "claim"
     ],
     "it_syn": [],
@@ -130426,7 +130487,9 @@
       "leave",
       "go away"
     ],
-    "it_syn": []
+    "it_syn": [],
+    "pastParticiple": "andato",
+    "aux": "essere"
   },
   {
     "id": "legittimare_verb",
@@ -130860,13 +130923,14 @@
   {
     "id": "indignare_verb",
     "it": "indignare",
-    "en": "to outrage/indignate",
+    "en": "to outrage",
     "level": "B1",
     "pos": "verb",
     "rating": 7,
     "en_syn": [
       "outrage",
-      "indignate"
+      "anger",
+      "appal"
     ],
     "it_syn": []
   },
@@ -136810,11 +136874,15 @@
   {
     "id": "in_bianco_adverb",
     "it": "in bianco",
-    "en": "blank/in blank",
+    "en": "blank/plain",
     "level": "B1",
     "pos": "adverb",
     "rating": 6,
-    "en_syn": [],
+    "en_syn": [
+      "blank",
+      "plain",
+      "unseasoned"
+    ],
     "it_syn": [],
     "audited": "v1-audit-2026-04-12"
   },
@@ -137823,7 +137891,7 @@
     "it": "seduto",
     "en": "seated/sitting",
     "level": "A2",
-    "pos": "adverb",
+    "pos": "adjective",
     "rating": 7,
     "en_syn": [
       "sitting"
@@ -138208,7 +138276,7 @@
     "it": "spalancato",
     "en": "wide open",
     "level": "B1",
-    "pos": "adverb",
+    "pos": "adjective",
     "rating": 5,
     "en_syn": [],
     "it_syn": [],
@@ -141133,12 +141201,12 @@
   {
     "id": "preporre_verb",
     "it": "preporre",
-    "en": "to foresee",
+    "en": "to place before",
     "level": "B2",
     "pos": "verb",
     "en_syn": [
-      "foresee",
-      "anticipate"
+      "place before",
+      "put in charge of"
     ],
     "it_syn": [],
     "rating": 8,

@@ -1,0 +1,22 @@
+{
+ "reviewed": "entries 7150-8310 (rating 7 tail, rating 8)",
+ "_finding": "Mostly part-of-speech slips: an Italian adjective entered as a noun and glossed as 'X person'. The app uses pos to decide whether to attach articles and whether to drill a plural, so an adjective tagged noun is not cosmetic.",
+ "rows": [
+  {"it": "droghiere", "en": "grocer", "syn": ["grocer", "grocery shopkeeper"],
+   "_was": "en was 'draper'. Renaming the misspelt droghere in 007 fixed the spelling but left the wrong gloss: a droghiere keeps a drogheria, a grocery shop. A draper sells cloth."},
+  {"it": "prevalente", "en": "prevailing", "pos": "adjective", "syn": ["prevailing", "predominant", "prevalent"],
+   "_was": "glossed 'predominantly' and tagged adverb, which duplicated prevalentemente directly below it. prevalente is the adjective."},
+  {"it": "tollerante", "en": "tolerant", "pos": "adjective", "syn": ["tolerant", "open-minded"],
+   "_was": "glossed 'tolerant person' as a noun; tollerante is the adjective."},
+  {"it": "agile", "pos": "adjective",
+   "_was": "pos was noun."},
+  {"it": "carisma", "pos": "noun",
+   "_was": "pos was adjective; carisma is a noun. carismatico is the adjective and is already present."},
+  {"it": "seduto", "pos": "adjective",
+   "_was": "pos was adverb; seduto is a participial adjective."},
+  {"it": "croccante", "en": "crunchy/crispy", "pos": "adjective", "syn": ["crunchy", "crispy"],
+   "_was": "glossed 'brittle' as a noun. The nut brittle sense exists but the everyday use is the adjective, and nothing else in the file covers crunchy."},
+  {"it": "endemia", "en": "endemic disease", "syn": ["endemic disease"],
+   "_was": "en was 'endemic', which is the adjective endemico."}
+ ]
+}

@@ -1,0 +1,16 @@
+{
+ "reviewed": "entries 3220-4240 (end of rating 5, start of rating 6)",
+ "_note": "These five were identified while reading but were left out of 006 by mistake; commit b64ff20 named titolo and censo in its message without actually carrying them. Applied here.",
+ "rows": [
+  {"it": "titolo", "en": "title", "syn": ["title", "bond", "security", "qualification"],
+   "_was": "en was 'bond' with 'title' demoted. The financial sense is real --- the file has 'titolo di stato = government bond' --- but the everyday meaning is a title."},
+  {"it": "censo", "en": "wealth/means", "syn": ["wealth", "means", "property"],
+   "_was": "en was 'census'. False friend: a census is a censimento. censo is means or social standing."},
+  {"it": "sinistro", "en": "accident (insurance)", "syn": ["accident", "incident", "claim"],
+   "_was": "en was 'claim'. The sinistro is the event itself; the claim made against it is the richiesta di risarcimento."},
+  {"it": "sfondo", "en": "background", "syn": ["background", "backdrop"],
+   "_was": "en was 'bottom/background'. sfondo is the background of an image or scene; 'bottom' belongs to fondo."},
+  {"it": "spalancato", "pos": "adjective",
+   "_was": "pos was adverb; spalancato is a participial adjective."}
+ ]
+}

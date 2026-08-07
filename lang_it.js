@@ -267,6 +267,14 @@ function isRegularNoun(w) {
   return !!(w && (w.noun_class === "m_std" || w.noun_class === "f_std"));
 }
 
+// An elided article joins straight onto the noun: l'amica, not "l' amica".
+// normalizeAnswer() collapses whitespace before it strips punctuation, so the spaced
+// form normalises to "l amica" while what the learner correctly types, l'amica,
+// normalises to "lamica" --- and every vowel-initial noun is marked wrong.
+function joinArticle(article, word) {
+  return article.endsWith("'") ? article + word : article + " " + word;
+}
+
 function getNounForms(w) {
   if (!w || w.pos !== "noun") return null;
   const wordBase = (w.src || w.it || "").trim();
@@ -277,14 +285,16 @@ function getNounForms(w) {
     const plBase = w.noun_override.plural || pluralizeNoun(base, "m_std");
     const aSg    = w.noun_override.article_sg || "il";
     const aPl    = w.noun_override.article_pl || "i";
-    return { base, pluralBase: plBase, singular: `${aSg} ${base}`, plural: `${aPl} ${plBase}` };
+    return { base, pluralBase: plBase,
+             singular: joinArticle(aSg, base), plural: joinArticle(aPl, plBase) };
   }
 
   const arts = nounArticlesForClass(w.noun_class, wordBase);
   if (!arts) return null;
 
   const plBase = pluralizeNoun(wordBase, w.noun_class);
-  return { base: wordBase, pluralBase: plBase, singular: `${arts.sg} ${wordBase}`, plural: `${arts.pl} ${plBase}` };
+  return { base: wordBase, pluralBase: plBase,
+           singular: joinArticle(arts.sg, wordBase), plural: joinArticle(arts.pl, plBase) };
 }
 
 function nounRequiresPluralForMastery(w) {

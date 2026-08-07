@@ -1,0 +1,13 @@
+{
+ "reviewed": "defects surfaced by re-running the engine check after the read",
+ "_finding": "Two of them I introduced: promoting carisma and innovatore to noun in 009 and 011 without giving them a noun_class, so getNounForms returned null and the entries silently lost their articles. The third is pre-existing: andarsene is pronominal in -ne rather than -si, so the reflexive helper does not recognise it and the participle rule fell through to its fallback.",
+ "rows": [
+  {"it": "innovatore", "nc": "m_std",
+   "_note": "ends in -e, so the engine derives gli innovatori on its own"},
+  {"it": "carisma", "nc": "irregular",
+   "override": {"base": "carisma", "plural": "carismi", "article_sg": "il", "article_pl": "i"},
+   "_note": "masculine despite the -a ending, like pigiama and problema; the regular rules cannot get carismi from carisma"},
+  {"it": "andarsene", "pp": "andato", "aux": "essere",
+   "_was": "the participle came out as 'andarseneato'. andarsene is built on andare with the clitics ne + si, and isReflexiveInfinitive only matches -arsi/-ersi/-irsi, so the stem was never reduced. Supplying the participle and auxiliary directly sidesteps the whole derivation."}
+ ]
+}

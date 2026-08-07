@@ -1,0 +1,27 @@
+{
+ "reviewed": "entries 8310-10345 (ratings 8, 9, 10) --- completes the read of every live entry",
+ "rows": [
+  {"it": "canottaggio", "en": "rowing", "syn": ["rowing", "crew"],
+   "_was": "en was 'canoeing'. canottaggio is rowing; canoeing is canoa or canoismo. This one matters beyond itself: 007 dropped the invented headword 'rematura = rowing' on the grounds that canottaggio already covered rowing, which was only true of the word, not of the gloss. With this fix the file has rowing again."},
+  {"it": "pescheria", "en": "fish shop", "syn": ["fish shop", "fishmonger's"],
+   "_was": "en was 'fishmonger', which now collided with pescivendolo after 006 corrected that entry to the person. pescheria is the shop."},
+  {"it": "preporre", "en": "to place before", "syn": ["place before", "put in charge of"],
+   "_was": "en was 'to foresee', which is prevedere --- already in the file, glossed exactly that way. preporre is to put something or someone ahead of another."},
+  {"it": "lampeggiare", "en": "to flash", "syn": ["flash", "flicker", "blink"],
+   "_was": "en was 'to lighten'. lampeggiare is what lightning or an indicator does."},
+  {"it": "strada statale", "en": "trunk road", "syn": ["trunk road", "state road", "A road"],
+   "_was": "en was 'motorway', which is autostrada and already in the file. A strada statale is the non-motorway state road network."},
+  {"it": "artigianato", "en": "craftsmanship", "syn": ["craftsmanship", "handicrafts", "crafts"],
+   "_was": "en was 'handcrafted', an adjective. artigianato is the noun; artigianale is the adjective and is already present."},
+  {"it": "grinza", "en": "crease/wrinkle", "syn": ["crease", "wrinkle", "pucker"],
+   "_was": "en led with 'grimace', which is smorfia. A grinza is a crease in cloth or skin."},
+  {"it": "prepotente", "en": "overbearing", "pos": "adjective", "syn": ["overbearing", "bossy", "domineering"],
+   "_was": "glossed 'bossy person' as a noun; prepotente is the adjective."},
+  {"it": "impanato", "pos": "adjective",
+   "_was": "pos was noun; impanato is a participial adjective."},
+  {"it": "ufficio samente", "it_new": "ufficiosamente",
+   "_was": "the headword had a space inserted mid-word, so the app was teaching the non-phrase 'ufficio samente'."},
+  {"it": "erbicida", "en": "herbicide", "syn": ["herbicide", "weedkiller"],
+   "_was": "en was 'wherbicide' --- a stray w."}
+ ]
+}

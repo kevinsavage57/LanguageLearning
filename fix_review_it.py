@@ -54,18 +54,42 @@ def main():
     dropped = [w for w in words if w.get("id") in drop_ids]
     words = [w for w in words if w.get("id") not in drop_ids]
 
-    seen, dupes = set(), set()
-    for r in rows:
-        (dupes if r["it"] in seen else seen).add(r["it"])
-    if dupes:
-        print("WARNING: same headword fixed in two batches: %s" % sorted(dupes))
-
     # Key each row by its old headword *and* its new one so a rename stays idempotent.
-    fixes = {}
+    # A headword touched by two batches has its rows *merged*, later file winning per
+    # field. Replacing outright would silently drop the earlier batch's edits: pretendere
+    # got its pastParticiple in 003 and its gloss in 009, and only the gloss survived.
+    # A rename makes two spellings the same entry, so group them before merging:
+    # 007 renames droghere -> droghiere and 011 then corrects droghiere's gloss. Keyed
+    # naively, a rebuild from the pre-audit file would rename without re-glossing,
+    # because the entry still reads "droghere" when the lookup happens.
+    alias = {}
     for r in rows:
-        fixes[r["it"]] = r
         if "it_new" in r:
-            fixes[r["it_new"]] = r
+            alias[r["it"]] = alias.get(r["it_new"], r["it_new"])
+    canon = lambda k: alias.get(k, k)
+
+    merged, spellings, multi = {}, {}, set()
+    for r in rows:
+        key = canon(r["it"])
+        # Every spelling the group has ever had stays a valid lookup key, so the row
+        # still matches whether the file holds the old headword or the renamed one.
+        seen = spellings.setdefault(key, set())
+        seen.update([r["it"], key])
+        if "it_new" in r:
+            seen.add(r["it_new"])
+        if key in merged:
+            multi.add(key)
+            merged[key] = {**merged[key], **r}
+        else:
+            merged[key] = dict(r)
+
+    fixes = {}
+    for key, r in merged.items():
+        for spelling in spellings[key]:
+            fixes[spelling] = r
+    if multi:
+        print("note: headword fixed in more than one batch, rows merged: %s"
+              % sorted(multi))
 
     changes = []
     for w in words:

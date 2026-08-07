@@ -1,0 +1,23 @@
+{
+ "reviewed": "entries 5650-7150 (rating 7)",
+ "drop_ids": ["esplora_noun"],
+ "_dropped": [
+  "esplora_noun -- 'esplora' is the third-person verb form, not a noun. esploratore and esploratrice are both already present and correct."
+ ],
+ "rows": [
+  {"it": "visitare", "en": "to visit", "syn": ["visit", "examine", "see"],
+   "_was": "en was 'to examine' with 'to visit' demoted. The medical sense is real (il medico mi ha visitato) but the everyday one is to visit, which the file already assumes in 'visitare un museo'."},
+  {"it": "vetrina", "en": "shop window", "syn": ["shop window", "display case", "display cabinet"],
+   "_was": "en was 'display cabinet'; the ordinary sense is the shop window."},
+  {"it": "foniatria", "en": "phoniatrics", "syn": ["phoniatrics", "speech therapy"],
+   "_was": "en was 'speech therapist', which is the person. logopedista is already in the file glossed exactly that way, so the two entries collided. foniatria is the discipline."},
+  {"it": "macelleria", "en": "butcher's shop", "syn": ["butcher's shop", "butcher's"],
+   "_was": "en was 'butcher', identical to macellaio directly above it. macelleria is the shop."},
+  {"it": "arrogante", "en": "arrogant", "pos": "adjective", "syn": ["arrogant", "haughty"],
+   "_was": "glossed 'arrogant person' as a noun; arrogante is the adjective."},
+  {"it": "indignare", "en": "to outrage", "syn": ["outrage", "anger", "appal"],
+   "_was": "en_syn contained 'indignate', which is not an English word."},
+  {"it": "comporre il numero", "en": "to dial", "syn": ["dial", "dial the number"],
+   "_was": "en_syn contained 'mark', which is Spanish marcar (to dial) rendered literally --- the same cross-language leak as escapata and verdureria."}
+ ]
+}
