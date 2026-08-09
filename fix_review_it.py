@@ -126,6 +126,8 @@ def main():
         if "override" in r:
             w["noun_class"] = "irregular"
             w["noun_override"] = dict(r["override"])
+        if "rating" in r:
+            w["rating"] = r["rating"]
         if "pp" in r:
             w["pastParticiple"] = r["pp"]
         if "aux" in r:
@@ -136,7 +138,7 @@ def main():
         if before != after:
             b, a = json.loads(before), json.loads(after)
             bits = []
-            for k in ("it", "en", "pos", "en_syn", "noun_class", "pastParticiple", "aux"):
+            for k in ("it", "en", "pos", "en_syn", "noun_class", "pastParticiple", "aux", "rating"):
                 if b.get(k) != a.get(k):
                     bits.append("%s: %r -> %r" % (k, b.get(k), a.get(k)))
             if b.get("noun_override") != a.get("noun_override"):

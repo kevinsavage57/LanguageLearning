@@ -1503,7 +1503,7 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 9
   },
   {
     "id": "accountable_adjective",
@@ -1513,7 +1513,7 @@
     "pos": "adjective",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 10
   },
   {
     "id": "accovacciarsi_verb",
@@ -4768,7 +4768,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "anagrafe_noun",
@@ -5703,7 +5703,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "anormale_adjective",
@@ -8485,7 +8485,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 9
   },
   {
     "id": "assicurare_verb",
@@ -10305,7 +10305,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 8
   },
   {
     "id": "babysitter_noun",
@@ -10379,7 +10379,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 7
   },
   {
     "id": "badante_noun",
@@ -10400,10 +10400,16 @@
     "en": "badge",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 7,
+    "noun_override": {
+      "base": "badge",
+      "plural": "badge",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "baffi_noun",
@@ -10666,7 +10672,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5
+    "rating": 7
   },
   {
     "id": "banale_adjective",
@@ -11389,7 +11395,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 9
   },
   {
     "id": "benché_adverb",
@@ -11492,7 +11498,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5
+    "rating": 8
   },
   {
     "id": "benessere_noun",
@@ -11798,7 +11804,7 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
+    "rating": 7,
     "noun_override": {
       "base": "big bang",
       "plural": "big bang",
@@ -11938,10 +11944,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5,
+    "rating": 9,
     "noun_override": {
       "base": "bike sharing",
-      "plural": "biki sharing",
+      "plural": "bike sharing",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -12069,10 +12075,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7,
+    "rating": 10,
     "noun_override": {
       "base": "binge watching",
-      "plural": "bingi watching",
+      "plural": "binge watching",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -12250,7 +12256,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "birra_noun",
@@ -12415,7 +12421,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9
   },
   {
     "id": "bloccare_verb",
@@ -12471,7 +12477,7 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 8
   },
   {
     "id": "blog_noun",
@@ -12526,10 +12532,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9,
+    "rating": 10,
     "noun_override": {
       "base": "boa constrictor",
-      "plural": "boi constrictor",
+      "plural": "boa constrictor",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -12938,7 +12944,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 9
   },
   {
     "id": "bora_noun",
@@ -13194,10 +13200,16 @@
     "en": "boutique",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "f_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 8,
+    "noun_override": {
+      "base": "boutique",
+      "plural": "boutique",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "box_office_noun",
@@ -13208,10 +13220,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4,
+    "rating": 8,
     "noun_override": {
       "base": "box office",
-      "plural": "box offici",
+      "plural": "box office",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -13281,7 +13293,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5
+    "rating": 6
   },
   {
     "id": "branding_noun",
@@ -13292,7 +13304,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 9
   },
   {
     "id": "brasare_verb",
@@ -13462,10 +13474,16 @@
     "en": "brie",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9,
+    "noun_override": {
+      "base": "brie",
+      "plural": "brie",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "brillante_adjective",
@@ -13828,7 +13846,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 7
   },
   {
     "id": "bugia_noun",
@@ -13916,7 +13934,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9
   },
   {
     "id": "bungee_jumping_noun",
@@ -13927,10 +13945,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9,
+    "rating": 10,
     "noun_override": {
       "base": "bungee jumping",
-      "plural": "bungei jumping",
+      "plural": "bungee jumping",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -14069,7 +14087,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9
   },
   {
     "id": "burocrate_noun",
@@ -14167,7 +14185,7 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4,
+    "rating": 8,
     "noun_override": {
       "base": "business class",
       "plural": "business class",
@@ -15150,7 +15168,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "camera_deco_noun",
@@ -16588,7 +16606,7 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5,
+    "rating": 8,
     "noun_override": {
       "base": "car sharing",
       "plural": "car sharing",
@@ -16728,7 +16746,7 @@
     "pos": "adjective",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 10
   },
   {
     "id": "carbonade_flamande_noun",
@@ -16809,7 +16827,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9
   },
   {
     "id": "cardinale_noun",
@@ -17059,7 +17077,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "carriera_noun",
@@ -17564,10 +17582,16 @@
     "en": "cashmere",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9,
+    "noun_override": {
+      "base": "cashmere",
+      "plural": "cashmere",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "casinò_noun",
@@ -18171,7 +18195,7 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 8
   },
   {
     "id": "celibe_noun",
@@ -19039,7 +19063,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4
+    "rating": 7
   },
   {
     "id": "checkout_noun",
@@ -19050,7 +19074,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4
+    "rating": 7
   },
   {
     "id": "chef_noun",
@@ -20693,7 +20717,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "clima_noun",
@@ -20715,7 +20739,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 9
   },
   {
     "id": "clinica_privata_noun",
@@ -20744,7 +20768,7 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 7
   },
   {
     "id": "clips_noun",
@@ -20818,7 +20842,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 9
   },
   {
     "id": "coalizione_noun",
@@ -20840,7 +20864,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 8
   },
   {
     "id": "coccinella_noun",
@@ -22689,7 +22713,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 10
   },
   {
     "id": "compostaggio_noun",
@@ -24616,7 +24640,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "contrabbando_noun",
@@ -25394,7 +25418,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "coraggio_noun",
@@ -27227,7 +27251,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9
   },
   {
     "id": "crostaceo_noun",
@@ -27812,10 +27836,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5,
+    "rating": 9,
     "noun_override": {
       "base": "customer care",
-      "plural": "customer cari",
+      "plural": "customer care",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -28296,10 +28320,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
+    "rating": 10,
     "noun_override": {
       "base": "data scientist",
-      "plural": "dati scientist",
+      "plural": "data scientist",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -28311,10 +28335,16 @@
     "en": "database",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 6,
+    "noun_override": {
+      "base": "database",
+      "plural": "database",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "datore_di_lavoro_noun",
@@ -28385,10 +28415,16 @@
     "en": "deadline",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "f_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 9,
+    "noun_override": {
+      "base": "deadline",
+      "plural": "deadline",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "deambulatore_noun",
@@ -28467,7 +28503,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "debutto_noun",
@@ -29165,7 +29201,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 9
   },
   {
     "id": "dente_noun",
@@ -31918,7 +31954,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 10
   },
   {
     "id": "disperazione_noun",
@@ -32458,10 +32494,16 @@
     "en": "djembe",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 10
+    "rating": 10,
+    "noun_override": {
+      "base": "djembe",
+      "plural": "djembe",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "DNA_noun",
@@ -33365,10 +33407,16 @@
     "en": "e-commerce",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 8,
+    "noun_override": {
+      "base": "e-commerce",
+      "plural": "e-commerce",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "elearning_noun",
@@ -33379,7 +33427,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5
+    "rating": 8
   },
   {
     "id": "ereader_noun",
@@ -33390,7 +33438,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 9
   },
   {
     "id": "eau_de_toilette_noun",
@@ -33651,10 +33699,10 @@
     "en": "edamame",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9,
+    "rating": 10,
     "noun_override": {
       "base": "edamame",
       "plural": "edamame",
@@ -34760,7 +34808,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 9
   },
   {
     "id": "enoteca_noun",
@@ -35528,10 +35576,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5,
+    "rating": 10,
     "noun_override": {
       "base": "escape room",
-      "plural": "escapi room",
+      "plural": "escape room",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -36935,7 +36983,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 10
   },
   {
     "id": "expo_noun",
@@ -36974,7 +37022,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9
   },
   {
     "id": "fa_bel_tempo_phrase",
@@ -37202,7 +37250,7 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5,
+    "rating": 7,
     "noun_override": {
       "base": "fake news",
       "plural": "fake news",
@@ -42454,7 +42502,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7,
+    "rating": 9,
     "noun_override": {
       "base": "futures",
       "plural": "futures",
@@ -42647,10 +42695,16 @@
     "en": "garage",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 6,
+    "noun_override": {
+      "base": "garage",
+      "plural": "garage",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "garantire_verb",
@@ -43156,7 +43210,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "geofisico_noun",
@@ -44366,7 +44420,7 @@
     "pos": "adjective",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 10
   },
   {
     "id": "gnocchi_noun",
@@ -44530,7 +44584,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "governare_verb",
@@ -45109,7 +45163,7 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4,
+    "rating": 7,
     "noun_override": {
       "base": "green pass",
       "plural": "green pass",
@@ -45854,7 +45908,7 @@
     "pos": "adjective",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9
   },
   {
     "id": "hard_disk_noun",
@@ -45869,8 +45923,8 @@
     "noun_override": {
       "base": "hard disk",
       "plural": "hard disk",
-      "article_sg": "il",
-      "article_pl": "i"
+      "article_sg": "l'",
+      "article_pl": "gli"
     },
     "audited": "v1-audit-2026-04-12"
   },
@@ -45887,8 +45941,8 @@
     "noun_override": {
       "base": "hard disk esterno",
       "plural": "hard disk esterni",
-      "article_sg": "il",
-      "article_pl": "i"
+      "article_sg": "l'",
+      "article_pl": "gli"
     },
     "audited": "v1-audit-2026-04-12"
   },
@@ -45901,12 +45955,12 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 3,
+    "rating": 7,
     "noun_override": {
       "base": "hard power",
       "plural": "hard power",
-      "article_sg": "il",
-      "article_pl": "i"
+      "article_sg": "l'",
+      "article_pl": "gli"
     },
     "audited": "v1-audit-2026-04-12"
   },
@@ -45930,7 +45984,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "hedge_fund_noun",
@@ -45941,12 +45995,12 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7,
+    "rating": 10,
     "noun_override": {
       "base": "hedge fund",
-      "plural": "hedgi fund",
-      "article_sg": "il",
-      "article_pl": "i"
+      "plural": "hedge fund",
+      "article_sg": "l'",
+      "article_pl": "gli"
     },
     "audited": "v1-audit-2026-04-12"
   },
@@ -45959,12 +46013,12 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
+    "rating": 8,
     "noun_override": {
       "base": "hip hop",
       "plural": "hip hop",
-      "article_sg": "il",
-      "article_pl": "i"
+      "article_sg": "l'",
+      "article_pl": "gli"
     },
     "audited": "v1-audit-2026-04-12"
   },
@@ -45979,7 +46033,7 @@
       "hit song"
     ],
     "it_syn": [],
-    "rating": 4
+    "rating": 6
   },
   {
     "id": "HIV_noun",
@@ -46260,10 +46314,16 @@
     "en": "hoodie",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 10,
+    "noun_override": {
+      "base": "hoodie",
+      "plural": "hoodie",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "hostess_noun",
@@ -46271,10 +46331,16 @@
     "en": "flight attendant",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 7,
+    "noun_override": {
+      "base": "hostess",
+      "plural": "hostess",
+      "article_sg": "l'",
+      "article_pl": "le"
+    }
   },
   {
     "id": "i_article",
@@ -50376,10 +50442,16 @@
     "en": "intelligence",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "f_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5
+    "rating": 6,
+    "noun_override": {
+      "base": "intelligence",
+      "plural": "intelligence",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "intelligente_adjective",
@@ -52072,10 +52144,16 @@
     "en": "judo",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 8,
+    "noun_override": {
+      "base": "judo",
+      "plural": "judo",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "junghismo_noun",
@@ -52116,10 +52194,16 @@
     "en": "karate",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 7,
+    "noun_override": {
+      "base": "karate",
+      "plural": "karate",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "kefir_noun",
@@ -52130,7 +52214,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "Kenya_noun",
@@ -52232,7 +52316,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9
   },
   {
     "id": "komodovaran_noun",
@@ -52253,7 +52337,7 @@
     "pos": "adjective",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9
   },
   {
     "id": "KPI_noun",
@@ -52277,7 +52361,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "kumquat_noun",
@@ -52937,10 +53021,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
+    "rating": 7,
     "noun_override": {
       "base": "laser game",
-      "plural": "laser gami",
+      "plural": "laser game",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -53486,7 +53570,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 8
   },
   {
     "id": "legale_adjective",
@@ -53645,7 +53729,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8,
+    "rating": 9,
     "noun_override": {
       "base": "leggings",
       "plural": "leggings",
@@ -54906,7 +54990,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 9
   },
   {
     "id": "lobbyista_noun",
@@ -55002,7 +55086,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 9
   },
   {
     "id": "locker_noun",
@@ -55013,7 +55097,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 9
   },
   {
     "id": "lodare_verb",
@@ -55475,10 +55559,16 @@
     "en": "lycra",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "f_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10,
+    "noun_override": {
+      "base": "lycra",
+      "plural": "lycra",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "lì_adverb",
@@ -55934,7 +56024,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9
   },
   {
     "id": "magnesio_noun",
@@ -56950,7 +57040,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7,
+    "rating": 8,
     "noun_override": {
       "base": "marines",
       "plural": "marines",
@@ -58126,7 +58216,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 10
   },
   {
     "id": "mentre_conjunction",
@@ -59760,7 +59850,7 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9
   },
   {
     "id": "minerale_noun",
@@ -60127,7 +60217,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 8
   },
   {
     "id": "mixer_audio_noun",
@@ -62563,7 +62653,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "Nepal_noun",
@@ -62814,7 +62904,7 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4,
+    "rating": 7,
     "noun_override": {
       "base": "night club",
       "plural": "night club",
@@ -63898,10 +63988,16 @@
     "en": "nuance",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "f_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 10,
+    "noun_override": {
+      "base": "nuance",
+      "plural": "nuance",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "nubifragio_noun",
@@ -64191,7 +64287,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9
   },
   {
     "id": "né_luno_né_laltro_phrase",
@@ -64880,7 +64976,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "oncologa_noun",
@@ -67022,10 +67118,16 @@
     "en": "pancake",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9,
+    "noun_override": {
+      "base": "pancake",
+      "plural": "pancake",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "pancetta_noun",
@@ -69031,7 +69133,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 10
   },
   {
     "id": "peccato_phrase",
@@ -69130,7 +69232,7 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
+    "rating": 9,
     "noun_override": {
       "base": "peer review",
       "plural": "peer review",
@@ -69594,7 +69696,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "pentirsi_verb",
@@ -70142,10 +70244,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4,
+    "rating": 6,
     "noun_override": {
       "base": "performance art",
-      "plural": "performanci art",
+      "plural": "performance art",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -70334,7 +70436,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "permanente_adjective",
@@ -71618,7 +71720,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 8
   },
   {
     "id": "pietra_noun",
@@ -71708,7 +71810,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9
   },
   {
     "id": "pilota_noun",
@@ -72625,7 +72727,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "podio_noun",
@@ -74514,10 +74616,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5,
+    "rating": 7,
     "noun_override": {
       "base": "premier league",
-      "plural": "premier leagui",
+      "plural": "premier league",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -74529,10 +74631,16 @@
     "en": "premiere",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "f_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 8,
+    "noun_override": {
+      "base": "premiere",
+      "plural": "premiere",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "premio_noun",
@@ -75499,7 +75607,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 9
   },
   {
     "id": "primo_adjective",
@@ -75671,10 +75779,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
+    "rating": 10,
     "noun_override": {
       "base": "private equity",
-      "plural": "privati equity",
+      "plural": "private equity",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -78428,10 +78536,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8,
+    "rating": 10,
     "noun_override": {
       "base": "quantitative easing",
-      "plural": "quantitativi easing",
+      "plural": "quantitative easing",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -78751,10 +78859,16 @@
     "en": "quinoa",
     "level": "B1",
     "pos": "noun",
-    "noun_class": "f_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9,
+    "noun_override": {
+      "base": "quinoa",
+      "plural": "quinoa",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "quorn_noun",
@@ -78765,7 +78879,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "quota_di_pesca_noun",
@@ -79854,7 +79968,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "ratto_noun",
@@ -80223,7 +80337,7 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 7
   },
   {
     "id": "receptionist_noun",
@@ -80369,7 +80483,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4,
+    "rating": 5,
     "noun_override": {
       "base": "record",
       "plural": "record",
@@ -80483,7 +80597,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 10
   },
   {
     "id": "referendum_noun",
@@ -81246,7 +81360,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 7
   },
   {
     "id": "respirare_verb",
@@ -81479,7 +81593,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 10
   },
   {
     "id": "rete_noun",
@@ -84624,7 +84738,7 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 10
   },
   {
     "id": "robot_noun",
@@ -84699,7 +84813,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4
+    "rating": 5
   },
   {
     "id": "rognone_noun",
@@ -85052,10 +85166,16 @@
     "en": "routine",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "f_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 6,
+    "noun_override": {
+      "base": "routine",
+      "plural": "routine",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "rover_lunare_noun",
@@ -85101,7 +85221,7 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7,
+    "rating": 9,
     "noun_override": {
       "base": "royalty",
       "plural": "royalty",
@@ -90017,7 +90137,7 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "sera_noun",
@@ -90668,7 +90788,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
+    "rating": 8,
     "noun_override": {
       "base": "shorts",
       "plural": "shorts",
@@ -90873,10 +90993,16 @@
     "en": "silo",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9,
+    "noun_override": {
+      "base": "silo",
+      "plural": "silo",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "silvicoltura_noun",
@@ -91444,10 +91570,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
+    "rating": 8,
     "noun_override": {
       "base": "slot machine",
-      "plural": "slot machini",
+      "plural": "slot machine",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -91557,7 +91683,7 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
+    "rating": 10,
     "noun_override": {
       "base": "smart grid",
       "plural": "smart grid",
@@ -91731,7 +91857,7 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4,
+    "rating": 5,
     "noun_override": {
       "base": "social media",
       "plural": "social media",
@@ -91974,7 +92100,7 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5,
+    "rating": 8,
     "noun_override": {
       "base": "soft power",
       "plural": "soft power",
@@ -91989,10 +92115,16 @@
     "en": "software",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5
+    "rating": 5,
+    "noun_override": {
+      "base": "software",
+      "plural": "software",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "soggettivamente_adverb",
@@ -93445,7 +93577,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 7
   },
   {
     "id": "sparecchiare_verb",
@@ -94636,7 +94768,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5
+    "rating": 7
   },
   {
     "id": "sprecare_risorse_verb",
@@ -95159,7 +95291,7 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8,
+    "rating": 10,
     "noun_override": {
       "base": "standing ovation",
       "plural": "standing ovation",
@@ -95686,7 +95818,7 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "steward_noun",
@@ -95992,7 +96124,7 @@
       "stop"
     ],
     "it_syn": [],
-    "rating": 3
+    "rating": 5
   },
   {
     "id": "storia_noun",
@@ -96103,7 +96235,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 8
   },
   {
     "id": "stracchino_noun",
@@ -96308,7 +96440,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 10
   },
   {
     "id": "street_art_noun",
@@ -96319,7 +96451,7 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4,
+    "rating": 6,
     "noun_override": {
       "base": "street art",
       "plural": "street art",
@@ -96337,7 +96469,7 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4,
+    "rating": 7,
     "noun_override": {
       "base": "street food",
       "plural": "street food",
@@ -97161,7 +97293,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 7
   },
   {
     "id": "suocera_noun",
@@ -98210,7 +98342,7 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "Tailandia_noun",
@@ -98232,7 +98364,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 4
+    "rating": 9
   },
   {
     "id": "talco_noun",
@@ -98423,7 +98555,7 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "tapparella_noun",
@@ -98606,10 +98738,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5,
+    "rating": 8,
     "noun_override": {
       "base": "task force",
-      "plural": "task forci",
+      "plural": "task force",
       "article_sg": "la",
       "article_pl": "le"
     },
@@ -99395,7 +99527,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "temperamento_noun",
@@ -99982,7 +100114,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 7
   },
   {
     "id": "termine_noun",
@@ -100433,7 +100565,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9,
+    "rating": 10,
     "noun_override": {
       "base": "thermos",
       "plural": "thermos",
@@ -100450,7 +100582,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 7
   },
   {
     "id": "Ti_amo_phrase",
@@ -100648,7 +100780,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 8
   },
   {
     "id": "timidamente_adverb",
@@ -101520,7 +101652,7 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5,
+    "rating": 7,
     "noun_override": {
       "base": "tour de France",
       "plural": "tour de France",
@@ -101681,7 +101813,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 8
   },
   {
     "id": "tradimento_noun",
@@ -102691,10 +102823,16 @@
     "en": "triage",
     "level": "B2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 9,
+    "noun_override": {
+      "base": "triage",
+      "plural": "triage",
+      "article_sg": "il",
+      "article_pl": "i"
+    }
   },
   {
     "id": "triangolo_noun",
@@ -103288,7 +103426,7 @@
     "noun_class": "f_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 10
   },
   {
     "id": "Tunisia_noun",
@@ -103815,10 +103953,16 @@
     "en": "ukulele",
     "level": "A2",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9,
+    "noun_override": {
+      "base": "ukulele",
+      "plural": "ukulele",
+      "article_sg": "l'",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "uliveto_noun",
@@ -103873,7 +104017,7 @@
     "pos": "adjective",
     "en_syn": [],
     "it_syn": [],
-    "rating": 9
+    "rating": 10
   },
   {
     "id": "umanesimo_noun",
@@ -105627,10 +105771,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
+    "rating": 9,
     "noun_override": {
       "base": "venture capital",
-      "plural": "venturi capital",
+      "plural": "venture capital",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -105880,7 +106024,7 @@
     "pos": "adjective",
     "en_syn": [],
     "it_syn": [],
-    "rating": 7
+    "rating": 8
   },
   {
     "id": "vertebra_noun",
@@ -107651,7 +107795,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 9
   },
   {
     "id": "welfare_aziendale_noun",
@@ -107680,10 +107824,10 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6,
+    "rating": 7,
     "noun_override": {
       "base": "welfare state",
-      "plural": "welfari stati",
+      "plural": "welfare state",
       "article_sg": "il",
       "article_pl": "i"
     },
@@ -107698,7 +107842,7 @@
     "noun_class": "m_std",
     "en_syn": [],
     "it_syn": [],
-    "rating": 8
+    "rating": 10
   },
   {
     "id": "wild_card_noun",
@@ -107709,7 +107853,7 @@
     "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 5,
+    "rating": 8,
     "noun_override": {
       "base": "wild card",
       "plural": "wild card",
@@ -108058,10 +108202,16 @@
     "en": "zoo",
     "level": "A1",
     "pos": "noun",
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "en_syn": [],
     "it_syn": [],
-    "rating": 6
+    "rating": 6,
+    "noun_override": {
+      "base": "zoo",
+      "plural": "zoo",
+      "article_sg": "lo",
+      "article_pl": "gli"
+    }
   },
   {
     "id": "zoologa_noun",
@@ -113321,7 +113471,7 @@
     "en": "badminton",
     "level": "B1",
     "pos": "noun",
-    "rating": 8,
+    "rating": 9,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -114217,7 +114367,7 @@
     "en": "hockey",
     "level": "A2",
     "pos": "noun",
-    "rating": 6,
+    "rating": 7,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -114910,7 +115060,7 @@
     "en": "jackpot",
     "level": "B1",
     "pos": "noun",
-    "rating": 7,
+    "rating": 8,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -114949,7 +115099,7 @@
     "en": "jet lag",
     "level": "B1",
     "pos": "noun",
-    "rating": 7,
+    "rating": 9,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -115246,7 +115396,7 @@
     "en": "leadership",
     "level": "B1",
     "pos": "noun",
-    "rating": 5,
+    "rating": 6,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "f_std",
@@ -115545,7 +115695,7 @@
     "en": "loft",
     "level": "B1",
     "pos": "noun",
-    "rating": 7,
+    "rating": 8,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -116580,10 +116730,10 @@
     "en": "mountain bike",
     "level": "A2",
     "pos": "noun",
-    "rating": 5,
+    "rating": 9,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "f_std",
+    "noun_class": "irregular",
     "noun_override": {
       "base": "mountain bike",
       "plural": "mountain bike",
@@ -116600,7 +116750,7 @@
     "rating": 9,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "f_std",
+    "noun_class": "irregular",
     "noun_override": {
       "base": "mousse",
       "plural": "mousse",
@@ -116726,7 +116876,7 @@
     "en": "musical",
     "level": "B1",
     "pos": "noun",
-    "rating": 5,
+    "rating": 6,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -117178,10 +117328,10 @@
     "en": "noodle",
     "level": "A2",
     "pos": "noun",
-    "rating": 8,
+    "rating": 10,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "noun_override": {
       "base": "noodle",
       "plural": "noodle",
@@ -117908,7 +118058,7 @@
     "en": "picnic",
     "level": "A2",
     "pos": "noun",
-    "rating": 7,
+    "rating": 8,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -118402,7 +118552,7 @@
     "en": "ranch",
     "level": "B1",
     "pos": "noun",
-    "rating": 6,
+    "rating": 7,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -118458,7 +118608,7 @@
     "en": "reality show",
     "level": "A2",
     "pos": "noun",
-    "rating": 5,
+    "rating": 7,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -118503,7 +118653,7 @@
     "en": "recital",
     "level": "B1",
     "pos": "noun",
-    "rating": 8,
+    "rating": 9,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -119024,7 +119174,7 @@
     "rating": 8,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "f_std",
+    "noun_class": "irregular",
     "noun_override": {
       "base": "roulette",
       "plural": "roulette",
@@ -119207,7 +119357,7 @@
     "en": "baseball",
     "level": "A2",
     "pos": "noun",
-    "rating": 5,
+    "rating": 6,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -119291,7 +119441,7 @@
     "en": "beat",
     "level": "B1",
     "pos": "noun",
-    "rating": 4,
+    "rating": 7,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -119349,7 +119499,7 @@
     "en": "bestseller",
     "level": "B1",
     "pos": "noun",
-    "rating": 8,
+    "rating": 9,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -119458,7 +119608,7 @@
     "en": "blackjack",
     "level": "B1",
     "pos": "noun",
-    "rating": 8,
+    "rating": 9,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -119714,7 +119864,7 @@
       "leaflet"
     ],
     "it_syn": [],
-    "noun_class": "f_std",
+    "noun_class": "irregular",
     "noun_override": {
       "base": "brochure",
       "plural": "brochure",
@@ -119745,10 +119895,10 @@
     "en": "brownie",
     "level": "A2",
     "pos": "noun",
-    "rating": 8,
+    "rating": 9,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "noun_override": {
       "base": "brownie",
       "plural": "brownie",
@@ -119779,7 +119929,7 @@
     "en": "brunch",
     "level": "B1",
     "pos": "noun",
-    "rating": 8,
+    "rating": 9,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -122030,7 +122180,7 @@
     "rating": 9,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "noun_override": {
       "base": "taekwondo",
       "plural": "taekwondo",
@@ -122093,7 +122243,7 @@
     "en": "tapa",
     "level": "A2",
     "pos": "noun",
-    "rating": 9,
+    "rating": 10,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "f_std",
@@ -124089,10 +124239,10 @@
     "en": "yo-yo",
     "level": "B1",
     "pos": "noun",
-    "rating": 6,
+    "rating": 8,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "noun_override": {
       "base": "yo-yo",
       "plural": "yo-yo",
@@ -124160,7 +124310,7 @@
     "rating": 7,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "noun_override": {
       "base": "zombie",
       "plural": "zombie",
@@ -124407,7 +124557,7 @@
     "rating": 8,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "noun_override": {
       "base": "cardio",
       "plural": "cardio",
@@ -124490,7 +124640,7 @@
     "en": "cast",
     "level": "B1",
     "pos": "noun",
-    "rating": 5,
+    "rating": 6,
     "en_syn": [
       "actors"
     ],
@@ -124526,7 +124676,7 @@
     "en": "catering",
     "level": "B1",
     "pos": "noun",
-    "rating": 7,
+    "rating": 8,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -124594,7 +124744,7 @@
     "rating": 7,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "noun_override": {
       "base": "champagne",
       "plural": "champagne",
@@ -124678,7 +124828,7 @@
     "en": "chatbot",
     "level": "B1",
     "pos": "noun",
-    "rating": 9,
+    "rating": 10,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -125450,10 +125600,10 @@
     "en": "cookie",
     "level": "B1",
     "pos": "noun",
-    "rating": 6,
+    "rating": 7,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "noun_override": {
       "base": "cookie",
       "plural": "cookie",
@@ -125961,7 +126111,7 @@
     "rating": 6,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "noun_override": {
       "base": "detective",
       "plural": "detective",
@@ -126342,7 +126492,7 @@
     "en": "download",
     "level": "A2",
     "pos": "noun",
-    "rating": 5,
+    "rating": 6,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -126506,7 +126656,7 @@
     "en": "duplex",
     "level": "B1",
     "pos": "noun",
-    "rating": 8,
+    "rating": 9,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -127042,7 +127192,7 @@
     "en": "fair play",
     "level": "B1",
     "pos": "noun",
-    "rating": 5,
+    "rating": 8,
     "en_syn": [],
     "it_syn": [],
     "noun_class": "m_std",
@@ -127246,7 +127396,7 @@
     "rating": 5,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "noun_override": {
       "base": "file",
       "plural": "file",
@@ -127401,7 +127551,7 @@
     "rating": 5,
     "en_syn": [],
     "it_syn": [],
-    "noun_class": "m_std",
+    "noun_class": "irregular",
     "noun_override": {
       "base": "hotel a cinque stelle",
       "plural": "hotel a cinque stelle",
@@ -140197,7 +140347,7 @@
     "en": "part-time",
     "level": "B1",
     "pos": "phrase",
-    "rating": 3,
+    "rating": 7,
     "en_syn": [],
     "it_syn": [],
     "audited": "v1-audit-2026-04-12"

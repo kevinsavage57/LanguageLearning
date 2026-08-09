@@ -1,0 +1,19 @@
+{
+ "reviewed": "h-initial loanwords: articles corrected to the elided form",
+ "_finding": "Italian has no /h/ phoneme. A leading h is silent, so the article elides: l'hotel, l'hamburger, gli hobby. Native Italian has no h-initial nouns at all --- only the verb forms ho, hai, ha, hanno --- so every h-initial entry here is a loanword, and Italian speakers pronounce them without any [h]. The engine now treats a leading h like a vowel; these five entries hardcoded il/i in their overrides and so bypassed it.",
+ "rows": [
+  {"it": "hard disk",
+   "override": {"base": "hard disk", "plural": "hard disk", "article_sg": "l'", "article_pl": "gli"}},
+  {"it": "hard disk esterno",
+   "override": {"base": "hard disk esterno", "plural": "hard disk esterni",
+                "article_sg": "l'", "article_pl": "gli"},
+   "_note": "the plural is right: the Italian adjective esterno inflects even though the English noun does not"},
+  {"it": "hard power",
+   "override": {"base": "hard power", "plural": "hard power", "article_sg": "l'", "article_pl": "gli"}},
+  {"it": "hedge fund",
+   "override": {"base": "hedge fund", "plural": "hedge fund", "article_sg": "l'", "article_pl": "gli"},
+   "_was": "plural was 'hedgi fund' --- the English noun hedge had been run through the Italian -e -> -i rule. English loanwords do not inflect in Italian."},
+  {"it": "hip hop",
+   "override": {"base": "hip hop", "plural": "hip hop", "article_sg": "l'", "article_pl": "gli"}}
+ ]
+}

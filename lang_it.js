@@ -243,7 +243,11 @@ function pluralizeNoun(base, nounClass) {
 
 function nounArticlesForClass(nounClass, wordBase) {
   const w = (wordBase || "").trim().toLowerCase();
-  const startsVowel = /^[aeiouàèìòùáéíóú]/.test(w);
+  // Italian has no /h/ phoneme, so a leading h is silent and the article elides:
+  // l'hotel, l'hamburger, gli hobby. This holds for the English loanwords too --- an
+  // Italian speaker says "otel", "amburger". Native Italian has no h-initial nouns,
+  // only verb forms (ho, hai, ha, hanno), so every case here is a loanword.
+  const startsVowel = /^[haeiouàèìòùáéíóú]/.test(w);
   const startsZ = /^z/.test(w);
   const startsGn = /^gn/.test(w);
   const startsPS = /^ps/.test(w);

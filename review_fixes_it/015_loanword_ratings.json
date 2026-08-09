@@ -1,0 +1,1128 @@
+{
+ "reviewed": "English loanword ratings re-derived from Italian corpus frequency",
+ "_generated_by": "gen_loanword_fixes.py",
+ "rows": [
+  {
+   "it": "accountability",
+   "rating": 9,
+   "_was": 7,
+   "_it_zipf": 2.52
+  },
+  {
+   "it": "accountable",
+   "rating": 10,
+   "_was": 7,
+   "_it_zipf": 1.31
+  },
+  {
+   "it": "anaconda",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.37
+  },
+  {
+   "it": "anorak",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 1.13
+  },
+  {
+   "it": "assessment",
+   "rating": 9,
+   "_was": 6,
+   "_it_zipf": 2.78
+  },
+  {
+   "it": "baba",
+   "rating": 8,
+   "_was": 7,
+   "_it_zipf": 3.26
+  },
+  {
+   "it": "backup",
+   "rating": 7,
+   "_was": 6,
+   "_it_zipf": 3.72
+  },
+  {
+   "it": "badge",
+   "rating": 7,
+   "_was": 6,
+   "_it_zipf": 3.41
+  },
+  {
+   "it": "ban",
+   "rating": 7,
+   "_was": 5,
+   "_it_zipf": 3.73
+  },
+  {
+   "it": "benchmark",
+   "rating": 9,
+   "_was": 7,
+   "_it_zipf": 2.95
+  },
+  {
+   "it": "benefit",
+   "rating": 8,
+   "_was": 5,
+   "_it_zipf": 3.24
+  },
+  {
+   "it": "big bang",
+   "rating": 7,
+   "_was": 6,
+   "_it_zipf": 3.85
+  },
+  {
+   "it": "bike sharing",
+   "rating": 9,
+   "_was": 5,
+   "_it_zipf": 3.29
+  },
+  {
+   "it": "binge watching",
+   "rating": 10,
+   "_was": 7,
+   "_it_zipf": 2.43
+  },
+  {
+   "it": "birdwatching",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.24
+  },
+  {
+   "it": "blazer",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.74
+  },
+  {
+   "it": "blockchain",
+   "rating": 8,
+   "_was": 7,
+   "_it_zipf": 3.22
+  },
+  {
+   "it": "boa constrictor",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 1.91
+  },
+  {
+   "it": "booster",
+   "rating": 9,
+   "_was": 7,
+   "_it_zipf": 2.76
+  },
+  {
+   "it": "boutique",
+   "rating": 8,
+   "_was": 7,
+   "_it_zipf": 3.23
+  },
+  {
+   "it": "box office",
+   "rating": 8,
+   "_was": 4,
+   "_it_zipf": 3.72
+  },
+  {
+   "it": "brand",
+   "rating": 6,
+   "_was": 5,
+   "_it_zipf": 3.97
+  },
+  {
+   "it": "branding",
+   "rating": 9,
+   "_was": 7,
+   "_it_zipf": 2.97
+  },
+  {
+   "it": "brie",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.92
+  },
+  {
+   "it": "bug",
+   "rating": 7,
+   "_was": 6,
+   "_it_zipf": 3.68
+  },
+  {
+   "it": "bungalow",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.96
+  },
+  {
+   "it": "bungee jumping",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.2
+  },
+  {
+   "it": "burnout",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.5
+  },
+  {
+   "it": "business class",
+   "rating": 8,
+   "_was": 4,
+   "_it_zipf": 3.68
+  },
+  {
+   "it": "camembert",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.16
+  },
+  {
+   "it": "car sharing",
+   "rating": 8,
+   "_was": 5,
+   "_it_zipf": 3.46
+  },
+  {
+   "it": "carbon neutral",
+   "rating": 10,
+   "_was": 6,
+   "_it_zipf": 2.51
+  },
+  {
+   "it": "cardigan",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.86
+  },
+  {
+   "it": "carpooling",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.09
+  },
+  {
+   "it": "cashmere",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.74
+  },
+  {
+   "it": "celebrity",
+   "rating": 8,
+   "_was": 6,
+   "_it_zipf": 3.01
+  },
+  {
+   "it": "check-in",
+   "rating": 7,
+   "_was": 4,
+   "_it_zipf": 3.99
+  },
+  {
+   "it": "check-out",
+   "rating": 7,
+   "_was": 4,
+   "_it_zipf": 3.87
+  },
+  {
+   "it": "cliffhanger",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.42
+  },
+  {
+   "it": "climax",
+   "rating": 9,
+   "_was": 7,
+   "_it_zipf": 2.77
+  },
+  {
+   "it": "clip",
+   "rating": 7,
+   "_was": 6,
+   "_it_zipf": 3.73
+  },
+  {
+   "it": "coaching",
+   "rating": 9,
+   "_was": 6,
+   "_it_zipf": 2.84
+  },
+  {
+   "it": "cobra",
+   "rating": 8,
+   "_was": 7,
+   "_it_zipf": 3.27
+  },
+  {
+   "it": "compost",
+   "rating": 10,
+   "_was": 8,
+   "_it_zipf": 2.43
+  },
+  {
+   "it": "contouring",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.04
+  },
+  {
+   "it": "copywriting",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.31
+  },
+  {
+   "it": "crossfit",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.82
+  },
+  {
+   "it": "customer care",
+   "rating": 9,
+   "_was": 5,
+   "_it_zipf": 3.0
+  },
+  {
+   "it": "data scientist",
+   "rating": 10,
+   "_was": 6,
+   "_it_zipf": 2.65
+  },
+  {
+   "it": "deadline",
+   "rating": 9,
+   "_was": 6,
+   "_it_zipf": 2.73
+  },
+  {
+   "it": "debugging",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.06
+  },
+  {
+   "it": "denim",
+   "rating": 9,
+   "_was": 7,
+   "_it_zipf": 2.54
+  },
+  {
+   "it": "dispenser",
+   "rating": 10,
+   "_was": 8,
+   "_it_zipf": 2.36
+  },
+  {
+   "it": "e-commerce",
+   "rating": 8,
+   "_was": 6,
+   "_it_zipf": 3.46
+  },
+  {
+   "it": "e-learning",
+   "rating": 8,
+   "_was": 5,
+   "_it_zipf": 3.57
+  },
+  {
+   "it": "e-reader",
+   "rating": 9,
+   "_was": 6,
+   "_it_zipf": 3.24
+  },
+  {
+   "it": "edamame",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 1.49
+  },
+  {
+   "it": "engagement",
+   "rating": 9,
+   "_was": 6,
+   "_it_zipf": 2.97
+  },
+  {
+   "it": "escape room",
+   "rating": 10,
+   "_was": 5,
+   "_it_zipf": 2.87
+  },
+  {
+   "it": "expat",
+   "rating": 10,
+   "_was": 8,
+   "_it_zipf": 2.33
+  },
+  {
+   "it": "eyeliner",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.87
+  },
+  {
+   "it": "fake news",
+   "rating": 7,
+   "_was": 5,
+   "_it_zipf": 3.94
+  },
+  {
+   "it": "futures",
+   "rating": 9,
+   "_was": 7,
+   "_it_zipf": 2.85
+  },
+  {
+   "it": "geocaching",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 1.53
+  },
+  {
+   "it": "gluten-free",
+   "rating": 10,
+   "_was": 7,
+   "_it_zipf": 2.64
+  },
+  {
+   "it": "goulash",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 1.87
+  },
+  {
+   "it": "green pass",
+   "rating": 7,
+   "_was": 4,
+   "_it_zipf": 3.77
+  },
+  {
+   "it": "halal",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.67
+  },
+  {
+   "it": "hard power",
+   "rating": 7,
+   "_was": 3,
+   "_it_zipf": 3.86
+  },
+  {
+   "it": "headhunter",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 1.62
+  },
+  {
+   "it": "hedge fund",
+   "rating": 10,
+   "_was": 7,
+   "_it_zipf": 2.65
+  },
+  {
+   "it": "hip hop",
+   "rating": 8,
+   "_was": 6,
+   "_it_zipf": 3.47
+  },
+  {
+   "it": "hit",
+   "rating": 6,
+   "_was": 4,
+   "_it_zipf": 3.82
+  },
+  {
+   "it": "hoodie",
+   "rating": 10,
+   "_was": 8,
+   "_it_zipf": 1.95
+  },
+  {
+   "it": "intelligence",
+   "rating": 6,
+   "_was": 5,
+   "_it_zipf": 3.83
+  },
+  {
+   "it": "kefir",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.08
+  },
+  {
+   "it": "koala",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.75
+  },
+  {
+   "it": "kosher",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.73
+  },
+  {
+   "it": "krill",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.08
+  },
+  {
+   "it": "laser game",
+   "rating": 7,
+   "_was": 6,
+   "_it_zipf": 3.76
+  },
+  {
+   "it": "leasing",
+   "rating": 8,
+   "_was": 7,
+   "_it_zipf": 3.32
+  },
+  {
+   "it": "leggings",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.8
+  },
+  {
+   "it": "lobbying",
+   "rating": 9,
+   "_was": 7,
+   "_it_zipf": 2.64
+  },
+  {
+   "it": "lockdown",
+   "rating": 9,
+   "_was": 7,
+   "_it_zipf": 2.59
+  },
+  {
+   "it": "locker",
+   "rating": 9,
+   "_was": 7,
+   "_it_zipf": 2.65
+  },
+  {
+   "it": "lycra",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 1.83
+  },
+  {
+   "it": "magma",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.97
+  },
+  {
+   "it": "marines",
+   "rating": 8,
+   "_was": 7,
+   "_it_zipf": 3.31
+  },
+  {
+   "it": "mentoring",
+   "rating": 10,
+   "_was": 8,
+   "_it_zipf": 2.18
+  },
+  {
+   "it": "mindfulness",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.67
+  },
+  {
+   "it": "mixer",
+   "rating": 8,
+   "_was": 7,
+   "_it_zipf": 3.11
+  },
+  {
+   "it": "neoprene",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.03
+  },
+  {
+   "it": "night club",
+   "rating": 7,
+   "_was": 4,
+   "_it_zipf": 3.95
+  },
+  {
+   "it": "nuance",
+   "rating": 10,
+   "_was": 8,
+   "_it_zipf": 2.02
+  },
+  {
+   "it": "nylon",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.97
+  },
+  {
+   "it": "onboarding",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 0.0
+  },
+  {
+   "it": "pancake",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.96
+  },
+  {
+   "it": "peacekeeping",
+   "rating": 10,
+   "_was": 8,
+   "_it_zipf": 2.36
+  },
+  {
+   "it": "peer review",
+   "rating": 9,
+   "_was": 6,
+   "_it_zipf": 3.32
+  },
+  {
+   "it": "pentathlon",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.02
+  },
+  {
+   "it": "performance art",
+   "rating": 6,
+   "_was": 4,
+   "_it_zipf": 4.23
+  },
+  {
+   "it": "permafrost",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.46
+  },
+  {
+   "it": "piercing",
+   "rating": 8,
+   "_was": 7,
+   "_it_zipf": 3.36
+  },
+  {
+   "it": "pilates",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.95
+  },
+  {
+   "it": "podcaster",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 1.34
+  },
+  {
+   "it": "premier league",
+   "rating": 7,
+   "_was": 5,
+   "_it_zipf": 4.02
+  },
+  {
+   "it": "premiere",
+   "rating": 8,
+   "_was": 6,
+   "_it_zipf": 3.27
+  },
+  {
+   "it": "primer",
+   "rating": 9,
+   "_was": 7,
+   "_it_zipf": 2.87
+  },
+  {
+   "it": "private equity",
+   "rating": 10,
+   "_was": 6,
+   "_it_zipf": 2.97
+  },
+  {
+   "it": "quantitative easing",
+   "rating": 10,
+   "_was": 8,
+   "_it_zipf": 2.44
+  },
+  {
+   "it": "quinoa",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.83
+  },
+  {
+   "it": "quorn",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 1.06
+  },
+  {
+   "it": "rattan",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 1.76
+  },
+  {
+   "it": "reception",
+   "rating": 7,
+   "_was": 6,
+   "_it_zipf": 3.39
+  },
+  {
+   "it": "record",
+   "rating": 5,
+   "_was": 4,
+   "_it_zipf": 4.54
+  },
+  {
+   "it": "reel",
+   "rating": 10,
+   "_was": 7,
+   "_it_zipf": 2.38
+  },
+  {
+   "it": "resort",
+   "rating": 7,
+   "_was": 6,
+   "_it_zipf": 3.55
+  },
+  {
+   "it": "restructuring",
+   "rating": 10,
+   "_was": 7,
+   "_it_zipf": 1.52
+  },
+  {
+   "it": "roadmap",
+   "rating": 10,
+   "_was": 8,
+   "_it_zipf": 2.08
+  },
+  {
+   "it": "rock",
+   "rating": 5,
+   "_was": 4,
+   "_it_zipf": 4.51
+  },
+  {
+   "it": "royalty",
+   "rating": 9,
+   "_was": 7,
+   "_it_zipf": 2.73
+  },
+  {
+   "it": "sequoia",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.46
+  },
+  {
+   "it": "shorts",
+   "rating": 8,
+   "_was": 6,
+   "_it_zipf": 3.02
+  },
+  {
+   "it": "silo",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.75
+  },
+  {
+   "it": "slot machine",
+   "rating": 8,
+   "_was": 6,
+   "_it_zipf": 3.48
+  },
+  {
+   "it": "smart grid",
+   "rating": 10,
+   "_was": 6,
+   "_it_zipf": 2.8
+  },
+  {
+   "it": "social media",
+   "rating": 5,
+   "_was": 4,
+   "_it_zipf": 4.82
+  },
+  {
+   "it": "soft power",
+   "rating": 8,
+   "_was": 5,
+   "_it_zipf": 3.69
+  },
+  {
+   "it": "spam",
+   "rating": 7,
+   "_was": 6,
+   "_it_zipf": 3.75
+  },
+  {
+   "it": "spread",
+   "rating": 7,
+   "_was": 5,
+   "_it_zipf": 3.62
+  },
+  {
+   "it": "standing ovation",
+   "rating": 10,
+   "_was": 8,
+   "_it_zipf": 2.71
+  },
+  {
+   "it": "stevia",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.26
+  },
+  {
+   "it": "stop",
+   "rating": 5,
+   "_was": 3,
+   "_it_zipf": 4.38
+  },
+  {
+   "it": "storytelling",
+   "rating": 8,
+   "_was": 7,
+   "_it_zipf": 3.14
+  },
+  {
+   "it": "streamer",
+   "rating": 10,
+   "_was": 8,
+   "_it_zipf": 2.12
+  },
+  {
+   "it": "street art",
+   "rating": 6,
+   "_was": 4,
+   "_it_zipf": 4.36
+  },
+  {
+   "it": "street food",
+   "rating": 7,
+   "_was": 4,
+   "_it_zipf": 4.11
+  },
+  {
+   "it": "summit",
+   "rating": 7,
+   "_was": 6,
+   "_it_zipf": 3.56
+  },
+  {
+   "it": "taiga",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.1
+  },
+  {
+   "it": "take-away",
+   "rating": 9,
+   "_was": 4,
+   "_it_zipf": 3.33
+  },
+  {
+   "it": "tapioca",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.4
+  },
+  {
+   "it": "task force",
+   "rating": 8,
+   "_was": 5,
+   "_it_zipf": 3.5
+  },
+  {
+   "it": "tempeh",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 1.57
+  },
+  {
+   "it": "terminal",
+   "rating": 7,
+   "_was": 6,
+   "_it_zipf": 3.57
+  },
+  {
+   "it": "thermos",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.47
+  },
+  {
+   "it": "thread",
+   "rating": 7,
+   "_was": 6,
+   "_it_zipf": 3.69
+  },
+  {
+   "it": "timer",
+   "rating": 8,
+   "_was": 7,
+   "_it_zipf": 3.32
+  },
+  {
+   "it": "tour de France",
+   "rating": 7,
+   "_was": 5,
+   "_it_zipf": 3.91
+  },
+  {
+   "it": "tracking",
+   "rating": 8,
+   "_was": 6,
+   "_it_zipf": 3.1
+  },
+  {
+   "it": "tundra",
+   "rating": 10,
+   "_was": 8,
+   "_it_zipf": 2.41
+  },
+  {
+   "it": "ukulele",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.92
+  },
+  {
+   "it": "umami",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.08
+  },
+  {
+   "it": "venture capital",
+   "rating": 9,
+   "_was": 6,
+   "_it_zipf": 3.17
+  },
+  {
+   "it": "versatile",
+   "rating": 8,
+   "_was": 7,
+   "_it_zipf": 3.31
+  },
+  {
+   "it": "webinar",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.81
+  },
+  {
+   "it": "welfare state",
+   "rating": 7,
+   "_was": 6,
+   "_it_zipf": 3.96
+  },
+  {
+   "it": "whistleblower",
+   "rating": 10,
+   "_was": 8,
+   "_it_zipf": 2.34
+  },
+  {
+   "it": "wild card",
+   "rating": 8,
+   "_was": 5,
+   "_it_zipf": 3.5
+  },
+  {
+   "it": "badminton",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.9
+  },
+  {
+   "it": "hockey",
+   "rating": 7,
+   "_was": 6,
+   "_it_zipf": 3.61
+  },
+  {
+   "it": "jackpot",
+   "rating": 8,
+   "_was": 7,
+   "_it_zipf": 2.99
+  },
+  {
+   "it": "jet lag",
+   "rating": 9,
+   "_was": 7,
+   "_it_zipf": 3.0
+  },
+  {
+   "it": "leadership",
+   "rating": 6,
+   "_was": 5,
+   "_it_zipf": 3.9
+  },
+  {
+   "it": "loft",
+   "rating": 8,
+   "_was": 7,
+   "_it_zipf": 3.12
+  },
+  {
+   "it": "mountain bike",
+   "rating": 9,
+   "_was": 5,
+   "_it_zipf": 3.36
+  },
+  {
+   "it": "musical",
+   "rating": 6,
+   "_was": 5,
+   "_it_zipf": 3.84
+  },
+  {
+   "it": "noodle",
+   "rating": 10,
+   "_was": 8,
+   "_it_zipf": 2.34
+  },
+  {
+   "it": "picnic",
+   "rating": 8,
+   "_was": 7,
+   "_it_zipf": 3.33
+  },
+  {
+   "it": "ranch",
+   "rating": 7,
+   "_was": 6,
+   "_it_zipf": 3.48
+  },
+  {
+   "it": "reality show",
+   "rating": 7,
+   "_was": 5,
+   "_it_zipf": 3.8
+  },
+  {
+   "it": "recital",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.77
+  },
+  {
+   "it": "baseball",
+   "rating": 6,
+   "_was": 5,
+   "_it_zipf": 3.91
+  },
+  {
+   "it": "beat",
+   "rating": 7,
+   "_was": 4,
+   "_it_zipf": 3.43
+  },
+  {
+   "it": "bestseller",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.96
+  },
+  {
+   "it": "blackjack",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.96
+  },
+  {
+   "it": "brownie",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.67
+  },
+  {
+   "it": "brunch",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.92
+  },
+  {
+   "it": "tapa",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.03
+  },
+  {
+   "it": "yo-yo",
+   "rating": 8,
+   "_was": 6,
+   "_it_zipf": 3.6
+  },
+  {
+   "it": "cast",
+   "rating": 6,
+   "_was": 5,
+   "_it_zipf": 4.12
+  },
+  {
+   "it": "catering",
+   "rating": 8,
+   "_was": 7,
+   "_it_zipf": 3.26
+  },
+  {
+   "it": "chatbot",
+   "rating": 10,
+   "_was": 9,
+   "_it_zipf": 2.12
+  },
+  {
+   "it": "cookie",
+   "rating": 7,
+   "_was": 6,
+   "_it_zipf": 3.57
+  },
+  {
+   "it": "download",
+   "rating": 6,
+   "_was": 5,
+   "_it_zipf": 4.05
+  },
+  {
+   "it": "duplex",
+   "rating": 9,
+   "_was": 8,
+   "_it_zipf": 2.69
+  },
+  {
+   "it": "fair play",
+   "rating": 8,
+   "_was": 5,
+   "_it_zipf": 3.63
+  },
+  {
+   "it": "part-time",
+   "rating": 7,
+   "_was": 3,
+   "_it_zipf": 4.01
+  }
+ ]
+}

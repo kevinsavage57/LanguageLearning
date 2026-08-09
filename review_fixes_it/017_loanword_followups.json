@@ -1,0 +1,17 @@
+{
+ "reviewed": "loanword gender and plural cases the generated pass could not reach",
+ "rows": [
+  {"it": "hostess", "nc": "irregular",
+   "override": {"base": "hostess", "plural": "hostess",
+                "article_sg": "l'", "article_pl": "le"},
+   "_was": "class m_std, so the app rendered 'gli hostess'. A hostess is feminine in Italian --- la hostess, le hostess --- and the male counterpart steward is a separate entry."},
+  {"it": "hotel a cinque stelle",
+   "override": {"base": "hotel a cinque stelle", "plural": "hotel a cinque stelle",
+                "article_sg": "l'", "article_pl": "gli"},
+   "_was": "plural was 'hotel a cinque stelli': stelle is already plural and was run through the -e -> -i rule anyway."},
+  {"it": "hoodie",
+   "override": {"base": "hoodie", "plural": "hoodie",
+                "article_sg": "l'", "article_pl": "gli"},
+   "_was": "plural was 'hoodii'"}
+ ]
+}

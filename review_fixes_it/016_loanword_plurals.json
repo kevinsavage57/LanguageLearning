@@ -1,0 +1,286 @@
+{
+ "reviewed": "unadapted loanwords made invariable",
+ "_generated_by": "gen_loanword_fixes.py",
+ "rows": [
+  {
+   "it": "badge",
+   "plural": "badge",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "bike sharing",
+   "plural": "bike sharing",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "binge watching",
+   "plural": "binge watching",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "boa constrictor",
+   "plural": "boa constrictor",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "boutique",
+   "plural": "boutique",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "box office",
+   "plural": "box office",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "brie",
+   "plural": "brie",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "bungee jumping",
+   "plural": "bungee jumping",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "cashmere",
+   "plural": "cashmere",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "customer care",
+   "plural": "customer care",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "data scientist",
+   "plural": "data scientist",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "database",
+   "plural": "database",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "deadline",
+   "plural": "deadline",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "djembe",
+   "plural": "djembe",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "e-commerce",
+   "plural": "e-commerce",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "edamame",
+   "plural": "edamame",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "escape room",
+   "plural": "escape room",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "garage",
+   "plural": "garage",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "hoodie",
+   "plural": "hoodie",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "intelligence",
+   "plural": "intelligence",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "judo",
+   "plural": "judo",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "karate",
+   "plural": "karate",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "laser game",
+   "plural": "laser game",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "lycra",
+   "plural": "lycra",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "nuance",
+   "plural": "nuance",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "pancake",
+   "plural": "pancake",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "performance art",
+   "plural": "performance art",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "premier league",
+   "plural": "premier league",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "premiere",
+   "plural": "premiere",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "private equity",
+   "plural": "private equity",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "quantitative easing",
+   "plural": "quantitative easing",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "quinoa",
+   "plural": "quinoa",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "routine",
+   "plural": "routine",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "silo",
+   "plural": "silo",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "slot machine",
+   "plural": "slot machine",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "software",
+   "plural": "software",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "task force",
+   "plural": "task force",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "triage",
+   "plural": "triage",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "ukulele",
+   "plural": "ukulele",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "venture capital",
+   "plural": "venture capital",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "welfare state",
+   "plural": "welfare state",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "zoo",
+   "plural": "zoo",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "mountain bike",
+   "plural": "mountain bike",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "mousse",
+   "plural": "mousse",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "noodle",
+   "plural": "noodle",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "roulette",
+   "plural": "roulette",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "brochure",
+   "plural": "brochure",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "brownie",
+   "plural": "brownie",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "taekwondo",
+   "plural": "taekwondo",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "yo-yo",
+   "plural": "yo-yo",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "zombie",
+   "plural": "zombie",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "cardio",
+   "plural": "cardio",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "champagne",
+   "plural": "champagne",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "cookie",
+   "plural": "cookie",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "detective",
+   "plural": "detective",
+   "_note": "unadapted loanword; invariable in Italian"
+  },
+  {
+   "it": "file",
+   "plural": "file",
+   "_note": "unadapted loanword; invariable in Italian"
+  }
+ ]
+}
